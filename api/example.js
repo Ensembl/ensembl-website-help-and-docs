@@ -6,13 +6,16 @@ const parseMarkdown = require('../scripts/parseMarkdown');
 // }());
 
 module.exports = async (req, res) => {
-  const markdownData = await parseMarkdown();
+  try {
+    const markdownData = await parseMarkdown();
 
-  res.json({
-    data: markdownData,
-    query: req.query,
-    // body: req.body,
-    // cookies: req.cookies
-  })
-
+    res.json({
+      data: markdownData,
+      query: req.query,
+      // body: req.body,
+      // cookies: req.cookies
+    })
+  } catch (error) {
+    res.status(404);
+  }
 }
