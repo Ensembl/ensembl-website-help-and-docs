@@ -6,8 +6,16 @@ const parseMarkdown = require('../scripts/parseMarkdown');
 // }());
 
 module.exports = async (req, res) => {
+  const filePath = req.query.file;
+  if (!filePath) {
+    res.status(400);
+    return res.json({
+      error: 'File parameter cannot be empty'
+    });
+  }
+
   try {
-    const markdownData = await parseMarkdown();
+    const markdownData = await parseMarkdown(filePath);
 
     res.json({
       data: markdownData,
@@ -17,6 +25,8 @@ module.exports = async (req, res) => {
     })
   } catch (error) {
     res.status(404);
-    res.send('Not found');
+    res.json({
+      error: `File ${filePath} not found`
+    })
   }
 }

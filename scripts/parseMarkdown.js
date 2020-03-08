@@ -8,7 +8,7 @@ const html = require('rehype-stringify');
 const frontmatter = require('remark-frontmatter');
 const yaml = require('yaml').parse;
 
-const parseMarkdown = async () => {
+const parseMarkdown = async (pathToFile) => {
   return await new Promise((resolve, reject) => {
     unified()
       .use(parse)
@@ -16,7 +16,7 @@ const parseMarkdown = async () => {
       .use(extract, { yaml: yaml })
       .use(remark2rehype)
       .use(html)
-      .process(vfile.readSync(path.resolve(__dirname, '../markdown/example.md')), function(err, file) {
+      .process(vfile.readSync(path.resolve(__dirname, `../markdown/${pathToFile}.md`)), function(err, file) {
         if (err) {
           reject(err);
         } else {
@@ -26,10 +26,5 @@ const parseMarkdown = async () => {
       });
   });
 };
-
-// (async function() {
-//   const result = await parseMarkdown();
-//   console.log(result);
-// }());
 
 module.exports = parseMarkdown;
