@@ -1,5 +1,5 @@
 ---
-title: Example
+title: Foo
 list:
   - one
   - 0
