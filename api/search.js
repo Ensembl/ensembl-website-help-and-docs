@@ -2,9 +2,17 @@ const fs = require('fs');
 const searchIndex = require('../scripts/searchIndex');
 const parseMarkdown = require('../scripts/parseMarkdown');
 
-const index = JSON.parse(fs.readFileSync('./index.json', 'utf-8'));
+// const index = JSON.parse(fs.readFileSync('./index.json', 'utf-8'));
 
 module.exports = async (req, res) => {
+  const files = fs.readdirSync('.');
+  const parentDirFiles = fs.readdirSync('..');
+  res.json({ files, parentDirFiles });
+
+  return;
+
+
+
   const search = req.query.query;
   if (!query) {
     res.status(400);
