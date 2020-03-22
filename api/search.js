@@ -1,6 +1,8 @@
 const searchIndex = require('../scripts/searchIndex');
 const parseMarkdown = require('../scripts/parseMarkdown');
 
+const index = require('./index.json');
+
 module.exports = async (req, res) => {
   const search = req.query.query;
   if (!query) {
@@ -11,7 +13,7 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const searchResults = searchIndex(query);
+    const searchResults = searchIndex(query, index);
     const filePaths = searchResults.map(result => result.ref);
     const resultPromises = filePaths.map(parseMarkdown);
     const results = await Promise.all(resultPromises);
