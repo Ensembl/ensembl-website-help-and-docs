@@ -1,7 +1,8 @@
+const fs = require('fs');
 const searchIndex = require('../scripts/searchIndex');
 const parseMarkdown = require('../scripts/parseMarkdown');
 
-const index = require('./index.json');
+const index = JSON.parse(fs.readFileSync('./index.json', 'utf-8'));
 
 module.exports = async (req, res) => {
   const search = req.query.query;
