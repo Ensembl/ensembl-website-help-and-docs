@@ -1,10 +1,5 @@
 const parseMarkdown = require('../scripts/parseMarkdown');
 
-// (async function() {
-//   const result = await parseMarkdown();
-//   console.log(result);
-// }());
-
 module.exports = async (req, res) => {
   const filePath = req.query.file;
   if (!filePath) {
@@ -29,4 +24,4 @@ module.exports = async (req, res) => {
       error: `File ${filePath} not found`
     })
   }
-}
+};
