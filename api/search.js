@@ -7,7 +7,7 @@ const parseMarkdown = require('../scripts/parseMarkdown');
 // const index = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
 
 module.exports = async (req, res) => {
-  const files = fs.readdirSync(path.resolve(__dirname, '../build'));
+  const files = fs.readdirSync(path.resolve(__dirname, '..'));
   // const parentDirFiles = fs.readdirSync('..');
   res.json({ files });
 
