@@ -11,7 +11,7 @@ module.exports = async (req, res) => {
     const index = require('build/indices/index.json');
     res.json({ success: true });
   } catch (error) {
-    const files = fs.readdirSync('.'));
+    const files = fs.readdirSync('.');
     res.json({ error, files });
   }
 
