@@ -16,7 +16,7 @@ module.exports = async (req, res) => {
     res.json({ error, files });
   }
 
-  const search = req.query.query;
+  const { query } = req.query;
   if (!query) {
     res.status(400);
     return res.json({
