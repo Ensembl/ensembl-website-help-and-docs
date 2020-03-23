@@ -38,7 +38,7 @@ module.exports = async (req, res) => {
   } catch (error) {
     res.status(404);
     res.json({
-      error: `Search failed`
+      error
     })
   }
 }
