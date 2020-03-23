@@ -10,7 +10,6 @@ module.exports = async (req, res) => {
   let index;
   try {
     index = require('build/indices/index.json');
-    res.json({ success: true });
   } catch (error) {
     const files = fs.readdirSync('.');
     res.json({ error, files });
