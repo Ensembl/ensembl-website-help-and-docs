@@ -14,6 +14,4 @@ const searchIndex = (query, index) => {
   return idx.search(query);
 };
 
-module.exports = {
-  searchIndex
-};
+module.exports = searchIndex;
