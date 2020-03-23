@@ -3,13 +3,13 @@ const path = require('path');
 const searchIndex = require('../scripts/searchIndex');
 const parseMarkdown = require('../scripts/parseMarkdown');
 
-const indexPath = path.resolve(__dirname, './index.json');
-const index = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+// const indexPath = path.resolve(__dirname, './index.json');
+// const index = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
 
 module.exports = async (req, res) => {
-  const files = fs.readdirSync(__dirname);
+  const files = fs.readdirSync(path.resolve(__dirname, '../build'));
   // const parentDirFiles = fs.readdirSync('..');
-  res.json({ files, parentDirFiles });
+  res.json({ files });
 
   return;
 
