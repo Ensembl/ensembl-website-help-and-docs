@@ -23,8 +23,9 @@ module.exports = async (req, res) => {
     });
   }
 
+  const searchResults = searchIndex(query, index);
+
   try {
-    const searchResults = searchIndex(query, index);
     const filePaths = searchResults.map(result => result.ref);
     const resultPromises = filePaths.map(parseMarkdown);
     const results = await Promise.all(resultPromises);
@@ -38,7 +39,8 @@ module.exports = async (req, res) => {
   } catch (error) {
     res.status(404);
     res.json({
-      error
+      error,
+      searchResults
     })
   }
 }
