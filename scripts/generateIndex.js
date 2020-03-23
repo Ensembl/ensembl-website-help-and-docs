@@ -38,7 +38,8 @@ const run = async () => {
     .map(parseMarkdown);
   const data = await Promise.all(promisedData);
   const index = generateIndex(data);
-  writeIndex(index);
+  return index;
+  // writeIndex(index);
 };
 
 const generateIndex = (documents) => {
@@ -59,6 +60,4 @@ const writeIndex = (index) => {
   fs.writeFileSync(indexPath, JSON.stringify(index));
 };
 
-run();
-
-module.exports = parseMarkdown;
+module.exports = run;
