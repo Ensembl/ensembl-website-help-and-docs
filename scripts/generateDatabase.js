@@ -94,21 +94,15 @@ const addDocumentCategory = async (db, fileData) => {
   });
 };
 
-(async () => {
-  const db = await createDatabase();
-  const files = await readMarkdownFiles();
-  populateDatabase(db, files);
-})();
-
-module.exports = {
-  getDbPath
+const buildDatabase = async () => {
+  try {
+    const db = await createDatabase();
+    const files = await readMarkdownFiles();
+    populateDatabase(db, files);
+    console.log('Database generated successfully');
+  } catch (error) {
+    console.error('Error when building database', error);
+  }
 };
 
-// (async () => {
-//   const db = await sqlite.open({
-//     filename: getDbPath(),
-//     driver: sqlite3.Database
-//   });
-//   const result = await db.all('SELECT * FROM documents_categories');
-//   console.log(result);
-// })();
+module.exports = buildDatabase;
