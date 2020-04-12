@@ -15,7 +15,7 @@ const getOne = async (req, res) => {
 
   try {
     const db = await sqlite.open({
-      filename: getDbPath(),
+      filename: databasePath,
       driver: sqlite3.Database
     });
     const match = await getOneDocument(db, filePath);
