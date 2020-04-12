@@ -1,6 +1,10 @@
-const parseMarkdown = require('../scripts/parseMarkdown');
+const sqlite = require('sqlite');
+const sqlite3 = require('sqlite3');
 
-module.exports = async (req, res) => {
+const { getOneDocument } = require('../scripts/getFromDatabase');
+const databasePath = 'build/database.db';
+
+const getOne = async (req, res) => {
   const filePath = req.query.file;
   if (!filePath) {
     res.status(400);
@@ -10,18 +14,30 @@ module.exports = async (req, res) => {
   }
 
   try {
-    const markdownData = await parseMarkdown(filePath);
+    const db = await sqlite.open({
+      filename: getDbPath(),
+      driver: sqlite3.Database
+    });
+    const match = await getOneDocument(db, filePath);
 
-    res.json({
-      data: markdownData,
-      query: req.query,
-      // body: req.body,
-      // cookies: req.cookies
-    })
+    if (match) {
+      res.json({
+        body: match.body,
+        data: match.data,
+        query: req.query
+      });
+    } else {
+      res.status(404);
+      res.json({
+        error: `File ${filePath} not found`
+      });
+    }
+    await db.close();
   } catch (error) {
-    res.status(404);
+    console.error('Error finding the document', error);
+    res.status(500);
     res.json({
-      error: `File ${filePath} not found`
+      error: 'There was an error processing your request'
     })
   }
 };

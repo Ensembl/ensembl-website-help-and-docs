@@ -2,6 +2,9 @@
   "functions": {
     "api/search.js": {
       "includeFiles": "build/indices/**"
-    }
+    },
+    "api/example.js": {
+      "includeFiles": "build/database.db"
+    },
   }
 }

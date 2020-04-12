@@ -601,28 +601,3 @@ it("should render a greeting", () => {
 ```
 
 It's typically better to make more specific assertions than to use snapshots. These kinds of tests include implementation details so they break easily, and teams can get desensitized to snapshot breakages. Selectively [mocking some child components](#mocking-modules) can help reduce the size of snapshots and keep them readable for the code review.
-
----
-
-### Multiple Renderers {#multiple-renderers}
-
-In rare cases, you may be running a test on a component that uses multiple renderers. For example, you may be running snapshot tests on a component with `react-test-renderer`, that internally uses `ReactDOM.render` inside a child component to render some content. In this scenario, you can wrap updates with `act()`s corresponding to their renderers.
-
-```jsx
-import { act as domAct } from "react-dom/test-utils";
-import { act as testAct, create } from "react-test-renderer";
-// ...
-let root;
-domAct(() => {
-  testAct(() => {
-    root = create(<App />);
-  });
-});
-expect(root).toMatchSnapshot();
-```
-
----
-
-### Something Missing? {#something-missing}
-
-If some common scenario is not covered, please let us know on the [issue tracker](https://github.com/reactjs/reactjs.org/issues) for the documentation website.
