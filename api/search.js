@@ -1,19 +1,23 @@
-const fs = require('fs');
-const path = require('path');
-const searchIndex = require('../scripts/searchIndex');
-const parseMarkdown = require('../scripts/parseMarkdown');
+// const fs = require('fs');
+const sqlite = require('sqlite');
+const sqlite3 = require('sqlite3');
 
-// const indexPath = path.resolve(__dirname, './index.json');
-// const index = JSON.parse(fs.readFileSync(indexPath, 'utf-8'));
+const searchIndex = require('../scripts/searchIndex');
+const getArticleFromDB = require('../scripts/get-from-database/getArticle');
+
+const config = require('../config');
+
+const articlesIndexPath = process.env.DEPLOYMENT === 'NOW'
+  ? 'build/indices/articlesIndexName.json'
+  : config.articlesIndexPath;
+const articlesIndex = require(articlesIndexPath);
+
+const databasePath = process.env.DEPLOYMENT === 'NOW'
+  ? 'build/database.db'
+  : config.databasePath;
 
 module.exports = async (req, res) => {
   let index;
-  try {
-    index = require('build/indices/index.json');
-  } catch (error) {
-    const files = fs.readdirSync('.');
-    res.json({ error, files });
-  }
 
   const { query } = req.query;
   if (!query) {
@@ -23,11 +27,15 @@ module.exports = async (req, res) => {
     });
   }
 
-  const searchResults = searchIndex(query, index);
+  const searchResults = searchIndex(query, articlesIndex);
 
   try {
-    const filePaths = searchResults.map(result => result.ref);
-    const resultPromises = filePaths.map(parseMarkdown);
+    const db = await sqlite.open({
+      filename: databasePath,
+      driver: sqlite3.Database
+    });
+    const slugs = searchResults.map(result => result.ref);
+    const resultPromises = slugs.map(async (slug) => await getArticleFromDB(db, slug));
     const results = await Promise.all(resultPromises);
 
     res.json({

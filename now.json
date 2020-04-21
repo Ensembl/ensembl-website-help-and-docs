@@ -1,9 +1,9 @@
 {
   "functions": {
     "api/search.js": {
-      "includeFiles": "build/indices/**"
+      "includeFiles": "build/**"
     },
-    "api/example.js": {
+    "api/article.js": {
       "includeFiles": "build/database.db"
     }
   }
