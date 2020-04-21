@@ -10,7 +10,13 @@ const attacher = () => {
 };
 
 const imageVisitor = (node) => {
-  // console.log('node:', JSON.stringify(node, null, 2));
+  let host;
+  if (process.env.DEPLOYMENT === 'NOW') {
+    host = 'https://zeit-serverless-exercise.now.sh';
+  } else {
+    host = 'http://localhost:3000';
+  }
+  node.url = `${host}${node.url}`;
 };
 
 module.exports = attacher;
