@@ -8,7 +8,7 @@ const getArticleFromDB = require('../scripts/get-from-database/getArticle');
 const config = require('../config');
 
 const articlesIndexPath = process.env.DEPLOYMENT === 'NOW'
-  ? 'build/indices/articlesIndexName.json'
+  ? 'build/indices/articlesIndex.json'
   : config.articlesIndexPath;
 const articlesIndex = require(articlesIndexPath);
 
