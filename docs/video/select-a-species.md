@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=v6HKpja5t1M&t=6s
+url: https://www.youtube.com/embed/v6HKpja5t1M
 status: published
 ---
 
