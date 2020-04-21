@@ -38,6 +38,7 @@ module.exports = async (req, res) => {
     const resultPromises = slugs.map(async (slug) => await getArticleFromDB(db, slug));
     const results = await Promise.all(resultPromises);
 
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.json({
       data: results,
       query: req.query,
