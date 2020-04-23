@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=C2g37X_uMok
+url: https://www.youtube.com/embed/C2g37X_uMok
 tags:
   - browser
 status: published

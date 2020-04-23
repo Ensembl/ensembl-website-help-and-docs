@@ -1,5 +1,5 @@
 ---
-url: https://www.youtube.com/watch?v=43p_73zJfIo
+url: https://www.youtube.com/embed/43p_73zJfIo
 tags:
   - browser
   - transcript
