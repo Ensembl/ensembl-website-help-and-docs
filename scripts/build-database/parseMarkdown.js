@@ -3,6 +3,7 @@ const vfile = require('to-vfile');
 const unified = require('unified');
 const parse = require('remark-parse');
 const remark2rehype = require('remark-rehype');
+const raw = require('rehype-raw');
 const extract = require('remark-extract-frontmatter');
 const html = require('rehype-stringify');
 const frontmatter = require('remark-frontmatter');
@@ -17,7 +18,8 @@ const parseMarkdown = async (pathToFile) => {
       .use(frontmatter, ['yaml', 'toml'])
       .use(extract, { yaml: yaml })
       .use(imagePlugin)
-      .use(remark2rehype)
+      .use(remark2rehype, {allowDangerousHTML: true})
+      .use(raw)
       .use(html)
       .process(vfile.readSync(pathToFile), function(err, file) {
         if (err) {

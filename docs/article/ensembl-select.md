@@ -25,6 +25,8 @@ status: published
 
 </div>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C2g37X_uMok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 This page provides a theoretical overview of Concurrent Mode. **For a more practical introduction, you might want to check out the next sections:**
 
 * [Suspense for Data Fetching](/docs/concurrent-mode-suspense.html) describes a new mechanism for fetching data in React components.

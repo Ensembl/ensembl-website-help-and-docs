@@ -6,17 +6,66 @@ When evaluating it, please keep in mind that it is a prototype and that almost a
 The prototype can handle two types of content: articles and videos. All content should be stored as markdown files in the `docs/article` or `docs/video` folder.
 
 # How to integrate images into content
-Save image files to the `images` folder and then link to them in the markdown file, starting the path from the root of the project.
+Save image files to the `images` folder and then add links to them in the body of markdown files, starting the path from the root of the project.
 
 Example: `![alt text](/images/path/to/file)` (I believe the alt text block can be empty: `![](/images/path/to/file)`).
 
 _(See `docs/article/select-a-species.md` for the reference)_.
 
 # How to integrate videos into content
+
+## Option 1: Add a related video file
 - Add a markdown file in the `docs/video` folder.
 - Format it similarly to other files in this folder.
+- add `related-video` metadata field in the frontmatter yaml of appropriate markdown files (see `docs/article/select-a-species.md` for the reference).
 
 **Important** Please note that the video appearing on Ensembl website will be embedded in an iframe. Youtube is very particular about its links — urls for videos embedded in iframes should end in `/embed/:id` rather than in `/watch?v=:id`. To get the correct url from youtube, click on `Share`, then `Embed`. What you want, is just the content of the `src` attribute of the code for the iframe.
+
+**Note:** We are currently supporting only one video per article using this approach. This is a limitation that we probably should address.
+
+## Option 2: Simply add iframe html code in the markdown file
+This is an example of using an escape hatch when authoring markdown files. If you do not need to associate any metadata with a video, but simply want to add it inside your article, you can do so by adding raw `iframe` html element inside the body of your article. For example:
+
+```
+Here is my first paragraph, right before the video.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C2g37X_uMok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+Here is my second paragraph, right after the video.
+```
+
+For more details about this approach, see the **Escape hatch** section below.
+
+# Escape hatch: writing HTML inside markdown
+Markdown is a great writing tool, but it may be somewhat missing in the formatting department. If you really need to add some extra html markup or CSS styling to specific parts of your articles, you can do so by switching to raw html. Here is an example:
+
+```
+<style>
+.scary > blockquote {
+  background-color: rgba(237, 51, 21, 0.2);
+  border-left-color: #ed3315;
+}
+</style>
+
+<div class="scary">
+
+>Caution:
+>
+>This page describes **experimental features that are [not yet available](/docs/concurrent-mode-adoption.html) in a stable release**. Don't rely on experimental builds of React in production apps. These features may change significantly and without a warning before they become a part of React.
+>
+>This documentation is aimed at early adopters and people who are curious. **If you're new to React, don't worry about these features** -- you don't need to learn them right now.
+
+</div>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/C2g37X_uMok" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+This page provides a theoretical overview of Concurrent Mode.
+```
+
+Notice how:
+- the Caution block is written in Markdown (and formatted as a blockquote) and is placed inside a `div` that has a specific CSS class
+- there is an empty line between the `div` and the Caution block (this is required if you want to continue writing Markdown inside html)
+- there is an iframe code linking to a youtube video
 
 # How to publish content
 Push committed changes to this repository. A build script will run automatically, and a bot will post a comment to your commit, notifying you whether your changes have been deployed successfully. In case of a successful deployment, it will also provide links to where the code has been deployed.
@@ -42,7 +91,7 @@ At the moment, you can only see changes in the popup on the species selector pag
 - visit the page built according to the following pattern: `https://zeit-serverless-exercise.now.sh/api/article?file=<name_of_your_file>` (example: https://zeit-serverless-exercise.now.sh/api/article?file=ensembl-select)
 - verify that you see the changes
 
-## How to add new articles
+# How to add new articles
 
 Ah, here’s the rub: in order for the new help content to appear on the new Ensembl web site, you'll have to ask the web team to add an identifier, which would be the name of your new documentation file, to the specific element on the specific page that you are documenting. But that's unavoidable in the case of contextual help. It will be different for full documentation pages, which will be generated automatically without any involvement of the web team.
 

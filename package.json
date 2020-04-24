@@ -15,6 +15,7 @@
     "express": "4.17.1",
     "lunr": "2.3.8",
     "mkdirp": "1.0.4",
+    "rehype-raw": "4.0.2",
     "rehype-stringify": "7.0.0",
     "remark-extract-frontmatter": "2.0.2",
     "remark-frontmatter": "2.0.0",
