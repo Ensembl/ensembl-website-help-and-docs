@@ -8,10 +8,10 @@ COPY ${SOURCE_DIR} /srv/ensembl-docs-server
 
 WORKDIR /srv/ensembl-docs-server
 
+ENV NODE_ENV production
+
 RUN npm ci
 RUN npm run build
-
-ENV NODE_ENV production
 
 EXPOSE 3000
 
