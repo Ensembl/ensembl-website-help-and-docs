@@ -2,7 +2,6 @@ const visit = require('unist-util-visit');
 
 const attacher = () => {
   const transformer = (tree, file) => {
-    // console.log('tree', JSON.stringify(tree, null, 2));
     visit(tree, 'image', imageVisitor);
   };
 
@@ -11,8 +10,8 @@ const attacher = () => {
 
 const imageVisitor = (node) => {
   let host;
-  if (process.env.DEPLOYMENT === 'NOW') {
-    host = 'https://zeit-serverless-exercise.now.sh';
+  if (process.env.NODE_ENV === 'production') {
+    host = 'http://193.62.55.158:30799';
   } else {
     host = 'http://localhost:3000';
   }
