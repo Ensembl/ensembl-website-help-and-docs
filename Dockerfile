@@ -9,7 +9,7 @@ COPY ${SOURCE_DIR} /srv/ensembl-docs-server
 WORKDIR /srv/ensembl-docs-server
 
 RUN npm ci
-RUN npm run
+RUN npm run build
 
 EXPOSE 3000
 
