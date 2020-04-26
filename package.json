@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "now-build": "mkdirp build && node ./build.js",
-    "local-build": "rm -rf ./build && mkdir build && npm run now-build",
-    "start-server": "node server/server.js"
+    "clean": "rm -rf ./build _site",
+    "prebuild": "npm run clean",
+    "build": "mkdirp build && node ./build.js && npm run eleventy-build",
+    "start-server": "node server/server.js",
+    "eleventy-clean": "rm -rf _site",
+    "start-eleventy": "npm run eleventy-clean && eleventy --serve",
+    "eleventy-build": "eleventy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@11ty/eleventy": "0.10.0",
+    "cross-fetch": "3.0.4",
     "express": "4.17.1",
     "lunr": "2.3.8",
     "mkdirp": "1.0.4",

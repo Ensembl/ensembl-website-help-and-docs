@@ -1,0 +1,24 @@
+---
+pagination:
+  data: articles
+  size: 1
+  alias: article
+permalink: "articles/{{ article.data.slug }}/"
+layout: default
+---
+
+{% if article.data.relatedVideo %}
+  <div class="article-with-video-container">
+    <div>
+      {{ article.body | safe }}
+    </div>
+    <div>
+      <iframe width="560" height="315" src="{{ article.data.relatedVideo.data.url }}" frameborder="0" allowfullscreen></iframe>
+      {{ article.data.relatedVideo.body | safe }}
+    </div>
+  </div>
+{% else %}
+  <div class="simple-article-container">
+    {{ article.body | safe }}
+  </div>
+{% endif %}

@@ -37,7 +37,8 @@ const getArticle = async (req, res) => {
     }
     await db.close();
   } catch (error) {
-    console.error('Error finding the document', error);
+    console.error('Error opening the database', error);
+    console.error('Database path:', databasePath);
     res.status(500);
     res.json({
       error: 'There was an error processing your request'

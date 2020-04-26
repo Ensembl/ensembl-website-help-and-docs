@@ -1,12 +1,16 @@
+# Introduction
+
 This is a quick-and-dirty prototype of a help and documentation system for Ensembl, in which the content is stored in plain-text files.
 
-When evaluating it, please keep in mind that it is a prototype and that almost anything about it can be changed to make it more usable.
+When evaluating it, please keep in mind that it is a very early prototype and that almost anything about it can be changed to make it more usable.
+
+_**Note:** This repository currently contains both the documentation files and the code that transforms them into the format usable by Ensembl client. If this prototype is accepted as the preferred way of maintaining documentation, we will likely split the repository into two, one containing only documentation files, and the other containing the code that consumes and transforms them._
 
 # How to author content
 The prototype can handle two types of content: articles and videos. All content should be stored as markdown files in the `docs/article` or `docs/video` folder.
 
 # How to integrate images into content
-Save image files to the `images` folder and then add links to them in the body of markdown files, starting the path from the root of the project.
+Save image files to the `images` folder, and then add links to them in the body of appropriate markdown files, starting the path from the root of the project.
 
 Example: `![alt text](/images/path/to/file)` (I believe the alt text block can be empty: `![](/images/path/to/file)`).
 
@@ -14,14 +18,14 @@ _(See `docs/article/select-a-species.md` for the reference)_.
 
 # How to integrate videos into content
 
-## Option 1: Add a related video file
+## Option 1: Add a markdown file with video data
 - Add a markdown file in the `docs/video` folder.
 - Format it similarly to other files in this folder.
-- add `related-video` metadata field in the frontmatter yaml of appropriate markdown files (see `docs/article/select-a-species.md` for the reference).
+- Add the `related-video` metadata field in the frontmatter of appropriate markdown files (see `docs/article/select-a-species.md` as example).
 
 **Important** Please note that the video appearing on Ensembl website will be embedded in an iframe. Youtube is very particular about its links — urls for videos embedded in iframes should end in `/embed/:id` rather than in `/watch?v=:id`. To get the correct url from youtube, click on `Share`, then `Embed`. What you want, is just the content of the `src` attribute of the code for the iframe.
 
-**Note:** We are currently supporting only one video per article using this approach. This is a limitation that we probably should address.
+**Note:** We are currently supporting only one video per article using this approach. This is a limitation that we will be able to overcome if needed.
 
 ## Option 2: Simply add iframe html code in the markdown file
 This is an example of using an escape hatch when authoring markdown files. If you do not need to associate any metadata with a video, but simply want to add it inside your article, you can do so by adding raw `iframe` html element inside the body of your article. For example:
@@ -37,7 +41,9 @@ Here is my second paragraph, right after the video.
 For more details about this approach, see the **Escape hatch** section below.
 
 # Escape hatch: writing HTML inside markdown
-Markdown is a great writing tool, but it may be somewhat missing in the formatting department. If you really need to add some extra html markup or CSS styling to specific parts of your articles, you can do so by switching to raw html. Here is an example:
+Markdown is a great writing tool, but it may be somewhat missing in the formatting department. If you really need to add some extra html markup or CSS styling to specific parts of your articles, you can do so by switching to raw html.
+
+Here is an example of mixing Markdown with HTML in Markdown files:
 
 ```
 <style>
@@ -63,8 +69,9 @@ This page provides a theoretical overview of Concurrent Mode.
 ```
 
 Notice how:
-- the Caution block is written in Markdown (and formatted as a blockquote) and is placed inside a `div` that has a specific CSS class
-- there is an empty line between the `div` and the Caution block (this is required if you want to continue writing Markdown inside html)
+- the Caution block is written in Markdown and formatted as a blockquote (using the leading angle bracket)
+- it is placed inside a `div` that has a CSS class (notice an empty line between the `div` and the Caution block — this is required if you want to continue writing Markdown inside html)
+- there is a `style` block defining CSS rules for the used class
 - there is an iframe code linking to a youtube video
 
 # How to publish content
@@ -97,15 +104,15 @@ Ah, here’s the rub: in order for the new help content to appear on the new Ens
 
 However, you can easily add a new article, push it to master, wait for the bot’s confirmation, and then verify that your content is accessible over the json api at `https://zeit-serverless-exercise.now.sh/api/article?file=<name_of_your_file>`.
 
-# For the fun
+# Just for fun
 
 The api can do search. To check whether the search is specific enough or whether it returns false positives, you can test it via the json api by visiting the url constructed according to the following pattern: `https://zeit-serverless-exercise.now.sh/api/search?query=<word_to_search>`, for example: https://zeit-serverless-exercise.now.sh/api/search?query=ensembl
 
-# For the future
+# Future development
 
 ## How will this solution manage content when this gets into hundreds of elements?
 
-Please take a look at [Microsoft's repository of Azure docs](https://github.com/MicrosoftDocs/azure-docs) for inspiration (specifically, in the `articles` folder and the `bread` folder). Notice how articles are grouped together by topic. Notice too that apart from the yaml frontmatter in markdown files themselves, each folder with articles contains a top-level `TOC.yml` and `index.yml` file which contain metadata linking the articles together. We could organize our code in a similar manner to ensure good scalability.
+Please take a look at [Microsoft's repository for Azure docs](https://github.com/MicrosoftDocs/azure-docs) for inspiration. Specifically, explore their `articles` and `bread` folders. Notice how articles are grouped together by topic. Notice too that apart from the yaml frontmatter in markdown files themselves, each folder with related articles contains a top-level `TOC.yml` and `index.yml` file, which contain metadata linking the articles together. We could organize our code in a similar manner to ensure good scalability.
 
 ## How will this solution enable linking between content nodes
 
