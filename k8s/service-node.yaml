@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ensembl-docs-prototype-svc
+  labels:
+    app: ensembl-docs-prototype-svc
+spec:
+  selector:
+    app: ensembl-docs-prototype
+  type: NodePort
+  ports:
+    - port: 8000
+      protocol: TCP
+      targetPort: 3000

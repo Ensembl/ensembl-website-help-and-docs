@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata: 
+  name: ensembl-docs-prototype-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ensembl-docs-prototype
+    spec:
+      imagePullSecrets:
+        - name: ensembl-docs-prototype-secret
+      containers:
+      - name: ensembl-docs-prototype
+        image: <DOCKER_IMAGE>
+        command: [ "npm", "run", "start-server" ]
+        ports:
+          - containerPort: 3000
+        imagePullPolicy: Always
