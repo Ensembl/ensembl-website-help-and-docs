@@ -1,3 +1,12 @@
+a, a:visited, a:focus {
+  color: blue;
+}
+
+.index-container {
+  max-width: 800px;
+  margin: auto;  
+}
+
 .simple-article-container {
   max-width: 1000px;
   margin: auto;
@@ -5,5 +14,6 @@
 
 .article-with-video-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
+  grid-column-gap: 1rem;
 }

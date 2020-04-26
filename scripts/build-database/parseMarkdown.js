@@ -1,4 +1,3 @@
-const path = require('path');
 const vfile = require('to-vfile');
 const unified = require('unified');
 const parse = require('remark-parse');
@@ -18,7 +17,7 @@ const parseMarkdown = async (pathToFile) => {
       .use(frontmatter, ['yaml', 'toml'])
       .use(extract, { yaml: yaml })
       .use(imagePlugin)
-      .use(remark2rehype, {allowDangerousHTML: true})
+      .use(remark2rehype, {allowDangerousHtml: true})
       .use(raw)
       .use(html)
       .process(vfile.readSync(pathToFile), function(err, file) {

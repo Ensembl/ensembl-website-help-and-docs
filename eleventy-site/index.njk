@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<div class="index-container">
+  <h1>
+    Available articles
+  </h1>
+  <ul>
+    {% for article in articles %}
+      <li>
+        <a href="/articles/{{ article.data.slug }}">{{ article.data.slug }}</a>
+      </li>
+    {% else %}
+      <li>There are no articles</li>
+    {% endfor %}
+  </ul>
+
+</div>

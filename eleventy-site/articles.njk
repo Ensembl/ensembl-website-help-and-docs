@@ -13,6 +13,7 @@ layout: default
       {{ article.body | safe }}
     </div>
     <div>
+      <h1>Related video</h1>
       <iframe width="560" height="315" src="{{ article.data.relatedVideo.data.url }}" frameborder="0" allowfullscreen></iframe>
       {{ article.data.relatedVideo.body | safe }}
     </div>
