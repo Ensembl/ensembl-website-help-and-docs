@@ -16,24 +16,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "0.10.0",
+    "@11ty/eleventy": "0.11.0",
     "cross-fetch": "3.0.4",
     "express": "4.17.1",
+    "globby": "11.0.0",
     "lunr": "2.3.8",
     "mkdirp": "1.0.4",
     "rehype-raw": "4.0.2",
     "rehype-stringify": "7.0.0",
     "remark-extract-frontmatter": "2.0.2",
     "remark-frontmatter": "2.0.0",
-    "remark-parse": "8.0.0",
-    "remark-rehype": "6.0.0",
+    "remark-parse": "8.0.2",
+    "remark-rehype": "7.0.0",
     "remark-stringify": "8.0.0",
-    "sqlite": "4.0.6",
-    "sqlite3": "4.1.1",
+    "sqlite": "4.0.9",
+    "sqlite3": "4.2.0",
     "strip-markdown": "3.1.2",
     "to-vfile": "6.1.0",
     "unified": "9.0.0",
     "unist-util-visit": "2.0.2",
-    "yaml": "1.8.3"
+    "yaml": "1.10.0"
   }
 }
