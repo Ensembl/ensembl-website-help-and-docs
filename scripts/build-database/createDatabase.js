@@ -4,7 +4,7 @@ const sqlite3 = require('sqlite3');
 const sql = `
   CREATE TABLE articles (
     id integer PRIMARY KEY,
-    filename text NOT NULL,
+    path text NOT NULL,
     body text NOT NULL,
     data text
   );

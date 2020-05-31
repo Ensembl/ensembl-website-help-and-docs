@@ -1,29 +1,24 @@
 const fs = require('fs');
 const path = require('path');
+const globby = require('globby');
 
 const config = require('../../config');
 const parseMarkdown = require('./parseMarkdown');
 
 const readSourceFiles = async () => {
-  const { articlesPath, videosPath } = config;
-  const articles = await readFilesFromDir(articlesPath);
-  const videos = await readFilesFromDir(videosPath);
+  const { docsPath } = config;
+  const searchPath = `${docsPath}/**/*.md`;
+  const filePaths = await globby(searchPath);
+  const articles = await Promise.all(filePaths.map(async (filePath) => {
+    const pathWithinDocsDir = filePath.substring(docsPath.length + 1);
+    const fileContent = fs.readFileSync(filePath, 'utf-8');
+    const parsedFileContent = await parseMarkdown(fileContent);
+    return Object.assign({}, parsedFileContent, { path: pathWithinDocsDir });
+  }));
 
   return {
-    articles,
-    videos
-  };
-};
-
-const readFilesFromDir = async (dir) => {
-  const promisedData = fs.readdirSync(dir)
-    .map(async fileName => {
-      const slug = fileName.replace(/\.md$/, '');
-      const filePath = path.join(dir, fileName);
-      const fileData = await parseMarkdown(filePath);
-      return Object.assign({}, fileData, { slug });
-    });
-  return await Promise.all(promisedData);
+    articles
+  }
 };
 
 module.exports = readSourceFiles;

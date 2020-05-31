@@ -3,5 +3,5 @@ const buildDatabase = require('./scripts/build-database');
 
 (async () => {
   await buildDatabase();
-  await buildIndex();
+  // await buildIndex();
 })();

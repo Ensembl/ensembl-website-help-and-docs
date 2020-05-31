@@ -1,4 +1,3 @@
-const vfile = require('to-vfile');
 const unified = require('unified');
 const parse = require('remark-parse');
 const remark2rehype = require('remark-rehype');
@@ -10,7 +9,7 @@ const yaml = require('yaml').parse;
 
 const imagePlugin = require('./markdownImagePlugin');
 
-const parseMarkdown = async (pathToFile) => {
+const parseMarkdown = async (content) => {
   return await new Promise((resolve, reject) => {
     unified()
       .use(parse)
@@ -20,7 +19,7 @@ const parseMarkdown = async (pathToFile) => {
       .use(remark2rehype, {allowDangerousHtml: true})
       .use(raw)
       .use(html)
-      .process(vfile.readSync(pathToFile), function(err, file) {
+      .process(content, function(err, file) {
         if (err) {
           reject(err);
         } else {

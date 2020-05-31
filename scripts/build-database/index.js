@@ -8,10 +8,11 @@ const buildDatabase = async () => {
     const db = await createDatabase();
     const files = await readSourceFiles();
     await addArticles(db, files.articles);
-    await addVideos(db, files.videos);
-    console.log('Documentation database generated successfully');
+    // await addVideos(db, files.videos);
+    // console.log('Documentation database generated successfully');
   } catch (error) {
-    console.error('Error building the database', error);
+    console.log('error', error);
+    // console.error('Error building the database', error);
   }
 };
 

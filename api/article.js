@@ -7,11 +7,11 @@ const getArticleFromDB = require('../scripts/get-from-database/getArticle');
 const databasePath = process.env.DEPLOYMENT === 'NOW' ? 'build/database.db' : config.databasePath;
 
 const getArticle = async (req, res) => {
-  const filePath = req.query.file;
+  const filePath = req.query.path;
   if (!filePath) {
     res.status(400);
     return res.json({
-      error: 'File parameter cannot be empty'
+      error: 'Path parameter cannot be empty'
     });
   }
 
