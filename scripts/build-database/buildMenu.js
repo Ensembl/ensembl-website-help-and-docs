@@ -6,7 +6,8 @@ const config = require('../../config');
 
 const buildMenu = () => {
   const ensemblHelpMenuEntryPath = path.resolve(config.docsPath, 'ensembl-help');
-  populateMenu(ensemblHelpMenuEntryPath);
+  const populatedMenu = populateMenu(ensemblHelpMenuEntryPath);
+  console.log('result', JSON.stringify(populatedMenu, null, 2));
 };
 
 const populateMenu = (folderPath) => {
@@ -27,11 +28,13 @@ const populateMenu = (folderPath) => {
       if (stats.isDirectory()) {
         const submenu = populateMenu(itemPath);
         menuItem.items = submenu;
+      } else if (stats.isFile()) {
+        const internalPath = itemPath.substring(config.docsPath.length + 1);
+        menuItem = Object.assign({}, menuItem, { path: internalPath });
       }
     }
     return menuItem;
   });
-
   return result;
 };
 
