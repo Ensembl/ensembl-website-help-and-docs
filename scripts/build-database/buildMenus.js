@@ -4,10 +4,14 @@ const yaml = require('yaml');
 
 const config = require('../../config');
 
-const buildMenu = () => {
+const buildMenus = () => {
   const ensemblHelpMenuEntryPath = path.resolve(config.docsPath, 'ensembl-help');
-  const populatedMenu = populateMenu(ensemblHelpMenuEntryPath);
-  console.log('result', JSON.stringify(populatedMenu, null, 2));
+  
+  // returning an array of a single menu, because expecting more menus in future
+  return [{
+    name: 'ensembl-help',
+    data: populateMenu(ensemblHelpMenuEntryPath)
+  }];
 };
 
 const populateMenu = (folderPath) => {
@@ -38,4 +42,4 @@ const populateMenu = (folderPath) => {
   return result;
 };
 
-module.exports = buildMenu;
+module.exports = buildMenus;

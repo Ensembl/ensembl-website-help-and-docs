@@ -17,27 +17,4 @@ const insertArticle = async (db, fileData) => {
   });
 };
 
-
-const addParents = (article, articles) => {
-  if (!article.parent) {
-    return article;
-  }
-  return buildParents(article, articles);
-};
-
-const buildParents = (article, articles, parent) => {
-  if (!article.parents) {
-    article.parents = [];
-  }
-  const nextParentName = parent ? parent.parent : article.parent;
-  const nextParent = articles.find(({ slug }) => slug === nextParentName);
-
-  if (!nextParent) {
-    return article;
-  } else {
-    article = Object.assign({}, article, { parents: [...article.parents, nextParent.slug] });
-    return buildParents(article, articles, nextParent);
-  }
-};
-
 module.exports = addArticles;

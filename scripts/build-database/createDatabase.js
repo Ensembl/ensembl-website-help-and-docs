@@ -8,6 +8,11 @@ const sql = `
     body text NOT NULL,
     data text
   );
+  CREATE TABLE menus (
+    id integer PRIMARY KEY,
+    application text NOT NULL,
+    data text NOT NULL
+  );
   CREATE TABLE videos (
     id integer PRIMARY KEY,
     filename text NOT NULL,

@@ -2,15 +2,17 @@ const createDatabase = require('./createDatabase');
 const readSourceFiles = require('./readSourceFiles');
 const addArticles = require('./addArticles');
 const addVideos = require('./addVideos');
-const buildMenu = require('./buildMenu');
+const buildMenus = require('./buildMenus');
+const addMenus = require('./addMenus');
 
 const buildDatabase = async () => {
   try {
-    // const db = await createDatabase();
+    const db = await createDatabase();
     // const files = await readSourceFiles();
     // await addArticles(db, files.articles);
 
-    buildMenu();
+    const menus = buildMenus();
+    await addMenus(db, menus);
 
     // await addVideos(db, files.videos);
     // console.log('Documentation database generated successfully');
