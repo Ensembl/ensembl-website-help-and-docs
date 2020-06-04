@@ -8,8 +8,8 @@ const addMenus = require('./addMenus');
 const buildDatabase = async () => {
   try {
     const db = await createDatabase();
-    // const files = await readSourceFiles();
-    // await addArticles(db, files.articles);
+    const files = await readSourceFiles();
+    await addArticles(db, files.articles);
 
     const menus = buildMenus();
     await addMenus(db, menus);

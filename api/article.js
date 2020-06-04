@@ -23,7 +23,6 @@ const getArticle = async (req, res) => {
     const match = await getArticleFromDB(db, filePath);
 
     if (match) {
-      res.setHeader('Access-Control-Allow-Origin', '*');
       res.json({
         body: match.body,
         data: match.data,
