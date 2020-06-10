@@ -5,7 +5,9 @@ const sql = `
   CREATE TABLE articles (
     id integer PRIMARY KEY,
     path text NOT NULL,
-    body text NOT NULL,
+    file_path text NOT NULL,
+    slug text NOT NULL,
+    body text,
     data text
   );
   CREATE TABLE menus (

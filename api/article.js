@@ -7,11 +7,12 @@ const getArticleFromDB = require('../scripts/get-from-database/getArticle');
 const databasePath = config.databasePath;
 
 const getArticle = async (req, res) => {
+  const slug = req.query.slug;
   const filePath = req.query.path;
-  if (!filePath) {
+  if (!filePath && !slug) {
     res.status(400);
     return res.json({
-      error: 'Path parameter cannot be empty'
+      error: 'Path and slug parameters cannot both be empty'
     });
   }
 
@@ -20,18 +21,19 @@ const getArticle = async (req, res) => {
       filename: databasePath,
       driver: sqlite3.Database
     });
-    const match = await getArticleFromDB(db, filePath);
+    const match = await getArticleFromDB(db, { path: filePath, slug });
 
     if (match) {
       res.json({
+        path: match.path,
+        slug: match.slug,
         body: match.body,
-        data: match.data,
-        query: req.query
+        data: match.data
       });
     } else {
       res.status(404);
       res.json({
-        error: `File ${filePath} not found`
+        error: `Article not found`
       });
     }
     await db.close();

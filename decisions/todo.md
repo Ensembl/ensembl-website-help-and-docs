@@ -1,3 +1,5 @@
+# Backend
+
 - Enable api to report menu structure
   - Q: how many apps (i.e. what data) is the app going to support?
     - contextual help
@@ -11,9 +13,12 @@
   - make sure images are copied to relevant folder and can be served correctly
 - Decide how to handle section pages (example: getting started page, using Ensembl page, Known bugs page, Contact page). Should we support html pages as well
 
+# Client
+- be able to show pages
+- be able to navigate between pages
+- notice that text and video sections in contextual menu may change independently when you click on a related article/video link
+  - Q: Are contextual menu and page in help&docs app same pages or different?
 
-# Dependencies
-- Menu structure will likely reflect the file hierarchy. So having the 
 
 # Consequences
 ## Content ids

@@ -1,6 +1,12 @@
 ---
-parent: getting-started
-related-video: select-a-species
+slug: selecting-a-species
+title: Select a species or assembly
+description: In order to start using Ensembl website, you first need to select a species.
+related_videos:
+  - videos/select-a-species.yml
+related_articles:
+  - relativePath: search.md
+  - docsRootPath: ensembl-help/using-ensembl/viewing-ensembl-data/genome-browser/using-the-genome-browser.md
 status: published
 ---
 
