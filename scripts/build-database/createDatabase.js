@@ -17,9 +17,16 @@ const sql = `
   );
   CREATE TABLE videos (
     id integer PRIMARY KEY,
-    filename text NOT NULL,
-    body text NOT NULL,
+    file_path text NOT NULL,
+    title text NOT NULL,
+    description text,
+    url text NOT NULL,
     data text
+  );
+  CREATE TABLE articles_videos (
+    id integer PRIMARY KEY,
+    article_id integer NOT NULL,
+    video_id integer NOT NULL
   );
   CREATE TABLE tags (
     id integer PRIMARY KEY,
