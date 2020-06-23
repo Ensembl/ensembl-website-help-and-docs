@@ -15,7 +15,7 @@ export const getArticle = async (req: Request, res: Response) => {
   try {
     const article: Article = filePath
       ? await Article.findOne({ where: { file_path: filePath } })
-      : await Article.findOne({ where: { slug: slug } })
+      : await Article.findOne({ where: { slug: slug } });
 
     if (article) {
       const videos = await article.getVideos();
@@ -36,6 +36,6 @@ export const getArticle = async (req: Request, res: Response) => {
     res.status(500);
     res.json({
       error: 'There was an error processing your request'
-    })
+    });
   }
 };

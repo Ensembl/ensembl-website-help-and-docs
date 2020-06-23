@@ -1,5 +1,16 @@
-# Backend
+# TODO
+- Fetch all articles for a collection (paginated?)
+- Link related articles
+- Figure out what to do with index pages
 
+## Basic server-side maintenance
+- Add healthcheck endpoint
+- Add proper logging
+
+
+
+
+# Backend
 - Enable api to report menu structure
   - Q: how many apps (i.e. what data) is the app going to support?
     - contextual help
