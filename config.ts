@@ -1,14 +1,14 @@
-const path = require('path');
+import path from 'path';
 
 const docsPath = path.resolve(__dirname, 'docs');
 const databaseDirectory = path.resolve(__dirname, 'build'); // FIXME?
-const databaseName = 'database.db';
+const databaseName = 'database.sqlite';
 const indexDirectory = path.resolve(__dirname, 'build/indices');
 const articlesIndexName = 'articlesIndex.json';
 const buildPath = path.resolve(__dirname, 'build');
 const buildImagesPath = path.resolve(buildPath, 'images');
 
-module.exports = {
+export default {
   buildPath,
   buildImagesPath,
   docsPath,
