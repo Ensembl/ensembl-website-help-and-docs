@@ -7,7 +7,7 @@ import {
   buildPathToRelatedItem
 } from './filePathHelpers';
 
-import { Article, Video } from '../models';
+import { Article, Video, Collection } from '../models';
 
 import { ParsedArticle } from 'src/types/ParsedArticle';
 
@@ -49,9 +49,23 @@ const addArticles = async (articles: ParsedArticle[]) => {
       }
     }
 
+    const collectionName = article.path.split('/').shift();
+    const collection = await getCollection(collectionName);
+    collection.addArticle(newArticle);
+
     Article.sync();
   }
 };
+
+const getCollection = async (name: string) => {
+  const savedCollection = await Collection.findOne({ where: { name } });
+  if (savedCollection) {
+    return savedCollection;
+  } else {
+    const collection = await Collection.create({ name });
+    return collection;
+  }
+}
 
 // const insertArticle = async (db, fileData) => {
 //   const { path, filePath, slug, html, ...otherFields } = fileData;

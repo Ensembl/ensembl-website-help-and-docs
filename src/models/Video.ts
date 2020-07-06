@@ -29,18 +29,20 @@ Video.init({
     allowNull: true
   },
   description: {
-    type: new DataTypes.TEXT('medium'),
+    type: new DataTypes.TEXT,
+    allowNull: true
+  },
+  url: {
+    type: new DataTypes.STRING(255),
     allowNull: true
   },
   data: {
-    type: new DataTypes.TEXT('long'),
+    type: new DataTypes.TEXT,
     allowNull: true
   }
 }, {
   tableName: 'videos',
   sequelize
 });
-
-sequelize.sync();
 
 export default Video;

@@ -14,7 +14,7 @@ export const getArticle = async (req: Request, res: Response) => {
 
   try {
     const article: Article = filePath
-      ? await Article.findOne({ where: { file_path: filePath } })
+      ? await Article.findOne({ where: { path: filePath } })
       : await Article.findOne({ where: { slug: slug } });
 
     if (article) {

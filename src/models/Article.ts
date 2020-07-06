@@ -50,7 +50,7 @@ Article.init({
     allowNull: false,
   },
   description: {
-    type: new DataTypes.TEXT('medium'),
+    type: new DataTypes.TEXT,
     allowNull: false,
   },
   path: {
@@ -66,11 +66,11 @@ Article.init({
     allowNull: true
   },
   body: {
-    type: new DataTypes.TEXT('long'),
+    type: new DataTypes.TEXT,
     allowNull: true
   },
   data: {
-    type: new DataTypes.TEXT('long'),
+    type: new DataTypes.TEXT,
     allowNull: true
   }
 }, {
@@ -86,7 +86,5 @@ Article.hasMany(Video, {
   foreignKey: 'articleId',
   as: 'videos'
 });
-
-sequelize.sync();
 
 export default Article;

@@ -22,7 +22,7 @@ Menu.init({
     allowNull: false,
   },
   data: {
-    type: new DataTypes.TEXT('long'),
+    type: new DataTypes.TEXT,
     allowNull: false
   }
 }, {

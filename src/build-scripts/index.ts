@@ -1,24 +1,27 @@
+import prepareDatabase from '../db/prepareDatabase';
 import readSourceFiles from './readSourceFiles';
 import addArticles from './addArticles';
-// const addVideos = require('./addVideos');
 import buildMenus from './buildMenus';
 import addMenus from './addMenus';
+import buildIndex from './build-index';
+import copyAssets from './copy-assets';
 
 
 const buildDatabase = async () => {
   try {
-    // const db = await createDatabase();
+    await prepareDatabase();
     const files = await readSourceFiles();
     await addArticles(files.articles);
+    console.log('Documentation database generated successfully');
 
     const menus = buildMenus();
     await addMenus(menus);
 
-    // await addVideos(db, files.videos);
-    // console.log('Documentation database generated successfully');
+    await buildIndex();
+
+    copyAssets();
   } catch (error) {
-    console.log('error', error);
-    // console.error('Error building the database', error);
+    console.error('Error building the database', error);
   }
 };
 
