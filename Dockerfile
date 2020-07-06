@@ -1,14 +1,13 @@
 FROM node:12.16.2
 
 ARG SOURCE_DIR="."
+ARG TARGET_DIR="/srv/ensembl-docs-server"
 
-RUN mkdir -p /srv/ensembl-docs-server
+RUN mkdir -p ${TARGET_DIR}
 
-COPY ${SOURCE_DIR} /srv/ensembl-docs-server
+COPY ${SOURCE_DIR} ${TARGET_DIR}
 
-WORKDIR /srv/ensembl-docs-server
-
-ENV NODE_ENV production
+WORKDIR ${TARGET_DIR}
 
 RUN npm ci
 RUN npm run build

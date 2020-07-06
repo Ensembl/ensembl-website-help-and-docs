@@ -1,11 +1,13 @@
 import path from 'path';
 
 const docsPath = path.resolve(__dirname, 'docs');
-const databaseDirectory = path.resolve(__dirname, 'build'); // FIXME?
+const buildPath = process.env.NODE_ENV === 'production'
+  ? path.resolve(__dirname)
+  : path.resolve(__dirname, 'build');
+const databaseDirectory = buildPath; // FIXME?
 const databaseName = 'database.sqlite';
-const indexDirectory = path.resolve(__dirname, 'build/indices');
+const indexDirectory = path.resolve(buildPath, 'indices');
 const articlesIndexName = 'articlesIndex.json';
-const buildPath = path.resolve(__dirname, 'build');
 const buildImagesPath = path.resolve(buildPath, 'images');
 
 export default {
