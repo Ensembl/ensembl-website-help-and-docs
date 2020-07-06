@@ -1,5 +1,5 @@
 import visit from 'unist-util-visit';
-import {Node} from 'unist'
+import { Node } from 'unist'
 
 import config from '../../config';
 
@@ -20,13 +20,7 @@ const imageVisitor = (filePath: string) => (node: Node) => {
     .join('/');
   const destPath = `/images/${markdownDirectory}/${node.url}`;
 
-  let host;
-  if (process.env.NODE_ENV === 'production') {
-    host = 'http://193.62.55.158:30799';
-  } else {
-    // FIXME: this should also come from the config
-    host = 'http://127.0.0.1:3000';
-  }
+  const { host } = config;
   node.url = `${host}${destPath}`;
 };
 
