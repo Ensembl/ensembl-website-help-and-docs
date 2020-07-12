@@ -36,6 +36,6 @@ build:
 deploy:
   extends: .deploy
   environment:
-    name : ehk-sbox
+    name : wp-hx-dev
   # only:
   #   - master
