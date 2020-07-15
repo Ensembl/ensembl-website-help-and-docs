@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { Article } from '../models';
+import { Article, Video } from '../models';
 
 export const getArticle = async (req: Request, res: Response) => {
   const slug = req.query.slug as string | undefined;
@@ -13,17 +13,33 @@ export const getArticle = async (req: Request, res: Response) => {
   }
 
   try {
-    const article: Article = filePath
-      ? await Article.findOne({ where: { path: filePath } })
-      : await Article.findOne({ where: { slug: slug } });
+    const searchKey = slug ? 'slug' : 'path';
+    const searchValue = slug ? slug : filePath as string;
+
+    const article: Article | null = await Article.findOne({
+      where: { [searchKey]: searchValue },
+      include: [
+        {
+          model: Video,
+          as: 'videos',
+          attributes: [ 'id', 'title', 'description', 'url' ]
+        },
+        {
+          model: Article,
+          as: 'relatedArticles',
+          attributes: [ 'id', 'title', 'slug' ],
+          through: { attributes: [] }
+        }
+      ]
+    });
 
     if (article) {
-      const videos = await article.getVideos();
       res.json({
         path: article.path,
         slug: article.slug,
         body: article.body,
-        videos
+        related_articles: article.relatedArticles,
+        videos: article.videos
         // data: match.data
       });
     } else {
@@ -33,6 +49,7 @@ export const getArticle = async (req: Request, res: Response) => {
       });
     }
   } catch (error) {
+    console.log('error', error);
     res.status(500);
     res.json({
       error: 'There was an error processing your request'

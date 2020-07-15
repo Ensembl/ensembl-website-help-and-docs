@@ -28,9 +28,11 @@ class Article extends Model {
   public getVideos: HasManyGetAssociationsMixin<Video>;
   public hasVideos: HasManyHasAssociationMixin<Video, number>;
 
+  public addRelatedArticle: HasManyAddAssociationMixin<Article, number>;
   public getRelatedArticles: HasManyGetAssociationsMixin<Article>;
   public hasRelatedArticles: HasManyHasAssociationMixin<Article, number>;
 
+  public readonly relatedArticles?: Article[];
   public readonly videos?: Video[];
 
   public static associations: {
@@ -78,8 +80,9 @@ Article.init({
   sequelize
 });
 
-Article.hasMany(Article, {
-  as: 'relatedArticles'
+Article.belongsToMany(Article, {
+  as: 'relatedArticles',
+  through: 'article_relationships'
 });
 
 Article.hasMany(Video, {
