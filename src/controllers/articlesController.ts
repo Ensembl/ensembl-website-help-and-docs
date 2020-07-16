@@ -27,7 +27,7 @@ export const getArticle = async (req: Request, res: Response) => {
         {
           model: Article,
           as: 'relatedArticles',
-          attributes: [ 'id', 'title', 'slug' ],
+          attributes: [ 'id', 'title', 'slug', 'path' ],
           through: { attributes: [] }
         }
       ]
