@@ -30,12 +30,12 @@ variables:
 
 build:
   extends: .build
-  only:
-    - master
+  # only:
+  #   - master
     
 deploy:
   extends: .deploy
   environment:
-    name : ehk-sbox
-  only:
-    - master
+    name : wp-hx-dev
+  # only:
+  #   - master

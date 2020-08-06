@@ -1,18 +1,18 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata: 
-  name: ensembl-docs-prototype-deployment
+  name: ensembl-help-and-docs-deployment
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: ensembl-docs-prototype
+        app: ensembl-help-and-docs
     spec:
       imagePullSecrets:
-        - name: ensembl-docs-prototype-secret
+        - name: ensembl-help-and-docs-pull-secret
       containers:
-      - name: ensembl-docs-prototype
+      - name: ensembl-help-and-docs
         image: <DOCKER_IMAGE>
         command: [ "npm", "run", "start-server" ]
         ports:

@@ -1,0 +1,14 @@
+- name: Genome browser
+  href: genome-browser
+- name: Entity viewer
+  href: blah
+- name: Sequence viewer
+  href: blah
+- name: Variation viewer
+  href: blah
+- name: Comparative views
+  href: blah
+- name: Pairwise & polyglot views
+  href: blah
+- name: Looking at genes & transcripts
+  href: blah

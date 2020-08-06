@@ -1,0 +1,22 @@
+- name: Viewing Ensembl data
+  href: viewing-ensembl-data
+- name: Getting Ensembl data
+  href: blah
+- name: Using other data
+  href: blah
+- name: Tools
+  href: blah
+- name: External references
+  href: external-references.md
+- name: Glossary
+  href: glossary.md
+- name: How to set up a local mirror
+  href: local-mirror.md
+- name: Sharing
+  href: sharing.md
+- name: Exporting images
+  href: exporting-images.md
+- name: Citing Ensembl
+  href: citing-ensembl.md
+- name: Roadmap
+  href: roadmap.md
