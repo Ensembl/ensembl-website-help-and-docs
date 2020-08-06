@@ -9,16 +9,12 @@
     "prebuild": "npm run clean",
     "build": "mkdirp build && ts-node ./src/build-scripts/index.ts && npm run build-server",
     "build-server": "tsc",
-    "start-server": "NODE_ENV=production node build/src/server/index.js",
-    "eleventy-clean": "rm -rf _site",
-    "start-eleventy": "npm run eleventy-clean && eleventy --serve",
-    "eleventy-build": "eleventy"
+    "start-server": "NODE_ENV=production node build/src/server/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@11ty/eleventy": "0.11.0",
     "cors": "2.8.5",
     "cross-fetch": "3.0.4",
     "express": "4.17.1",

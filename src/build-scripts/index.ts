@@ -13,5 +13,11 @@ const build = async () => {
 };
 
 (async () => {
-  await build();
+  try {
+    await build();
+    process.exit(0);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
 })();
