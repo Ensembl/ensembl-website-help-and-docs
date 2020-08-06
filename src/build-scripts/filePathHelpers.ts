@@ -25,7 +25,6 @@ type BuildPathToRelatedItemParams = {
 // transforms absolute file path to the path relative to the documents root
 export const fromDocumentsRoot = (absFilePath: string) => {
   const [_, filePath] = absFilePath.split(config.docsPath);
-  console.log('absFilePath', absFilePath, 'filePath', filePath);
   return filePath;
 };
 

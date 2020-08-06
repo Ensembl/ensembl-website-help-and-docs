@@ -1,9 +1,11 @@
 import path from 'path';
 
 const host = process.env.HOST || 'http://127.0.0.1:3000';
+const isProduction = process.env.NODE_ENV === 'production';
+const isBuildingDocs = process.env.NODE_ENV === 'build-docs';
 
 const docsPath = path.resolve(__dirname, 'docs');
-const buildPath = process.env.NODE_ENV === 'production'
+const buildPath = isProduction
   ? path.resolve(__dirname)
   : path.resolve(__dirname, 'build');
 const databaseDirectory = buildPath; // FIXME?
@@ -14,6 +16,8 @@ const buildImagesPath = path.resolve(buildPath, 'images');
 
 export default {
   host,
+  isProduction,
+  isBuildingDocs,
   buildPath,
   buildImagesPath,
   docsPath,

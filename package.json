@@ -6,8 +6,9 @@
   "scripts": {
     "clean": "rm -rf ./build",
     "dev": "ts-node-dev --respawn --transpileOnly src/server/index.ts",
-    "prebuild": "npm run clean",
-    "build": "mkdirp build && ts-node ./src/build-scripts/index.ts && npm run build-server",
+    "prebuild": "npm run clean && mkdirp build",
+    "build": "npm run build-docs && npm run build-server",
+    "build-docs": "NODE_ENV=build-docs ts-node ./src/build-scripts/index.ts",
     "build-server": "tsc",
     "start-server": "NODE_ENV=production node build/src/server/index.js"
   },
@@ -23,7 +24,6 @@
     "lodash": "4.17.19",
     "lunr": "2.3.8",
     "sequelize": "6.3.4",
-    "sqlite": "4.0.12",
     "sqlite3": "5.0.0"
   },
   "devDependencies": {
