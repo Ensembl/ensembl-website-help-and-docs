@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
 
-import config from '../../config';
+import config from '../../../config';
 
 import { MenuItem } from 'src/types/ParsedMenu';
 

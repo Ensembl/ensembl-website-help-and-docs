@@ -1,7 +1,7 @@
 import visit from 'unist-util-visit';
 import { Node } from 'unist'
 
-import config from '../../config';
+import config from '../../../config';
 
 const attacher = () => {
   const transformer = (tree: Node, file: any) => {

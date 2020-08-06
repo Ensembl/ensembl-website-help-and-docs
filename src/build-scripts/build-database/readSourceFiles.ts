@@ -2,12 +2,12 @@ import fs from 'fs';
 import globby from 'globby';
 import yaml from 'yaml';
 
-import config from '../../config';
+import config from '../../../config';
 import parseMarkdown from './parseMarkdown';
 import {
   slugifyPath,
   stripFileExtensions
- } from './filePathHelpers';
+ } from '../filePathHelpers';
 
 const readSourceFiles = async () => {
   const { docsPath } = config;

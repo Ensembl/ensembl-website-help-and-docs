@@ -1,30 +1,17 @@
-import prepareDatabase from '../db/prepareDatabase';
-import readSourceFiles from './readSourceFiles';
-import addArticles from './addArticles';
-import buildMenus from './buildMenus';
-import addMenus from './addMenus';
+import buildDatabase from './build-database';
 import buildIndex from './build-index';
-import copyAssets from './copy-assets';
+import copyAssets from './/copy-assets';
 
-
-const buildDatabase = async () => {
+const build = async () => {
   try {
-    await prepareDatabase();
-    const files = await readSourceFiles();
-    await addArticles(files.articles);
-    console.log('Documentation database generated successfully');
-
-    const menus = buildMenus();
-    await addMenus(menus);
-
+    await buildDatabase();
     await buildIndex();
-
-    copyAssets();
+    await copyAssets();
   } catch (error) {
-    console.error('Error building the database', error);
+    console.error('Error building the project', error);
   }
 };
 
 (async () => {
-  await buildDatabase();
+  await build();
 })();

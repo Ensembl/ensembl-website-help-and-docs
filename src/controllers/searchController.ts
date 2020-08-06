@@ -4,9 +4,6 @@ import lunr from 'lunr';
 
 import config from '../../config';
 import { Article } from '../models';
-// const fs = require('fs');
-
-
 
 const articlesIndexPath = config.articlesIndexPath;
 const articlesIndex = require(articlesIndexPath);
@@ -21,7 +18,6 @@ export const search = async (req: Request, res: Response) => {
   }
 
   const searchResults = searchIndex(query, articlesIndex);
-  console.log('searchResults', searchResults);
 
   try {
     const paths: string[] = searchResults.map((result: any) => result.ref);
@@ -37,10 +33,7 @@ export const search = async (req: Request, res: Response) => {
       searchResults
     })
   }
-}
-
-
-
+};
 
 const searchIndex = (query: string, index: string) => {
   const idx = lunr.Index.load(index);
