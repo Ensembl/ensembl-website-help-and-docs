@@ -7,7 +7,7 @@ export class Video extends Model {
   public file_path: string;
   public title: string;
   public description: string;
-  public url: string;
+  public youtube_id: string;
   public data: string;
 
   public readonly createdAt: Date;
@@ -32,7 +32,7 @@ Video.init({
     type: new DataTypes.TEXT,
     allowNull: true
   },
-  url: {
+  youtube_id: {
     type: new DataTypes.STRING(255),
     allowNull: true
   },

@@ -9,8 +9,7 @@ import {
 
 import { Article, Video, Collection } from '../../models';
 
-import { ParsedArticle } from 'src/types/ParsedArticle';
-import { search } from 'src/controllers/searchController';
+import { ParsedArticle } from '../../types/ParsedArticle';
 
 const addArticles = async (articles: ParsedArticle[]) => {
   // first, save all articles to db
@@ -78,7 +77,7 @@ const createArticle = async (article: ParsedArticle) => {
       const video = await Video.create({
         title: parsedVideo.title,
         description: parsedVideo.description,
-        url: parsedVideo.url,
+        youtube_id: parsedVideo.youtube_id,
         file_path: fromDocsPath
       });
 

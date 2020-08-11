@@ -22,7 +22,7 @@ export const getArticle = async (req: Request, res: Response) => {
         {
           model: Video,
           as: 'videos',
-          attributes: [ 'id', 'title', 'description', 'url' ]
+          attributes: [ 'id', 'title', 'description', 'youtube_id' ]
         },
         {
           model: Article,
