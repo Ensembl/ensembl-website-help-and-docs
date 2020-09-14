@@ -1,4 +1,2 @@
-- name: Using genome browser
+- name: Using the Genome Browser
   href: using-the-genome-browser.md
-- name: Custom tracks
-  href: custom-tracks.md

@@ -1,5 +1,0 @@
----
-status: published
----
-
-# Exporting images

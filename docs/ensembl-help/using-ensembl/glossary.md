@@ -1,5 +1,0 @@
----
-status: published
----
-
-# Glossary
