@@ -1,0 +1,16 @@
+metadata:
+  title: Getting Started
+  description: Learn how to start using Ensembl website
+  type: landing-page
+
+content:
+
+  - title: What is Ensembl
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas mauris condimentum tempor vulputate.
+    link_text: See more
+    link: what-is-ensembl.md
+
+  - title: About the site
+    description: Sed luctus cursus urna, eu ornare mi ullamcorper gravida. Sed et congue purus.
+    link_text: See more
+    link: about-the-site.md

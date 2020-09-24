@@ -1,3 +1,5 @@
+---
+slug: using-the-entity-viewer
 parent: viewing-ensembl-data
 tags:
   - genes, transcripts

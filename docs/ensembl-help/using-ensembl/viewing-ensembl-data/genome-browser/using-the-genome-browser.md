@@ -1,4 +1,5 @@
 ---
+slug: using-the-genome-browser
 parent: viewing-ensembl-data
 tags:
   - browser

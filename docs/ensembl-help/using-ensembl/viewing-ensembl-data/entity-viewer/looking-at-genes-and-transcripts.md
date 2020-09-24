@@ -1,3 +1,5 @@
+---
+slug: looking-at-genes-and-transcripts
 parent: viewing-ensembl-data
 tags:
   - genes, transcripts
