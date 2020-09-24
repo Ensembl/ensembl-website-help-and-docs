@@ -1,10 +1,2 @@
-- name: What is Ensembl
-  href: what-is-ensembl.md
-- name: About the site
-  href: about-the-site.md
-- name: Selecting a species
+- name: Selecting a species or assembly
   href: selecting-a-species.md
-- name: Search
-  href: search.md
-- name: FAQs
-  href: faq.md

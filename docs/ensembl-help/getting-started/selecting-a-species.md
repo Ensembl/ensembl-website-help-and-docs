@@ -2,19 +2,14 @@
 slug: selecting-a-species
 title: Select a species or assembly
 description: In order to start using Ensembl website, you first need to select a species.
-related_videos:
-  - relativePath: videos/select-a-species.yml
-  - relativePath: videos/genome-browser.yml
-related_articles:
-  - relativePath: search.md
-  - docsRootPath: ensembl-help/using-ensembl/viewing-ensembl-data/genome-browser/using-the-genome-browser.md
-status: published
+status: draft
 ---
 
-# Select a species or assembly
+# Selecting a species or assembly
 
-## This is updated text 
+In order to start using Ensembl website, you first need to select a species or assembly. There are two main ways to do this:
 
-Here is example image: ![image](media/american-red-squirrel.jpg)
+- Click on one of the icons representing our 42 most popular species
+- Type into the search box
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam egestas mauris condimentum tempor vulputate. Sed luctus cursus urna, eu ornare mi ullamcorper gravida. Sed et congue purus. Pellentesque eu turpis sit amet ligula malesuada condimentum quis vitae justo. Aenean mattis efficitur nisl. Aenean tortor leo, tempor a justo eget, tincidunt faucibus purus. Praesent at lacinia ligula. Proin lacus justo, finibus vehicula condimentum a, auctor eget tortor. Nam feugiat imperdiet lectus, sed pellentesque arcu facilisis et. Duis vel est lorem. Mauris varius lectus eget tincidunt lacinia.
+You can add as many species as you like. Click on the blue button displaying the name of the species to find out more about this assembly and its annotation.
