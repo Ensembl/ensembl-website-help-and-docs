@@ -1,5 +1,7 @@
 ---
 slug: action-buttons
+title: Action buttons
+description: Managing tracks and personal data in genome browser
 parent: viewing-ensembl-data
 tags:
   - browser

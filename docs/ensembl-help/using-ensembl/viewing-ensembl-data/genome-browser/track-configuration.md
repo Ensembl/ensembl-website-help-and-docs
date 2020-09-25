@@ -1,6 +1,7 @@
 ---
 slug: track-configuration
-parent: viewing-ensembl-data
+title: Track configuration
+description: How to configure individual tracks in Ensembl genome browser
 tags:
   - browser
 status: draft

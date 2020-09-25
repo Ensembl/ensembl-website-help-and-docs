@@ -1,8 +1,10 @@
 ---
 slug: using-the-entity-viewer
-parent: viewing-ensembl-data
+title: Using the Entity Viewer
+description: Overview of Ensembl entity viewer
 tags:
-  - genes, transcripts
+  - genes
+  - transcripts
 status: draft
 ---
 

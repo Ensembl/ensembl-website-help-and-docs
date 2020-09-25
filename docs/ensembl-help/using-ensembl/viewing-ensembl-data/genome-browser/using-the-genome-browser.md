@@ -1,6 +1,7 @@
 ---
 slug: using-the-genome-browser
-parent: viewing-ensembl-data
+title: Using the genome browser
+description: How to browse genes, variants, and other features aligned to the reference genome
 tags:
   - browser
 status: draft
