@@ -55,7 +55,7 @@ Example: `![this is alt text that appears if image doesn't show up](media/my-ima
   - `title` — title of the video
   - `description` — description of the video
   - `youtube_id` — video id copied from a youtube url (**note:** only the id, not the full url)
-- Add the `related_videos` field to the frontmatter of your documentation file. The `related_videos` field should contain a yaml list with a path to your video. For instructions on how to write such a path, [see this section](#paths-to-related-files).
+- Add the `related_videos` field to the frontmatter of your documentation file. The `related_videos` field should contain a yaml list with a path to your video. For instructions on how to write such a path, see [this section](#paths-to-related-files).
 
 Using this option will allow us to extract the video and to display it side by side with the body of the article, in a way shown in [this design](https://xd.adobe.com/view/d64fc883-dc95-4d08-63a3-483f9c772ec1-a07e/screen/690c281b-e3ad-4c8f-9566-2b6745ea0fee?fullscreen).
 
@@ -70,12 +70,20 @@ Here is my first paragraph, right before the video.
 Here is my second paragraph, right after the video.
 ```
 
+## How to link articles to one another
+
+### Option 1: Linking in the yaml frontmatter
+You can list all the articles that are related to the current article in the yaml frontmatter. To do so, add a `related_articles` field, which should contain a yaml list of paths to related articles. See [this section](#paths-to-related-files) for instructions on how to write paths to files in the frontmatter.
+
+### Option 2: Linking from within the body of the article
+[TODO]: to be added.
+
 ## Paths to related files
-We are using the following two keywords for linking files to one another:
+Files can be linked to one another in the yaml frontmatter using the following two keywords:
 - `relative_path`
 - `docs_root_path`
 
-These keywords are reminiscent of relative and absolute paths in the file system. `relative_path` means a path to the other file starting from the directory that your current article is in. `docs_root_path` means a path starting from the root for the documents, i.e. from the `docs` directory.
+The concepts represented by these keywords are similar to relative and absolute paths in the file system. `relative_path` means a path to the other file starting from the directory that your current article is in. `docs_root_path` means a path starting from the documents root, i.e. from the `docs` directory.
 
 Example. For the following directory tree:
 
