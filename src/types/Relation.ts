@@ -1,9 +1,9 @@
 type RelativePathRelation = {
-  relativePath: string;
+  relative_path: string;
 };
 
 type RootPathRelation = {
-  docsRootPath: string;
+  docs_root_path: string;
 };
 
 type SlugRelation = {
