@@ -1,6 +1,7 @@
 ---
 slug: selecting-a-species
-parent: species-selector
+title: Selecting a species
+description: How to select a species and genome assembly of interest using the species selector
 tags:
   - species selector
 status: draft
