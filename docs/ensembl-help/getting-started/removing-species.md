@@ -2,7 +2,6 @@
 slug: removing-species
 title: Removing species
 description: How to remove selected species from the Species Selector
-parent: species-selector
 tags:
   - species selector
 status: draft
