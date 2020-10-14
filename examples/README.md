@@ -55,7 +55,7 @@ Example: `![this is alt text that appears if image doesn't show up](media/my-ima
   - `title` — title of the video
   - `description` — description of the video
   - `youtube_id` — video id copied from a youtube url (**note:** only the id, not the full url)
-- Add the `related_videos` field to the frontmatter of your documentation file. The `related_videos` field should contain a yaml list with a path to your video.
+- Add the `related_videos` field to the frontmatter of your documentation file. The `related_videos` field should contain a yaml list with a path to your video. For instructions on how to write such a path, see [this section](#paths-to-related-files).
 
 Using this option will allow us to extract the video and to display it side by side with the body of the article, in a way shown in [this design](https://xd.adobe.com/view/d64fc883-dc95-4d08-63a3-483f9c772ec1-a07e/screen/690c281b-e3ad-4c8f-9566-2b6745ea0fee?fullscreen).
 
@@ -69,6 +69,65 @@ Here is my first paragraph, right before the video.
 
 Here is my second paragraph, right after the video.
 ```
+
+## How to link articles to one another
+
+### Option 1: Linking in the yaml frontmatter
+You can list all the articles that are related to the current article in the yaml frontmatter. To do so, add a `related_articles` field, which should contain a yaml list of paths to related articles. See [this section](#paths-to-related-files) for instructions on how to write paths to files in the frontmatter.
+
+### Option 2: Linking from within the body of the article
+[TODO]: to be added.
+
+## Paths to related files
+Files can be linked to one another in the yaml frontmatter using the following two keywords:
+- `relative_path`
+- `docs_root_path`
+
+The concepts represented by these keywords are similar to relative and absolute paths in the file system. `relative_path` means a path to the other file starting from the directory that your current article is in. `docs_root_path` means a path starting from the documents root, i.e. from the `docs` directory.
+
+Example. For the following directory tree:
+
+```
+docs/
+└── ensembl-help
+    ├── getting-started
+    │   ├── selecting-a-species.md
+    |   ├── search.md
+    │   └── videos
+    |       └── select-a-species.yml
+    └── using-ensembl
+        └── using-the-genome-browser.md
+```
+
+Given that you are currently editing `selecting-a-species.md` file, you may refer from it to the `select-a-species.yml` video file as follows:
+
+```yml
+related_videos:
+  - relative_path: videos/select-a-species.yml
+```
+
+or
+
+```yml
+related_videos:
+  - docs_root_path: ensembl-help/getting-started/videos/select-a-species.yml
+```
+
+Similarly, you can refer from `selecting-a-species.md` file to the `using-the-genome-browser.md` file as follows:
+
+```yml
+related_articles:
+  - relative_path: ../using-ensembl/using-the-genome-browser.md
+```
+
+or
+
+```yml
+related_articles:
+  - docs_root_path: ensembl-help/using-ensembl/using-the-genome-browser.md
+```
+
+You will notice that relative paths may be more convenient to use if the target file is down the same branch of the directory tree as the current file; while docs root paths my be more convenient to use if the target files is on a different branch of the directory tree.
 
 # Prior art
 The structure of this documentation project is inspired by [Microsoft's repository for Azure docs](https://github.com/MicrosoftDocs/azure-docs), which provides a living example that storing documentation in markdown and yaml files, together with the folder hierarchy that mirrors the hierarchy of the documentation site, is powerful enough to serve even large-scale documentation projects.

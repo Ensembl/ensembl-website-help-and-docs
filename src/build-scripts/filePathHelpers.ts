@@ -31,11 +31,11 @@ export const fromDocumentsRoot = (absFilePath: string) => {
 export const buildPathToRelatedItem = (params: BuildPathToRelatedItemParams) => {
   const { sourceFilePath, relation, returnAbsolutePath } = params;
   let relationPath;
-  if ('docsRootPath' in relation) {
-    relationPath = relation.docsRootPath;
-  } else if ('relativePath' in relation) {
+  if ('docs_root_path' in relation) {
+    relationPath = relation.docs_root_path;
+  } else if ('relative_path' in relation) {
     const currentDirPath = sourceFilePath.split('/').slice(0, -1).join('/');
-    relationPath = path.join(currentDirPath, relation.relativePath);
+    relationPath = path.join(currentDirPath, relation.relative_path);
   }
   if (returnAbsolutePath) {
     return path.join(config.docsPath, relationPath);
