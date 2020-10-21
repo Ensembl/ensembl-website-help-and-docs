@@ -37,6 +37,7 @@ export const getArticle = async (req: Request, res: Response) => {
       res.json({
         path: article.path,
         slug: article.slug,
+        title: article.title,
         body: article.body,
         related_articles: article.relatedArticles,
         videos: article.videos
