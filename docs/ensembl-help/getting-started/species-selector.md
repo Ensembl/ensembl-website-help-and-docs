@@ -4,6 +4,11 @@ title: Species selector
 description: How to select a species and genome assembly of interest to visualise in the genome browser and entitiy viewer
 tags:
   - species selector
+related_articles:
+  - relative_path: selecting-a-species.md
+  - relative_path: removing-species.md
+related_videos:
+  - relative_path: videos/find-and-add-species.yml
 status: draft
 ---
 
