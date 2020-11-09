@@ -1,7 +1,10 @@
 ---
 slug: using-the-genome-browser
-title: Using the genome browser
+title: Genome Browser
 description: How to browse genes, variants, and other features aligned to the reference genome
+related_articles:
+  - relative_path: action-buttons.md
+  - relative_path: track-configuration.md
 tags:
   - browser
 status: draft
