@@ -1,2 +1,4 @@
-- name: Selecting a species or assembly
-  href: selecting-a-species.md
+- name: Species selector
+  href: species-selector.md
+- name: Species homepage
+  href: species-homepage.md

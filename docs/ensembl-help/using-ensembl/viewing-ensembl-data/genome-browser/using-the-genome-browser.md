@@ -5,8 +5,6 @@ description: How to browse genes, variants, and other features aligned to the re
 related_articles:
   - relative_path: action-buttons.md
   - relative_path: track-configuration.md
-related_videos:
-  - relative_path: videos/genome-browser.yml
 tags:
   - browser
 status: draft
