@@ -28,6 +28,7 @@ variables:
     - kubectl apply -f k8s/deployment.yaml
     - kubectl apply -f k8s/service-node.yaml
 
+# Template to deploy to staging, internal, prod
 .deploy-wp:
   stage: deploy
   image: dockerhub.ebi.ac.uk/ensembl-web/deploy-tools:0.1
@@ -45,7 +46,6 @@ deploy:
     name : wp-hx-dev
   except:
   - master
-  - deploy-all-env
 
 
 # Job to deploy to staging environment (WP-HX k8s cluster)
@@ -55,7 +55,6 @@ Staging:WP-HX:
     name : wp-hx-staging
   only:
   - master
-  - deploy-all-env
 
 
 # Job to deploy to staging environment (WP-HH k8s cluster)
@@ -65,7 +64,6 @@ Staging:WP-HH:
     name : wp-hh-staging
   only:
   - master
-  - deploy-all-env
 
 
 # Job to deploy to internal environment (WP-HX k8s cluster)
@@ -75,7 +73,6 @@ Internal:WP-HX:
     name : wp-hx-internal
   only:
   - master
-  - deploy-all-env
 
 # Job to deploy to internal environment (WP-HH k8s cluster)
 Internal:WP-HH:
@@ -84,7 +81,6 @@ Internal:WP-HH:
     name : wp-hh-internal
   only:
   - master
-  - deploy-all-env
 
 # Job to deploy to live environment (WP-HX k8s cluster)
 Live:WP-HX:
@@ -93,7 +89,6 @@ Live:WP-HX:
     name : wp-hx-live
   only:
   - master
-  - deploy-all-env
 
 # Job to deploy to live environment (WP-HH k8s cluster)
 Live:WP-HH:
@@ -102,4 +97,3 @@ Live:WP-HH:
     name : wp-hh-live
   only:
   - master
-  - deploy-all-env
