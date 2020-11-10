@@ -1,0 +1,15 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /api/$2
+  name: ensembl-help-docs-ingress
+spec:
+  rules:
+  - host: <HOST>
+    http:
+      paths:
+      - backend:
+          serviceName: ensembl-help-and-docs-svc
+          servicePort: 8000
+        path: /help-api($|/)(.*)
