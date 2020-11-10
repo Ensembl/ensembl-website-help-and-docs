@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ensembl-help-and-docs-svc
+  labels:
+    app: ensembl-help-and-docs-svc
+spec:
+  selector:
+    app: ensembl-help-and-docs
+  type: ClusterIP
+  ports:
+    - port: 8000
+      protocol: TCP
+      targetPort: 3000
