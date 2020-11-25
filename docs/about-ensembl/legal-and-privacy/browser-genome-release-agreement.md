@@ -14,7 +14,7 @@ The purpose of this document is to establish a common set of minimum requirement
 ## Background
 Previously, the only agreement among the major browsers was to display the same set of reference coordinates for the human genome reference assembly. This has largely extended to other organisms as well, but issues remain that can lead to differences in the data provided by the browsers. The issue that likely causes the largest number of problems is the annotation and display of genome assembly data prior to deposition of the genome assembly to the International Nucleotide Sequence Database Collaboration (INSDC), commonly referred to as DDBJ/EMBL/GenBank. The most common problems are (in increasing order of severity):
 
-###Inconsistent sequence identifiers amongst browsers.
+### Inconsistent sequence identifiers amongst browsers.
 
 Inconsistent sequence identifiers increase the level of difficulty when trying to exchange annotation sets. This has been apparent as NCBI and Ensembl have tried to exchange gene model datasets for organisms other than human and mouse. Of note, all browsers get these two assemblies from a single source.
 
@@ -50,7 +50,7 @@ Practical application:
 
 ### All browsers will refer to any given assembly by the same name, preferably a submitter approved name. This should be collected at the time of assembly submission and guidance should be given to the submitted group in terms of selecting an appropriate name.
 
-Practical application:
+Practical applications:
 
 * There are several assemblies submitted that have no real submitter approved name. In these cases, every effort should be made by the browsers to reconcile the names/assemblies so that it is clear to users what data is being supplied at each browser and that data exchange between the browsers/annotation groups is facilitated.
 * Browser-specific assembly names are permitted only as an adjunct to the official, submitter-approved name, not as a replacement for the official name.
