@@ -5,7 +5,7 @@ description: How to browse genes, variants, and other features aligned to the re
 related_articles:
   - relative_path: navigation.md
   - relative_path: tracks.md
-  - relative_path: focus_entity.md
+  - relative_path: focus-entity.md
 tags:
   - browser
 status: draft
@@ -32,7 +32,7 @@ You can [navigate around this region](navigation.md) using the Navigation bar ab
 
 ## Navigation bar
 
-You can see the genome coordinates of your region of interest in the Navigation bar. If you have a [Focus entity](focus_entity.md), details of this will be displayed too. You can expand the [Navigation bar to change your region](navigation.md).
+You can see the genome coordinates of your region of interest in the Navigation bar. If you have a [Focus entity](focus-entity.md), details of this will be displayed too. You can expand the [Navigation bar to change your region](navigation.md).
 
 ## Track panel
 
