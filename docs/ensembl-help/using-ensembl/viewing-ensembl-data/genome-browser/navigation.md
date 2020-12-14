@@ -5,7 +5,7 @@ description: How to navigate around the genomic regions with the genome browser
 related_articles:
   - relative_path: browser.md
   - relative_path: tracks.md
-  - relative_path: focus_entity.md
+  - relative_path: focus-entity.md
 tags:
   - browser
 status: draft
@@ -21,4 +21,4 @@ You can expand the Navigation bar by clicking on the blue coordinates. This will
 
 ![The Navigation bar](navigation_bar.png)
 
-The coordinates of the [focus entity](focus_entity.md) are shown on the left of the Navigation bar. As you move around using either the Navigation bar or the mouse actions, the focus entity coordinates remain constant. To return to the region of your focus entity, click on the target icon on the left, which will be blue when you are away from the focus entity. When you are looking at the focus entity, the target icon will be grey.
+The coordinates of the [Focus entity](focus-entity.md) are shown on the left of the Navigation bar. As you move around using either the Navigation bar or the mouse actions, the focus entity coordinates remain constant. To return to the region of your focus entity, click on the target icon on the left, which will be blue when you are away from the focus entity. When you are looking at the focus entity, the target icon will be grey.
