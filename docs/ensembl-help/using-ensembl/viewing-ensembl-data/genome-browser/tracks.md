@@ -5,7 +5,7 @@ description: How to configure individual tracks in Ensembl genome browser
 related_articles:
   - relative_path: navigation.md
   - relative_path: browser.md
-  - relative_path: focus_entity.md
+  - relative_path: focus-entity.md
 tags:
   - browser
 status: draft
