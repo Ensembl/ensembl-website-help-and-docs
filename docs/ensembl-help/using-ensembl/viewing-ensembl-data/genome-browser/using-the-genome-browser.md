@@ -28,7 +28,7 @@ The main part of the page is the browser image, showing your region or entity of
 
 Tracks are sets of data that can be plotted against the genome, such as transcripts, genetic variation or conserved regions. You can change which tracks you can see or the appearance of the tracks using the [Track panel or the cog icons in the browser image](tracks.md).
 
-You can [navigate around this region](navigation.md) using the Navigation bar above it or by mouse scrolling. You can click on features in the tracks to learn more about them and go to the [Entity viewer app](link to EV docs).
+You can [navigate around this region](navigation.md) using the Navigation bar above it or by mouse scrolling. You can click on features in the tracks to learn more about them and go to the [Entity viewer app](../entity-viewer/entity-viewer.md).
 
 ## Navigation bar
 
@@ -40,7 +40,7 @@ The track panel lists all available tracks that can be viewed in the browser. Yo
 
 ## Genome tabs
 
-The Genome tabs display the genomes you have chosen to look at using the [Species Selector app](link to SS docs), which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
+The Genome tabs display the genomes you have chosen to look at using the [Species Selector app](../species-selector/species-selector.md), which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
 
 ## Action bar
 
