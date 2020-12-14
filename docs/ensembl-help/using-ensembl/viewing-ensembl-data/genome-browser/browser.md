@@ -1,6 +1,6 @@
 ---
 slug: browser
-title: What is the genome browser?
+title: What is the Genome browser?
 description: How to browse genes, variants, and other features aligned to the reference genome
 related_articles:
   - relative_path: navigation.md
@@ -11,9 +11,9 @@ tags:
 status: draft
 ---
 
-# What is the genome browser?
+# What is the Genome browser?
 
-The genome browser displays a genomic region of interest. There are five parts to this page:
+The Genome browser displays a genomic region of interest. There are five parts to this page:
 * Browser image
 * Navigation bar
 * Track panel
