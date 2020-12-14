@@ -1,40 +1,47 @@
 ---
-slug: using-the-genome-browser
-title: Genome Browser
+slug: browser
+title: What is the genome browser?
 description: How to browse genes, variants, and other features aligned to the reference genome
 related_articles:
-  - relative_path: action-buttons.md
-  - relative_path: track-configuration.md
+  - relative_path: navigation.md
+  - relative_path: tracks.md
+  - relative_path: focus_entity.md
 tags:
   - browser
 status: draft
 ---
 
-# Genome Browser
+# What is the genome browser?
 
-The Genome Browser App allows you to browse genes, variants and other annotation features aligned to the reference genome.
+The genome browser displays a genomic region of interest. There are five parts to this page:
+* Browser image
+* Navigation bar
+* Track panel
+* Genome tabs
+* Action bar
 
-The Genome Browser is divided into a number of sections:
+![The Genome browser app](browser.png)
 
- - Species Tabs
- - Navigation Bar
- - Genome Browser
- - Track Panel
-  
-### Species Tabs
- 
-The species of interest and the genome assemblies are listed in the Species Tabs at the top of the page. You can navigate between the different selected species by clicking on the individual species tab. You can add or change the species of interest by clicking on 'Change' in the Species panel to navigate to the Species Selector.
+## Browser image
 
-### Navigation Bar
+The main part of the page is the browser image, showing your region or entity of interest and tracks of the genomic features within that region, with the genome shown horizontally. If you have gone to the genome browser by searching for a gene or other entity, this will be highlighted as your focus entity. 
 
-The chromosome/scaffold number and genomic coordinates are displayed in the navigation bar above the genome browser display. Clicking on the coordinates will show/hide options to zoom in/out of the genomic region of interest or to scroll upstream/downstream along the genome. 
+Tracks are sets of data that can be plotted against the genome, such as transcripts, genetic variation or conserved regions. You can change which tracks you can see or the appearance of the tracks using the [Track panel or the cog icons in the browser image](tracks.md).
 
-To search for a new genomic region of interest, click on 'Change' within the navigation bar and enter genomic coordinates, e.g 4:122868000-122946000.
+You can [navigate around this region](navigation.md) using the Navigation bar above it or by mouse scrolling. You can click on features in the tracks to learn more about them and go to the [Entity viewer app](link to EV docs).
 
-### Genome Browser
-The Genome Browser presents data in tracks, which are each aligned to the reference genome assembly.
+## Navigation bar
 
-You can scroll upstream/downstream by clicking and dragging on the Genome Browser with your cursor. You can zoom in/out by hovering your cursor on the Genome browser and scrolling up/down.
+You can see the genome coordinates of your region of interest in the Navigation bar. If you have a [Focus entity](focus_entity.md), details of this will be displayed too. You can expand the [Navigation bar to change your region](navigation.md).
 
-### Track Panel
-You can find more information about the data presented within a track using the Track Panel. You can view the Track Panel by clicking on the > icon at the top of the Action Button bar.
+## Track panel
+
+The track panel lists all available tracks that can be viewed in the browser. You can use the panel to [show or hide tracks](tracks.md) and learn more about the data.
+
+## Genome tabs
+
+The Genome tabs display the genomes you have chosen to look at using the [Species Selector app](link to SS docs), which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
+
+## Action bar
+
+The Action bar gives you options to search and manage tracks, view bookmarks, add your own data, share the view and download data.
