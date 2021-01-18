@@ -1,3 +1,19 @@
+- name: What is the Entity viewer?
+  href: entity-viewer.md
+
+- name: What’s in the Transcripts view?
+  href: transcripts.md
+
+- name: What’s in the Gene function?
+  href: gene-function.md
+
+- name: What’s in the Overview panel?
+  href: overview.md
+
+- name: What’s in the External references panel?
+  href: external-references.md
+  
+
 - name: Using the Entity Viewer
   href: using-the-entity-viewer.md
 - name: Looking at genes and transcripts
