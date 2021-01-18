@@ -1,13 +1,14 @@
 ---
-slug: focus-entity
-title: What is a Focus entity?
-parent: viewing-ensembl-data
+slug: transcripts
+title: What’s in the Transcripts view?
+description: How to browse and download transcript data
 related_articles:
-  - relative_path: navigation.md
-  - relative_path: tracks.md
-  - relative_path: focus_entity.md
+  - relative_path: entity-viewer.md
+  - relative_path: gene-function.md
+  - relative_path: overview.md
+  - relative_path: external-references.md
 tags:
-  - browser
+  - entity
 status: draft
 ---
 
