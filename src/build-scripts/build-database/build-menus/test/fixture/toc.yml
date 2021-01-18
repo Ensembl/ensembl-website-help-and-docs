@@ -1,0 +1,12 @@
+- name: Home page
+  href: index.md
+  url: /
+- name: Top-level sibling page
+  href: sibling.md
+- name: Parent menu item without own page
+  href: child-folder-1/toc.yml
+- name: Parent menu item with its own page
+  href: child-folder-2/toc.yml
+  topicHref: child-folder-2/index.yml
+- name: Page from oddly named file
+  href: fileWith_strange-name.md
