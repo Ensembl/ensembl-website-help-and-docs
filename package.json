@@ -10,7 +10,9 @@
     "build": "npm run build-docs && npm run build-server",
     "build-docs": "NODE_ENV=build-docs ts-node ./src/build-scripts/index.ts",
     "build-server": "tsc",
-    "start-server": "NODE_ENV=production node build/src/server/index.js"
+    "start-server": "NODE_ENV=production node build/src/server/index.js",
+    "test": "jest",
+    "tdd": "jest --watch"
   },
   "keywords": [],
   "author": "",
@@ -27,14 +29,17 @@
     "sqlite3": "5.0.0"
   },
   "devDependencies": {
+    "@sindresorhus/slugify": "1.1.0",
     "@types/bluebird": "3.5.33",
     "@types/cors": "2.8.9",
     "@types/express": "4.17.9",
     "@types/fs-extra": "9.0.6",
+    "@types/jest": "26.0.20",
     "@types/lodash": "4.14.167",
     "@types/sqlite3": "3.1.6",
     "@types/unist": "2.0.3",
     "@types/validator": "13.1.2",
+    "jest": "26.6.3",
     "mkdirp": "1.0.4",
     "nodemon": "2.0.6",
     "rehype-raw": "5.0.0",
@@ -46,6 +51,7 @@
     "remark-stringify": "9.0.1",
     "strip-markdown": "4.0.0",
     "to-vfile": "6.1.0",
+    "ts-jest": "26.4.4",
     "ts-node": "9.1.1",
     "ts-node-dev": "1.1.1",
     "tsconfig-paths": "3.9.0",
