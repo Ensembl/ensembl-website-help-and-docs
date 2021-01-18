@@ -13,6 +13,7 @@ status: draft
 ---
 
 # What’s in the Gene function
+
 Gene function view presents protein information for all coding transcripts of the gene of interest. It is therefore only available for protein coding genes.
  
 By default, the protein list is sorted by the amino acid length and specifies the protein name and the Ensembl protein stable ID with its corresponding transcript stable ID. Ensembl canonical flag is shown on the left if available. You can show/hide extra information by clicking on the protein of interest. The top line is expanded by default.
