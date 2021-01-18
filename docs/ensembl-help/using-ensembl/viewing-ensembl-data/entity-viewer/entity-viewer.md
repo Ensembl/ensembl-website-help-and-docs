@@ -27,13 +27,17 @@ The gene summary section includes the gene image, Ensembl gene stable ID, gene l
 Right-hand panel provides additional information about the gene of interest such as [Overview](overview.md) and [External references](external-references.md).
  
 ## Navigation bar
+
 Navigation bar shows gene summary details including its name, Ensembl gene stable ID, biotype, strand and genomic coordinates. It also lists available views in the Right-hand panel.
  
 ## Action bar
+
 Action bar allows you to show/hide the Right-hand panel, Search, view Bookmarks, Share the view or Download sequences.
  
 ### Bookmarks
+
 Bookmarks view is an auto-generated browsing history of up to 20 genes previously loaded within the Entity viewer application.
  
 ### Download
+
 Download enables custom export of the sequence data for the gene of interest and all of its transcripts and translations. Select your options by ticking the boxes, then click on the green Download button to export sequences in FASTA format.
