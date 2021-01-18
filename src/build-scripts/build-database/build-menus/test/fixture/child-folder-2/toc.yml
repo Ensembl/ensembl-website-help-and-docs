@@ -1,0 +1,6 @@
+- name: Child A
+  href: a.md
+- name: Child B
+  href: b.md
+- name: Child Foo
+  href: ../child-folder-1/foo.md
