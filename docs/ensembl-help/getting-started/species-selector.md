@@ -1,7 +1,7 @@
 ---
 slug: species-selector
 title: Species selector
-description: How to select a species and genome assembly of interest to visualise in the genome browser and entitiy viewer
+description: How to select a species and genome assembly of interest to visualise in the genome browser and entity viewer
 tags:
   - species selector
 related_videos:
