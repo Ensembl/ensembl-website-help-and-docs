@@ -1,11 +1,11 @@
 ---
 slug: overview
 title: What’s in the Overview panel?
-description: How to browse through gene overview and publications
+description: Where to find gene summary data and publication records
 related_articles:
   - relative_path: entity-viewer.md
   - relative_path: transcripts.md
-  - relative_path: overview.md
+  - relative_path: gene-function.md
   - relative_path: external-references.md
 tags:
   - entity
