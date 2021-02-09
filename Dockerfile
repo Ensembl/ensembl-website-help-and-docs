@@ -9,10 +9,6 @@ COPY ${SOURCE_DIR} ${TARGET_DIR}
 
 WORKDIR ${TARGET_DIR}
 
-# FIXME: environment variable should be passed from outside (as build-arg? or at runtime?)
-# Note: the following environment variables have to be defined before the build
-ENV HOST=http://193.62.55.158:30799
-
 RUN npm ci && \
     npm run build
 
