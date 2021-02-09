@@ -1,5 +1,5 @@
 ---
-slug: browser
+slug: genome-browser
 title: What is the Genome browser?
 description: How to browse genes, variants, and other features aligned to the reference genome
 related_articles:
