@@ -13,7 +13,7 @@ import { getMenu } from '../controllers/menusController';
 import { search } from '../controllers/searchController';
 import { healthcheck } from '../controllers/healthcheckController';
 
-app.use('/images', express.static(config.buildImagesPath));
+app.use('/api/images', express.static(config.buildImagesPath));
 
 app.use('/api/article', getArticle);
 app.use('/api/collection', getCollection);

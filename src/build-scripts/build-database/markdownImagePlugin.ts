@@ -18,7 +18,7 @@ const imageVisitor = (filePath: string) => (node: Node) => {
     .split('/')
     .slice(0, -1)
     .join('/');
-  const destPath = `/images/${markdownDirectory}/${node.url}`;
+  const destPath = `/api/images/${markdownDirectory}/${node.url}`;
 
   const { host } = config;
   node.url = `${host}${destPath}`;
