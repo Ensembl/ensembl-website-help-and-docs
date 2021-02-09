@@ -18,10 +18,10 @@ const imageVisitor = (filePath: string) => (node: Node) => {
     .split('/')
     .slice(0, -1)
     .join('/');
-  const destPath = `/api/images/${markdownDirectory}/${node.url}`;
+  const destPath = `/help-api/images/${markdownDirectory}/${node.url}`;
 
-  const { host } = config;
-  node.url = `${host}${destPath}`;
+  const { host, isProduction } = config;
+  node.url = isProduction ? destPath : `${host}${destPath}`;
 };
 
 export default attacher;

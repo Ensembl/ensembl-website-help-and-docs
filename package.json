@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf ./build",
-    "dev": "ts-node-dev --respawn --transpileOnly src/server/index.ts",
+    "dev": "ts-node-dev --respawn --transpile-only src/server/index.ts",
     "prebuild": "npm run clean && mkdirp build",
     "build": "npm run build-docs && npm run build-server",
     "build-docs": "NODE_ENV=build-docs ts-node ./src/build-scripts/index.ts",
