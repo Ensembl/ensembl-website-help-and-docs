@@ -18,7 +18,7 @@ Transcript view lists all transcripts of the focus gene. You can find the graphi
  
 Transcript models are positioned relative to the gene start and end, so that the yellow grid matches the coordinates in the gene image above. Click on the transcript image or its corresponding Ensembl transcript stable IDs on the right to show/hide information about this transcript. The first transcript on the list is expanded by default.
  
-The expanded view includes transcript name, genomic coordinates, biotype, exon count, combined exon length in bp and amino acid length of its translation for coding transcripts. Ensembl protein stable ID of the corresponding translation links out to the [Gene function](gene-function.md) view. Transcript flags, such as Ensembl canonical or APPRIS can be found on the left. There is also an option to view this transcript in the [Genome browser](../genome-browser/browser.md). 
+The expanded view includes transcript name, genomic coordinates, biotype, exon count, combined exon length in bp and amino acid length of its translation for coding transcripts. Ensembl protein stable ID of the corresponding translation links out to the Gene function view. Transcript flags, such as Ensembl canonical or APPRIS can be found on the left. There is also an option to view this transcript in the Genome browser. 
  
 Expanded transcript view allows quick sequence Download for both the gene and the focus transcript. Click Download to reveal customisation options, select your preference by ticking the boxes and hit the green Download button to export sequence data in FASTA format. You can select multiple options at once.
  
