@@ -20,7 +20,7 @@ The Genome browser displays a genomic region of interest. There are five parts t
 * Genome tabs
 * Action bar
 
-![The Genome browser app](browser2.png)
+![The Genome browser app](browser.png)
 
 ## Browser image
 
