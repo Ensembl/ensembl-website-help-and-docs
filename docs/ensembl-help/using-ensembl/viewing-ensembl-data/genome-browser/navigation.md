@@ -21,4 +21,4 @@ You can expand the Navigation bar by clicking on the blue coordinates. This will
 
 ![The Navigation bar](navigation_bar.png)
 
-The coordinates of the [Focus entity](focus-entity.md) are shown on the left of the Navigation bar. As you move around using either the Navigation bar or the mouse actions, the focus entity coordinates remain constant. To return to the region of your focus entity, click on the target icon on the left, which will be blue when you are away from the focus entity. When you are looking at the focus entity, the target icon will be grey.
+The coordinates of the Focus entity are shown on the left of the Navigation bar. As you move around using either the Navigation bar or the mouse actions, the focus entity coordinates remain constant. To return to the region of your focus entity, click on the target icon on the left, which will be blue when you are away from the focus entity. When you are looking at the focus entity, the target icon will be grey.
