@@ -18,13 +18,13 @@ Entity viewer collates information about the gene of interest and related entiti
  
 ## Main display
 
-Main display presents data relating to the gene of interest. The gene summary is found at the top of the view, while data tabs including [Transcripts](transcripts.md), [Gene function](gene-function.md) and Gene relationships are located beneath. Active tab is shown in black.
+Main display presents data relating to the gene of interest. The gene summary is found at the top of the view, while data tabs including Transcripts, Gene function and Gene relationships are located beneath. Active tab is shown in black.
  
-The gene summary section includes the gene image, Ensembl gene stable ID, gene length, strand and transcript count. Please note that the gene is always displayed in the 5’->3’ orientation, regardless of the strand. You can also go to the [Genome browser](../genome-browser/browser.md) from here to view your gene of interest plotted against the genome, by clicking the ‘View in Genome browser’ icon.
+The gene summary section includes the gene image, Ensembl gene stable ID, gene length, strand and transcript count. Please note that the gene is always displayed in the 5’->3’ orientation, regardless of the strand. You can also go to the Genome browser from here to view your gene of interest plotted against the genome, by clicking the ‘View in Genome browser’ icon.
  
  ## Right-hand panel
  
-Right-hand panel provides additional information about the gene of interest such as [Overview](overview.md) and [External references](external-references.md).
+Right-hand panel provides additional information about the gene of interest such as Overview and External references.
  
 ## Navigation bar
 
