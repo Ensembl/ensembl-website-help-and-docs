@@ -13,4 +13,4 @@ status: draft
 
 # What is a Focus entity?
 
-If you navigate to the genome browser from an entity, such as a gene or variant, either by [searching for that entity](../search/search.md) or from the [Entity viewer](../entity-viewer/entity-viewer.md), that entity is your Focus entity. The Focus entity is highlighted in the Browser image by red dotted lines. The name and/or identifier and coordinates of the focus entity are displayed in the Navigation bar. Details of the Focus entity are displayed at the top of the Track panel.
+If you navigate to the genome browser from an entity, such as a gene or variant, either by searching for that entity or from the Entity viewer, that entity is your Focus entity. The Focus entity is highlighted in the Browser image by red dotted lines. The name and/or identifier and coordinates of the focus entity are displayed in the Navigation bar. Details of the Focus entity are displayed at the top of the Track panel.
