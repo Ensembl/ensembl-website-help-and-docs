@@ -27,6 +27,12 @@ Decided during meeting on Feb 8 (Andrea, Anne, Andrey)
 ```
 
 
+Decisions from meeting on 2021-02-16
+- urls: (mostly) automatic, which means that there will be folder segments in the pathname
+- related articles: set them individually per page (because they will likely be different for different pages)
+- add navigation to contextual help (since the list of related articles can be different for different article, and we cannot rely on the links of related articles to always stay the same)
+
+
 
 # Check later
 
