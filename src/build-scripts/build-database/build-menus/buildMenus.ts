@@ -46,14 +46,16 @@ type TOCMetadata = {
   fullPath: string;
   directoryPath: string;
   url: string; // can be set explicitly or derived from path
-}
+};
+
+type TOCItemType = 'article' | 'video'; // a TOC item can be either a text article or a video
 
 type TOCItem = {
   name: string;
+  type: TOCItemType;
   href?: string; // path to file or a url
   url?: string; // url to use if different from the file path
   items?: TOCItem[];
-  // possibly breadcrumbName: string;
 };
 
 type CreateMenuParams = {
@@ -64,6 +66,7 @@ type CreateMenuParams = {
 
 type ParsedMenuItem = {
   name: string;
+  type: TOCItemType;
   path?: string;
   url?: string;
   items?: ParsedMenuItem[];
@@ -108,13 +111,16 @@ const parseTOC = async (toc: TOC): Promise<ParsedMenuItem[]> /* parsedMenuTree -
 };
 
 const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem> => {
-  const menuItem: ParsedMenuItem = { name: tocItem.name };
+  const menuItem: ParsedMenuItem = {
+    name: tocItem.name,
+    type: tocItem.type || 'article'
+  };
   const tocItemPath = tocItem.href;
 
   if (tocItemPath && /https?:\/\//.test(tocItemPath)) {
     menuItem.url = tocItem.href;
   } else if (tocItemPath && await isTOCFile(path.join(toc.directoryPath, tocItemPath))) {
-    // TODO: does this menu parent have a pagr associated with it?
+    // TODO: does this menu parent have a page associated with it?
     const newTocUrl = buildDirectoryUrlFromFileSystem(tocItemPath, toc.url);
     const newToc = await readTOC(path.join(toc.directoryPath, tocItemPath), newTocUrl);
     const parsedNewToc = await parseTOC(newToc);

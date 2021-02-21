@@ -50,6 +50,20 @@ describe('createMenu', () => {
     expect(childBar.url).toBe('/root/child-folder-1/bar');
   });
 
+  it('assigns the type of article to a menu item by default', async () => {
+    const menu = await createMenu({ tocPath: pathToToc, url: '/root' });
+    const defaultArticleItem = menu.find(({ name }) => name === 'Top-level sibling page'); // it doesn't have explicit article type in the TOC
+    expect(defaultArticleItem.type).toBe('article');
+  });
+
+  it('respects the type of a item menu indicated in the TOC', async () => {
+    const menu = await createMenu({ tocPath: pathToToc, url: '/root' });
+    const explicitlyArticleItem = menu.find(({ name }) => name === 'Explicitly an article page'); // type set to "article" in TOC
+    const videoItem = menu.find(({ name }) => name === 'A video page'); // type set to "video" in TOC
+    expect(explicitlyArticleItem.type).toBe('article');
+    expect(videoItem.type).toBe('video');
+  });
+
   it.skip('assigns a page to a parent menu item if topicHref is provided', () => {
 
   });
@@ -58,8 +72,11 @@ describe('createMenu', () => {
 
   });
 
-  it.skip('uses absolute urls for menu items if provided', () => {
-
+  it('uses absolute urls for menu items if provided', async () => {
+    const menu = await createMenu({ tocPath: pathToToc, url: '/root' });
+    const pageWithAbsoluteUrl = menu.find(({ name }) => 
+      name === 'Page from an external resource');
+    expect(pageWithAbsoluteUrl.url).toBe('https://example.com'); // as defined in the TOC file
   });
 
   it('supports references to files in parent or sibling directories', async () => {
