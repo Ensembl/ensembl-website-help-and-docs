@@ -3,6 +3,12 @@
   url: /
 - name: Top-level sibling page
   href: sibling.md
+- name: A video page
+  type: video
+  href: video.yml
+- name: Explicitly an article page
+  type: article
+  href: article.md
 - name: Parent menu item without own page
   href: child-folder-1/toc.yml
 - name: Parent menu item with its own page
@@ -10,3 +16,5 @@
   topicHref: child-folder-2/index.yml
 - name: Page from oddly named file
   href: fileWith_strange-name.md
+- name: Page from an external resource
+  href: https://example.com
