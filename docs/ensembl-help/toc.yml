@@ -1,14 +1,5 @@
 - name: Getting Started
-  href: getting-started
+  href: getting-started/toc.yml
+  url: /getting-started
 - name: Using Ensembl
-  href: using-ensembl
-- name: Training
-  href: blah
-- name: Ensembl Annotation & Prediction
-  href: blah
-- name: Data releases
-  href: blah
-- name: Known bugs
-  href: blah
-- name: Contact
-  href: blah
+  href: using-ensembl/toc.yml

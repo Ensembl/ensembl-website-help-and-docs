@@ -48,11 +48,16 @@ type TOCMetadata = {
   url: string; // can be set explicitly or derived from path
 };
 
-type TOCItemType = 'article' | 'video'; // a TOC item can be either a text article or a video
+// a TOC item can be either a text article, a video,
+// or a parent item without an associated page (we might also consider index pages in the future)
+type TOCItemType = 
+  | 'article'
+  | 'video'
+  | 'collection';
 
 type TOCItem = {
   name: string;
-  type: TOCItemType;
+  type?: TOCItemType;
   href?: string; // path to file or a url
   url?: string; // url to use if different from the file path
   items?: TOCItem[];
@@ -64,7 +69,7 @@ type CreateMenuParams = {
 };
 
 
-type ParsedMenuItem = {
+export type ParsedMenuItem = {
   name: string;
   type: TOCItemType;
   path?: string;
@@ -113,7 +118,7 @@ const parseTOC = async (toc: TOC): Promise<ParsedMenuItem[]> /* parsedMenuTree -
 const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem> => {
   const menuItem: ParsedMenuItem = {
     name: tocItem.name,
-    type: tocItem.type || 'article'
+    type: tocItem.type
   };
   const tocItemPath = tocItem.href;
 
@@ -130,7 +135,18 @@ const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem>
     menuItem.url = tocItem.url || buildPageUrlFromFileSystem(tocItemPath, toc.url);
   }
 
+  menuItem.type = getMenuItemType(menuItem);
   return menuItem;
+};
+
+const getMenuItemType = (menuItem: ParsedMenuItem): TOCItemType => {
+  if (menuItem.type) {
+    return menuItem.type;
+  } else if (menuItem.items) {
+    return 'collection';
+  } else {
+    return 'article';
+  }
 };
 
 

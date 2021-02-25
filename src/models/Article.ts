@@ -14,30 +14,29 @@ class Article extends Model {
   public id: number;
   public title: string;
   public description: string;
-  public path: string;
-  public file_path: string;
   public slug: string;
-  public body: string;
+  public url: string;
   public data: string;
+  public body: string;
 
   public readonly createdAt: Date;
   public readonly updatedAt: Date;
 
 
-  public addVideo: HasManyAddAssociationMixin<Video, number>;
-  public getVideos: HasManyGetAssociationsMixin<Video>;
-  public hasVideos: HasManyHasAssociationMixin<Video, number>;
+  // public addVideo: HasManyAddAssociationMixin<Video, number>;
+  // public getVideos: HasManyGetAssociationsMixin<Video>;
+  // public hasVideos: HasManyHasAssociationMixin<Video, number>;
 
   public addRelatedArticle: HasManyAddAssociationMixin<Article, number>;
   public getRelatedArticles: HasManyGetAssociationsMixin<Article>;
   public hasRelatedArticles: HasManyHasAssociationMixin<Article, number>;
 
   public readonly relatedArticles?: Article[];
-  public readonly videos?: Video[];
+  // public readonly videos?: Video[];
 
-  public static associations: {
-    projects: Association<Article, Video>;
-  };
+  // public static associations: {
+  //   projects: Association<Article, Video>;
+  // };
 
 }
 
@@ -47,6 +46,10 @@ Article.init({
     autoIncrement: true,
     primaryKey: true,
   },
+  type: {
+    type: new DataTypes.STRING(255),
+    allowNull: false,
+  },
   title: {
     type: new DataTypes.STRING(255),
     allowNull: false,
@@ -55,15 +58,11 @@ Article.init({
     type: new DataTypes.TEXT,
     allowNull: false,
   },
-  path: {
-    type: new DataTypes.STRING(255),
-    allowNull: false,
-  },
-  file_path: {
+  slug: {
     type: new DataTypes.STRING(255),
     allowNull: true
   },
-  slug: {
+  url: {
     type: new DataTypes.STRING(255),
     allowNull: true
   },
@@ -80,14 +79,14 @@ Article.init({
   sequelize
 });
 
-Article.belongsToMany(Article, {
-  as: 'relatedArticles',
-  through: 'article_relationships'
-});
+// Article.belongsToMany(Article, {
+//   as: 'relatedArticles',
+//   through: 'article_relationships'
+// });
 
-Article.hasMany(Video, {
-  foreignKey: 'articleId',
-  as: 'videos'
-});
+// Article.hasMany(Video, {
+//   foreignKey: 'articleId',
+//   as: 'videos'
+// });
 
 export default Article;

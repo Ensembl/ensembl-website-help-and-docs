@@ -7,9 +7,11 @@ import { Relation } from '../types/Relation';
 
 // Transform file path into a slug (hyphen-separates string)
 export const slugifyPath = (filePath: string) => {
-  const withoutExtensions = stripFileExtensions(filePath);
-  const withoutSlashes = withoutExtensions.replace('/', '-');
-  return kebabCase(withoutSlashes);
+  const { dir, name } = path.parse(filePath);
+  return kebabCase([
+    dir.split(path.sep),
+    name
+  ].flat().join('-'));
 };
 
 export const stripFileExtensions = (filePath: string) => {

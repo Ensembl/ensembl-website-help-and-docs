@@ -1,11 +1,13 @@
 import { Relation } from './Relation';
 
 export type ParsedArticle = {
+  type: 'article';
+  slug: string;
   title: string;
   description: string;
-  path: string;
-  filePath: string;
-  slug: string;
+  url?: string;
+  // path: string;
+  // filePath: string;
   html: string;
   status: string;
   related_articles?: Relation[];

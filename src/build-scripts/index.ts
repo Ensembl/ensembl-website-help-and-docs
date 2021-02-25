@@ -5,8 +5,8 @@ import copyAssets from './/copy-assets';
 const build = async () => {
   try {
     await buildDatabase();
-    await buildIndex();
-    await copyAssets();
+    // await buildIndex();
+    // await copyAssets();
   } catch (error) {
     console.error('Error building the project', error);
   }
