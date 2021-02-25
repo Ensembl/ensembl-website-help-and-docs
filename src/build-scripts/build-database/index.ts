@@ -13,8 +13,7 @@ const buildDatabase = async () => {
     // await addMenus(menus);
     // console.log('Menus added to the database');
 
-    // console.log('Documentation database generated successfully');
-
+    console.log('Documentation database generated successfully');
   } catch (error) {
     console.error('Error building the database', error);
   }

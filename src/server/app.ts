@@ -18,7 +18,7 @@ app.use('/api/images', express.static(config.buildImagesPath));
 app.use('/api/article', getArticle);
 app.use('/api/collection', getCollection);
 app.use('/api/menus', getMenu);
-app.use('/api/search', search);
+// app.use('/api/search', search);
 app.use('/api/healthcheck', healthcheck);
 
 export default app;
