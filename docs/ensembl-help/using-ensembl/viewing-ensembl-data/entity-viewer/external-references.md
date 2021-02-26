@@ -3,10 +3,10 @@ slug: external-references
 title: What’s in the External references panel?
 description: Where to find related records in external databases
 related_articles:
-  - relative_path: entity-viewer.md
-  - relative_path: transcripts.md
-  - relative_path: gene-function.md
-  - relative_path: overview.md
+  - href: entity-viewer.md
+  - href: transcripts.md
+  - href: gene-function.md
+  - href: overview.md
 tags:
   - entity
 status: draft

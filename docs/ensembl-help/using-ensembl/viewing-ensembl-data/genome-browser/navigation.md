@@ -3,9 +3,9 @@ slug: navigation
 title: Genome browser navigation
 description: How to navigate around the genomic regions with the genome browser
 related_articles:
-  - relative_path: browser.md
-  - relative_path: tracks.md
-  - relative_path: focus-entity.md
+  - href: browser.md
+  - href: tracks.md
+  - href: focus-entity.md
 tags:
   - browser
 status: draft

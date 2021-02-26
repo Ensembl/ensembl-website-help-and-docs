@@ -1,7 +1,10 @@
 import app from './app';
+import prepareDatabase from '../db/prepareDatabase';
 
 const port = 3000;
 
-app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`)
+prepareDatabase().then(() => {
+  app.listen(port, () => {
+    console.log(`Listening at http://localhost:${port}`)
+  });
 });

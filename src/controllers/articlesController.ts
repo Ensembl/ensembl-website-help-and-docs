@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-import { Article, Video } from '../models';
+import { TextArticle, VideoArticle } from '../models';
 
 export const getArticle = async (req: Request, res: Response) => {
   const slug = req.query.slug as string | undefined;
@@ -16,24 +16,14 @@ export const getArticle = async (req: Request, res: Response) => {
     const searchKey = slug ? 'slug' : 'url';
     const searchValue = slug ? slug : url as string;
 
-    const article: Article | null = await Article.findOne({
-      where: { [searchKey]: searchValue },
-      // include: [
-      //   {
-      //     model: Video,
-      //     as: 'videos',
-      //     attributes: [ 'id', 'title', 'description', 'youtube_id' ]
-      //   },
-      //   {
-      //     model: Article,
-      //     as: 'relatedArticles',
-      //     attributes: [ 'id', 'title', 'slug', 'path' ],
-      //     through: { attributes: [] }
-      //   }
-      // ]
+    // should be TextArticle | VideoArticle | null
+    const article: TextArticle | VideoArticle | null = await TextArticle.findOne({
+      where: { [searchKey]: searchValue }
     });
 
     if (article) {
+      const relatedArticles = await article.relatedArticles;
+      console.log('relatedArticles', relatedArticles);
       res.json({
         slug: article.slug,
         url: article.url,

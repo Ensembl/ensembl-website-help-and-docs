@@ -3,10 +3,10 @@ slug: gene-function
 title: What’s in the Gene function?
 description: How to browse and download protein data
 related_articles:
-  - relative_path: entity-viewer.md
-  - relative_path: transcripts.md
-  - relative_path: overview.md
-  - relative_path: external-references.md
+  - href: entity-viewer.md
+  - href: transcripts.md
+  - href: overview.md
+  - href: external-references.md
 tags:
   - entity
 status: draft

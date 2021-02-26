@@ -1,14 +1,108 @@
 import {
-  Model,
-  Association,
-  HasManyAddAssociationMixin,
-  HasManyGetAssociationsMixin,
-  HasManyHasAssociationMixin,
-  DataTypes
-} from 'sequelize';
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  BaseEntity,
+  ManyToOne,
+  OneToMany,
+  ManyToMany,
+  JoinTable
+} from "typeorm";
 
-import sequelize from '../db/sequelize';
-import Video from './Video';
+export abstract class Article extends BaseEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  title: string;
+
+  @Column()
+  description: string;
+
+  @Column()
+  slug: string;
+
+  @Column()
+  filePath: string;
+
+  @Column({ nullable: true })
+  url: string;
+
+  // @Column({ type: "simple-array", nullable: true })
+  // relatedArticleSlugs: string[];
+
+}
+
+
+@Entity()
+export class TextArticle extends Article {
+
+  type: 'article';
+
+  @Column({ type: 'text' })
+  body: string;
+
+  @Column('simple-json')
+  data: { relatedArticles?: { path: string }[] };
+
+  @OneToMany(() => RelatedArticle, relatedArticle => relatedArticle.textArticle, { eager: true })
+  relatedArticles: RelatedArticle[];
+  // @ManyToMany(() => TextArticle, (article) => article.referencingArticles)
+  // @JoinTable()
+  // textArticles: TextArticle[];
+
+  // @ManyToMany(() => TextArticle, (article) => article.textArticles)
+  // referencingArticles: TextArticle[];
+
+  // @ManyToMany(() => VideoArticle)
+  // @JoinTable()
+  // videoArticles: VideoArticle[];
+
+}
+
+@Entity()
+export class VideoArticle extends Article {
+
+  type: 'video';
+
+  @Column('simple-json')
+  data: { youtube_id: string };
+
+  // @ManyToMany(() => TextArticle)
+  // textArticles: TextArticle[];
+
+  // @ManyToMany(() => VideoArticle)
+  // @JoinTable()
+  // videoArticles: VideoArticle[];
+
+}
+
+@Entity()
+export class RelatedArticle extends BaseEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  title: string;
+
+  // @Column()
+  // type: string;
+
+  // @Column()
+  // slug: string;
+
+  // @Column({ nullable: true }) // <-- this is a problem
+  // url: string;
+
+  @ManyToOne(() => TextArticle, textArticle => textArticle.relatedArticles)
+  textArticle: TextArticle;
+
+}
+
+
+/*
 
 class Article extends Model {
   public id: number;
@@ -90,3 +184,5 @@ Article.init({
 // });
 
 export default Article;
+
+*/

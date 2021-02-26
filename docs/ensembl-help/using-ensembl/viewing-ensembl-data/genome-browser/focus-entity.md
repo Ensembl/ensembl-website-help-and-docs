@@ -3,9 +3,8 @@ slug: focus-entity
 title: What is a Focus entity?
 parent: viewing-ensembl-data
 related_articles:
-  - relative_path: navigation.md
-  - relative_path: tracks.md
-  - relative_path: focus_entity.md
+  - href: navigation.md
+  - href: tracks.md
 tags:
   - browser
 status: draft

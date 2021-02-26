@@ -5,7 +5,7 @@ description: How to select a species and genome assembly of interest to visualis
 tags:
   - species selector
 related_videos:
-  - relative_path: videos/find-and-add-species.yml
+  - href: videos/find-and-add-species.yml
 status: draft
 ---
 

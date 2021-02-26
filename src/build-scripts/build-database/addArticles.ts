@@ -19,7 +19,7 @@ Page has a url...
 */
 
 
-import fs from 'fs';
+import path from 'path';
 import yaml from 'yaml';
 
 import {
@@ -28,7 +28,7 @@ import {
   buildPathToRelatedItem
 } from '../filePathHelpers';
 
-import { Article, Video, Collection } from '../../models';
+import { TextArticle, VideoArticle, RelatedArticle } from '../../models';
 
 import { ParsedArticle } from '../../types/ParsedArticle';
 import { ParsedVideo } from '../../types/ParsedVideo';
@@ -37,7 +37,13 @@ type ParsedFile = ParsedArticle | ParsedVideo;
 
 const addArticles = async (items: ParsedFile[]) => {
   for (const item of items) {
+    if (!item.path) {
+      console.log('item without path', item);
+    }
     await saveItem(item);
+  }
+  for (const item of items) {
+    await addRelationships(item);
   }
 };
 
@@ -50,36 +56,80 @@ const saveItem = (item: ParsedFile) => {
 };
 
 const saveArticle = async (article: ParsedArticle) => {
-  const newArticle = await Article.create({
-    type: article.type,
-    title: article.title || 'empty title',
-    description: article.description || 'empty description',
-    slug: article.slug,
-    url: article.url,
-    body: article.html
-  });
-  await Article.sync();
-
-  return newArticle;
+  try {
+    const relatedArticles = article.related_articles
+      ?.map(({ href }) => ({ path: buildPathToRelatedFile(article.path, href) }));
+    const articleData = {
+      relatedArticles
+    };
+    const newArticle = TextArticle.create({
+      title: article.title || 'empty title',
+      description: article.description || 'empty description',
+      slug: article.slug,
+      url: article.url,
+      filePath: fromDocumentsRoot(article.path),
+      data: articleData,
+      body: article.html
+    });
+    await TextArticle.save(newArticle);
+  
+    return newArticle;
+  } catch (error) {
+    console.log('failed to save article', article);
+    // throw error;
+  }
 };
 
 const saveVideo = async (video: ParsedVideo) => {
-  const videoData = {
-    youtube_id: video.youtube_id
-  };
-  const newArticle = await Article.create({
-    type: video.type,
-    title: video.title || 'empty title',
-    description: video.description || 'empty description',
-    slug: video.slug,
-    url: video.url,
-    data: JSON.stringify(videoData)
-  });
-  await Article.sync();
-
-  return newArticle;
+  try {
+    const videoData = {
+      youtube_id: video.youtube_id
+    };
+    const newVideo = VideoArticle.create({
+      title: video.title || 'empty title',
+      description: video.description || 'empty description',
+      slug: video.slug,
+      url: video.url,
+      filePath: fromDocumentsRoot(video.path),
+      data: videoData
+    });
+    await VideoArticle.save(newVideo);
+  
+    return newVideo;
+  } catch (error) {
+    console.log('failed to save video', video);
+    // throw error;
+  }
 };
 
+
+const addRelationships = async (item: ParsedFile) => {
+  // TODO:
+  // - videos can have related content too
+  // - both videos and articles should be collated together
+  let savedArticle;
+  if (item.type === 'article') {
+    savedArticle = await TextArticle.findOne({ where: { slug: item.slug } });
+    if (savedArticle.data.relatedArticles) {
+      for (const { path: pathToArticle } of savedArticle.data.relatedArticles) {
+        const relatedTextArticle = await TextArticle.findOne({ where: { filePath: pathToArticle } });
+        if (!relatedTextArticle) {
+          console.log('Incorrect path for related article provided:', pathToArticle);
+          continue;
+        }
+        const relatedArticle = RelatedArticle.create({ title: savedArticle.title });
+        savedArticle.relatedArticles = savedArticle.relatedArticles || [];
+        savedArticle.relatedArticles.push(relatedArticle);
+      }
+      await savedArticle.save();
+    }
+  }
+};
+
+const buildPathToRelatedFile = (sourceFilePath: string, relatedFilePath: string) => {
+  const { dir: sourceFileDirectory } = path.parse(sourceFilePath);
+  return fromDocumentsRoot(path.join(sourceFileDirectory, relatedFilePath));
+};
 
 
 // const addArticles1 = async (articles: ParsedArticle[]) => {
@@ -120,13 +170,13 @@ const saveVideo = async (video: ParsedVideo) => {
 // };
 
 const createArticle = async (article: ParsedArticle) => {
-  const newArticle = await Article.create({
-    title: article.title || 'empty title',
-    description: article.description || 'empty description',
-    slug: article.slug,
-    url: article.url,
-    // body: article.html
-  });
+  // const newArticle = await Article.create({
+  //   title: article.title || 'empty title',
+  //   description: article.description || 'empty description',
+  //   slug: article.slug,
+  //   url: article.url,
+  //   // body: article.html
+  // });
 
   // if (article.related_videos) {
   //   const videoPaths = article.related_videos.map(relation => buildPathToRelatedItem({
@@ -159,20 +209,20 @@ const createArticle = async (article: ParsedArticle) => {
   // const collection = await getCollection(collectionName);
   // collection.addArticle(newArticle);
 
-  await Article.sync();
+  // await Article.sync();
 
-  return newArticle;
+  // return newArticle;
 };
 
 
-const getCollection = async (name: string) => {
-  const savedCollection = await Collection.findOne({ where: { name } });
-  if (savedCollection) {
-    return savedCollection;
-  } else {
-    const collection = await Collection.create({ name });
-    return collection;
-  }
-};
+// const getCollection = async (name: string) => {
+//   const savedCollection = await Collection.findOne({ where: { name } });
+//   if (savedCollection) {
+//     return savedCollection;
+//   } else {
+//     const collection = await Collection.create({ name });
+//     return collection;
+//   }
+// };
 
 export default addArticles;

@@ -6,10 +6,10 @@ export type ParsedArticle = {
   title: string;
   description: string;
   url?: string;
-  // path: string;
+  path: string;
   // filePath: string;
   html: string;
   status: string;
-  related_articles?: Relation[];
+  related_articles?: { href: string }[];
   related_videos?: Relation[];
 };
