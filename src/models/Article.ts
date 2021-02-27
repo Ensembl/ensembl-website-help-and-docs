@@ -3,8 +3,6 @@ import {
   PrimaryGeneratedColumn,
   Column,
   BaseEntity,
-  ManyToOne,
-  OneToMany,
   ManyToMany,
   JoinTable
 } from "typeorm";
@@ -46,18 +44,9 @@ export class TextArticle extends Article {
   @Column('simple-json')
   data: { relatedArticles?: { path: string }[] };
 
-  @OneToMany(() => RelatedArticle, relatedArticle => relatedArticle.textArticle, { eager: true })
+  @ManyToMany(() => RelatedArticle)
+  @JoinTable()
   relatedArticles: RelatedArticle[];
-  // @ManyToMany(() => TextArticle, (article) => article.referencingArticles)
-  // @JoinTable()
-  // textArticles: TextArticle[];
-
-  // @ManyToMany(() => TextArticle, (article) => article.textArticles)
-  // referencingArticles: TextArticle[];
-
-  // @ManyToMany(() => VideoArticle)
-  // @JoinTable()
-  // videoArticles: VideoArticle[];
 
 }
 
@@ -68,6 +57,10 @@ export class VideoArticle extends Article {
 
   @Column('simple-json')
   data: { youtube_id: string };
+
+  @ManyToMany(() => RelatedArticle)
+  @JoinTable()
+  relatedArticles: RelatedArticle[];
 
   // @ManyToMany(() => TextArticle)
   // textArticles: TextArticle[];
@@ -87,17 +80,21 @@ export class RelatedArticle extends BaseEntity {
   @Column()
   title: string;
 
-  // @Column()
-  // type: string;
+  @Column()
+  type: string;
 
-  // @Column()
-  // slug: string;
+  @Column()
+  slug: string;
 
-  // @Column({ nullable: true }) // <-- this is a problem
-  // url: string;
+  @Column({ nullable: true }) // <-- this is a problem
+  url: string;
 
-  @ManyToOne(() => TextArticle, textArticle => textArticle.relatedArticles)
-  textArticle: TextArticle;
+  // @ManyToOne(() => TextArticle, textArticle => textArticle.relatedArticles)
+  @ManyToMany(() => TextArticle)
+  referencingTextArticles: TextArticle[];
+
+  @ManyToMany(() => VideoArticle)
+  referencingVideoArticles: VideoArticle[];
 
 }
 

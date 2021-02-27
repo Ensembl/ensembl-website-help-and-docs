@@ -18,7 +18,8 @@ export const getArticle = async (req: Request, res: Response) => {
 
     // should be TextArticle | VideoArticle | null
     const article: TextArticle | VideoArticle | null = await TextArticle.findOne({
-      where: { [searchKey]: searchValue }
+      where: { [searchKey]: searchValue },
+      relations: ['relatedArticles']
     });
 
     if (article) {

@@ -112,12 +112,20 @@ const addRelationships = async (item: ParsedFile) => {
     savedArticle = await TextArticle.findOne({ where: { slug: item.slug } });
     if (savedArticle.data.relatedArticles) {
       for (const { path: pathToArticle } of savedArticle.data.relatedArticles) {
+        const referencedArticle = await TextArticle.findOne({ where: { filePath: pathToArticle } })
         const relatedTextArticle = await TextArticle.findOne({ where: { filePath: pathToArticle } });
         if (!relatedTextArticle) {
           console.log('Incorrect path for related article provided:', pathToArticle);
           continue;
         }
-        const relatedArticle = RelatedArticle.create({ title: savedArticle.title });
+        let relatedArticle = await RelatedArticle.findOne({ where: { slug: savedArticle.slug } })
+        relatedArticle = RelatedArticle.create({
+          title: savedArticle.title,
+          type: savedArticle.type,
+          slug: savedArticle.slug,
+          url: savedArticle.url
+        });
+        await relatedArticle.save();
         savedArticle.relatedArticles = savedArticle.relatedArticles || [];
         savedArticle.relatedArticles.push(relatedArticle);
       }
