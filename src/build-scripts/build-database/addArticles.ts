@@ -28,7 +28,8 @@ import {
   buildPathToRelatedItem
 } from '../filePathHelpers';
 
-import { TextArticle, VideoArticle, RelatedArticle } from '../../models';
+import { Article } from '../../models';
+import { TextArticle } from '../../models/Article';
 
 import { ParsedArticle } from '../../types/ParsedArticle';
 import { ParsedVideo } from '../../types/ParsedVideo';
@@ -36,107 +37,109 @@ import { ParsedVideo } from '../../types/ParsedVideo';
 type ParsedFile = ParsedArticle | ParsedVideo;
 
 const addArticles = async (items: ParsedFile[]) => {
+  let savedArticles: { parsedFile: ParsedFile, savedArticle: Article }[] = [];
   for (const item of items) {
-    if (!item.path) {
-      console.log('item without path', item);
-    }
-    await saveItem(item);
+    savedArticles.push({
+      parsedFile: item,
+      savedArticle: await saveArticle(item)
+    });
   }
-  for (const item of items) {
+  for (const item of savedArticles) {
     await addRelationships(item);
   }
 };
 
-const saveItem = (item: ParsedFile) => {
-  if (item.type === 'article') {
-    return saveArticle(item);
-  } else if (item.type === 'video') {
-    return saveVideo(item);
-  }
+// const saveItem = (item: ParsedFile) => {
+//   if (item.type === 'article') {
+//     return saveArticle(item);
+//   } else if (item.type === 'video') {
+//     return saveVideo(item);
+//   }
+// };
+
+const saveArticle = async (article: ParsedArticle | ParsedVideo) => {
+  // const relatedArticles = article.related_articles
+  //   ?.map(({ href }) => ({ path: buildPathToRelatedFile(article.path, href) }));
+  // const articleData = {
+  //   relatedArticles
+  // };
+  const newArticle = Article.create({
+    title: article.title || 'empty title',
+    type: article.type,
+    description: article.description || 'empty description',
+    slug: article.slug,
+    url: article.url,
+    filePath: fromDocumentsRoot(article.path),
+    data: prepareArticleMetadata(article),
+    body: article.type === 'article' ? article.html : undefined
+  });
+  await Article.save(newArticle);
+
+  return newArticle;
 };
 
-const saveArticle = async (article: ParsedArticle) => {
-  try {
-    const relatedArticles = article.related_articles
-      ?.map(({ href }) => ({ path: buildPathToRelatedFile(article.path, href) }));
-    const articleData = {
-      relatedArticles
-    };
-    const newArticle = TextArticle.create({
-      title: article.title || 'empty title',
-      description: article.description || 'empty description',
-      slug: article.slug,
-      url: article.url,
-      filePath: fromDocumentsRoot(article.path),
-      data: articleData,
-      body: article.html
-    });
-    await TextArticle.save(newArticle);
+const prepareArticleMetadata = (article: ParsedArticle | ParsedVideo) => {
+  if (article.type === 'video') {
+    return { youtube_id: article.youtube_id };
+  }
+}
+
+// const saveVideo = async (video: ParsedVideo) => {
+//   try {
+//     const videoData = {
+//       youtube_id: video.youtube_id
+//     };
+//     const newVideo = VideoArticle.create({
+//       title: video.title || 'empty title',
+//       description: video.description || 'empty description',
+//       slug: video.slug,
+//       url: video.url,
+//       filePath: fromDocumentsRoot(video.path),
+//       data: videoData
+//     });
+//     await VideoArticle.save(newVideo);
   
-    return newArticle;
-  } catch (error) {
-    console.log('failed to save article', article);
-    // throw error;
+//     return newVideo;
+//   } catch (error) {
+//     console.log('failed to save video', video);
+//     // throw error;
+//   }
+// };
+
+
+const addRelationships = async (item: { parsedFile: ParsedFile, savedArticle: Article }) => {
+  const { parsedFile, savedArticle } = item;
+  if (parsedFile.type === 'video') {
+    // FIXME: videos can also have related articles
+    return;
   }
-};
 
-const saveVideo = async (video: ParsedVideo) => {
-  try {
-    const videoData = {
-      youtube_id: video.youtube_id
-    };
-    const newVideo = VideoArticle.create({
-      title: video.title || 'empty title',
-      description: video.description || 'empty description',
-      slug: video.slug,
-      url: video.url,
-      filePath: fromDocumentsRoot(video.path),
-      data: videoData
-    });
-    await VideoArticle.save(newVideo);
-  
-    return newVideo;
-  } catch (error) {
-    console.log('failed to save video', video);
-    // throw error;
-  }
-};
+  if (parsedFile.related_articles) {
+    for (const { href } of parsedFile.related_articles) {
+      const pathToRelatedArticle = buildPathToRelatedFile(savedArticle.filePath, href);
+      const relatedArticle = await Article.findOne({ where: { filePath: pathToRelatedArticle } });
 
-
-const addRelationships = async (item: ParsedFile) => {
-  // TODO:
-  // - videos can have related content too
-  // - both videos and articles should be collated together
-  let savedArticle;
-  if (item.type === 'article') {
-    savedArticle = await TextArticle.findOne({ where: { slug: item.slug } });
-    if (savedArticle.data.relatedArticles) {
-      for (const { path: pathToArticle } of savedArticle.data.relatedArticles) {
-        const referencedArticle = await TextArticle.findOne({ where: { filePath: pathToArticle } })
-        const relatedTextArticle = await TextArticle.findOne({ where: { filePath: pathToArticle } });
-        if (!relatedTextArticle) {
-          console.log('Incorrect path for related article provided:', pathToArticle);
-          continue;
-        }
-        let relatedArticle = await RelatedArticle.findOne({ where: { slug: savedArticle.slug } })
-        relatedArticle = RelatedArticle.create({
-          title: savedArticle.title,
-          type: savedArticle.type,
-          slug: savedArticle.slug,
-          url: savedArticle.url
-        });
-        await relatedArticle.save();
-        savedArticle.relatedArticles = savedArticle.relatedArticles || [];
-        savedArticle.relatedArticles.push(relatedArticle);
+      if (!relatedArticle) {
+        console.log('Incorrect path for related article provided:', pathToRelatedArticle);
+        continue;
       }
-      await savedArticle.save();
+
+      if (!savedArticle.data) {
+        savedArticle.data = { relatedArticles: [] };
+      } else if (!(savedArticle as TextArticle).data.relatedArticles) {
+        (savedArticle as TextArticle).data.relatedArticles = [];
+      }
+
+      (savedArticle as TextArticle).data.relatedArticles.push(relatedArticle.id);
     }
   }
+
+  await savedArticle.save();
 };
 
 const buildPathToRelatedFile = (sourceFilePath: string, relatedFilePath: string) => {
   const { dir: sourceFileDirectory } = path.parse(sourceFilePath);
-  return fromDocumentsRoot(path.join(sourceFileDirectory, relatedFilePath));
+  return path.join(sourceFileDirectory, relatedFilePath);
 };
 
 

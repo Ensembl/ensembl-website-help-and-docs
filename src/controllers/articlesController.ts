@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
+import { In } from "typeorm";
+import pick from 'lodash/pick';
 
-import { TextArticle, VideoArticle } from '../models';
+import { Article } from '../models';
 
 export const getArticle = async (req: Request, res: Response) => {
   const slug = req.query.slug as string | undefined;
@@ -16,20 +18,20 @@ export const getArticle = async (req: Request, res: Response) => {
     const searchKey = slug ? 'slug' : 'url';
     const searchValue = slug ? slug : url as string;
 
-    // should be TextArticle | VideoArticle | null
-    const article: TextArticle | VideoArticle | null = await TextArticle.findOne({
-      where: { [searchKey]: searchValue },
-      relations: ['relatedArticles']
+    const article: Article | null = await Article.findOne({
+      where: { [searchKey]: searchValue }
     });
 
     if (article) {
-      const relatedArticles = await article.relatedArticles;
-      console.log('relatedArticles', relatedArticles);
+      const relatedArticleIds = (article.data as { relatedArticles?: number[] } | null )?.relatedArticles || [];
+      const relatedArticles = await Article.find({ id: In(relatedArticleIds) });
       res.json({
         slug: article.slug,
+        type: article.type,
         url: article.url,
         title: article.title,
         body: article.body,
+        related_articles: relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug']))
         // related_articles: article.relatedArticles,
         // videos: article.videos
         // data: match.data
