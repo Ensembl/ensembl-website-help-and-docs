@@ -11,7 +11,6 @@ const buildDatabase = async () => {
     const files = await readSourceFiles(menus);
     await addArticles(files);
     await addMenus(menus);
-    // console.log('Menus added to the database');
 
     console.log('Documentation database generated successfully');
   } catch (error) {

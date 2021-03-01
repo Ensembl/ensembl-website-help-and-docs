@@ -1,5 +1,3 @@
-// make sure tables are created in the db
-
 import "reflect-metadata";
 import { createConnection } from "typeorm";
 
