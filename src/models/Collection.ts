@@ -1,12 +1,29 @@
 import {
-  Model,
-  DataTypes,
-  HasManyAddAssociationMixin,
-  HasManyGetAssociationsMixin
-} from 'sequelize';
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  BaseEntity,
+  OneToMany
+} from "typeorm";
 
-import sequelize from '../db/sequelize';
-import Article from './Article';
+import { Article } from './Article';
+
+@Entity()
+export class Collection extends BaseEntity {
+
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+
+  @OneToMany('Article', 'collection', { eager: true })
+  articles: Article[]
+
+}
+
+
+/*
 
 class Collection extends Model {
   public id: number;
@@ -38,5 +55,7 @@ Collection.hasMany(Article, {
   foreignKey: 'collectionId',
   as: 'articles'
 });
+
+*/
 
 export default Collection;

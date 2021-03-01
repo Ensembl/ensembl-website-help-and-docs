@@ -5,14 +5,15 @@ import { createConnection } from "typeorm";
 
 import config from '../../config';
 
-import { Article } from '../models';
+import { Article, Collection } from '../models';
 
 const prepareDatabase = async () => {
   return await createConnection({
     type: 'sqlite',
     database: config.databasePath,
     entities: [
-      Article
+      Article,
+      Collection
     ],
     synchronize: true,
     logging: !config.isProduction && !config.isBuildingDocs

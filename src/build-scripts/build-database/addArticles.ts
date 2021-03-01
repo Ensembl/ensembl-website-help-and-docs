@@ -28,7 +28,7 @@ import {
   buildPathToRelatedItem
 } from '../filePathHelpers';
 
-import { Article } from '../../models';
+import { Article, Collection } from '../../models';
 import { TextArticle } from '../../models/Article';
 
 import { ParsedArticle } from '../../types/ParsedArticle';
@@ -73,7 +73,12 @@ const saveArticle = async (article: ParsedArticle | ParsedVideo) => {
     data: prepareArticleMetadata(article),
     body: article.type === 'article' ? article.html : undefined
   });
+
   await Article.save(newArticle);
+
+  if (article.collection) {
+    await addArticleToCollection(newArticle, article.collection);
+  }
 
   return newArticle;
 };
@@ -83,6 +88,18 @@ const prepareArticleMetadata = (article: ParsedArticle | ParsedVideo) => {
     return { youtube_id: article.youtube_id };
   }
 }
+
+const addArticleToCollection = async (article: Article, collectionName: string) => {
+  let collection = await Collection.findOne({ where: { name: collectionName } });
+  if (!collection) {
+    collection = Collection.create({
+      name: collectionName,
+      articles: []
+    });
+  }
+  collection.articles.push(article);
+  await Collection.save(collection);
+};
 
 // const saveVideo = async (video: ParsedVideo) => {
 //   try {

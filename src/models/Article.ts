@@ -3,7 +3,10 @@ import {
   PrimaryGeneratedColumn,
   Column,
   BaseEntity,
+  ManyToOne
 } from "typeorm";
+
+import { Collection } from './Collection';
 
 @Entity()
 export class Article extends BaseEntity {
@@ -35,8 +38,8 @@ export class Article extends BaseEntity {
   @Column('simple-json', { nullable: true })
   data?: unknown;
 
-  // @Column({ type: "simple-array", nullable: true })
-  // relatedArticleSlugs: string[];
+  @ManyToOne('Collection', 'articles')
+  collection: Collection;
 
 }
 
@@ -58,41 +61,3 @@ export type VideoArticle = Article & {
     relatedArticles?: number[];
   };
 };
-
-// @Entity()
-// export class TextArticle extends Article {
-
-//   type: 'article';
-
-//   @Column({ type: 'text' })
-//   body: string;
-
-//   @Column('simple-json')
-//   data: { relatedArticles?: { path: string }[] };
-
-//   @ManyToMany(() => RelatedArticle)
-//   @JoinTable()
-//   relatedArticles: RelatedArticle[];
-
-// }
-
-// @Entity()
-// export class VideoArticle extends Article {
-
-//   type: 'video';
-
-//   @Column('simple-json')
-//   data: { youtube_id: string };
-
-//   @ManyToMany(() => RelatedArticle)
-//   @JoinTable()
-//   relatedArticles: RelatedArticle[];
-
-//   // @ManyToMany(() => TextArticle)
-//   // textArticles: TextArticle[];
-
-//   // @ManyToMany(() => VideoArticle)
-//   // @JoinTable()
-//   // videoArticles: VideoArticle[];
-
-// }

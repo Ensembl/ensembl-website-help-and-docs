@@ -9,6 +9,7 @@ export type ParsedArticle = {
   path: string;
   // filePath: string;
   html: string;
+  collection?: string;
   status: string;
   related_articles?: { href: string }[];
   related_videos?: Relation[];

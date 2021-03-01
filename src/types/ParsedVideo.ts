@@ -6,4 +6,5 @@ export type ParsedVideo = {
   youtube_id: string;
   url: string;
   path: string;
+  collection?: string;
 };
