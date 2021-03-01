@@ -5,7 +5,11 @@ import { createConnection } from "typeorm";
 
 import config from '../../config';
 
-import { Article, Collection } from '../models';
+import {
+  Article,
+  Collection,
+  Menu
+} from '../models';
 
 const prepareDatabase = async () => {
   return await createConnection({
@@ -13,7 +17,8 @@ const prepareDatabase = async () => {
     database: config.databasePath,
     entities: [
       Article,
-      Collection
+      Collection,
+      Menu
     ],
     synchronize: true,
     logging: !config.isProduction && !config.isBuildingDocs

@@ -1,3 +1,3 @@
 export { Article } from './Article';
-// export { default as Menu } from './Menu';
-export { default as Collection } from './Collection';
+export { Menu } from './Menu';
+export { Collection } from './Collection';
