@@ -14,5 +14,6 @@ Arrows = arrow.png from Outreach shared drive
 
 
 ## Tools
+[Tinypng](https://tinypng.com/) for shrinking file size without losing quality
 
-[GIMP](https://www.gimp.org/)
+[GIMP](https://www.gimp.org/) for drawing
