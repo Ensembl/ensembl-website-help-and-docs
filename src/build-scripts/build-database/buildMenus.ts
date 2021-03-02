@@ -3,15 +3,10 @@ import path from 'path';
 import config from '../../../config';
 
 import { createMenu } from './build-menus/buildMenus';
+import { menuNameToPathMap } from './menuNameToPathMap';
 
 const { docsPath } = config;
 
-// map between the name of each collection of documentation
-// and the directory for the root table of contents file 
-const menuNameToPathMap = new Map([
-  ['help', 'ensembl-help'],
-  ['about', 'about-ensembl']
-]);
 const menuPaths = [...menuNameToPathMap.entries()]
   .map(([name, dirname]) =>
     [name, path.resolve(docsPath, dirname, 'toc.yml')]

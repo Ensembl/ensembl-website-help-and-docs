@@ -1,7 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
-import slugify from '@sindresorhus/slugify';
+
+import { buildPageUrl } from '../buildPageUrl';
 
 const fsPromises = fs.promises;
 
@@ -46,6 +47,7 @@ type TOCMetadata = {
   fullPath: string;
   directoryPath: string;
   url: string; // can be set explicitly or derived from path
+  urlNamespace: string;
 };
 
 // a TOC item can be either a text article, a video,
@@ -79,12 +81,19 @@ export type ParsedMenuItem = {
 
 export const createMenu = async (params: CreateMenuParams) => {
   const { tocPath, url } = params;
-  const toc = await readTOC(tocPath, url); // FIXME: error handling?
+  const toc = await readTOC({ filePath: tocPath, url, urlNamespace: url }); // FIXME: error handling?
   const parsedToc = parseTOC(toc);
   return parsedToc;
 };
 
-const readTOC = async (filePath: string, url: string): Promise<TOC> => {
+type ReadTOCParams = {
+  filePath: string,
+  urlNamespace: string,
+  url?: string
+};
+// from the root toc.yml file, generate a tree of TOC items
+const readTOC = async (params: ReadTOCParams): Promise<TOC> => {
+  const { filePath, url, urlNamespace } = params;
   const fileContent = await fsPromises.readFile(filePath, 'utf-8');
   const directoryPath = path.dirname(filePath);
   const toc = yaml.parse(fileContent) as TOC | TOCItem[];
@@ -93,13 +102,15 @@ const readTOC = async (filePath: string, url: string): Promise<TOC> => {
       fullPath: filePath,
       directoryPath,
       url,
+      urlNamespace,
       items: toc
     }
   } else {
     return {
       ...toc,
       fullPath: filePath,
-      directoryPath
+      directoryPath,
+      urlNamespace
     };
   }
 };
@@ -127,12 +138,16 @@ const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem>
   } else if (tocItemPath && await isTOCFile(path.join(toc.directoryPath, tocItemPath))) {
     // TODO: does this menu parent have a page associated with it?
     const newTocUrl = buildDirectoryUrlFromFileSystem(tocItemPath, toc.url);
-    const newToc = await readTOC(path.join(toc.directoryPath, tocItemPath), newTocUrl);
+    const newToc = await readTOC({
+      filePath: path.join(toc.directoryPath, tocItemPath),
+      url: newTocUrl,
+      urlNamespace: toc.urlNamespace
+    });
     const parsedNewToc = await parseTOC(newToc);
     menuItem.items = parsedNewToc;
   } else if (tocItemPath && await isContentFile(path.join(toc.directoryPath, tocItemPath))) {
     menuItem.path = buildFullPathToFile(tocItemPath, toc);
-    menuItem.url = tocItem.url || buildPageUrlFromFileSystem(tocItemPath, toc.url);
+    menuItem.url = tocItem.url || buildPageUrl(tocItem.name, getMenuItemType(menuItem), toc.urlNamespace);
   }
 
   menuItem.type = getMenuItemType(menuItem);
@@ -147,35 +162,6 @@ const getMenuItemType = (menuItem: ParsedMenuItem): TOCItemType => {
   } else {
     return 'article';
   }
-};
-
-
-/*
-cases to support?
-
-1)
-- href: file.md
-
-2) ???
-- href: ../file.md
-
-3) ???
-- href: folder/file.md
-
-*/
-const buildUrl = (toc: TOC, filePath: string) => {
-  const { url: tocDirectoryUrl } = toc;
-  const filePathSegments = filePath.split('/');
-  const fileNameWithExtension = filePathSegments.pop();
-  const fileName = path.basename(fileNameWithExtension, path.extname(fileNameWithExtension));
-  const slugifiedFileName = slugify(fileName);
-  filePathSegments.push(slugifiedFileName);
-  return `${tocDirectoryUrl}/${filePathSegments.join('/')}`;
-
-  // path.basename('howto/index.md', path.extname('howto/index.md'))
-  /*
-    currentTOCPath
-  */
 };
 
 const isTOCFile = async (filePath: string) => {
@@ -208,11 +194,4 @@ const buildFullPathToFile = (filePath: string, toc: TOC) => {
 const buildDirectoryUrlFromFileSystem = (pathToNewToc: string, urlOfParentToc: string) => {
   const newTocDirectory = path.dirname(pathToNewToc);
   return path.join(urlOfParentToc, newTocDirectory);
-};
-
-const buildPageUrlFromFileSystem = (pathToFile: string, parentDirectoryUrl: string) => {
-  const fileExtension = path.extname(pathToFile);
-  const fileDirectory = path.dirname(pathToFile);
-  const fileName = slugify(path.basename(pathToFile, fileExtension));
-  return path.join(parentDirectoryUrl, fileDirectory, fileName);
 };

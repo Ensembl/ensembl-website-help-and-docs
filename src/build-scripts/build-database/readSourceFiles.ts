@@ -6,11 +6,14 @@ import pickBy from 'lodash/pickBy';
 import uniqBy from 'lodash/uniqBy';
 
 import config from '../../../config';
+import { pathToMenuNameMap } from './menuNameToPathMap';
+
 import parseMarkdown from './parseMarkdown';
 import {
   slugifyPath,
   fromDocumentsRoot
  } from '../filePathHelpers';
+ import { buildPageUrl } from './buildPageUrl';
 
 import { ParsedMenuItem } from './build-menus/buildMenus';
 
@@ -48,15 +51,12 @@ const readSourceFiles = async (menus: ReadSourceFilesParams) => {
   }
 
   return articles.map(article => {
-    if (article.slug) {
-      return article;
-    } else {
-      const articlePath = article.path;
-      const slug = slugifyPath(fromDocumentsRoot(articlePath));
-      return {
-        ...article,
-        slug
-      };
+    const articlePath = article.path;
+    
+    return {
+      ...article,
+      slug: article.slug || slugifyPath(fromDocumentsRoot(articlePath)),
+      url: article.url || buildUrlForArticleWithoutMenu(article)
     }
   });
 };
@@ -141,40 +141,24 @@ const createArticlesIterator = async function*(articleMetadata: ArticleMetadata[
   }
 };
 
-// const readSourceFiles1 = async () => {
-//   const { docsPath } = config;
-//   const filePatterns = [
-//     `${docsPath}/**/*.md`,
-//     `${docsPath}/**/index.yml`
-//   ];
-//   const filePaths = await globby(filePatterns);
-//   const articles = await Promise.all(filePaths.map(async (filePath) => {
-//     const pathWithinDocsDir = filePath.substring(docsPath.length + 1);
-//     const articlePath = stripFileExtensions(pathWithinDocsDir);
-//     let slug = slugifyPath(pathWithinDocsDir);
-//     let parsedFileContent;
-//     if (isMarkdownFile(filePath)) {
-//       parsedFileContent = await parseMarkdown(filePath);
-//     } else if (isYamlFile(filePath)) {
-//       const fileContent = fs.readFileSync(filePath, 'utf-8');
-//       parsedFileContent = yaml.parse(fileContent);
-//     }
-//     slug = parsedFileContent.slug || slug;
-//     return Object.assign(
-//       {},
-//       parsedFileContent,
-//       {
-//         path: articlePath,
-//         filePath: pathWithinDocsDir,
-//         slug
-//       }
-//     );
-//   }));
+const buildUrlForArticleWithoutMenu = (article: { path: string, type: string, title: string }) => {
+  const fromDocumentsRootPath = fromDocumentsRoot(article.path);
+  const dirName = path
+    .parse(fromDocumentsRootPath)
+    .dir
+    .split(path.sep)
+    .filter(Boolean)
+    .shift();
+  const urlNamespace = pathToMenuNameMap.get(dirName);
 
-//   return {
-//     articles
-//   }
-// };
+  if (!urlNamespace) {
+    console.log({ dirName, urlNamespace, pathToMenuNameMap });
+
+    throw new Error(`Could not create url for file ${article.path}`);
+  }
+
+  return buildPageUrl(article.title, article.type, urlNamespace);
+};
 
 const isMarkdownFile = (filePath: string) => path.parse(filePath).ext === '.md';
 
