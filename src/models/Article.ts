@@ -47,6 +47,8 @@ export type TextArticle = Article & {
 
   type: 'article';
 
+  body: string;
+
   data?: {
     relatedArticles: number[];
   }

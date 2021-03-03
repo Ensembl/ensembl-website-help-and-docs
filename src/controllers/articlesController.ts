@@ -3,6 +3,7 @@ import { In } from "typeorm";
 import pick from 'lodash/pick';
 
 import { Article } from '../models';
+import { TextArticle, VideoArticle } from '../models/Article';
 
 export const getArticle = async (req: Request, res: Response) => {
   const slug = req.query.slug as string | undefined;
@@ -18,23 +19,20 @@ export const getArticle = async (req: Request, res: Response) => {
     const searchKey = slug ? 'slug' : 'url';
     const searchValue = slug ? slug : url as string;
 
-    const article: Article | null = await Article.findOne({
+    const article = await Article.findOne({
       where: { [searchKey]: searchValue }
-    });
+    }) as TextArticle | VideoArticle | null;
 
     if (article) {
-      const relatedArticleIds = (article.data as { relatedArticles?: number[] } | null )?.relatedArticles || [];
+      const relatedArticleIds = article.data?.relatedArticles || [];
       const relatedArticles = await Article.find({ id: In(relatedArticleIds) });
       res.json({
         slug: article.slug,
         type: article.type,
         url: article.url,
         title: article.title,
-        body: article.body,
-        related_articles: relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug']))
-        // related_articles: article.relatedArticles,
-        // videos: article.videos
-        // data: match.data
+        related_articles: relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug'])),
+        ...getTypeSpecificArticleFields(article)
       });
     } else {
       res.status(404);
@@ -50,3 +48,14 @@ export const getArticle = async (req: Request, res: Response) => {
     });
   }
 };
+
+const getTypeSpecificArticleFields = (article: TextArticle |VideoArticle) => {
+  switch (article.type) {
+    case 'article':
+      return { body: article.body };
+    case 'video':
+      return { youtube_id: article.data.youtube_id };
+    default:
+      return null;
+  }
+}
