@@ -37,6 +37,20 @@ variables:
     - sed -i "s#<DOCKER_IMAGE>#${DOCKER_IMAGE}#g" k8s/deployment.yaml
     - kubectl apply -f k8s/deployment.yaml
 
+# Template to deploy to staging, internal, prod
+.deploy-wp-review:
+  stage: deploy
+  image: dockerhub.ebi.ac.uk/ensembl-web/deploy-tools:0.3
+
+  before_script:
+    - cd k8s/overlays/review
+
+  script:
+    - kustomize edit set namesuffix -- -${CI_COMMIT_REF_SLUG}
+    - kustomize edit set image ${DOCKER_IMAGE}
+    - kustomize edit add label -f environment:${CI_COMMIT_REF_SLUG}
+    - kustomize build . | kubectl apply -f -
+
 build:
   extends: .build
     
