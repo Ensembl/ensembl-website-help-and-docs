@@ -62,7 +62,17 @@ variables:
 
 build:
   extends: .build
-    
+
+Dev:
+  extends: .deploy-wp-kstmz
+  environment:
+    name : wp-hx-dev
+  before_script:
+    - cd k8s/overlays/development
+    - kustomize edit add label -f environment:dev
+  only:
+  - master
+
 Review:
   extends: .deploy-wp-review
   environment:
