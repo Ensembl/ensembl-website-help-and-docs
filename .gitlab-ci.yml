@@ -54,8 +54,8 @@ variables:
 build:
   extends: .build
     
-deploy:
-  extends: .deploy
+Review:
+  extends: .deploy-wp-review
   environment:
     name : wp-hx-dev
   except:
