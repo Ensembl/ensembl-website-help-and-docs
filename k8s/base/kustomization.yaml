@@ -3,4 +3,3 @@ kind: Kustomization
 namespace: ensembl-experiments
 resources:
   - deployment.yaml
-  - service.yaml
