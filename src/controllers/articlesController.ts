@@ -31,6 +31,7 @@ export const getArticle = async (req: Request, res: Response) => {
         type: article.type,
         url: article.url,
         title: article.title,
+        description: article.description,
         related_articles: relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug'])),
         ...getTypeSpecificArticleFields(article)
       });
