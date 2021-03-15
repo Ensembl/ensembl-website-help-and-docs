@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata: 
+  name: ensembl-help-and-docs-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: ensembl-help-and-docs
+    spec:
+      imagePullSecrets:
+        - name: ensemblweb-pull-secret
+      containers:
+      - name: ensembl-help-and-docs
+        image: dockerhub.ebi.ac.uk/ensembl-web/ensembl-help-and-docs:TAG
+        command: [ "npm", "run", "start-server" ]
+        ports:
+          - containerPort: 3000
+        imagePullPolicy: Always

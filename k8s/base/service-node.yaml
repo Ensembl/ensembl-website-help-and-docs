@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: ensembl-help-and-docs-svc
+  labels:
+    app: ensembl-help-and-docs-svc
+spec:
+  selector:
+    app: ensembl-help-and-docs
+    environment: branch-name
+  type: NodePort
+  ports:
+    - port: 8000
+      protocol: TCP
+      targetPort: 3000

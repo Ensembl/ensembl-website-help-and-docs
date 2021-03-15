@@ -37,11 +37,44 @@ variables:
     - sed -i "s#<DOCKER_IMAGE>#${DOCKER_IMAGE}#g" k8s/deployment.yaml
     - kubectl apply -f k8s/deployment.yaml
 
+# Template to deploy to dev (Review apps) using kustmoize
+.deploy-wp-kstmz:
+  stage: deploy
+  image: dockerhub.ebi.ac.uk/ensembl-web/deploy-tools:0.3
+
+  script:
+    - kustomize edit set image ${DOCKER_IMAGE}
+    - kustomize build . | kubectl apply -f -
+
+# Template to deploy to dev (Review apps)
+.deploy-wp-review:
+  stage: deploy
+  image: dockerhub.ebi.ac.uk/ensembl-web/deploy-tools:0.3
+
+  before_script:
+    - cd k8s/overlays/review
+
+  script:
+    - kustomize edit set namesuffix -- -${CI_COMMIT_REF_SLUG}
+    - kustomize edit set image ${DOCKER_IMAGE}
+    - kustomize edit add label -f environment:${CI_COMMIT_REF_SLUG}
+    - kustomize build . | kubectl apply -f -
+
 build:
   extends: .build
-    
-deploy:
-  extends: .deploy
+
+Dev:
+  extends: .deploy-wp-kstmz
+  environment:
+    name : wp-hx-dev
+  before_script:
+    - cd k8s/overlays/development
+    - kustomize edit add label -f environment:dev
+  only:
+  - master
+
+Review:
+  extends: .deploy-wp-review
   environment:
     name : wp-hx-dev
   except:
