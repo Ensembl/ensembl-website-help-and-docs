@@ -77,7 +77,7 @@ Review:
   extends: .deploy-wp-review
   environment:
     name : wp-hx-dev
-  only:
+  except:
   - master
 
 
