@@ -23,31 +23,7 @@ describe('createMenu', () => {
     expect(homePageMenuItem.path).toBe(path.join(rootTOCDirectoryPath, 'index.md'));
     expect(homePageMenuItem.url).toBe('/'); // explicitly defined in toc.yml
     expect(siblingPageMenuItem.path).toBe(path.join(rootTOCDirectoryPath, 'sibling.md'));
-    expect(siblingPageMenuItem.url).toBe('/root/sibling'); // pathname from toc plus 
-  });
-
-  it('creates web-friendly slugs from file names', async () => {
-    const menu = await createMenu({ tocPath: pathToToc, url: '/root' });
-    const menuItem = menu.find(item => item.name === 'Page from oddly named file');
-
-    expect(menuItem.path).toBe(path.join(rootTOCDirectoryPath, 'fileWith_strange-name.md'));
-    expect(menuItem.url).toBe('/root/file-with-strange-name');
-  });
-
-  it('correctly builds data about files in nested directories', async () => {
-    const menu = await createMenu({ tocPath: pathToToc, url: '/root' });
-    const menuItemWithChildren = menu.find(item => item.name === 'Parent menu item without own page');
-    const childrenItems = menuItemWithChildren.items;
-    
-    expect(childrenItems.length).toBeTruthy();
-
-    const childFoo = childrenItems.find(item => item.name === 'Child Foo');
-    const childBar = childrenItems.find(item => item.name === 'Child Bar');
-
-    expect(childFoo.path).toBe(path.join(rootTOCDirectoryPath, 'child-folder-1', 'foo.md'));
-    expect(childFoo.url).toBe('/root/child-folder-1/foo');
-    expect(childBar.path).toBe(path.join(rootTOCDirectoryPath, 'child-folder-1', 'bar.md'));
-    expect(childBar.url).toBe('/root/child-folder-1/bar');
+    expect(siblingPageMenuItem.url).toBe('/root/articles/top-level-sibling-page'); // pathname from toc item name and type plus 
   });
 
   it('assigns the type of article to a menu item by default', async () => {
@@ -77,18 +53,6 @@ describe('createMenu', () => {
     const pageWithAbsoluteUrl = menu.find(({ name }) => 
       name === 'Page from an external resource');
     expect(pageWithAbsoluteUrl.url).toBe('https://example.com'); // as defined in the TOC file
-  });
-
-  it('supports references to files in parent or sibling directories', async () => {
-    const menu = await createMenu({ tocPath: pathToToc, url: '/root' });
-    const menuItemWithChildren = menu.find(item => item.name === 'Parent menu item with its own page');
-    const childrenItems = menuItemWithChildren.items;
-
-    // Notice that the file for this page is in a different folder than the TOC file
-    const childFoo = childrenItems.find(item => item.name === 'Child Foo');
-
-    expect(childFoo.path).toBe(path.join(rootTOCDirectoryPath, 'child-folder-1', 'foo.md'));
-    expect(childFoo.url).toBe('/root/child-folder-1/foo');
   });
 
 });
