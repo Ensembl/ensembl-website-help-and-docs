@@ -30,7 +30,7 @@ Save the Gimp file to the Outreach shared drive image folder so that it can be e
 
 Drop the file into tinypng to compress. Download the image again and add to Git.
 
-![](images/tiny.png)
+![](images/tinypng.png)
 
 ## Drawings
 
