@@ -1,45 +1,11 @@
 import fs from 'fs';
 import path from 'path';
 import yaml from 'yaml';
+import pick from 'lodash/pick';
 
 import { buildPageUrl } from '../buildPageUrl';
 
 const fsPromises = fs.promises;
-
-/*
-
-- should accept the name of the app (root) with the menus
-
-- parseTOC function?
-  - directory_pathname (optional)
-    - if so, then items should be in the items field
-
-  - readHref
-    - file
-    - toc.yml
-    - url
-
-
-*/
-
-// type MenuMetadataFile = {
-//   type: 'file';
-//   name: string;
-//   path: string;
-//   url: string;
-//   fileType: string; // 'markdown' | 'yaml'
-// };
-
-// type MenuMetadataLink = {
-//   name: string;
-//   url: string;
-// };
-
-// type MenuMetadataDirectory = {
-//   name: string;
-//   path: string;
-//   children: MenuMetadataFile[];
-// };
 
 type TOC = TOCMetadata & { items: TOCItem[] };
 
@@ -127,10 +93,7 @@ const parseTOC = async (toc: TOC): Promise<ParsedMenuItem[]> /* parsedMenuTree -
 };
 
 const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem> => {
-  const menuItem: ParsedMenuItem = {
-    name: tocItem.name,
-    type: tocItem.type
-  };
+  const menuItem = pick(tocItem, ['name', 'type', 'url']) as ParsedMenuItem;
   const tocItemPath = tocItem.href;
 
   if (tocItemPath && /https?:\/\//.test(tocItemPath)) {
