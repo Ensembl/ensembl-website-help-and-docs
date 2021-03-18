@@ -3,6 +3,7 @@ import readSourceFiles from './readSourceFiles';
 import addArticles from './addArticles';
 import buildMenus from './buildMenus';
 import addMenus from './addMenus';
+import { setInternalLinks } from './set-internal-links';
 
 const buildDatabase = async () => {
   try {
@@ -11,6 +12,7 @@ const buildDatabase = async () => {
     const files = await readSourceFiles(menus);
     await addArticles(files);
     await addMenus(menus);
+    await setInternalLinks();
 
     console.log('Documentation database generated successfully');
   } catch (error) {
