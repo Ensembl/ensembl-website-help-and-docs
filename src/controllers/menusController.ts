@@ -18,7 +18,7 @@ export const getMenu = async (req: Request, res: Response) => {
     if (menu) {
       res.json({
         name: menu.name,
-        data: menu.data,
+        items: menu.data,
       });
     } else {
       res.status(404);
