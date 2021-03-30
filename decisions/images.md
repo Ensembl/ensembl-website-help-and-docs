@@ -12,7 +12,7 @@ Drop the arrow.png image into the screenshot wherever you want to add a label â€
 
 ![](images/addarrow.png)
 
-Add text labels in Caveat bold 70px #D90000 (rgb 217,0,0).
+Add text labels in Caveat bold 60px #D90000 (rgb 217,0,0).
 
 ![](images/addlabel.png)
 
