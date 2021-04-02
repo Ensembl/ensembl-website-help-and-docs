@@ -1,5 +1,5 @@
-- name: Funding
-  href: funding
-
 - name: About the Ensembl Project
-  href: about
+  href: about.md
+  url: /about
+- name: Funding
+  href: funding.md

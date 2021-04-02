@@ -15,7 +15,7 @@ import yaml from 'yaml';
 import imagePlugin from './markdownImagePlugin';
 
 const parseMarkdown = async (pathToFile: string) => {
-  return await new Promise((resolve, reject) => {
+  const processedFile = await
     unified()
       .use(parse)
       .use(frontmatter, ['yaml', 'toml'])
@@ -24,15 +24,13 @@ const parseMarkdown = async (pathToFile: string) => {
       .use(remark2rehype, {allowDangerousHtml: true})
       .use(raw)
       .use(html)
-      .process(vfile.readSync(pathToFile), function(err, file) {
-        if (err) {
-          reject(err);
-        } else {
-          const html = String(file);
-          resolve(Object.assign({}, file.data, { html }));
-        }
-      });
-  });
+      .process(vfile.readSync(pathToFile));
+
+
+  return {
+    ...processedFile.data as Record<string, unknown>,
+    html: String(processedFile)
+  };
 };
 
 export default parseMarkdown;

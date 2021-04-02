@@ -9,7 +9,7 @@ export const getCollection = async (req: Request, res: Response) => {
     const collection: Collection = await Collection.findOne({ where: { name } });
 
     if (collection) {
-      const articles = await collection.getArticles();
+      const articles = collection.articles;
       res.json(articles);
     } else {
       res.status(404);

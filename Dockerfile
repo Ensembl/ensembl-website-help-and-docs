@@ -1,4 +1,4 @@
-FROM node:12.16.2
+FROM node:14.16.0
 
 ARG SOURCE_DIR="."
 ARG TARGET_DIR="/srv/ensembl-docs-server"

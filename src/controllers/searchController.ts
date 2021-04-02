@@ -1,12 +1,5 @@
 import { Request, Response } from 'express';
-// @ts-ignore
-import lunr from 'lunr';
-
-import config from '../../config';
-import { Article } from '../models';
-
-const articlesIndexPath = config.articlesIndexPath;
-const articlesIndex = require(articlesIndexPath);
+import { getManager } from 'typeorm';
 
 export const search = async (req: Request, res: Response) => {
   const query = req.query.query as string | undefined;
@@ -17,26 +10,34 @@ export const search = async (req: Request, res: Response) => {
     });
   }
 
-  const searchResults = searchIndex(query, articlesIndex);
-
   try {
-    const paths: string[] = searchResults.map((result: any) => result.ref);
-    const articles = await Promise.all(
-      paths.map(path => Article.findOne({ where: { path } }))
-    );
-
-    res.json(articles);
+    const searchResults = await searchForArticles(query);
+    res.json(searchResults);
   } catch (error) {
     res.status(404);
     res.json({
-      error,
-      searchResults
+      error
     })
   }
 };
 
-const searchIndex = (query: string, index: string) => {
-  const idx = lunr.Index.load(index);
-  return idx.search(query);
-};
+const sql = `
+  SELECT title, url, body
+  FROM article
+  WHERE id IN (
+    SELECT article_id
+    FROM articles_to_searchable_articles
+    WHERE searchable_article_id IN (
+      SELECT rowid
+      FROM searchable_articles
+      WHERE searchable_articles MATCH $1
+      ORDER BY rank
+    )
+  )
+`;
 
+
+const searchForArticles = async (query: string) => {
+  const entityManager = getManager();
+  return await entityManager.query(sql, [query]);
+};

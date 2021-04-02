@@ -1,11 +1,8 @@
 - name: What is the Genome browser?
   href: browser.md
-
 - name: Track configuration
-  href: tracks.md
-  
+  href: tracks.md  
 - name: Genome browser navigation
   href: navigation.md
-  
 - name: What is a Focus entity?
   href: focus-entity.md

@@ -1,5 +1,5 @@
 import visit from 'unist-util-visit';
-import { Node } from 'unist'
+import { Node } from 'unist';
 
 import config from '../../../config';
 

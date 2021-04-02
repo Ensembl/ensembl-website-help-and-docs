@@ -3,10 +3,10 @@ slug: transcripts
 title: What’s in the Transcripts view?
 description: How to browse and download transcript data
 related_articles:
-  - relative_path: entity-viewer.md
-  - relative_path: gene-function.md
-  - relative_path: overview.md
-  - relative_path: external-references.md
+  - href: entity-viewer.md
+  - href: gene-function.md
+  - href: overview.md
+  - href: external-references.md
 tags:
   - entity
 status: draft

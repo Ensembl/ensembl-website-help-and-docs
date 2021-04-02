@@ -3,10 +3,10 @@ slug: entity-viewer
 title: What is the Entity viewer?
 description: How to browse gene, transcript and protein data in the Entity viewer
 related_articles:
-  - relative_path: transcripts.md
-  - relative_path: gene-function.md
-  - relative_path: overview.md
-  - relative_path: external-references.md
+  - href: transcripts.md
+  - href: gene-function.md
+  - href: overview.md
+  - href: external-references.md
 tags:
   - entity
 status: draft

@@ -3,18 +3,18 @@ import readSourceFiles from './readSourceFiles';
 import addArticles from './addArticles';
 import buildMenus from './buildMenus';
 import addMenus from './addMenus';
+import { setInternalLinks } from './set-internal-links';
 
 const buildDatabase = async () => {
   try {
     await prepareDatabase();
-    const files = await readSourceFiles();
-    await addArticles(files.articles);
-    console.log('Documentation database generated successfully');
-
-    const menus = buildMenus();
+    const menus = await buildMenus();
+    const files = await readSourceFiles(menus);
+    await addArticles(files);
     await addMenus(menus);
-    console.log('Menus added to the database');
+    await setInternalLinks();
 
+    console.log('Documentation database generated successfully');
   } catch (error) {
     console.error('Error building the database', error);
   }

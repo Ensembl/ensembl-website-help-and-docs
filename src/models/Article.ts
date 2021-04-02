@@ -1,93 +1,65 @@
 import {
-  Model,
-  Association,
-  HasManyAddAssociationMixin,
-  HasManyGetAssociationsMixin,
-  HasManyHasAssociationMixin,
-  DataTypes
-} from 'sequelize';
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  BaseEntity,
+  ManyToOne
+} from "typeorm";
 
-import sequelize from '../db/sequelize';
-import Video from './Video';
+import { Collection } from './Collection';
 
-class Article extends Model {
-  public id: number;
-  public title: string;
-  public description: string;
-  public path: string;
-  public file_path: string;
-  public slug: string;
-  public body: string;
-  public data: string;
+@Entity()
+export class Article extends BaseEntity {
 
-  public readonly createdAt: Date;
-  public readonly updatedAt: Date;
+  @PrimaryGeneratedColumn()
+  id: number;
 
+  @Column()
+  type: string;
 
-  public addVideo: HasManyAddAssociationMixin<Video, number>;
-  public getVideos: HasManyGetAssociationsMixin<Video>;
-  public hasVideos: HasManyHasAssociationMixin<Video, number>;
+  @Column()
+  title: string;
 
-  public addRelatedArticle: HasManyAddAssociationMixin<Article, number>;
-  public getRelatedArticles: HasManyGetAssociationsMixin<Article>;
-  public hasRelatedArticles: HasManyHasAssociationMixin<Article, number>;
+  @Column()
+  description: string;
 
-  public readonly relatedArticles?: Article[];
-  public readonly videos?: Video[];
+  @Column()
+  slug: string;
 
-  public static associations: {
-    projects: Association<Article, Video>;
-  };
+  @Column()
+  filePath: string;
+
+  @Column({ nullable: true })
+  url: string;
+
+  @Column({ type: 'text', nullable: true })
+  body?: string;
+
+  @Column('simple-json', { nullable: true })
+  data?: unknown;
+
+  @ManyToOne('Collection', 'articles')
+  collection: Collection;
 
 }
 
-Article.init({
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-  title: {
-    type: new DataTypes.STRING(255),
-    allowNull: false,
-  },
-  description: {
-    type: new DataTypes.TEXT,
-    allowNull: false,
-  },
-  path: {
-    type: new DataTypes.STRING(255),
-    allowNull: false,
-  },
-  file_path: {
-    type: new DataTypes.STRING(255),
-    allowNull: true
-  },
-  slug: {
-    type: new DataTypes.STRING(255),
-    allowNull: true
-  },
-  body: {
-    type: new DataTypes.TEXT,
-    allowNull: true
-  },
-  data: {
-    type: new DataTypes.TEXT,
-    allowNull: true
+export type TextArticle = Article & {
+
+  type: 'article';
+
+  body: string;
+
+  data?: {
+    relatedArticles: number[];
   }
-}, {
-  tableName: 'articles',
-  sequelize
-});
+};
 
-Article.belongsToMany(Article, {
-  as: 'relatedArticles',
-  through: 'article_relationships'
-});
+export type VideoArticle = Article & {
 
-Article.hasMany(Video, {
-  foreignKey: 'articleId',
-  as: 'videos'
-});
+  type: 'video';
 
-export default Article;
+  data: {
+    youtube_id: string;
+    relatedArticles?: number[];
+  };
+};

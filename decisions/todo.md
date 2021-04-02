@@ -1,54 +1,93 @@
-# TODO
-- Fetch all articles for a collection (paginated?)
-- Link related articles
-- Figure out what to do with index pages
+draft field — likely not needed (but we will need internal deployments)
 
-## Basic server-side maintenance
-- Add healthcheck endpoint
-- Add proper logging
+tags -> keywords
 
+references
+  - get from api
+  - and to have option for references that don't have a pubmed id
 
 
+Decided during meeting on Feb 8 (Andrea, Anne, Andrey)
+- video pages are pages on their own right
+- there will be only 1 video per page
+- breadcrumbs are useless without pages that correspond to the parents
+- possibly avoid having meaningless directories in the url? This would mean:
+  - urls for files need to be defined manually
+  - something in the toc.yml should tell the parent-level item that it shouldn't add its directory name to the url
+- discuss setting up dedicated email server
+- we are unclear about references, but feel they should be requested from NCBI/EuropePMC
+- need to investigate linking between footnotes and where they appear in the text
 
-# Backend
-- Enable api to report menu structure
-  - Q: how many apps (i.e. what data) is the app going to support?
-    - contextual help
-    - Help&Docs app
-    - About Ensembl app?
-    - Ensembl static data (species pages)?
-- Enable entrypoint through the api to build pages
-  - should the entrypoint be just the menu, and then individual pages are requested through subsequent requests, or should all pages be returned en masse (alternatively, as a paginated list)?
-- Rebuild data generation (recurse through the folder structure)
-  - decide what to use for page identifier
-  - make sure images are copied to relevant folder and can be served correctly
-- Decide how to handle section pages (example: getting started page, using Ensembl page, Known bugs page, Contact page). Should we support html pages as well
-
-# Client
-- be able to show pages
-- be able to navigate between pages
-- notice that text and video sections in contextual menu may change independently when you click on a related article/video link
-  - Q: Are contextual menu and page in help&docs app same pages or different?
+```yml
+- name: Title of a menu item
+  href: child-folder/toc.yml
+  type: video
+  url: `/help/title-of-a-menu-item-video`
+  topicHref: my-index-page.yml
+```
 
 
-# Consequences
-## Content ids
-- using file paths for ids
-  - Advantages
-    - ensures uniqueness
-    - nicely reflect the url
-    - do not require any involvement from content creators
-  - Disadvantages
-    - things may break if files are moved or renamed
-    - a bit cumbersome in api requests (need to uri-escape slashes)
-- using slugs (or other kind of id)
-  - Advantages
-    - resilience to changes in file system
-  - Disadvantages
-    - requires manual input from content creators
-    - need extra validation code to guarantee uniqueness
+Decisions from meeting on 2021-02-16
+- urls: (mostly) automatic, which means that there will be folder segments in the pathname
+- related articles: set them individually per page (because they will likely be different for different pages)
+- add navigation to contextual help (since the list of related articles can be different for different article, and we cannot rely on the links of related articles to always stay the same)
 
-It is potentially possible to have both (with slug/id being a potentially optional field)
 
-## Related articles
-If relations are established through the same tag/category, then the order of the articles will be determined automatically (we could sort alphabetically, of course). I suspect that content creators will want full control over the order of related articles, in which case relations should be written out manually.
+
+# Check later
+
+Ensembl Help
+1) Getting Started
+  - is not expanded in the mega menu
+  - see more link (not reflected in the menu)
+  - more help: related articles are interspersed with related videos
+  - more help: the "About Ensembl" is separated from the related articles
+      does this suggest we need some kind of "additional links" section?
+
+2) Looking at Genes and Transcripts (get to it from mega menu)
+  - aside
+    - videos with articles
+    - a link separated from the related links
+
+3) Data releases
+  - aside
+      groups of links
+  - image/visualization (will there be interactive visualizations? if yes, how can we enable them? iframes?)
+
+
+About Ensembl
+1) No mega menu
+
+2) Would we represent the menu hierarchy like so:
+
+```
+About the Ensembl project
+|
+├── Assemblies and sequence
+├── Legal and privacy
+|     |
+|     ├─- Browser Genome release agreement
+|     ├─- Software license
+|
+├── Contact us
+```
+
+But this doesn't correspond to the right-hand of the About the Ensembl project page
+
+```
+├── About the Ensembl project
+|     |
+|     ├─- The Ensembl story
+|     ├─- Funding
+|     ├─- Citing Ensembl
+|
+├── Assemblies and sequence
+├── Legal and privacy
+|     |
+|     ├─- Browser Genome release agreement
+|     ├─- Software license
+|
+├── Contact us
+```
+
+What element is there on "where to find us"?

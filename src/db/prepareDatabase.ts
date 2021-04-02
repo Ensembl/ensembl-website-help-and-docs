@@ -1,10 +1,26 @@
-// make sure tables are created in the db
+import "reflect-metadata";
+import { createConnection } from "typeorm";
 
-import * as models from '../models';
-import sequelize from './sequelize';
+import config from '../../config';
+
+import {
+  Article,
+  Collection,
+  Menu
+} from '../models';
 
 const prepareDatabase = async () => {
-  await sequelize.sync();
+  return await createConnection({
+    type: 'sqlite',
+    database: config.databasePath,
+    entities: [
+      Article,
+      Collection,
+      Menu
+    ],
+    synchronize: true,
+    logging: !config.isProduction && !config.isBuildingDocs
+  });
 }
 
 export default prepareDatabase;

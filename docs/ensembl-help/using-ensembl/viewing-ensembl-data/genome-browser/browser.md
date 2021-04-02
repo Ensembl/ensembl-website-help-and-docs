@@ -3,9 +3,9 @@ slug: genome-browser
 title: What is the Genome browser?
 description: How to browse genes, variants, and other features aligned to the reference genome
 related_articles:
-  - relative_path: navigation.md
-  - relative_path: tracks.md
-  - relative_path: focus-entity.md
+  - href: navigation.md
+  - href: tracks.md
+  - href: focus-entity.md
 tags:
   - browser
 status: draft

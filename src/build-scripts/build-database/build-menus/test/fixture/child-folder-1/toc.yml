@@ -1,0 +1,4 @@
+- name: Child Foo
+  href: foo.md
+- name: Child Bar
+  href: bar.md

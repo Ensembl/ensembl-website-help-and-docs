@@ -1,33 +1,20 @@
 import {
-  Model,
-  DataTypes
-} from 'sequelize';
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  BaseEntity
+} from "typeorm";
 
-import sequelize from '../db/sequelize';
+@Entity()
+export class Menu extends BaseEntity {
 
-class Menu extends Model {
-  public id: number;
-  public name: string;
-  public data: string;
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+
+  @Column('simple-json')
+  data: unknown;
+
 }
-
-Menu.init({
-  id: {
-    type: DataTypes.INTEGER,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-  name: {
-    type: new DataTypes.STRING(255),
-    allowNull: false,
-  },
-  data: {
-    type: new DataTypes.TEXT,
-    allowNull: false
-  }
-}, {
-  tableName: 'menus',
-  sequelize
-});
-
-export default Menu;
