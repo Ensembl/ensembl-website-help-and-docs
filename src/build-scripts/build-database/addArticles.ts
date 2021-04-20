@@ -1,16 +1,18 @@
 import path from 'path';
+import pick from 'lodash/pick';
 
 import {
   fromDocumentsRoot
 } from '../filePathHelpers';
 
 import { Article, Collection } from '../../models';
-import { TextArticle } from '../../models/Article';
+import { IndexArticle, TextArticle } from '../../models/Article';
 
+import { ParsedIndexPage } from '../../types/ParsedIndexPage';
 import { ParsedArticle } from '../../types/ParsedArticle';
 import { ParsedVideo } from '../../types/ParsedVideo';
 
-type ParsedFile = ParsedArticle | ParsedVideo;
+type ParsedFile = ParsedIndexPage| ParsedArticle | ParsedVideo;
 
 const addArticles = async (items: ParsedFile[]) => {
   let savedArticles: { parsedFile: ParsedFile, savedArticle: Article }[] = [];
@@ -20,12 +22,18 @@ const addArticles = async (items: ParsedFile[]) => {
       savedArticle: await saveArticle(item)
     });
   }
+  // now that all articles have been saved to the database,
+  // it's time to establish relationships between them
   for (const item of savedArticles) {
-    await addRelationships(item);
+    if (item.parsedFile.type === 'index') {
+      await addLinksToIndexArticles(item.savedArticle as IndexArticle);
+    } else {
+      await addRelationships(item);
+    }
   }
 };
 
-const saveArticle = async (article: ParsedArticle | ParsedVideo) => {
+const saveArticle = async (article: ParsedFile) => {
   const newArticle = Article.create({
     title: article.title || 'empty title',
     type: article.type,
@@ -46,9 +54,16 @@ const saveArticle = async (article: ParsedArticle | ParsedVideo) => {
   return newArticle;
 };
 
-const prepareArticleMetadata = (article: ParsedArticle | ParsedVideo) => {
+const prepareArticleMetadata = (article: ParsedFile) => {
   if (article.type === 'video') {
     return { youtube_id: article.youtube_id };
+  } else if (article.type === 'index') {
+    return {
+      items: article.items.map(item => ({
+        ...pick(item, ['title', 'summary']),
+        url: item.href
+      }))
+    };
   }
 }
 
@@ -72,7 +87,7 @@ const addRelationships = async (item: { parsedFile: ParsedFile, savedArticle: Ar
     return;
   }
 
-  if (parsedFile.related_articles) {
+  if ('related_articles' in parsedFile) {
     for (const { href } of parsedFile.related_articles) {
       const pathToRelatedArticle = buildPathToRelatedFile(savedArticle.filePath, href);
       const relatedArticle = await Article.findOne({ where: { filePath: pathToRelatedArticle } });
@@ -93,6 +108,28 @@ const addRelationships = async (item: { parsedFile: ParsedFile, savedArticle: Ar
   }
 
   await savedArticle.save();
+};
+
+const addLinksToIndexArticles = async (indexArticle: IndexArticle) => {
+  const filePath = indexArticle.filePath;
+  const indexItems = indexArticle.data.items;
+  for (const indexItem of indexItems) {
+    // At this point, the url field of an index item of the saved article
+    // contains the relative path to the file that the index article is referencing.
+    // Here, we will overwrite this field with the actual url.
+    // TODO: should probably first check that the href is not a url to an external article
+    const pathToLinkedArticle = buildPathToRelatedFile(filePath, indexItem.url);
+    const savedLinkedArticle = await Article.findOne({ where: { filePath: pathToLinkedArticle } });
+
+    if (!savedLinkedArticle) {
+      console.log('Incorrect path for related article provided:', pathToLinkedArticle);
+      continue;
+    }
+
+    indexItem.url = savedLinkedArticle.url;
+  }
+
+  await indexArticle.save();
 };
 
 const buildPathToRelatedFile = (sourceFilePath: string, relatedFilePath: string) => {

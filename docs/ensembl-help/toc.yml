@@ -1,5 +1,7 @@
 - name: Getting Started
+  href: getting-started/index.yml
+  url: /help
+- name: Something Other than Getting Started
   href: getting-started/toc.yml
-  url: /getting-started
 - name: Using Ensembl
   href: using-ensembl/toc.yml

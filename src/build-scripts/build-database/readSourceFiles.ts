@@ -152,12 +152,10 @@ const buildUrlForArticleWithoutMenu = (article: { path: string, type: string, ti
   const urlNamespace = pathToMenuNameMap.get(dirName);
 
   if (!urlNamespace) {
-    console.log({ dirName, urlNamespace, pathToMenuNameMap });
-
     throw new Error(`Could not create url for file ${article.path}`);
   }
 
-  return buildPageUrl(article.title, article.type, urlNamespace);
+  return buildPageUrl(article.title, article.type, `/${urlNamespace}`);
 };
 
 const isMarkdownFile = (filePath: string) => path.parse(filePath).ext === '.md';

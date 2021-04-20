@@ -3,7 +3,7 @@ import { In } from "typeorm";
 import pick from 'lodash/pick';
 
 import { Article } from '../models';
-import { TextArticle, VideoArticle } from '../models/Article';
+import { IndexArticle, TextArticle, VideoArticle } from '../models/Article';
 
 export const getArticle = async (req: Request, res: Response) => {
   const slug = req.query.slug as string | undefined;
@@ -24,16 +24,13 @@ export const getArticle = async (req: Request, res: Response) => {
     }) as TextArticle | VideoArticle | null;
 
     if (article) {
-      const relatedArticleIds = article.data?.relatedArticles || [];
-      const relatedArticles = await Article.find({ id: In(relatedArticleIds) });
       res.json({
         slug: article.slug,
         type: article.type,
         url: article.url,
         title: article.title,
         description: article.description,
-        related_articles: relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug'])),
-        ...getTypeSpecificArticleFields(article)
+        ...await getTypeSpecificArticleFields(article)
       });
     } else {
       res.status(404);
@@ -50,13 +47,27 @@ export const getArticle = async (req: Request, res: Response) => {
   }
 };
 
-const getTypeSpecificArticleFields = (article: TextArticle |VideoArticle) => {
+const getTypeSpecificArticleFields = async (article: TextArticle | VideoArticle | IndexArticle) => {
   switch (article.type) {
     case 'article':
-      return { body: article.body };
+      return {
+        body: article.body,
+        related_articles: await populateRelatedArticles(article)
+      };
     case 'video':
-      return { youtube_id: article.data.youtube_id };
+      return {
+        youtube_id: article.data.youtube_id,
+        related_articles: await populateRelatedArticles(article)
+      };
+    case 'index':
+      return { items: article.data.items };
     default:
       return null;
   }
-}
+};
+
+const populateRelatedArticles = async (article: TextArticle | VideoArticle) => {
+  const relatedArticleIds = article.data?.relatedArticles || [];
+  const relatedArticles = await Article.find({ id: In(relatedArticleIds) });
+  return relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug']));
+};

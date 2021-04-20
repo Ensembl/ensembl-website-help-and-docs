@@ -1,26 +1,52 @@
-import visit from 'unist-util-visit';
+import path from 'path';
+import visitParents from 'unist-util-visit-parents';
+import unistUtilIs from 'unist-util-is';
 import { Node } from 'unist';
 
 import config from '../../../config';
 
-const attacher = () => {
-  const transformer = (tree: Node, file: any) => {
-    // FIXME: the file parameter is vfile
-    const { path: filePath } = file;
-    visit(tree, 'image', imageVisitor(filePath));
-  };
+const imagePlugin = () => (tree: Node, file: any) => {
+  // check that the node is an image element
+  const test = (node: Node): node is Node =>
+    unistUtilIs(node, { tagName: 'img' });
 
-  return transformer;
+  visitParents(
+    tree,
+    test,
+    (node: Node, ancestors) => {
+      updateImagePath(node as Element, file);
+      updateImageWrapperElement(ancestors as Element[]);
+    }
+  );
 };
 
-const imageVisitor = (filePath: string) => (node: Node) => {
-  const markdownDirectory = filePath.substring(config.docsPath.length + 1)
-    .split('/')
-    .slice(0, -1)
-    .join('/');
-  const destPath = `/api/docs/images/${markdownDirectory}/${node.url}`;
-
-  node.url = destPath;
+type Element = Node & {
+  type: 'element';
+  tagName: string;
+  properties: Record<string, unknown>;
+  children: Element[];
 };
 
-export default attacher;
+const updateImagePath = (imageNode: Element, file: any) => {
+  const imageSource = imageNode.properties.src as string;
+  // FIXME: check image source; only do the following if it's not an absolute url
+
+  const filePath = file.path; // this is the path of the markdown file containing the reference
+  const { dir: directoryPath } = path.parse(filePath);
+
+  // image files will be copied to the destination folder preserving the original directory tree
+  const directoryRelativeToDocsRoot = path.relative(config.docsPath, directoryPath);
+  const destDirectory = '/api/docs/images'; // this is where images are going to be copied
+  const destImagePath = path.join(destDirectory, directoryRelativeToDocsRoot, imageSource);
+
+
+  imageNode.properties.src = destImagePath;
+};
+
+const updateImageWrapperElement = (imageAncestors: Element[]) => {
+  const immediateAncestor = imageAncestors[imageAncestors.length - 1];
+  immediateAncestor.tagName = 'figure';
+};
+
+
+export default imagePlugin;
