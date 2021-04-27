@@ -2,6 +2,8 @@
 
 ## Screenshots
 
+### Whole page
+
 To take images of a whole page, scale your browser to 1200 px wide (you may need to turn on developer tools to see the size of the page) on your laptop retina display screen and take a screenshot.
 
 Open in gimp.
@@ -12,7 +14,7 @@ Drop the arrow.png image into the screenshot wherever you want to add a label â€
 
 ![](images/addarrow.png)
 
-Add text labels in Caveat bold 60px #D90000 (rgb 217,0,0).
+Add text labels in Caveat bold 80px #D90000 (rgb 217,0,0).
 
 ![](images/addlabel.png)
 
@@ -31,6 +33,10 @@ Save the Gimp file to the Outreach shared drive image folder so that it can be e
 Drop the file into tinypng to compress. Download the image again and add to Git.
 
 ![](images/tinypng.png)
+
+### Zoomed in sections
+
+Any image that is less than 980 px wide will not be scaled to fit into the pages. To make the text appear that the same size as in the full page images, use size 32 font for labels.
 
 ## Drawings
 
