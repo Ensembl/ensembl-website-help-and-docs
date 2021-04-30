@@ -12,7 +12,7 @@ import frontmatter from 'remark-frontmatter';
 import html from 'rehype-stringify';
 import yaml from 'yaml';
 
-import imagePlugin from './markdownImagePlugin';
+import imagePlugin from './imagePlugin';
 
 const parseMarkdown = async (pathToFile: string) => {
   const processedFile = await
@@ -20,8 +20,8 @@ const parseMarkdown = async (pathToFile: string) => {
       .use(parse)
       .use(frontmatter, ['yaml', 'toml'])
       .use(extract, { yaml: yaml.parse })
-      .use(imagePlugin)
       .use(remark2rehype, {allowDangerousHtml: true})
+      .use(imagePlugin)
       .use(raw)
       .use(html)
       .process(vfile.readSync(pathToFile));

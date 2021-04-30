@@ -8,6 +8,8 @@ import {
 
 import { Collection } from './Collection';
 
+import { IndexPageItem } from '../types/ParsedIndexPage';
+
 @Entity()
 export class Article extends BaseEntity {
 
@@ -62,4 +64,18 @@ export type VideoArticle = Article & {
     youtube_id: string;
     relatedArticles?: number[];
   };
+};
+
+export type IndexArticle = Article & {
+
+  type: 'index';
+
+  data: {
+    items: Array<{
+      title: string;
+      summary: string;
+      url: string;
+    }>
+  };
+
 };
