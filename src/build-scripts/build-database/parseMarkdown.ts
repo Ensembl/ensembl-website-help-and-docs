@@ -12,7 +12,7 @@ import frontmatter from 'remark-frontmatter';
 import html from 'rehype-stringify';
 import yaml from 'yaml';
 
-import imagePlugin from './markdownImagePlugin';
+import imagePlugin from './imagePlugin';
 
 const parseMarkdown = async (pathToFile: string) => {
   const processedFile = await
