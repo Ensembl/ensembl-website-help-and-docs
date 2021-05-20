@@ -2,7 +2,7 @@
 
 ## Scaling
 * Create Camtasia file at 1280 x 720 px
-* Open browser at 1960 x 1080 px
+* Open browser at 1280 x 720 px
 * Record video using Camtasia
 * Place recording in Camtasia time line
 * Shrink video to fit into frame
@@ -17,3 +17,9 @@
 * Add intros, either data intro or how to, depending on type of video
 * Extend out top bar so that it lasts the length of the video
 * Change label in intro and top bar
+
+## Subtitles
+
+* In YouTube enable Closed captioning.
+* Go into Closed captioning and *Duplicate and edit* the Automatic closed captioning.
+* Go through and fix any errors.
