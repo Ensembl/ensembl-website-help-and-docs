@@ -2,15 +2,21 @@ type: index
 title: Getting started
 description: Introduction to using the Ensembl web site
 items:
-  - title: What is Ensembl
+  - title: Using the Ensembl apps
     summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut tempus mi, eget congue sapien. Vivamus tempus nec purus eget mollis.
-    href: what-is-ensembl.md
-  - title: About the site
+    href: using_apps.md
+  - title: Find out about a gene
     summary: Morbi eget orci id ex porta elementum luctus id ipsum. Praesent quis ligula non nisl aliquet blandit. Vivamus dapibus turpis diam, venenatis fringilla eros semper ut.
-    href: about-the-site.md
-  - title: Selecting a species
+    href: gene_info.md
+  - title: Browse a genomic region
     summary: Sed dictum turpis nec condimentum efficitur. Sed eu aliquam lacus. Sed posuere rutrum elit id mattis. Quisque iaculis odio vel ipsum tincidunt bibendum.
-    href: selecting-a-species.md
-  - title: Search
+    href: genomic_region.md
+  - title: Get protein information
     summary: Aenean faucibus blandit purus bibendum tincidunt. Nam pharetra aliquam condimentum. Sed sit amet dignissim purus. Fusce vehicula eget sapien et congue.
-    href: search.md
+    href: protein_info.md
+  - title: Choose a species to work with
+    summary: Aenean faucibus blandit purus bibendum tincidunt. Nam pharetra aliquam condimentum. Sed sit amet dignissim purus. Fusce vehicula eget sapien et congue.
+    href: species.md
+  - title: Get sequences
+    summary: Aenean faucibus blandit purus bibendum tincidunt. Nam pharetra aliquam condimentum. Sed sit amet dignissim purus. Fusce vehicula eget sapien et congue.
+    href: sequences.md
