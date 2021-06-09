@@ -1,6 +1,13 @@
 ---
+slug: gene_info
 title: Find out about a gene
 description: Here is how to find out about a gene
+related_articles:
+  - href: ../using-ensembl/viewing-ensembl-data/entity_viewer/entity-viewer.md
+  - href: ../using-ensembl/viewing-ensembl-data/genome-browser/browser.md
+tags:
+  - gene
+status: draft
 ---
 
 In order to find your gene of interest, you must first use the Species selector to choose your species of interest.
