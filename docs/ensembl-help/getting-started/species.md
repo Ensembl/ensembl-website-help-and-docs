@@ -8,5 +8,9 @@ tags:
   - gene
 status: draft
 ---
+Before using the other apps, you will need to use the Species selector:
 
-This is a placeholder for the _Selecting a species_ article.
+![](../../placeholder.jpg)
+Species selector icon
+
+Here you can choose the species you're working with, including specific genome assemblies and strains/breeds/varieties. You can have multiple species selected.
