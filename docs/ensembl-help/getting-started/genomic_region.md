@@ -8,7 +8,14 @@ tags:
   - genome
 status: draft
 ---
-
-genome browser placeholder
+In order to find your region of interest, you must first use the Species selector to choose your species of interest.
 
 ![](../../placeholder.jpg)
+Species selector icon
+
+You can then find your region of interest using the Genome browser:
+
+![](../../placeholder.jpg)
+Genome browser icon
+
+You can search by either genome coordinates or genes.
