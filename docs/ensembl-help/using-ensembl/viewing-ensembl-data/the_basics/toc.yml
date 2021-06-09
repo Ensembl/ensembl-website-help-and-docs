@@ -1,0 +1,22 @@
+type: index
+title: The Basics
+description: How to use functionality across the Ensembl apps
+items:
+  - title: In-app search
+    summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut tempus mi, eget congue sapien. Vivamus tempus nec purus eget mollis.
+    href: in_app_search.md
+  - title: Sequence download
+    summary: Morbi eget orci id ex porta elementum luctus id ipsum. Praesent quis ligula non nisl aliquet blandit. Vivamus dapibus turpis diam, venenatis fringilla eros semper ut.
+    href: sequence_download.md
+  - title: Previously viewed
+    summary: Sed dictum turpis nec condimentum efficitur. Sed eu aliquam lacus. Sed posuere rutrum elit id mattis. Quisque iaculis odio vel ipsum tincidunt bibendum.
+    href: previously_viewed.md
+  - title: Sharing
+    summary: Aenean faucibus blandit purus bibendum tincidunt. Nam pharetra aliquam condimentum. Sed sit amet dignissim purus. Fusce vehicula eget sapien et congue.
+    href: sharing.md
+  - title: Glossary
+    summary: Aenean faucibus blandit purus bibendum tincidunt. Nam pharetra aliquam condimentum. Sed sit amet dignissim purus. Fusce vehicula eget sapien et congue.
+    href: glossary.md
+  - title: Supported browsers
+    summary: Aenean faucibus blandit purus bibendum tincidunt. Nam pharetra aliquam condimentum. Sed sit amet dignissim purus. Fusce vehicula eget sapien et congue.
+    href: supported_browsers.md
