@@ -10,7 +10,12 @@ tags:
   - sequence
 status: draft
 ---
-
-In order to find your gene of interest, you must first use the Species selector to choose your species of interest.
+You can export sequences from the Genome Browser and Entity viewer apps using the Sequence download tool:
 
 ![](../../placeholder.jpg)
+Genome browser icon
+
+![](../../placeholder.jpg)
+Entity viewer icon
+
+From both the Genome browser and the Entity viewer you can export sequences of genomic regions, cDNAs, CDSs and peptides.
