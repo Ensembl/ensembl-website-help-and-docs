@@ -27,7 +27,7 @@ Use the Genome browser to explore a genomic region and view a gene and its trans
 ![](../../placeholder.jpg)
 Entity viewer icon
 
-Use the Entity viewer to look at gene details, including transcript structures and protein domains.
+Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
 ![](../../placeholder.jpg)
 Help & documentation icon
