@@ -1,5 +1,5 @@
 ---
-title: Selecting a species
+title: Choose a species to work with
 description: Here is how to select a species
 ---
 
