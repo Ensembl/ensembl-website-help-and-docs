@@ -8,4 +8,3 @@ status: draft
 ---
 
 ```Some kind of clever code to populate the page from OLS```
-![](../../../../placeholder.jpg)
