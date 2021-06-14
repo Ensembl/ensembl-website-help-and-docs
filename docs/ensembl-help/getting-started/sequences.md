@@ -12,10 +12,8 @@ status: draft
 ---
 You can export sequences from the Genome Browser and Entity viewer apps using the Sequence download tool:
 
-![](../../placeholder.jpg)
-Genome browser icon
+![](../../id-genome-browser.svg)
 
-![](../../placeholder.jpg)
-Entity viewer icon
+![](../../id-entity-viewer.svg)
 
 From both the Genome browser and the Entity viewer you can export sequences of genomic regions, cDNAs, CDSs and peptides.
