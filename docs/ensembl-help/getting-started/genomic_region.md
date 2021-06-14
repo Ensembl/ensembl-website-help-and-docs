@@ -10,12 +10,10 @@ status: draft
 ---
 In order to find your region of interest, you must first use the Species selector to choose your species of interest.
 
-![](../../placeholder.jpg)
-Species selector icon
+![](../../id-species-selector.svg)
 
 You can then find your region of interest using the Genome browser:
 
-![](../../placeholder.jpg)
-Genome browser icon
+![](../../id-genome-browser.svg)
 
 You can search by either genome coordinates or genes.
