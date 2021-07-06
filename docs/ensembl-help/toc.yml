@@ -1,9 +1,7 @@
 - name: Getting started
   href: getting-started/toc.yml
-  url: /help/getting-started/
 - name: In-depth guides
   href: in-depth/toc.yml
-  url: /help/in-depth/
 # NOT FOR MAP
 # - name: Annotation and Prediction
 # - href: annotation/toc.yml
