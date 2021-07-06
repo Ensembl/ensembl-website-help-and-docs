@@ -10,4 +10,4 @@ tags:
 status: draft
 ---
 
-![](../../../../placeholder.jpg)
+![](../../../placeholder.jpg)
