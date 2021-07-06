@@ -14,10 +14,10 @@ status: draft
 
 In order to find your protein of interest, you must first use the Species selector to choose your species of interest.
 
-![](../../id-species-selector.svg)
+![](../../img/id-species-selector.svg)
 
 Protein data is available in the Entity viewer:
 
-![](../../id-entity-viewer.svg)
+![](../../img/id-entity-viewer.svg)
 
 In the Entity viewer you can find details of the different transcripts and protein isoforms, protein domains, links out to other protein databases and peptide sequences.

@@ -1,9 +1,9 @@
 ---
-slug: previously_viewed
+slug: previously-viewed
 title: Previously viewed
 description: How Ensembl keeps track of the pages you've visited previously
 related_articles:
-  - href: ../entity_viewer/entity-viewer.md
+  - href: ../entity-viewer/entity-viewer.md
   - href: ../genome-browser/browser.md
 tags:
   - gene

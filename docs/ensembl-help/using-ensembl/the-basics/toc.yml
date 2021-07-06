@@ -1,0 +1,9 @@
+- name: In-app search
+  href: in-app-search.md
+- name: Sequence download
+  href: sequence-download.md
+- name: Previously viewed
+  href: previously-viewed.md
+# Not for MAP
+#- name: Supported browsers
+#  href: supported-browsers.md
