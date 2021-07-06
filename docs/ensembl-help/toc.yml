@@ -7,7 +7,7 @@
 # - href: annotation/toc.yml
 # - url: /help/annotation/
 - name: Training
-  href: https:/training.ensembl.org
+  url: https:/training.ensembl.org
 # Awaiting final design and technical solution
 # - name: Contact
 # - url: /help/contact/
