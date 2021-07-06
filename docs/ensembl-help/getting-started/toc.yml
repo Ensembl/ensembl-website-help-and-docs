@@ -1,0 +1,18 @@
+- name: Using apps
+  href: getting-started/using-apps.md
+  url: /help/getting-started/using-apps/
+- name: Choose a species to work with
+  href: getting-started/species.md 
+  url: /help/getting-started/species/
+- name: Find out about a gene
+  href: getting-started/gene-info.md 
+  url: /help/getting-started/gene-info/
+- name: Browse a genomic region
+  href: getting-started/genomic-region.md 
+  url: /help/getting-started/genomic-region/
+- name: Get protein information
+  href: getting-started/protein-info.md 
+  url: /help/getting-started/protein-info/
+- name: Get sequences
+  href: getting-started/sequences.md 
+  url: /help/getting-started/sequences/
