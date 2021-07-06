@@ -1,0 +1,13 @@
+- name: In-app search
+  href: in-app-search.md
+  url: /help/in-depth/the-basics/in-app-search/
+- name: Sequence download
+  href: sequence-download.md
+  url: /help/in-depth/the-basics/sequence-download/
+- name: Previously viewed
+  href: previously-viewed.md
+  url: /help/in-depth/the-basics/previously-viewed/
+# Not for MAP
+#- name: Supported browsers
+#  href: supported-browsers.md
+#  url: /help/in-depth/the-basics/supported-browsers/

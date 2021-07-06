@@ -1,0 +1,9 @@
+- name: The basics
+  href: the-basics/toc.yml
+  url: /help/in-depth/the-basics/
+- name: Ensembl apps
+  href: ensembl-apps/toc.yml
+  url: /help/in-depth/ensembl-apps/
+# Not for MAP
+# - name: External tracks
+# - name: Tools
