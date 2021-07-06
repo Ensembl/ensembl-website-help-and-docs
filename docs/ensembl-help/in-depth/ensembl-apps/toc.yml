@@ -1,4 +1,6 @@
 - name: Genome browser
   href: genome-browser/toc.yml
+  url: /help/in-depth/ensembl-apps/genome-browser/
 - name: Entity viewer
   href: entity-viewer/toc.yml
+  url: /help/in-depth/ensembl-apps/entity-viewer/
