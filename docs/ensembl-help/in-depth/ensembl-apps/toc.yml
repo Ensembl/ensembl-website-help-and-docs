@@ -1,3 +1,5 @@
+- name: Species selector
+  href: species-selector/toc.yml
 - name: Genome browser
   href: genome-browser/toc.yml
 - name: Entity viewer
