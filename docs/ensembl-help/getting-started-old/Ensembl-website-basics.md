@@ -7,7 +7,7 @@ tags:
 status: draft
 ---
 
-# Using Ensembl
+# How to get started with the Ensembl website
 
 The new Ensembl website is an ongoing project to provide access and visualisation to Ensembl data in a redesigned web interface. A very limited data set has been made available for our initial releases. New interfaces for presenting a range of other data types will be released periodically.
 
