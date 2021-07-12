@@ -2,3 +2,5 @@
   href: genome-browser/toc.yml
 - name: Entity viewer
   href: entity-viewer/toc.yml
+- name: The Basics
+  href: the_basics/toc.yml
