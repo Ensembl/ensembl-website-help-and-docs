@@ -1,7 +1,7 @@
 - name: Getting started
   href: getting-started/toc.yml
-- name: In-depth guides
-  href: in-depth/toc.yml
+- name: Using Ensembl 
+  href: using-ensembl/toc.yml
 # NOT FOR MAP
 # - name: Annotation and Prediction
 # - href: annotation/toc.yml
