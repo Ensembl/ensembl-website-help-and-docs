@@ -14,15 +14,15 @@ There are different apps to do different kinds of task in Ensembl. Different app
 
 The apps available to you are:
 
-![](../../id-species-selector.svg)
+![](../../../img/id-species-selector.svg)
 
 Use the Species selector to choose which species and genome assembly you are working with. You must select this before using any other apps.
 
-![](../../id-genome-browser.svg)
+![](../../../img/id-genome-browser.svg)
 
 Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
 
-![](../../id-entity-viewer.svg)
+![](../../../img/id-entity-viewer.svg)
 
 Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
