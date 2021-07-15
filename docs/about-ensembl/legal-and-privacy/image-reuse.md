@@ -1,11 +1,12 @@
 ---
 slug: image-reuse
-title: Ensembl Image Reuse
+title: Ensembl image reuse
 description:
 status: draft
 ---
 
-# Ensembl Image Reuse
+# Ensembl image reuse
+
 ## Definition
 Image reuse is the extraction of images from the Ensembl resource for the use in other media such as a figure in a manuscript. Media includes, but is not limited to, presentations, journal manuscripts, academic manuscripts, newspapers, websites or books. No distinction is made between online or printed media. The Ensembl resource refers to the Ensembl website, tools and data produced by Ensembl.
 
