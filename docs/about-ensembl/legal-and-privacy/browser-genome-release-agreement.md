@@ -1,11 +1,11 @@
 ---
 slug: browser-genome-release-agreement
-title: Browser Genome Release Agreement
+title: Browser genome release agreement
 description:
 status: draft
 ---
 
-# Browser Genome Release Agreement
+# Browser genome release agreement
 
 ## Purpose
 
