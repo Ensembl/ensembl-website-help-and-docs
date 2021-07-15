@@ -1,11 +1,11 @@
 ---
 slug: story
-title: The Ensembl Story
+title: The Ensembl story
 description:
 status: draft
 ---
 
-# The Ensembl Story
+# The Ensembl story
 
 The Ensembl project was started in 1999, some years before the draft human genome was completed. Even at that early stage it was clear that manual annotation of 3 billion base pairs of sequence would not be able to offer researchers timely access to the latest data. The goal of Ensembl was therefore to automatically annotate the genome, integrate this annotation with other available biological data and make all this publicly available via the web. Since the [website's launch in July 2000](http://web.archive.org/web/20000815203739/http://www.ensembl.org/), many more genomes have been added to Ensembl and the range of available data has also expanded to include comparative genomics, variation and regulatory data.
 
