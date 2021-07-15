@@ -8,6 +8,9 @@ tags:
   - gene
 status: draft
 ---
+
+# Choose a species to work with
+
 Before using the other apps, you will need to use the Species selector:
 
 ![](../../id-species-selector.svg)
