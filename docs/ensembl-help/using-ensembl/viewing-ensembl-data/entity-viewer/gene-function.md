@@ -12,7 +12,7 @@ tags:
 status: draft
 ---
 
-# What’s in the Gene function
+# What’s in the Gene function?
 
 Gene function view presents protein information for all coding transcripts of the gene of interest. It is therefore only available for protein coding genes.
  
