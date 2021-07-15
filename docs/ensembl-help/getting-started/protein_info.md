@@ -10,6 +10,8 @@ tags:
 status: draft
 ---
 
+# Get protein information
+
 In order to find your protein of interest, you must first use the Species selector to choose your species of interest.
 
 ![](../../id-species-selector.svg)
