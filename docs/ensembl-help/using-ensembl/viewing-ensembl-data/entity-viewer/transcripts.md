@@ -12,7 +12,7 @@ tags:
 status: draft
 ---
 
-# What’s in the Transcripts view
+# What’s in the Transcripts view?
 
 Transcript view lists all transcripts of the focus gene. You can find the graphical deception of the transcript models with exons illustrated as boxes connected by lines representing introns. Coding exons are coloured, while non-coding exons are empty.
  
