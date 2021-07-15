@@ -10,6 +10,8 @@ tags:
 status: draft
 ---
 
+# Find out about a gene
+
 In order to find your gene of interest, you must first use the Species selector to choose your species of interest.
 
 ![](../../id-species-selector.svg)
