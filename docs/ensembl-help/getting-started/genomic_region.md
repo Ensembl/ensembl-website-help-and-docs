@@ -8,6 +8,9 @@ tags:
   - genome
 status: draft
 ---
+
+# Browse a genomic region
+
 In order to find your region of interest, you must first use the Species selector to choose your species of interest.
 
 ![](../../id-species-selector.svg)
