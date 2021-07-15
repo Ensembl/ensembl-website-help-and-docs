@@ -1,11 +1,11 @@
 ---
 slug: privacy-and-cookies
-title: Privacy and Cookies
+title: Privacy and cookies
 description: Information about our privacy policy and use of cookies
 status: draft
 ---
 
-# Privacy and Cookies
+# Privacy and cookies
 
 (Information on state management and cookies on 2020 site - web to provide)
 
