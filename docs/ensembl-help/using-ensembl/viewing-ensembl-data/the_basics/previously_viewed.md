@@ -10,4 +10,6 @@ tags:
 status: draft
 ---
 
+# Previously viewed
+
 ![](../../../../placeholder.jpg)
