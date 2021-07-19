@@ -1,6 +1,6 @@
 ---
-slug: species-selector
-title: Species selector
+slug: add-remove-species
+title: How do I add or remove a species?
 description: How to select a species and genome assembly of interest to visualise in the genome browser and entity viewer
 tags:
   - species selector
@@ -29,3 +29,4 @@ You can add as many species as you like, and toggle between them when in the Gen
 You can remove selected species by hovering your cursor over the species of interest. You can 'turn off' a species, without removing it from your selected species list by clicking 'Do not use'. You can remove selected species from the list altogether by clicking on the 'X'.
 
 Selected species that are turned off can be turned on by hovering your cursor over the species name and clicking 'Use'.
+

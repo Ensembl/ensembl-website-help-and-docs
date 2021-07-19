@@ -1,5 +1,5 @@
 ---
-slug: supported_browsers
+slug: supported-browsers
 title: Supported browsers
 description: What internet browsers can you use with Ensembl?
 tags:

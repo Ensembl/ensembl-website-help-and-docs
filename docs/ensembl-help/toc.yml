@@ -1,7 +1,10 @@
-- name: Getting Started
-  href: getting-started/index.yml
-  url: /help
-- name: Something Other than Getting Started
-  href: getting-started-old/toc.yml
-- name: Using Ensembl
+- name: Getting started
+  href: getting-started/toc.yml
+- name: Using Ensembl 
   href: using-ensembl/toc.yml
+# NOT FOR MAP
+# - name: Annotation and Prediction
+# - href: annotation/toc.yml
+# - url: /help/annotation/
+- name: Training
+  url: https:/training.ensembl.org
