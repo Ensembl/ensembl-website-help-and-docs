@@ -11,7 +11,8 @@ const copyAssets = async () => {
     'jpg',
     'jpeg',
     'png',
-    'pdf'
+    'pdf',
+    'svg'
   ];
 
   const patterns = extensions.map(ext => `${docsPath}/**/*.${ext}`);
