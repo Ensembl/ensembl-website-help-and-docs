@@ -23,6 +23,7 @@ export default {
   docsPath,
   articlesPath: path.join(docsPath, 'article'),
   videosPath: path.join(docsPath, 'video'),
+  publicPath: isProduction ? '/api/docs' : '/api',  // FIXME: we'll need to rely on the environment variable other than NODE_ENV for this
   indexDirectory,
   articlesIndexName,
   articlesIndexPath: path.join(indexDirectory, articlesIndexName),

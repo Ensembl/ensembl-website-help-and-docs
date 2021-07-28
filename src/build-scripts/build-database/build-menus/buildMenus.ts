@@ -111,6 +111,11 @@ const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem>
   } else if (tocItemPath && await isContentFile(path.join(toc.directoryPath, tocItemPath))) {
     menuItem.path = buildFullPathToFile(tocItemPath, toc);
     menuItem.url = tocItem.url || buildPageUrl(tocItem.name, getMenuItemType(menuItem), toc.urlNamespace);
+  } else if (tocItemPath) {
+    // The href field of the TOC item does not refer either to a url or to a valid file on the disk
+    // Time to panic.
+    const errorMessage = `Invalid path in a table of contents: ${tocItemPath}`;
+    throw new Error(errorMessage);
   }
 
   menuItem.type = getMenuItemType(menuItem);

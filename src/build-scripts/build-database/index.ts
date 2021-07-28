@@ -17,6 +17,7 @@ const buildDatabase = async () => {
     console.log('Documentation database generated successfully');
   } catch (error) {
     console.error('Error building the database', error);
+    process.exit(1);
   }
 };
 
