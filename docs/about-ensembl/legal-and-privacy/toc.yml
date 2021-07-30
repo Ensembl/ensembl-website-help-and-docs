@@ -2,13 +2,11 @@
   href: legal-and-privacy.md
 - name: Privacy and Cookies
   href: privacy-and-cookies.md
-- name: Disclaimer
-  href: disclaimer.md
 - name: Software License
   href: software-license.md
 - name: Browser Genome Release Agreement
   href: browser-genome-release-agreement.md
-- name: Name and Logo Policy
-  href: name-logo-policy.md
+#- name: Name and Logo Policy
+#  href: name-logo-policy.md
 - name: Image Reuse
   href: image-reuse.md
