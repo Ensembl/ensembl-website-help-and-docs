@@ -3,7 +3,7 @@ slug: species
 title: Choose a species to work with
 description: Here is how to select a species
 related_articles:
-  - href: ../getting-started-old/species-selector.md
+  - href: href: ../using-ensembl/ensembl-apps/species-selector/species-selector-intro.md 
 tags:
   - gene
 status: draft
