@@ -8,5 +8,5 @@
 # - name: Annotation and Prediction
 # - href: annotation/toc.yml
 # - url: /help/annotation/
-- name: Training
-  url: https://training.ensembl.org
+#- name: Training
+#  url: https://training.ensembl.org
