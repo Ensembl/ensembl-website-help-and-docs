@@ -1,10 +1,10 @@
 ---
-slug: gene_info
+slug: gene-info
 title: Find out about a gene
 description: Here is how to find out about a gene
 related_articles:
-  - href: ../using-ensembl/viewing-ensembl-data/entity_viewer/entity-viewer.md
-  - href: ../using-ensembl/viewing-ensembl-data/genome-browser/browser.md
+  - href: ../using-ensembl/ensembl-apps/entity-viewer/entity-viewer.md
+  - href: ../using-ensembl/ensembl-apps/genome-browser/browser.md
 tags:
   - gene
 status: draft

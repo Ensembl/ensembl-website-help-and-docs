@@ -16,4 +16,4 @@ Within the Entity viewer and Genome browser, you can search for genes of interes
 
 Here you can do a simple search for a gene name or ID. The results not ranked and just list the gene name and ID. Click on a search result to see a pop-up giving details of the search result, including links to the Genome Browser and Entity Viewer.
 
-![](search_pop-up.png)
+![](images/search-pop-up.png)

@@ -1,10 +1,10 @@
 ---
-slug: protein_info
+slug: protein-info
 title: Get protein information
 description: Here is how to find out about a protein
 related_articles:
-  - href: ../using-ensembl/viewing-ensembl-data/entity_viewer/entity-viewer.md
-  - href: ../using-ensembl/viewing-ensembl-data/genome-browser/browser.md
+  - href: ../using-ensembl/ensembl-apps/entity-viewer/entity-viewer.md
+  - href: ../using-ensembl/ensembl-apps/genome-browser/browser.md
 tags:
   - protein
 status: draft
