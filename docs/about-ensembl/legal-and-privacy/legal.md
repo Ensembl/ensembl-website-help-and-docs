@@ -12,3 +12,8 @@ Ensembl imposes no restrictions on access to, or use of, the data provided and t
 Some of the data and software included in the distribution may be subject to third-party constraints. Users of the data and software are solely responsible for establishing the nature of and complying with any such restrictions.
 
 The [European Molecular Biology Laboratory's European Bioinformatics Institute](http://www.ebi.ac.uk/) (EMBL-EBI) provides this data and software in good faith, but make no warranty, express or implied, nor assume any legal liability or responsibility for any purpose for which they are used.
+
+## Code of conduct
+
+The Ensembl project is built on a foundation of collaboration, mutual respect and equality with a diverse and global community. We do not condone discrimination or abusive behaviour of any form. We encourage participation and engagement for everyone, in a professional manner, and wish all members of our community to adhere to the same principles.
+
