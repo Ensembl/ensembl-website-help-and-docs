@@ -17,7 +17,7 @@ _Nucleic Acids Res._ 2021, vol. 49(1):884–891\
 
 ## For invertebrate, plant, fungal and prokaryote genomes
 
-**Ensembl Genomes 2020&#2014;enabling non-vertebrate genomic research**\
+**Ensembl Genomes 2020—enabling non-vertebrate genomic research**\
 _Nucleic Acids Research_ 2019\
 [doi:10.1093/nar/gkz890](https://doi.org/10.1093/nar/gkz890)
 
