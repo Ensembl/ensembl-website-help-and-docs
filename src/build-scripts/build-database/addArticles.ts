@@ -93,8 +93,8 @@ const addRelationships = async (item: { parsedFile: ParsedFile, savedArticle: Ar
       const relatedArticle = await Article.findOne({ where: { filePath: pathToRelatedArticle } });
 
       if (!relatedArticle) {
-        console.log('Incorrect path for related article provided:', pathToRelatedArticle);
-        continue;
+        const errorMessage = `Incorrect path for related article provided in ${savedArticle.filePath}: ${pathToRelatedArticle}`;
+        throw new Error(errorMessage);
       }
 
       if (!savedArticle.data) {
@@ -122,8 +122,8 @@ const addLinksToIndexArticles = async (indexArticle: IndexArticle) => {
     const savedLinkedArticle = await Article.findOne({ where: { filePath: pathToLinkedArticle } });
 
     if (!savedLinkedArticle) {
-      console.log('Incorrect path for related article provided:', pathToLinkedArticle);
-      continue;
+      const errorMessage = `Incorrect path for related article provided in ${filePath}: ${pathToLinkedArticle}`;
+      throw new Error(errorMessage);
     }
 
     indexItem.url = savedLinkedArticle.url;

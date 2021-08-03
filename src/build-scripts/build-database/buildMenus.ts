@@ -24,7 +24,9 @@ const buildMenus = async () => {
     }));
     return await Promise.all(menuPromises);
   } catch (error) {
-    console.log('error building the menus', error);
+    console.log('Error building the menus');
+    console.log(error);
+    process.exit(1);
   }
 };
 

@@ -34,9 +34,9 @@ const updateImagePath = (imageNode: Element, file: any) => {
   const filePath = file.path; // this is the path of the markdown file containing the reference
   const { dir: directoryPath } = path.parse(filePath);
 
-  // image files will be copied to the destination folder preserving the original directory tree
+  // image files will be copied to the destination directory preserving the original directory tree
   const directoryRelativeToDocsRoot = path.relative(config.docsPath, directoryPath);
-  const destDirectory = '/api/docs/images'; // this is where images are going to be copied
+  const destDirectory = `${config.publicPath}/images`; // the public path of the images directory
   const destImagePath = path.join(destDirectory, directoryRelativeToDocsRoot, imageSource);
 
 
