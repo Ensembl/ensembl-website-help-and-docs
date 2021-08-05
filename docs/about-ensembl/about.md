@@ -1,11 +1,17 @@
 ---
 slug: about
-title: About the Ensembl project
-description:
+title: About Us
+description: Learn more about the Ensembl project
+related_articles:
+  - href: the-ensembl-project/the-ensembl-story.md
+  - href: annotation-and-prediction/assemblies-and-sequence.md
+  - href: working-with-us/cite.md
+  - href: our-process/funding.md
+  - href: the-ensembl-project/find-us.md
 status: draft
 ---
 
-# About the Ensembl project
+# About Us
 
 The Ensembl project has three goals: to provide a comprehensive source of stable genome annotation, to enable genomic interpretation, and to support researcher driven analysis.
 

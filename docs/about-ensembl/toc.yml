@@ -1,6 +1,7 @@
-- name: About the Ensembl project
-  href: the-ensembl-project/toc.yml
-  url: /about
+- name: About us
+  href: about.md
+#- name: Annotation
+#  href:
 - name: Legal & privacy
   href: legal-and-privacy/toc.yml
   url: /about/articles/legal
