@@ -5,6 +5,7 @@ stages:
 variables:
   DOCKER_IMAGE: ${CI_REGISTRY_IMAGE}:${CI_COMMIT_SHORT_SHA}
   DOCKER_TLS_CERTDIR: ""
+  PUBLIC_PATH: /api/docs
 
 .build:
   stage: build
