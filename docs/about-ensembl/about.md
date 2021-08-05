@@ -4,7 +4,7 @@ title: About Us
 description: Learn more about the Ensembl project
 related_articles:
   - href: about-us/the-ensembl-project/the-ensembl-story.md
-  - href: about-us/annotation-and-prediction/assemblies-and-sequence.md
+  - href: annotation-and-prediction/assemblies-and-sequence.md
   - href: about-us/working-with-us/cite.md
   - href: about-us/our-process/funding.md
   - href: about-us/the-ensembl-project/find-us.md
