@@ -9,6 +9,8 @@ COPY ${SOURCE_DIR} ${TARGET_DIR}
 
 WORKDIR ${TARGET_DIR}
 
+ARG PUBLIC_PATH=/api
+
 RUN npm ci && \
     npm run build
 
