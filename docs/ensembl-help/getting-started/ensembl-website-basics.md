@@ -42,7 +42,7 @@ To begin visualising data using the apps, you need to select a species and genom
 
 ## Selecting a species
 
-You can select your species and genomes of interest using the [Species selector app](/species-selector). You can select multiple species and genome assemblies, and switch between them by clicking on the species tabs when viewing data in the other apps.
+You can select your species and genomes of interest using the Species selector app. You can select multiple species and genome assemblies, and switch between them by clicking on the species tabs when viewing data in the other apps.
 
 ## Navigating the website
 
