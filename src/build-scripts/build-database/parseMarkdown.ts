@@ -21,8 +21,8 @@ const parseMarkdown = async (pathToFile: string) => {
       .use(frontmatter, ['yaml', 'toml'])
       .use(extract, { yaml: yaml.parse })
       .use(remark2rehype, {allowDangerousHtml: true})
-      .use(imagePlugin)
       .use(raw)
+      .use(imagePlugin)
       .use(html)
       .process(vfile.readSync(pathToFile));
 

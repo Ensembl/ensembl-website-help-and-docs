@@ -7,7 +7,9 @@ status: draft
 
 # The Ensembl logotype
 
-![The Ensembl logotype](media/logotype.svg)
+<figure>
+  <img src="media/logotype.svg" style="height: 32px;" />
+</figure>
 
 The Ensembl name and logotype are the property of EMBL and are protected by international trademark law. For all proposed uses of the Ensembl logotype, permission should be sought in advance by writing to Ensembl. Permission must be sought for any commercial use, and enquires may be sent via the Contact us form.
 
