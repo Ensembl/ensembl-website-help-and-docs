@@ -3,6 +3,10 @@ slug: about
 title: About Us
 description: Learn more about the Ensembl project
 related_articles:
+  - href: about-us/the-ensembl-project/the-ensembl-story.md
+  - href: about-us/working-with-us/cite.md
+  - href: about-us/our-process/funding.md
+  - href: about-us/the-ensembl-project/find-us.md
 status: draft
 ---
 
