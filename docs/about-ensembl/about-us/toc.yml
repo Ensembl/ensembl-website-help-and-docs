@@ -1,6 +1,15 @@
-- name: The Ensembl project
-  href: the-ensembl-project/toc.yml
-- name: Our process
-  href: our-process/toc.yml
-- name: Working with us
-  href: working-with-us/toc.yml
+- name: The Ensembl story 
+  href: about-us/the-ensembl-project/the-ensembl-story.md
+- name: Citing Ensembl
+  href: about-us/working-with-us/cite.md
+- name: Funding
+  href: about-us/our-process/funding.md
+- name: How to find us
+  href: about-us/the-ensembl-project/find-us.md
+
+#- name: The Ensembl project
+#  href: the-ensembl-project/toc.yml
+#- name: Our process
+#  href: our-process/toc.yml
+#- name: Working with us
+#  href: working-with-us/toc.yml
