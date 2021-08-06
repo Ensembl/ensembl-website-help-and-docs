@@ -18,7 +18,7 @@ Ensembl generates and imports genome annotation such as genes, variation, regula
 
 The website provides visualisations and functionality that enable the manipulation and analysis of this data. Information about genes, transcripts and further annotation can be retrieved at the genome, gene and protein level.
 
-![The East Wing of the EMBL-EBI main building](about-us/the-ensembl-project/media/ebi_east_wing.jpg)
+![The East Wing of the EMBL-EBI main building](media/ebi_east_wing.jpg)
 
 Ensembl is a core part of the freely available data services hosted by [EMBL's European Bioinformatics Institute (EMBL-EBI)](https://www.ebi.ac.uk). The Ensembl resources are created by a talented group of approximately 75 scientists led by EMBL-EBI faculty members [Paul Flicek](http://www.ebi.ac.uk/about/people/paul-flicek) (Head of Ensembl), [Andrew Yates](https://www.ebi.ac.uk/about/people/andy-yates) (Deputy Head and Genomics Technology Infrastructure), [Fiona Cunningham](https://www.ebi.ac.uk/about/people/fiona-cunningham) (Genome Interpretation), [Sarah Dyer](https://www.ebi.ac.uk/about/people/sarah-dyer) (Non-vertebrate Genomics), [Rob Finn](https://www.ebi.ac.uk/about/people/rob-finn) (Microbial Genomics), [Peter Harrison](https://www.ebi.ac.uk/about/people/peter-harrison) (Genome Analysis), and [Kevin Howe](https://www.ebi.ac.uk/about/people/kevin-howe) (Eukaryotic Annotation). The project receives input from an independent scientific advisory board.
 
