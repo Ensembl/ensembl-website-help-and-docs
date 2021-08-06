@@ -1,7 +1,7 @@
 ---
 slug: story
 title: The Ensembl story
-description:
+description: A history of the Ensembl project from 1999 to the present
 status: draft
 ---
 

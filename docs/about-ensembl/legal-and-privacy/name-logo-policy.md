@@ -1,7 +1,7 @@
 ---
 slug: name-logo-policy
 title: Policy for the use of the Ensembl name and logo
-description:
+description: How to use our name and logo when incorporating Ensembl code or data into your work
 status: draft
 ---
 

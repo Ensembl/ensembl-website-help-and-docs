@@ -1,7 +1,7 @@
 ---
 slug: find-us
 title: Where to find us
-description:
+description: Physical location of the EMBL-EBI
 status: draft
 ---
 

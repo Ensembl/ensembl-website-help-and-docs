@@ -1,7 +1,7 @@
 ---
 slug: cite
 title: Citing Ensembl
-description:
+description: How to cite Ensembl in your work
 status: draft
 ---
 

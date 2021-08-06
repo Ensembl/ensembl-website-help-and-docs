@@ -1,7 +1,7 @@
 ---
 slug: funding
 title: Funding
-description:
+description: List of funders from whom we receive grants
 status: draft
 ---
 
