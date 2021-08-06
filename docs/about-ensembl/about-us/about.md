@@ -2,6 +2,7 @@
 slug: about
 title: About Us
 description: Learn more about the Ensembl project
+related_articles:
 status: draft
 ---
 
