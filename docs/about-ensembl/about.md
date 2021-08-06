@@ -1,6 +1,6 @@
 ---
 slug: about
-title: About Us
+title: About us
 description: Learn more about the Ensembl project
 related_articles:
   - href: about-us/the-ensembl-project/the-ensembl-story.md
@@ -10,7 +10,7 @@ related_articles:
 status: draft
 ---
 
-# About Us
+# About us
 
 The Ensembl project has three goals: to provide a comprehensive source of stable genome annotation, to enable genomic interpretation, and to support researcher driven analysis.
 
