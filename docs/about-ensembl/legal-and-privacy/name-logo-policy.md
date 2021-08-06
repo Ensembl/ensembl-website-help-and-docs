@@ -1,36 +1,30 @@
 ---
 slug: name-logo-policy
-title: Policy for the use of the Ensembl name and logo
-description: How to use our name and logo when incorporating Ensembl code or data into your work
+title: The Ensembl logotype
+description: How to use our logotype when incorporating Ensembl code or data into your work
 status: draft
 ---
 
-# Policy for the use of the Ensembl name and logo
+# The Ensembl logotype
 
-### Document Version
-Version 1. Approved: 30 September 2008
+![The Ensembl logotype](media/logotype.svg)
 
-## 1. Background
-Ensembl is based at the EMBL European Bioinformatics Institute (EMBL-EBI) and develops a software system that produces and maintains automatic annotation on selected genomes. Ensembl is available to download for public use and its code is provided under an open source license. Because of this there are a number of local installations of Ensembl worldwide as well as projects that make use of customised Ensembl code as part of a larger project.
+The Ensembl name and logotype are the property of EMBL and are protected by international trademark law. For all proposed uses of the Ensembl logotype, permission should be sought in advance by writing to Ensembl. Permission must be sought for any commercial use, and enquires may be sent via the Contact us form.
 
-This document presents a general policy regarding the use of the Ensembl name and logo (see part 3 below) alone and in conjunction with projects that use Ensembl code. Display and use of the EMBL-EBI logo is governed by the institute's terms of use.
+## General use of the logotype
 
-The Ensembl name and logo are the property of the Wellcome Trust and are protected by international copyright. For all proposed uses of the Ensembl logo, including those referred to below, permission should be sought in advance by writing to Ensembl. Permission must be sought for any commercial use.
+Do not modify (stretch, alter or add to) the logotype in any way except to change it in size as required.
 
-## 2. General Policy
-Ensembl’s general policy is to permit the use the Ensembl logo in the context of activities associated with use of the Ensembl code, but not in any manner that suggests or implies that the Ensembl project or the EMBL-EBI has endorsed or approved of the activities, products, and/or services of the organisation, or that Ensembl is the source of any such activities, products, and/or services. For example, the official Ensembl logo may be copied and used on external websites for purposes such as to identify official collaborations with Ensembl or to link to either the main Ensembl website (www.ensembl.org) or an Ensembl mirror site. The image may not be modified in any way except to reduce it in size as required.
+The minimum sizes are: 24mm wide (png, jpg, or in print) or 90px wide (svg, or on screen).
 
-## 3. The Ensembl Logo and the Powered by Ensembl Logo
+Do not use colours that have low contrast with the background colour.
 
-___To be added___
+Where the logotype is set against a dark background, the logotype should appear in white.
 
-## 4. Use of the Name and Logo by Ensembl Mirrors
-Ensembl grants mirror sites a limited right to use its logo. Ensembl mirrors may use the Ensembl name and logo as provided as part of the default Ensembl webcode installation. This policy applies to both unsupported and official, supported mirrors. Additional details about Ensembl mirror sites are in the accompanying policy document referenced above.
+Ensembl’s general policy is to permit use of the Ensembl logotype in the context of activities associated with use of the Ensembl code, but not in any manner that suggests or implies that the Ensembl project or EMBL-EBI has endorsed or approved of the activities, products, and/or services of the organisation, or that Ensembl is the source of any such activities, products, and/or services.
 
-## 5. Use of the "Powered by Ensembl" Logo
-Ensembl Developers are encouraged to use the Ensembl code for any purpose. Those developers wishing to acknowledge this contribution should use the Powered by Ensembl logo (see above), which incorporates the Ensembl logo. A citation of relevant Ensembl publications related to the tools would be appropriate.
+## Use of the logotype by Ensembl mirrors
 
-Developers using the empowered logo should contact the Ensembl helpdesk and their projects may be added to our list of tools and sites using Ensembl technology. The current project list and a link to download the Powered by Ensembl logo may be found at [http://www.ensembl.org/info/about/ensembl_powered.html](http://www.ensembl.org/info/about/ensembl_powered.html).
+Ensembl grants mirror sites a limited right to use its logo. Ensembl mirrors may use the Ensembl name and logotype as provided as part of the default Ensembl webcode installation. This policy applies to both unsupported and official, supported mirrors.
 
-Before contacting Ensembl to be added to the list of Ensembl-derived projects the Powered by Ensembl logo should be visible on the relevant site. Inclusion of any project on the Ensembl maintained list of derived projects is not intended as an endorsement of the site or its content.
-
+For example, the official Ensembl logotype may be used on external websites to identify official collaboration with Ensembl, or to link to either the [main Ensembl website](https://2020.ensembl.org) or an Ensembl mirror site.
