@@ -22,10 +22,6 @@ There are currently four different apps, each allowing you to perform a specific
 
 The Species selector allows you to view and select the species and genome assemblies that you wish to view in the Genome browser and Entity viewer.
 
-![](../../img/id-search.svg)
-
-Search allows you to search for genes and features of interest.
-
 ![](../../img/id-genome-browser.svg)
 
 Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
