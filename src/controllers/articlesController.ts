@@ -69,5 +69,6 @@ const getTypeSpecificArticleFields = async (article: TextArticle | VideoArticle 
 const populateRelatedArticles = async (article: TextArticle | VideoArticle) => {
   const relatedArticleIds = article.data?.relatedArticles || [];
   const relatedArticles = await Article.find({ id: In(relatedArticleIds) });
-  return relatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug']));
+  const sortedRelatedArticles = relatedArticleIds.map(id => relatedArticles.find(article => article.id === id));
+  return sortedRelatedArticles.map(article => pick(article, ['title', 'type', 'url', 'slug']));
 };
