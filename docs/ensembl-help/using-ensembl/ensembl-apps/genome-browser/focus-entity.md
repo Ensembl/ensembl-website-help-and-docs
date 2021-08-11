@@ -4,6 +4,7 @@ title: What is a Focus entity?
 description: Learn more about the genome browser's Focus entity
 parent: viewing-ensembl-data
 related_articles:
+  - href: browser.md
   - href: navigation.md
   - href: tracks.md
 tags:
