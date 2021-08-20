@@ -10,7 +10,7 @@ To make this documentation easier to use, it has been divided into several pages
 
 - [How to add navigation](toc.md) with toc.yml files
 
-- [How to work with GitHub](github.md)  and the Ensembl continuous integration system
+- [How to work with GitHub and preview your pages](github.md)
 
 ## An overview of the Help and About apps
 
