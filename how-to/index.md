@@ -8,6 +8,8 @@ To make this documentation easier to use, it has been divided into several pages
 
 - [How to add images](media.md)  and other media to the repository
 
+- [How to add navigation](toc.md) with toc.yml files
+
 - [How to work with GitHub](github.md)  and the Ensembl continuous integration system
 
 ## An overview of the Help and About apps
@@ -15,6 +17,20 @@ To make this documentation easier to use, it has been divided into several pages
 This repository serves content for two separate apps on the new Ensembl website: Ensembl Help, and About Ensembl. Both of these apps import Markdown files to create HTML pages in the Ensembl client interface - they use the same React code, and therefore the content is structured in a very similar way.
 
 However the pages are not served as-is from the directories in this repository; instead, a build process compiles the Markdown into HTML, adds links to related content and creates menus for navigation. When it does this, it checks that the pages being linked to actually exist, and if there are any problems the build is aborted and the live site is not updated. This reduces the risk of errors on the public website. [Find out more about this process](github.md)...
+
+## Design principles
+
+### Index pages
+
+One of the decisions we made when working out the structure of these apps is that we would not have index pages (equivalent to index.html on the current site), as these so often end up as a boring list of links to the pages in that folder. (EXPAND THIS SECTION) 
+
+### Page layout
+
+For readability, the body of the page has a fixed width that is narrow enough for the reader's eye to scan quickly and easily. There may thus be a lot of white space between the body text and the righthand menu of related articles.
+
+However this rule does not apply to all images, some of which may be wider than the text if that makes them more readable, e.g. a large screenshot.
+
+We are in the process of finalising the types of images we use and how they should be sized - please check the [images guide](media.md) for the latest information.
 
 ## How to add content
 
