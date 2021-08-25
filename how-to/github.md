@@ -29,7 +29,7 @@ There will be a long, scary-looking report - ignore everything except the first 
 
 Here you can see that the error was in `funding.md`, and that it was a broken link to the `about.md` page.
 
-**Future work** - GitLab can inform GitHub of the status of the latest build, so that GitHub displays either a red cross or a green tick. Clicking on the link will take you straight to GitLab.
+**Future work** - GitLab can inform GitHub of the status of the latest build, so that GitHub displays either a red cross or a green tick. Once we have implemented this integration, you will be able to check the build status directly from this GitHub repo, and clicking on the status icon will take you straight to GitLab.
 
 ## Creating branches
 
