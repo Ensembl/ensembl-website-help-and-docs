@@ -15,7 +15,7 @@ We leverage the power of GitLab as follows (this is highly simplified!):
 
 To do - GitLab can inform GitHub of the status of the latest build, so that GitHub displays either a red cross or a green tick, as per the image below (from the ensembl-client repo). Clicking on the link will take you to GitLab, where you can find out more about the latest run.
 
-![GitHub screenshot showing green tick](media/status.jpg)
+![GitHub screenshot showing green tick](media/status.png)
 
 ## Creating branches
 
