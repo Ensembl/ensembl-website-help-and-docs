@@ -34,7 +34,7 @@ We are in the process of finalising the types of images we use and how they shou
 
 ## How to add content
 
-Before you create content, please ensure you are familiar with the SOP described in the [Github and integratiion guide](github.md) - it will save you a lot of time and the web team a lot of pain :)
+Before you create content, please ensure you are familiar with the SOP described in the [Github and integration guide](github.md) - it will save you a lot of time and the web team a lot of pain :)
 
 ### Naming conventions
 
