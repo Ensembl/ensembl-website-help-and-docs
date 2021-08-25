@@ -1,4 +1,4 @@
-# How to create documents for the Help and About apps
+# How to create content for the Help and About apps
 
 To make this documentation easier to use, it has been divided into several pages
 
