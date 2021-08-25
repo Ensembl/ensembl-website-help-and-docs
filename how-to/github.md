@@ -13,9 +13,22 @@ We leverage the power of GitLab as follows (this is highly simplified!):
   - If the build fails, the new build is thrown away and GitLab waits for the next update
   - If it succeeds, the new build is made available to the web frontend
 
-To do - GitLab can inform GitHub of the status of the latest build, so that GitHub displays either a red cross or a green tick, as per the image below (from the ensembl-client repo). Clicking on the link will take you to GitLab, where you can find out more about the latest run.
+At the moment, the only way to check the build status is by manually checking the [pipelines page on GitLab](https://gitlab.ebi.ac.uk/ensembl-web/ensembl-help-and-docs/-/pipelines).
 
-![GitHub screenshot showing green tick](media/status.png)
+Click on a red "failed" button to go to that specific run:
+
+![GitLab screenshot showing list of builds](media/builds.png)
+
+then click on the "build" button to see full details:
+
+![GitLab screenshot showing failed build](media/failed.png)
+
+There will be a long, scary-looking report - ignore everything except the first line of red text, which will tell you exactly which file broke the build, and why.
+
+![GitLab screenshot showing error report](media/errors.png)
+
+
+**Future work** - GitLab can inform GitHub of the status of the latest build, so that GitHub displays either a red cross or a green tick, as per the image below (from the ensembl-client repo). Clicking on the link will take you straight to GitLab.
 
 ## Creating branches
 
