@@ -21,12 +21,15 @@ Click on a red "failed" button to go to that specific run:
 
 then click on the "build" button to see full details:
 
+<figure style="width:1014px;height:616px">
 ![GitLab screenshot showing failed build](media/failed.png)
+</figure>
 
 There will be a long, scary-looking report - ignore everything except the first line of red text, which will tell you exactly which file broke the build, and why.
 
 ![GitLab screenshot showing error report](media/errors.png)
 
+Here you can see that the error was in `funding.md`, and that it was a broken link to the `about.md` page.
 
 **Future work** - GitLab can inform GitHub of the status of the latest build, so that GitHub displays either a red cross or a green tick, as per the image below (from the ensembl-client repo). Clicking on the link will take you straight to GitLab.
 
