@@ -21,7 +21,9 @@ Click on a red "failed" button to go to that specific run:
 
 then click on the "build" button to see full details:
 
-<img src="media/failed.png" alt="GitLab screenshot showing failed build" style="width:1014px;height:616px" />
+<figure style="width:1014px;height:616px">
+![GitLab screenshot showing failed build](media/failed.png)
+</figure>
 
 There will be a long, scary-looking report - ignore everything except the first line of red text, which will tell you exactly which file broke the build, and why.
 
