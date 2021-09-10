@@ -1,8 +1,8 @@
 - name: About us
   href: about.md
   url: /about
-#- name: Annotation
-#  href:
+- name: Annotation
+  href: annotation-and-prediction/toc.yml
 - name: Legal & privacy
   href: legal-and-privacy/toc.yml
   url: /about/articles/legal
