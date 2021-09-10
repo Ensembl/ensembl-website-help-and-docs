@@ -12,7 +12,7 @@ Gene annotation is the plotting of genes onto genome assemblies, and indexing th
 
 For any given genome, you can find the provider and method in the righthand panel on the individual genome's homepage. The three methods we use are:
 
-1. Annotation by the Ensembl team using an automated pipeline plus, in a small subset of key species, additional manual annotation. This process is used for vertebrates and other selected eukaryotic organisms. In the case of human and mouse, we use manual annotation produced by the GENCODE project to create the comprehensive [GENCODE Gene Annotation Set](gencode-annotation.md). 
+1. Annotation by the Ensembl team using an automated pipeline plus, in a small subset of key species, additional manual annotation. This process is used for vertebrates and other selected eukaryotic organisms. In the case of human and mouse, we use manual annotation produced by the GENCODE project to create the comprehensive [GENCODE Gene Annotation Set](gencode-genes.md). 
 
 2. Importing from community resources. In this case the method will be listed as 'Import' and we link to the provider's website. Plants and non-vertebrate model organisms are annotated in this manner.
 
