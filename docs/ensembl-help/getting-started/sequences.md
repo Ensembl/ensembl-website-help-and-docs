@@ -20,7 +20,7 @@ You can export sequences from the Genome Browser and Entity viewer apps using th
 ![](../../img/id-genome-browser.svg)
 In the genome browser, you can download gene and transcript sequences by clicking on the quick download link in the drawer or by clicking on the interactive transcript model and selecting the appropriate sequence to download.
 
-You can either download as FASTA, suitable for using with sequence analysis tools, or as rich text format (RTF), for visual analysis.
+You can download sequences as a FASTA file which is suitable for using with sequence analysis tools.
 
 ## Entity viewer
 ![](../../img/id-entity-viewer.svg)
