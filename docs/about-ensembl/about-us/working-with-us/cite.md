@@ -17,7 +17,7 @@ If you've used Ensembl in your work, please cite the appropriate overview articl
 
 ## For vertebrate genomes
 
-**Ensembl 2020**\
+**Ensembl 2021**\
 _Nucleic Acids Res._ 2021, vol. 49(1):884–891\
 [doi:10.1093/nar/gkaa942](https://doi.org/10.1093/nar/gkaa942)
 
