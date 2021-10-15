@@ -8,7 +8,7 @@ description: The team of talented scientists and programmers who make Ensembl po
 
 The Ensembl project is headed by Paul Flicek and receives input from an independent scientific advisory board.
 
-Currently, the Ensembl group consists of around nn people, divided in a number of teams.
+Currently, the Ensembl group consists of over 100 people, divided into a number of smaller teams.
 
 ## Annotation
 
@@ -36,15 +36,15 @@ Responsible for manual annotation of genes on a selection of key species, primar
 
 ### Microbes
 
-Responsible for fungal, protist and prokaryotic genomes.
+Responsible for importing community annotation of fungal, protist and prokaryotic genomes.
 
 ### Plants
 
-Responsible for plant genomes, focusing particularly on crop species.
+Responsible for importing community annotation of plant genomes, focusing particularly on crop species such as wheat, rice and barley.
 
 ### Metazoa
 
-Responsible for invertebrate genomes.
+Responsible for importing community annotation of invertebrate genomes.
 
 ### WormBase/AGR
 
