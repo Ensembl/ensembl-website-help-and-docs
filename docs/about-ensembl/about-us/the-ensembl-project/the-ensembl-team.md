@@ -6,8 +6,6 @@ description: The team of talented scientists and programmers who make Ensembl po
 
 # The Ensembl team
 
-The Ensembl project is headed by Paul Flicek and receives input from an independent scientific advisory board.
-
 Currently, the Ensembl group consists of over 100 people, divided into a number of smaller teams.
 
 ## Annotation
