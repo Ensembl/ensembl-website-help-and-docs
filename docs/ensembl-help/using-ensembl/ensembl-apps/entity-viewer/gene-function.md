@@ -1,6 +1,6 @@
 ---
 slug: gene-function
-title: What’s in the Gene function?
+title: What’s in the gene function?
 description: How to browse and download protein data
 related_articles:
   - href: entity-viewer.md
@@ -12,7 +12,7 @@ tags:
 status: draft
 ---
 
-# What’s in the Gene function?
+# What’s in the gene function?
 
 Gene function view presents protein information for all coding transcripts of the gene of interest. It is therefore only available for protein coding genes.
  
