@@ -8,7 +8,7 @@ description: The team of talented scientists and programmers who make Ensembl po
 
 Currently, the Ensembl group consists of over 100 people, divided into a number of smaller teams.
 
-![The Ensembl team at our retreat in 2019](media/retreat_2019.jpg)
+![Members of the Ensembl team at our retreat in 2019](media/retreat_2019.jpg)
 
 ## Annotation
 
@@ -73,5 +73,3 @@ Responsible for management of data release, execution of pipelines during the re
 Responsible for spreading awareness and education for Ensembl. They also manage the help desk.
 
 
-
-![Members of the Ensembl team at our retreat in 2019](media/retreat_photo.jpg)
