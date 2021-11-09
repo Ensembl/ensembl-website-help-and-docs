@@ -8,6 +8,8 @@ description: The team of talented scientists and programmers who make Ensembl po
 
 Currently, the Ensembl group consists of over 100 people, divided into a number of smaller teams.
 
+![The Ensembl team at our retreat in 2019](media/retreat_2019.jpg)
+
 ## Annotation
 
 ### Genebuild
