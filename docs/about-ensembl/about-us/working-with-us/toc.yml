@@ -1,2 +1,6 @@
 - name: Citing Ensembl
   href: cite.md
+- name: Collaborations
+  href: collaborations.md
+- name: Google Summer of Code
+  href: gsoc.md
