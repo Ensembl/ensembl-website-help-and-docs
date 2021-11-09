@@ -13,7 +13,7 @@ status: draft
 
 # Get sequences
 
-You can export sequences from the Genome Browser and Entity viewer apps using the Sequence download tool:
+You can export sequences from the Genome browser and Entity viewer apps using the Sequence download tool:
 
 ## Genome browser
 
