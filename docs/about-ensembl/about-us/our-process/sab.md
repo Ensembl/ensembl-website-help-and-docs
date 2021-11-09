@@ -1,7 +1,7 @@
 ---
 slug: sab
 title: Scientific advisory boards
-description: 
+description: A list of members of our scientific advisory boards, past and present 
 ---
 
 # Scientific advisory boards

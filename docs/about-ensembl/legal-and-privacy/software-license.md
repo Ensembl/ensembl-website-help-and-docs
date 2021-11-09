@@ -2,7 +2,6 @@
 slug: software-license
 title: Software license
 description: Licensing information for the Ensembl client software codebase
-status: draft
 ---
 
 # Software license

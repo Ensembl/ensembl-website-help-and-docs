@@ -2,7 +2,6 @@
 slug: jobs
 title: Job vacancies
 description: Do you want to work for Ensembl? 
-status: draft
 ---
 
 # Job vacancies

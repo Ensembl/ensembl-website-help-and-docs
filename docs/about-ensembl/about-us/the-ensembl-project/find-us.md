@@ -2,13 +2,6 @@
 slug: find-us
 title: Where to find us
 description: Physical location of the EMBL-EBI
-related_articles:
-  - href: ../../about.md
-  - href: the-ensembl-story.md
-  - href: ../working-with-us/cite.md
-  - href: ../our-process/funding.md
-  - href: find-us.md
-status: draft
 ---
 
 # Where to find us

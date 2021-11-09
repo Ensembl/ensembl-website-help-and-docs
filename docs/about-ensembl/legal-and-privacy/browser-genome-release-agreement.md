@@ -2,7 +2,6 @@
 slug: browser-genome-release-agreement
 title: Browser genome release agreement
 description: Minimum requirements for display of genomic data, agreed between Ensembl, NCBI and UCSC
-status: draft
 ---
 
 # Browser genome release agreement

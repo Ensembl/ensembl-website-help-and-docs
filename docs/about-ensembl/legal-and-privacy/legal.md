@@ -2,7 +2,6 @@
 slug: legal
 title: Use of Ensembl content and data
 description: Restrictions on the use of Ensembl genomic data and software 
-status: draft
 ---
 
 # Use of Ensembl content and data

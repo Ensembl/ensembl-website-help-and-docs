@@ -2,13 +2,6 @@
 slug: story
 title: The Ensembl story
 description: A history of the Ensembl project from 1999 to the present
-related_articles:
-  - href: ../../about.md
-  - href: the-ensembl-story.md
-  - href: ../working-with-us/cite.md
-  - href: ../our-process/funding.md
-  - href: find-us.md
-status: draft
 ---
 
 # The Ensembl story

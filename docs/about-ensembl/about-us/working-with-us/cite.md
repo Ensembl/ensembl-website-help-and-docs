@@ -2,13 +2,6 @@
 slug: cite
 title: Citing Ensembl
 description: How to cite Ensembl in your work
-related_articles:
-  - href: ../../about.md
-  - href: ../the-ensembl-project/the-ensembl-story.md
-  - href: cite.md
-  - href: ../our-process/funding.md
-  - href: ../the-ensembl-project/find-us.md
-status: draft
 ---
 
 # Citing Ensembl

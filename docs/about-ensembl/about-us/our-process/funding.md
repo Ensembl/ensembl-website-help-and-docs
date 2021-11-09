@@ -2,13 +2,6 @@
 slug: funding
 title: Funding
 description: List of funders from whom we receive grants
-related_articles:
-  - href: ../../about.md
-  - href: ../the-ensembl-project/the-ensembl-story.md
-  - href: ../working-with-us/cite.md
-  - href: funding.md
-  - href: ../the-ensembl-project/find-us.md
-status: draft
 ---
 
 # Funding
