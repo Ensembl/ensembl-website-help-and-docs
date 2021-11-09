@@ -1,7 +1,7 @@
 ---
 slug: entity-viewer
-title: What is the entity viewer?
-description: How to browse gene, transcript and protein data in the entity viewer
+title: What is the Entity viewer?
+description: How to browse gene, transcript and protein data in the Entity viewer
 related_articles:
   - href: transcripts.md
   - href: gene-function.md
@@ -12,7 +12,7 @@ tags:
 status: draft
 ---
 
-# What is the entity viewer?
+# What is the Entity viewer?
 
 Entity viewer collates information about the gene of interest and related entities, such as its transcripts and proteins. This page is composed of the Main display, Right-hand panel, Navigation bar and Action bar.
  
