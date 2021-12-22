@@ -16,7 +16,7 @@ status: draft
 
 We are currently implementing a widespread refresh of the Ensembl infrastructure, which includes launching the new Ensembl website. The timeline for launching the new website is running in parallel with updates to other aspects of the Ensembl infrastructure. 
 
-![Roadmap](media/roadmap.jpg)
+![Roadmap](media/roadmap-211222.png)
 
 These updates ensure:
 - Genome annotation and analysis is provided at ever increasing scales. 
