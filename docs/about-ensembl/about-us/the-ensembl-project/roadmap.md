@@ -1,18 +1,10 @@
 ---
 slug: roadmap
-title: The Ensembl Roadmap
+title: The Ensembl roadmap
 description: Roadmap of new site and infrastructure development
-related_articles:
-  - href: ../../about.md
-  - href: the-ensembl-story.md
-  - href: ../working-with-us/cite.md
-  - href: ../our-process/funding.md
-  - href: find-us.md
-  - href: roadmap.md
-status: draft
 ---
 
-# Ensembl Roadmap
+# Ensembl roadmap
 
 We are currently implementing a widespread refresh of the Ensembl infrastructure, which includes launching the new Ensembl website. The timeline for launching the new website is running in parallel with updates to other aspects of the Ensembl infrastructure. 
 
@@ -30,7 +22,7 @@ Our new website is being delivered in three phases of development:
 2. Minimal Viable Product (MVP), currently scheduled for Q3 2022, will provide equivalent functionality to the Ensembl Rapid Release site, including variation visualisations, homologies and support for all new genomes. The Ensembl Rapid Release site is scheduled for retirement in 2023.
 3. New website functionality reaches that of the current site by the end of 2023. The current Ensembl sites will then receive minimal updates and are scheduled to be archived in late 2024.
 
-## Other Infrastructure Updates 
+## Other infrastructure updates 
 The Ensembl Perl API and publicly hosted MySQL databases currently provide programmatic access to genome annotation, but will be replaced with web-based APIs. A public beta version of our GraphQL entity API will be made available in early 2022, with other APIs launched during 2022 and 2023. The timeline for the retirement of our existing Perl API and public MySQL is dependent on providing access to all data freely hosted in Ensembl and will not start until data is accessible via other mechanisms.
  
 We are also developing new methods for locating flat-file dumps of Ensembl data programmatically rather than relying on FTP alone. Flat-files will continue to remain accessible from our bulk download services.
