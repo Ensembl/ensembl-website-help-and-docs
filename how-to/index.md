@@ -38,6 +38,8 @@ Before you create content, please ensure you are familiar with the SOP described
 
 ### Naming conventions
 
+Article titles should be in sentence case, e.g. "Find out about a gene" not "Find Out About a Gene". However proper nouns (e.g. Ensembl), acronyms (e.g. ncRNA), and so on should follow their normal capitalisation. See the appropriate [Design Decision Record](https://www.ebi.ac.uk/seqdb/confluence/display/ENSWEB/DDRs+-+Design+decision+records#DDRsDesigndecisionrecords-Global) on Confluence for full details.
+
 Folder and file names should be all lowercase, separated by hyphens (NOT underscores). Text files should of course use the extension .md so that they can be identified as Markdown.
 
 e.g. how-to-use-the-browser.md NOT How_to_use_the_Browser.md
