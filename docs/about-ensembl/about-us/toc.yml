@@ -1,6 +1,9 @@
 - name: The Ensembl project
   href: the-ensembl-project/toc.yml
+  url: /about/articles/story
 - name: Our process
   href: our-process/toc.yml
+  url: /about/articles/funding
 - name: Working with us
   href: working-with-us/toc.yml
+  url: /about/articles/cite
