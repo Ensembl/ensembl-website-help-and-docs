@@ -8,9 +8,11 @@ A Table of Contents should be capable of describing the menu for the appropriate
 ## Guiding principles
 
 - Every page that has to be accessible via the site menu must be listed in the Table of Contents.
-- Every page that has to be accessible via the site menu must have a stable url associated with it. The url should be derivable from the location of a document file on the file system; but it should also be possible to associate a custom url with the page.
+- Every page that has to be accessible via the site menu must have a stable url associated with it. The url can be generated automatically, but it should also be possible to assign a custom url to ths page.
+  - When the url is generated automatically, is is built according the following rule:
+    `/<namespace>/<type>/<menu_item_name>`. For example, an automatically generated url for a help article might be `/help/articles/in-app-search` or `/help/videos/how-to-find-and-add-species`; whereas an automatically generated url for an about article might be `/about/articles/the-ensembl-story`.
 - The Table of Contents is described in `toc.yml` file(s).
-- An item in the table of contents can refer to:
+- An item in a table of contents file can refer to:
   - a document file within any subfolder of the `docs` folder
   - a web page, either on ensembl.org or on any other web site
   - another table of contents file (typically, in a subdirectory relative to the current toc.yml file)
@@ -22,12 +24,9 @@ Note:
 
 ## The structure of a toc.yml file
 
-A toc.yml file can be formatted in one of two ways:
+A toc.yml file is formatted as a list of table of content items (see below):
 
-1. As a list of items
-2. As a dictionary with an `items` field containing a list of items; as well as other fields with additional pieces of metadata
-
-### Examples:
+### Example:
 
 1. A list of items
 
@@ -38,19 +37,6 @@ A toc.yml file can be formatted in one of two ways:
   href: howto2.md
 ```
 
-2. A dictionary with extra metadata: `directory_path` provides a custom namespace for the urls of individual files listed in this table of contents.
-
-```yml
-directory_path: /about/legal # or should it be called pathname?
-items:
-  - name: Privacy and Cookies
-    href: privacy-and-cookies.md
-  - name: Disclaimer
-    href: disclaimer.md
-  - name: Software License
-    href: software-license.md
-```
-
 ## Table of contents items
 
 An item of a table of contents can have the following fields:
@@ -58,13 +44,11 @@ An item of a table of contents can have the following fields:
 | Field      | Optional | Semantics                         |
 |------------|----------|-------------------------------------|
 | name       | no       | Name of a page as it appears in the menu
-| href       | yes      | Path to the page file or to a toc file. Alternatively, full url of an existing online page
+| href       | no       | Path to the page file or to a toc file. Alternatively, full url of an existing online page
+| type       | yes      | Explicitly stated type of the item. Practically, only needed if the type of the item is `video`
 | url        | yes      | Custom url that you want to assign to this page
 | topicHref  | yes      | see Sequence
 
-
-Possibly also required:
-- `type` (i.e. article vs video vs index.yml)
 
 ## Use cases
 
@@ -111,11 +95,3 @@ Normally, submenus will generate their url namespaces automatically, by combinin
 
 ## Prior art
 The conventions for annotating the `toc.yml` files are modified from the specifications of the [DocFX documentation generator by Microsoft](https://dotnet.github.io/docfx/tutorial/intro_toc.html) (see the [TOC section](https://dotnet.github.io/docfx/tutorial/intro_toc.html) of its documentation).
-
-===
-
-# Questions
-
-videos (including — is video actually a page?)
-
-related articles
