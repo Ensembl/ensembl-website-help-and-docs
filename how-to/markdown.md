@@ -1,84 +1,60 @@
-# A guide to writing Ensembl documentation with Markdown 
+# A guide to writing Ensembl documentation
 
-An Ensembl markdown file must consist of a metadata section followed by the body of the document. 
+An Ensembl markdown file must consist of a [metadata section](metadata.md) (written in YAML) followed by the body of the document written in the Markdown markup language. 
 
-- [Metadata](#metadata)
-- [Document body](#document-body)
+- [Metadata](metadata.md)
+- [Document body]
 
-## Metadata
+## Supported formatting
 
-The metadata section, also known as the yaml frontmatter block,  contains information about the document itself, and about its relationships to other documents. The metadata section is demarcated, above and below, with three hyphens. 
+We support CommonMark, an extension of the original Markdown specifications.
 
-Each Ensembl markdown document MUST have the following metadata fields:
+### Standard Markdown formatting
 
-- `title` — the title of the document
-- `description` — a short description of the document
+- paragraph
+- heading (h1 to h4)
+- ordered lists
+- unordered lists (with 2 levels of nesting)
+- links
+  - the ones that start with the pathname will be styled as internal links (example: `[Species selector](/species-selector)`)
+  - the ones that contain a protocol and a host name will be styled as external links (example: `[HGNC](https://www.genenames.org/)`)
+- inlined code and code blocks
+- tables (although markdown is poorly suited for tables, and it is possible you might want to use html to write them, see the next section)
+- images
 
-The `title` field and the `description` field will subsequently be indexed by Google, and will appear in Google search results like so:
+### Custom formatting via HTML
 
-![image](https://user-images.githubusercontent.com/6834224/94205723-ca9f5300-febb-11ea-8550-387993a6a8c9.png)
+The Markdown spec allows the author to inject raw HTML between the paragraphs of regular Markdown, which makes the following examples possible:
 
-Additionally, the metadata section may include the following optional fields:
+```md
+# Example
 
-- `slug` — short identifier of the document; if used, must be unique across all documents
-- `related_articles` — a list of paths to markdown files of related articles
-- `related_videos` — a list of paths to yaml files with data about related videos hosted on Youtube
+This is a paragraph of plain markdown.
 
-**Important note**: if you need to change a page's slug for some reason, **please inform the web team!** The `slug` is used by other Ensembl apps to identify contextual help for a particular page, for example on the genome browser page, the Help icon links to a help article giving an overview of how the genome browser is used. If you change the slug, this help popup will fail! 
-
-
-### Paths to related files
-Files can be linked to one another in the yaml frontmatter using the following two keywords:
-- `relative_path`
-- `docs_root_path`
-
-The concepts represented by these keywords are similar to relative and absolute paths in the file system. `relative_path` means a path to the other file starting from the directory that your current article is in. `docs_root_path` means a path starting from the documents root, i.e. from the `docs` directory.
-
-Example. For the following directory tree:
-
-```
-docs/
-└── ensembl-help
-    ├── getting-started
-    │   ├── selecting-a-species.md
-    |   ├── search.md
-    │   └── videos
-    |       └── select-a-species.yml
-    └── using-ensembl
-        └── using-the-genome-browser.md
+<p class="special-color">Hey, look at this! This is HTML in a Markdown file!</p>
 ```
 
-Given that you are currently editing `selecting-a-species.md` file, you may refer from it to the `select-a-species.yml` video file as follows:
+The CommonMark spec even allows continuing writing Markdown inside of HTML tags, provided there remains an empty line between the HTML tag and the Markdown content, thus making the following use cases possible:
 
-```yml
-related_videos:
-  - relative_path: videos/select-a-species.yml
+```md
+# Example
+
+This is a paragraph of plain markdown.
+
+<div class="documentation-box">
+
+## This is heading 2
+
+And this is another paragraph, which will be displayed inside a box element.
+
+</div>
 ```
 
-or
+Such sprinklings of HTML inside Markdown opens up the possibility of custom formatting, such as boxes, complex tables, etc. 
 
-```yml
-related_videos:
-  - docs_root_path: ensembl-help/getting-started/videos/select-a-species.yml
-```
 
-Similarly, you can refer from `selecting-a-species.md` file to the `using-the-genome-browser.md` file as follows:
 
-```yml
-related_articles:
-  - relative_path: ../using-ensembl/using-the-genome-browser.md
-```
 
-or
 
-```yml
-related_articles:
-  - docs_root_path: ensembl-help/using-ensembl/using-the-genome-browser.md
-```
 
-You will notice that relative paths may be more convenient to use if the target file is down the same branch of the directory tree as the current file; while docs root paths my be more convenient to use if the target files is on a different branch of the directory tree.
-
-## Document body
-
-(something about the flavour of Markdown we use, and where to find a useful cheat sheet).
 

@@ -1,17 +1,33 @@
-# Images and other media
+# Videos
 
-## How to add images to documentation
+- [How to create a Help video](#how-to-create-a-help-video)
+- How to add videos to documentation(#how-to-add-videos-to-documentation)
 
-For most pages, images should be stored in a subfolder alongside the Markdown file. The exception is generic images such as app icons and the Ensembl logo, which can be found in the top-level `img` folder.
+## How to create a Help video
 
-For consistency, we use the name `media` for image folders. If one does not exist in the folder you want to put your Markdown file in, go ahead and create it.
+### Scaling
+* Create Camtasia file at 1280 x 720 px
+* Open browser at 1280 x 720 px
+* Record video using Camtasia
+* Place recording in Camtasia time line
+* Shrink video to fit into frame
 
-Example: `![this is alt text that appears if image doesn't show up](media/my-image.jpg)`. (The alt text block can also be empty: `![](media/my-image.jpg)`).
+### Highlighting
+* Use zooming to show parts of the screen at full pixel:pixel scale
+* Use Camtasia arrow drawing to draw labels then add label afterwards
+* Arrow in #D90000 (rgb 217,0,0)
+* Add labels at 72 px Caveat bold #D90000 (rgb 217,0,0)
 
-**When adding images, please remember:**
-- the image should not be huge
-- the image should be compressed; pass the image through [https://tinypng.com](https://tinypng.com) to compress it
-- a good rule of thumb is, if an image is over 100kB, it's probably too much
+### Intros
+* Add intros, either data intro or how to, depending on type of video
+* Extend out top bar so that it lasts the length of the video
+* Change label in intro and top bar
+
+### Subtitles
+
+* In YouTube enable Closed captioning.
+* Go into Closed captioning and *Duplicate and edit* the Automatic closed captioning.
+* Go through and fix any errors.
 
 ## How to add videos to documentation
 

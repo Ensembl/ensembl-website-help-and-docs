@@ -4,9 +4,13 @@ To make this documentation easier to use, it has been divided into several pages
 
 - An overview of the Help and About apps (this page)
 
-- [A guide to Markdown](markdown.md), with Ensembl-specific formatting
+- [A guide to Markdown](markdown.md)
 
-- [How to add images](media.md)  and other media to the repository
+    - [How to add metadata to an article with YAML](metadata.md)
+
+- [How to create and add images](media.md)
+
+- [How to create and add videos](videos.md)
 
 - [How to add navigation](toc.md) with toc.yml files
 
