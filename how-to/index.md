@@ -55,7 +55,7 @@ Documentation for the Ensembl web site is stored in plain-text files in the foll
 - markdown (.md) — for freestyle prose
 - yaml (.yml) — for structured data
 
-More information about the specific formatting used by Ensembl can be found in the [Markdown guide](markdown.md) and [Image guide](media.md).
+More information about the specific formatting used by Ensembl can be found in the [Markdown](markdown.md), [YAML metadata](metadata.md), [image](images.md) and [video](videos.md) guides.
 
 ### Where to save your files
 

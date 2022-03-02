@@ -3,7 +3,7 @@
 An Ensembl markdown file must consist of a [metadata section](metadata.md) (written in YAML) followed by the body of the document written in the Markdown markup language. 
 
 - [Metadata](metadata.md)
-- [Document body]
+- Document body (see below)
 
 ## Supported formatting
 
