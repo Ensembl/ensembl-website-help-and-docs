@@ -1,6 +1,9 @@
 - name: Citing Ensembl
   href: cite.md
+  url: /about/articles/cite
 - name: Collaborations
   href: collaborations.md
+  url: /about/articles/collaborations
 - name: Google Summer of Code
   href: gsoc.md
+  url: /about/articles/gsoc
