@@ -32,12 +32,21 @@
 ## How to add videos to documentation
 
 ### Option 1: Add a link to the file with video data
-- Add a yaml file in a folder that makes the most sense (e.g. `media` folder or `videos` folder in the same folder as your article)
+
+- Add a yaml file in a folder that makes the most sense (e.g. `media` folder or `videos` folder in the same folder as your article) - IMPORTANT: use the 3-letter extension: `yml`, not `yaml`.
 - Make sure the video yaml file has the following fields:
+  - `type` - always set to "video"
   - `title` — title of the video
   - `description` — description of the video
   - `youtube_id` — video id copied from a youtube url (**note:** only the id, not the full url)
-- Add the `related_videos` field to the frontmatter of your documentation file. The `related_videos` field should contain a yaml list with a path to your video. For instructions on how to write such a path, see [this section](#paths-to-related-files).
+- Add the `related_videos` field to the frontmatter of your documentation file. The `related_videos` field should contain a yaml list with a path to your video. For instructions on how to write such a path, see the [metadata instructions](metadata.md).
+
+```yml
+type: Video
+title: Select a species or assembly
+description: How to select a species, strain or assembly.
+youtube_id: v6HKpja5t1M
+```
 
 Using this option will allow us to extract the video and to display it side by side with the body of the article, in a way shown in [this design](https://xd.adobe.com/view/d64fc883-dc95-4d08-63a3-483f9c772ec1-a07e/screen/690c281b-e3ad-4c8f-9566-2b6745ea0fee?fullscreen).
 
