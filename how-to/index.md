@@ -8,7 +8,7 @@ To make this documentation easier to use, it has been divided into several pages
 
     - [How to add metadata to an article with YAML](metadata.md)
 
-- [How to create and add images](media.md)
+- [How to create and add images](images.md)
 
 - [How to create and add videos](videos.md)
 
