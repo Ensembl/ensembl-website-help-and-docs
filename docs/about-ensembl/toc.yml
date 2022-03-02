@@ -1,5 +1,5 @@
 - name: About us
-  href: about-us/the-ensembl-project/toc.yml
+  href: about-us/toc.yml
   topicHref: about.md
   url: /about
 - name: Annotation
