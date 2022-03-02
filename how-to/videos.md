@@ -1,7 +1,7 @@
 # Videos
 
 - [How to create a Help video](#how-to-create-a-help-video)
-- How to add videos to documentation(#how-to-add-videos-to-documentation)
+- [How to add videos to documentation](#how-to-add-videos-to-documentation)
 
 ## How to create a Help video
 
