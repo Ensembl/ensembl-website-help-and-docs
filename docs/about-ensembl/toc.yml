@@ -1,9 +1,6 @@
 - name: About us
-  href: about-us/toc.yml
-  topicHref: about.md
   url: /about
 - name: Annotation
-  href: ./annotation-and-prediction/assemblies-and-sequence.md
+  href: ./annotation-and-prediction/toc.yml
 - name: Legal & privacy
   href: legal-and-privacy/toc.yml
-  topicHref: ./legal-and-privacy/legal.md
