@@ -1,4 +1,5 @@
 - name: About us
+  href: about.md
   url: /about
 - name: Annotation
   href: ./annotation-and-prediction/toc.yml
