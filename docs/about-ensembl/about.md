@@ -4,7 +4,7 @@ title: About us
 description: Learn more about the Ensembl project
 ---
 
-# About us
+# Introduction
 
 The Ensembl project has three goals: to provide a comprehensive source of stable genome annotation, to enable genomic interpretation, and to support researcher driven analysis.
 
