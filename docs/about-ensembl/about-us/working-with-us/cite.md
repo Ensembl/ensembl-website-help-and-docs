@@ -10,14 +10,14 @@ If you've used Ensembl in your work, please cite the appropriate overview articl
 
 ## For vertebrate genomes
 
-**Ensembl 2021**\
-_Nucleic Acids Res._ 2021, vol. 49(1):884–891\
-[doi:10.1093/nar/gkaa942](https://doi.org/10.1093/nar/gkaa942)
+**Ensembl 2022**\
+_Nucleic Acids Res._ 2022, vol. 50(D1):D988-D995\
+[doi:10.1093/nar/gkab1049](https://doi.org/10.1093/nar/gkab1049)
 
 ## For invertebrate, plant, fungal and prokaryote genomes
 
-**Ensembl Genomes 2020—enabling non-vertebrate genomic research**\
-_Nucleic Acids Research_ 2019\
-[doi:10.1093/nar/gkz890](https://doi.org/10.1093/nar/gkz890)
+**Ensembl Genomes 2022: an expanding genome resource for non-vertebrates**\
+_Nucleic Acids Res._ 2022, vol. 50(D1):D996-D1003\
+[doi:10.1093/nar/gkab1007](https://doi.org/10.1093/nar/gkab1007)
 
 Note: This site is currently using data from the 104 release of Ensembl, dated May 2021.
