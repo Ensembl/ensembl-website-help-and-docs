@@ -45,7 +45,7 @@ Practical applications:
 
 Practical application:
 
-* Browsers can use alternate sequence identifiers but it should be clear how these identifiers map to the INSDC record. Ideally, this will have a minimal disruption on dataflow but still provide a framework for easy data exchange between the various groups. This implies that the starting AGP files should use the INSDC accession.version to identify all of the objects and components describing the assembly. For a reminder of AGP definitions, please see the specification found here: http://www.ncbi.nlm.nih.gov/projects/genome/assembly/agp/AGP_Specification.shtml.
+* Browsers can use alternate sequence identifiers but it should be clear how these identifiers map to the INSDC record. Ideally, this will have a minimal disruption on dataflow but still provide a framework for easy data exchange between the various groups. This implies that the starting AGP files should use the INSDC accession.version to identify all of the objects and components describing the assembly. For a reminder of AGP definitions, please see the [specification](http://www.ncbi.nlm.nih.gov/projects/genome/assembly/agp/AGP_Specification.shtml).
 
 ### All browsers will refer to any given assembly by the same name, preferably a submitter approved name. This should be collected at the time of assembly submission and guidance should be given to the submitted group in terms of selecting an appropriate name.
 
