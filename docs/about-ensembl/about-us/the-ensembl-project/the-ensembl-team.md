@@ -18,9 +18,7 @@ Responsible for our internal annotation of genomes, including assembly loading, 
 
 ### Variation
 
-Creates infrastructure to manage and annotate genomic variation data and phenotype/disease 
-associations. Develops and maintains tools including VEP, Variant recoder, the LD caclulator. 
-Projects include Ensembl, IGSR and G2P.
+Creates infrastructure to manage and annotate genomic variation data and phenotype/disease associations. Develops and maintains tools including VEP, Variant recoder, the LD calculator. Projects include Ensembl, IGSR and G2P.
 
 ### Regulation
 
@@ -44,7 +42,7 @@ Responsible for importing community annotation of plant genomes, focusing partic
 
 ### Metazoa
 
-Responsible for importing community annotation of invertebrate genomes.
+Responsible for importing community annotation of invertebrate genomes, generation of new genome assemblies and annotations (African Cassava Whitefly, Infravec2),  and providing EBI's contribution to the VEuPathDB eukaryotic pathogen and vector database.
 
 ### WormBase/AGR
 
@@ -60,13 +58,17 @@ Develops and maintains the core database and associated API, the current [REST A
 
 Develops and maintains various projects, including [Tark](http://tark.ensembl.org/) and the [Trackhub Registry](https://www.trackhubregistry.org).
 
-### Web team
-
-Develops and maintains this website and other websites under the ensembl.org domain, as well as the [Ensembl blog](https://www.ensembl.info).
-
 ### Production
 
 Responsible for management of data release, execution of pipelines during the release cycle and development of associated software infrastructure.
+
+### Web team
+
+The Backend and Frontend web teams develop and maintain this website and other websites under the ensembl.org domain, as well as the [Ensembl blog](https://www.ensembl.info).
+
+### User research & design
+
+Engages with users to understand their needs and objectives, as well as liaising with the teams in Ensembl to create new interfaces, interactions and experiences when working with Ensembl genomes and data.
 
 ### Outreach
 
