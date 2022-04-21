@@ -18,11 +18,11 @@ Responsible for our internal annotation of genomes, including assembly loading, 
 
 ### Variation
 
-Creates infrastructure to manage and annotate genomic variation data and phenotype/disease associations. Develops and maintains tools including VEP, Variant recoder, the LD calculator. Projects include Ensembl, IGSR and G2P.
+Creates infrastructure to manage and annotate genomic variation data and phenotype/disease associations. Develops and maintains tools including VEP, Variant recoder, LD calculator. Projects include Ensembl, IGSR and G2P.
 
 ### Regulation
 
-Responsible for importing experimental data and annotating functional elements and regulatory information.
+Adapts, develops and runs computational analysis methods to identify and characterise genomic regulatory elements.
 
 ### Compara
 
@@ -34,7 +34,7 @@ Responsible for manual annotation of genes on a selection of key species, primar
 
 ### Microbes
 
-Responsible for importing community annotation of fungal, protist and prokaryotic genomes.
+Responsible for importing annotation of fungal, protist and prokaryotic genomes, and their interactions with each other and their hosts.
 
 ### Plants
 
