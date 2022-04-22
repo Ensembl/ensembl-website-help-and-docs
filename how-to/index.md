@@ -4,9 +4,13 @@ To make this documentation easier to use, it has been divided into several pages
 
 - An overview of the Help and About apps (this page)
 
-- [A guide to Markdown](markdown.md), with Ensembl-specific formatting
+- [A guide to Markdown](markdown.md)
 
-- [How to add images](media.md)  and other media to the repository
+    - [How to add metadata to an article with YAML](metadata.md)
+
+- [How to create and add images](images.md)
+
+- [How to create and add videos](videos.md)
 
 - [How to add navigation](toc.md) with toc.yml files
 
@@ -51,7 +55,7 @@ Documentation for the Ensembl web site is stored in plain-text files in the foll
 - markdown (.md) — for freestyle prose
 - yaml (.yml) — for structured data
 
-More information about the specific formatting used by Ensembl can be found in the [Markdown guide](markdown.md) and [Image guide](media.md).
+More information about the specific formatting used by Ensembl can be found in the [Markdown](markdown.md), [YAML metadata](metadata.md), [image](images.md) and [video](videos.md) guides.
 
 ### Where to save your files
 

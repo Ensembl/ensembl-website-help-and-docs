@@ -2,7 +2,6 @@
 slug: name-logo-policy
 title: The Ensembl logotype
 description: How to use our logotype when incorporating Ensembl code or data into your work
-status: draft
 ---
 
 # The Ensembl logotype

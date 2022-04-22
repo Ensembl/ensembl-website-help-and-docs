@@ -19,7 +19,7 @@ const buildMenus = async () => {
       name,
       data: await createMenu({
         tocPath,
-        url: `/${name}`
+        urlNamespace: `/${name}`
       })
     }));
     return await Promise.all(menuPromises);

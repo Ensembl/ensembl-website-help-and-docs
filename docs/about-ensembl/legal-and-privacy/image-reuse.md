@@ -2,7 +2,6 @@
 slug: image-reuse
 title: Ensembl image reuse
 description: Policy for the reuse of images derived from Ensembl resources
-status: draft
 ---
 
 # Ensembl image reuse

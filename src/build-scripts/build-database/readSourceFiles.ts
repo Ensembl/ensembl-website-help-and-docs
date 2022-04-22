@@ -65,10 +65,11 @@ const readSourceFiles = async (menus: ReadSourceFilesParams) => {
 const getAllArticlesFromMenu = (collectionName: string, menuItems: ParsedMenuItem[]) => {
   let list: ArticleMetadata[] = [];
   for (const item of menuItems) {
+    const articleType = item.type === 'collection' ? 'article' : item.type;
     if (item.path) {
       const articleMetadata = {
         path: item.path,
-        type: item.type as ArticleType,
+        type: articleType,
         url: item.url,
         collection: collectionName
       }
@@ -93,6 +94,7 @@ const verifyUrlUniqueness = (articleMetadata: ArticleMetadata[]) => {
     } else if (tracker[path] === url) {
       continue;
     } else {
+      console.log({ tracker, path, url });
       throw new Error(`Article ${path} is referenced by more than one url`);
     }
   }

@@ -2,7 +2,6 @@
 slug: assemblies-and-sequence
 title: Assemblies and sequence
 description: Introduction to the sequence data used by Ensembl 
-status: draft
 ---
 
 # Assemblies and sequence

@@ -2,7 +2,6 @@
 slug: privacy-and-cookies
 title: Privacy and cookies
 description: Information about our privacy policy and use of cookies
-status: draft
 ---
 
 # Privacy and cookies

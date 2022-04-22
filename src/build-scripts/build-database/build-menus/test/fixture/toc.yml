@@ -13,7 +13,8 @@
   href: child-folder-1/toc.yml
 - name: Parent menu item with its own page
   href: child-folder-2/toc.yml
-  topicHref: child-folder-2/index.yml
+  topicHref: child-folder-2/index.md
+  url: '/test-collection-with-own-file'
 - name: Page from oddly named file
   href: fileWith_strange-name.md
 - name: Page from an external resource
