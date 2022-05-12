@@ -12,7 +12,7 @@ type TOC = TOCMetadata & { items: TOCItem[] };
 type TOCMetadata = {
   fullPath: string;
   directoryPath: string;
-  url: string; // can be set explicitly or derived from path
+  // url: string; // can be set explicitly or derived from path
   urlNamespace: string;
 };
 
@@ -26,14 +26,15 @@ type TOCItemType =
 type TOCItem = {
   name: string;
   type?: TOCItemType;
-  href?: string; // path to file or a url
+  href?: string; // url or path to a file, which can be either a content file (e.g. markdown) or a table-of-contents.yml
+  topicHref?: string; // url or path to a content file
   url?: string; // url to use if different from the file path
   items?: TOCItem[];
 };
 
 type CreateMenuParams = {
   tocPath: string; // path to top-level toc.yml file
-  url: string; // pathname of the menu's namespace, e.g. "/about", etc.
+  urlNamespace: string; // the menu's namespace in the url path, e.g. "/about", etc.
 };
 
 
@@ -46,8 +47,8 @@ export type ParsedMenuItem = {
 };
 
 export const createMenu = async (params: CreateMenuParams) => {
-  const { tocPath, url } = params;
-  const toc = await readTOC({ filePath: tocPath, url, urlNamespace: url }); // FIXME: error handling?
+  const { tocPath, urlNamespace } = params;
+  const toc = await readTOC({ filePath: tocPath, urlNamespace }); // FIXME: error handling?
   const parsedToc = parseTOC(toc);
   return parsedToc;
 };
@@ -55,11 +56,11 @@ export const createMenu = async (params: CreateMenuParams) => {
 type ReadTOCParams = {
   filePath: string,
   urlNamespace: string,
-  url?: string
+  // url?: string
 };
 // from the root toc.yml file, generate a tree of TOC items
 const readTOC = async (params: ReadTOCParams): Promise<TOC> => {
-  const { filePath, url, urlNamespace } = params;
+  const { filePath, urlNamespace } = params;
   const fileContent = await fsPromises.readFile(filePath, 'utf-8');
   const directoryPath = path.dirname(filePath);
   const toc = yaml.parse(fileContent) as TOC | TOCItem[];
@@ -67,11 +68,12 @@ const readTOC = async (params: ReadTOCParams): Promise<TOC> => {
     return {
       fullPath: filePath,
       directoryPath,
-      url,
+      // url,
       urlNamespace,
       items: toc
     }
   } else {
+    // QUESTION: why does this branch exist?
     return {
       ...toc,
       fullPath: filePath,
@@ -81,7 +83,7 @@ const readTOC = async (params: ReadTOCParams): Promise<TOC> => {
   }
 };
 
-const parseTOC = async (toc: TOC): Promise<ParsedMenuItem[]> /* parsedMenuTree - Node or Nodes */ => {
+const parseTOC = async (toc: TOC): Promise<ParsedMenuItem[]> => {
   const parsedMenuItems = [] as ParsedMenuItem[];
 
   for (const tocItem of toc.items) {
@@ -97,17 +99,20 @@ const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem>
   const tocItemPath = tocItem.href;
 
   if (tocItemPath && /https?:\/\//.test(tocItemPath)) {
+    // This TOC item is a link to an external resource
     menuItem.url = tocItem.href;
   } else if (tocItemPath && await isTOCFile(path.join(toc.directoryPath, tocItemPath))) {
-    // TODO: does this menu parent have a page associated with it?
-    const newTocUrl = buildDirectoryUrlFromFileSystem(tocItemPath, toc.url);
-    const newToc = await readTOC({
-      filePath: path.join(toc.directoryPath, tocItemPath),
-      url: newTocUrl,
-      urlNamespace: toc.urlNamespace
-    });
-    const parsedNewToc = await parseTOC(newToc);
-    menuItem.items = parsedNewToc;
+    // This TOC item has a list of children items associated with it
+    menuItem.items = await parseChildTOC(tocItemPath, toc);
+
+    // It may also have an associated content file
+    const ownPagePath = tocItem.topicHref;
+    if (ownPagePath && /https?:\/\//.test(ownPagePath)) {
+      menuItem.url = ownPagePath;
+    } else if (ownPagePath && await isContentFile(path.join(toc.directoryPath, ownPagePath))) {
+      menuItem.path = buildFullPathToFile(ownPagePath, toc);
+      menuItem.url = tocItem.url || buildPageUrl(tocItem.name, 'article', toc.urlNamespace);
+    }
   } else if (tocItemPath && await isContentFile(path.join(toc.directoryPath, tocItemPath))) {
     menuItem.path = buildFullPathToFile(tocItemPath, toc);
     menuItem.url = tocItem.url || buildPageUrl(tocItem.name, getMenuItemType(menuItem), toc.urlNamespace);
@@ -120,6 +125,16 @@ const parseTOCItem = async (tocItem: TOCItem, toc: TOC): Promise<ParsedMenuItem>
 
   menuItem.type = getMenuItemType(menuItem);
   return menuItem;
+};
+
+const parseChildTOC = async (tocFilePath: string, toc: TOC) => {
+  // const newTocUrl = buildDirectoryUrlFromFileSystem(tocFilePath, toc.url);
+  const newToc = await readTOC({
+    filePath: path.join(toc.directoryPath, tocFilePath),
+    // url: newTocUrl,
+    urlNamespace: toc.urlNamespace
+  });
+  return await parseTOC(newToc);
 };
 
 const getMenuItemType = (menuItem: ParsedMenuItem): TOCItemType => {
@@ -159,6 +174,7 @@ const buildFullPathToFile = (filePath: string, toc: TOC) => {
   return path.join(toc.directoryPath, filePath);
 };
 
+// FIXME: delete?
 const buildDirectoryUrlFromFileSystem = (pathToNewToc: string, urlOfParentToc: string) => {
   const newTocDirectory = path.dirname(pathToNewToc);
   return path.join(urlOfParentToc, newTocDirectory);

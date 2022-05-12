@@ -24,7 +24,7 @@ The Genome browser displays a genomic region of interest. There are five parts t
 
 ## Browser image
 
-The main part of the page is the browser image, showing your region or entity of interest and tracks of the genomic features within that region, with the genome shown horizontally. If you have gone to the genome browser by searching for a gene or other entity, this will be highlighted as your focus entity. 
+The main part of the page is the browser image, showing your region or entity of interest and tracks of the genomic features within that region, with the genome shown horizontally. If you have gone to the Genome browser by searching for a gene or other entity, this will be highlighted as your focus entity. 
 
 Tracks are sets of data that can be plotted against the genome, such as transcripts, genetic variation or conserved regions. You can change which tracks you can see or the appearance of the tracks using the Track panel or the cog icons in the browser image.
 
@@ -40,7 +40,7 @@ The track panel lists all available tracks that can be viewed in the browser. Yo
 
 ## Genome tabs
 
-The Genome tabs display the genomes you have chosen to look at using the Species Selector app, which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
+The Genome tabs display the genomes you have chosen to look at using the Species selector app, which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
 
 ## Action bar
 
