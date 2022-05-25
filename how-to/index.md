@@ -26,7 +26,7 @@ However the pages are not served as-is from the directories in this repository; 
 
 ### Index pages
 
-One of the decisions we made when working out the structure of these apps is that we would not have index pages (equivalent to index.html on the current site), as these so often end up as a boring list of links to the pages in that folder. (EXPAND THIS SECTION) 
+One of the decisions we made when working out the structure of these apps is that we would not have index pages (equivalent to index.html on the current site), as these so often end up as a boring list of links to the pages in that folder. Instead we use Table-of-Contents files that allow us to include these lists of links in the navigation, without the user having to go to a separate page just to find the next link in the hierarchy. See the [toc.yml documentation](toc.yml) for more information on how to use these files.
 
 ### Page layout
 
@@ -38,7 +38,7 @@ We are in the process of finalising the types of images we use and how they shou
 
 ## How to add content
 
-Before you create content, please ensure you are familiar with the SOP described in the [Github and integration guide](github.md) - it will save you a lot of time and the web team a lot of pain :)
+Before you create content, **please ensure you are familiar with the SOP** described in the [Github and integration guide](github.md) - it will save you a lot of time and the web team a lot of pain :)
 
 ### Naming conventions
 
