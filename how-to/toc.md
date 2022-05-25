@@ -50,7 +50,7 @@ These may have an optional custom URL, same as a text article.
 
 ## Link to external resource
 
-In a very few instance we may want to link out to another site, e.g.
+In a very few instances we may want to link out to another site, e.g.
 
 ```yml
 - name: Training
