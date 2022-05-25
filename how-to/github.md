@@ -8,11 +8,11 @@ We encourage content providers to use a feature branch to commit their changes, 
 
 If you want to see your new content as it will actually appear on the web, you will need to use a review deployment on our Kubernetes cluster. At the moment these review sites have to be set up manually, so please ask the webteam if you need to take advantage of this service. 
 
-Once your review branch is set up, you can check on the status of updates via GitLab, as described below. This is not essential, but if your local changes fail to appear on the review site after pushing, the GitLab interface can help you to pinpoint the problem.  
+Once your review deployment is set up, all you need to do is push any changes to GitHub and they will be automatically picked up by our CI/CD pipeline and appear on the review site. You can check on the status of updates via GitLab, as described below. This is not essential, but if your local changes fail to appear on the review site after pushing, the GitLab interface can help you to pinpoint the problem.  
 
 ## GitHub and GitLab
 
-While the Ensembl repositories hosted on the public GitHub website, there is also a git-based site internal to the EBI, at https://gitlab.ebi.ac.uk. If you are an EBI employee, you can log into this site using your usual credentials.
+While the Ensembl repositories are hosted on the public GitHub website, there is also a git-based site internal to the EBI, at https://gitlab.ebi.ac.uk. If you are an EBI employee, you can log into this site using your usual credentials.
 
 We leverage the power of GitLab as follows (this is highly simplified!):
 
