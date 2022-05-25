@@ -20,7 +20,7 @@ We support CommonMark, an extension of the original Markdown specifications.
 - unordered lists (with 2 levels of nesting)
 - links
   - the ones that start with the pathname will be styled as internal links (example: `[Species selector](/species-selector)`)
-  - the ones that contain a protocol and a host name will be styled as external links (example: `[HGNC](https://www.uniprot.org/)`)
+  - the ones that contain a protocol and a host name will be styled as external links (example: `[HGNC](https://www.genenames.org/)`)
 - inlined code and code blocks
 - tables (although markdown is poorly suited for tables, so you might want to use HTML to write them - see the next section)
 - images
