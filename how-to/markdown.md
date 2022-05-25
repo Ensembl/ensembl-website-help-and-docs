@@ -9,10 +9,13 @@ An Ensembl markdown file must consist of a [metadata section](metadata.md) (writ
 
 We support CommonMark, an extension of the original Markdown specifications.
 
+- [CommonMark cheat sheet](https://commonmark.org/help/)
+
 ### Standard Markdown formatting
 
 - paragraph
 - heading (h1 to h4)
+- bold and italic text
 - ordered lists
 - unordered lists (with 2 levels of nesting)
 - links
