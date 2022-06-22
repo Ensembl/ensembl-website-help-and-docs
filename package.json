@@ -24,7 +24,7 @@
     "globby": "11.0.2",
     "lodash": "4.17.21",
     "reflect-metadata": "0.1.13",
-    "sqlite3": "5.0.2",
+    "sqlite3": "5.0.3",
     "typeorm": "0.2.31"
   },
   "devDependencies": {
