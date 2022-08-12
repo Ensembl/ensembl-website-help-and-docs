@@ -1,4 +1,4 @@
 - name: Assemblies and sequence
   href: assemblies-and-sequence.md
-- name: Gene annotation
+  - name: Gene annotation
   href: gene-annotation.md
