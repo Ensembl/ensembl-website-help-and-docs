@@ -64,6 +64,7 @@ variables:
 build:
   extends: .build
 
+# Default help-and-docs api deployment used by all ensembl-client review branches
 Dev:
   extends: .deploy-wp-kstmz
   environment:
@@ -72,14 +73,15 @@ Dev:
     - cd k8s/overlays/development
     - kustomize edit add label -f environment:dev
   only:
-  - master
+  - main
 
+# Custom help-and-docs api deployment for any development branch of the api
 Review:
   extends: .deploy-wp-review
   environment:
     name : wp-hx-dev
   except:
-  - master
+  - main
 
 
 # Job to deploy to staging environment (WP-HX k8s cluster)
@@ -88,7 +90,7 @@ Staging:WP-HX:
   environment:
     name : wp-hx-staging
   only:
-  - master
+  - main
 
 
 # Job to deploy to staging environment (WP-HH k8s cluster)
@@ -97,7 +99,7 @@ Staging:WP-HH:
   environment:
     name : wp-hh-staging
   only:
-  - master
+  - main
 
 
 # Job to deploy to internal environment (WP-HX k8s cluster)
@@ -106,7 +108,7 @@ Internal:WP-HX:
   environment:
     name : wp-hx-internal
   only:
-  - master
+  - main
 
 # Job to deploy to internal environment (WP-HH k8s cluster)
 Internal:WP-HH:
@@ -114,7 +116,7 @@ Internal:WP-HH:
   environment:
     name : wp-hh-internal
   only:
-  - master
+  - main
 
 # Job to deploy to live environment (WP-HX k8s cluster)
 Live:WP-HX:
@@ -122,7 +124,7 @@ Live:WP-HX:
   environment:
     name : wp-hx-live
   only:
-  - master
+  - main
 
 # Job to deploy to live environment (WP-HH k8s cluster)
 Live:WP-HH:
@@ -130,4 +132,4 @@ Live:WP-HH:
   environment:
     name : wp-hh-live
   only:
-  - master
+  - main
