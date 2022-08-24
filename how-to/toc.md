@@ -20,7 +20,9 @@ Types of menu entries:
 
 ## Link to article
 
-The simplest scenario is a list of links to each of the documents in a directory
+The simplest scenario is a list of links to each of the documents in a directory.
+
+Note that the spacing is critical for correct parsing - the "- name" line must not have any spaces in front of it, whereas the "href" line needs 2 spaces so that it lines up with the name line.
 
 ```yml
 - name: Using apps
