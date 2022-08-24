@@ -40,6 +40,8 @@ We are in the process of finalising the types of images we use and how they shou
 
 Before you create content, **please ensure you are familiar with the SOP** described in the [Github and integration guide](github.md) - it will save you a lot of time and the web team a lot of pain :)
 
+In particular, **please make sure that you add the page content and the corresponding entry in toc.yml in the same PR**, otherwise the deployment pipeline may fail and/or you will not be able to view the page because there is no menu entry for it.
+
 ### Naming conventions
 
 Article titles should be in sentence case, e.g. "Find out about a gene" not "Find Out About a Gene". However proper nouns (e.g. Ensembl), acronyms (e.g. ncRNA), and so on should follow their normal capitalisation. See the appropriate [Design Decision Record](https://www.ebi.ac.uk/seqdb/confluence/display/ENSWEB/DDRs+-+Design+decision+records#DDRsDesigndecisionrecords-Global) on Confluence for full details.
