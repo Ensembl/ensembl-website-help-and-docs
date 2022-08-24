@@ -6,6 +6,8 @@ We therefore decided that the order of articles and folders within the menu will
 
 As a result, when you create a new article, you also need to add it to the `toc.yml` file that should exist in the same folder as the document itself - and if you create a new folder for Markdown documents (NOT for images or videos), you should create a `toc.yml` file in it as well.
 
+**IMPORTANT NOTE**: If you add an entry to the toc.yml without a corresponding markdown file, our site build will fail. Please write the document first, then add the navigation.
+
 ## How to write ToC entries
 
 Types of menu entries:
