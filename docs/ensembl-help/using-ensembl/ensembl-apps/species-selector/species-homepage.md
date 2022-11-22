@@ -28,7 +28,7 @@ If you select 'Don't use' the species genome will be disabled in all other apps,
 
 To remove the species from your list in the Species selector, select 'Remove species'.
 
-## Finding a gene in a species
+## Finding a gene in a species genome
 
 To find a gene from a Species homepage select 'Find a gene' or the magnifying glass icon in the Action bar and search for your gene of interest.
 
@@ -50,6 +50,6 @@ The Summary panel can be opened and closed using the '>' icon on the right hand 
 
 The Summary panel contains information about the genome assembly and gene annotation, such as the INSDC accession number, the assembly level and the gene annotation method and date.
 
-## How to leave the Species Homepage
+## How to leave the Species homepage
 
 To leave the Species homepage and return to the Species selector, select '<' or 'Find a species' to the left of the 'Species homepage' header.
