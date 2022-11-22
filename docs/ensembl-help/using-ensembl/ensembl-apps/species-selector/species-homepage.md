@@ -30,7 +30,7 @@ To remove the species from your list in the Species selector, select 'Remove spe
 
 ## Finding a gene in a species
 
-To find a gene from a Species homepage select Find a gene or a magnifying glass icon in the tools panel and search for your gene of interest.
+To find a gene from a Species homepage select 'Find a gene' or the magnifying glass icon in the Action bar and search for your gene of interest.
 
 Select the gene of interest and you will be given the option to view the gene in the Genome browser or Entity viewer app.
 
