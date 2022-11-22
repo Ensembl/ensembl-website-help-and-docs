@@ -36,13 +36,19 @@ Select the gene of interest and you will be given the option to view the gene in
 
 ## Statistics table 
 
-The table displays summary statistics of the number of coding genes, non-coding genes and pseudogenes found in a species genome. The table also contains a summary of the genome assembly and the variation, regulation and comparative data statistics for the genome. Select the expand icon to find more detailed information about each category.
+The table displays summary statistics of the number of coding genes, non-coding genes and pseudogenes found in a species genome.
+ 
+The table also contains a summary of the genome assembly and the variation, regulation and comparative data statistics for the genome. 
+
+Select the expand icon to find more detailed information about each category.
 
 You can also select the 'Example gene' to view a gene in the Entity viewer or Genome browser respectively.
 
 ## Summary panel
 
-The Summary panel can be opened and closed using the '>' icon on the right hand side of the Species homepage. The Summary panel contains information about the genome assembly and gene annotation, such as the INSDC accession number, the assembly level and the gene annotation method and date.
+The Summary panel can be opened and closed using the '>' icon on the right hand side of the Species homepage. 
+
+The Summary panel contains information about the genome assembly and gene annotation, such as the INSDC accession number, the assembly level and the gene annotation method and date.
 
 ## How to leave the Species Homepage
 
