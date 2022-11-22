@@ -19,11 +19,11 @@ In order to start using the Genome browser and Entity viewer, you need to select
 
 There are two ways to select a species genome:
 
-** Select from the 42 most popular species genomes **
+Select from the 42 most popular species genomes
 
 Select the icon representing your species genome of interest from the 42 most popular species genomes and select the green 'Add' button.
  
-** Search for a species genomes **
+Search for a species genomes
 
 Type the name of a species genome or assembly into the search box and select a species genome from the auto-complete options in the drop-down menu. 
 
@@ -32,7 +32,7 @@ Use the green 'Add' button to select the species genome.
 
 When a species genome has been selected the species and assembly name will appear at the top of the page.
 
-## Create a list of Species 
+## Creating a list of Species 
 
 You can add multiple species genomes and create a list of species genomes in the Species selector. 
 
