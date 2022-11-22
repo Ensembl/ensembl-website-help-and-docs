@@ -24,25 +24,21 @@ There are currently five different apps, each allowing you to perform a specific
 
 The five apps currently available:
 
-### Species selector
 
 ![](../../img/id-species-selector.svg)
 
 The Species selector allows you to view and select the species and genome assemblies that you wish to view in the Genome browser and Entity viewer.
 
-### Genome browser
 
 ![](../../img/id-genome-browser.svg)
 
 Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
 
-### Entity viewer
 
 ![](../../img/id-entity-viewer.svg)
 
 Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
-### Help and documentation 
 
 ![](../../img/id-help.svg)
 
@@ -50,7 +46,7 @@ Explore our Help & documentation to learn more about our data and tools.
 
 To begin visualising data using the apps, you need to select a species and genome assembly using the Species selector. Once you have selected your species, you can switch between apps by clicking on the app icons in the page header.
 
-### BLAST
+BLAST
 
 The BLAST app allows you to compare DNA, RNA and/or protein sequence information.
 
