@@ -17,9 +17,11 @@ A species genome can be turned 'on' or 'off' in the Species homepage by toggling
 The 'Use' 'Don't Use' toggle button is found next to the Species homepage header ie the species and assembly names.
 
 'On'
+
 When 'Use' is selected, this species will appear for use in all the apps. 
 
 'Off'
+
 If you select 'Don't use' the species genome will be disabled in other apps, but will still appear in your list of species genomes in the Species selector. 
 
 ## How to remove a species genome
