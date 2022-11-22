@@ -18,11 +18,11 @@ The 'Use' 'Don't Use' toggle button is found next to the Species homepage header
 
 'On'
 
-When 'Use' is selected, this species will appear for use in all the apps. 
+If you select 'Use' the species genome will appear for use in all the apps. 
 
 'Off'
 
-If you select 'Don't use' the species genome will be disabled in other apps, but will still appear in your list of species genomes in the Species selector. 
+If you select 'Don't use' the species genome will be disabled in all other apps, but will still appear in your list of species genomes in the Species selector. 
 
 ## How to remove a species genome
 
