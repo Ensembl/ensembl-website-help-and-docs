@@ -23,11 +23,11 @@ Forward and reverse strands
 
 Some tracks, such as genes, are associated with a specific strand of the genome. Strands are represented by small arrows pointing in the direction of transcription set behind the track information. 
 
-## How to reveal the Track names
+## How to reveal the track names
 
 Opening the Track panel
 
-The Track names are revealed in the Track panel. To open the Track panel select the arrow pointing right at the top of Action bar. A panel listing all Track names will appear to the right of the browser and Action bar. 
+The track names are revealed in the Track panel. To open the Track panel select the arrow pointing right at the top of Action bar. A panel listing all Track names will appear to the right of the browser and Action bar. 
 
 There are three tabs in the Track panel, Genomic, Variation and Expression. The panel will automatically show the correct tab for your chosen Focus entity ie if your Focus entity is a gene the Genomic tab will show in the Track panel.
 

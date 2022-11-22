@@ -23,7 +23,7 @@ The blue coordinates on the right of the Navigation bar, next to the chromosome 
 
 You can expand the Navigation bar by selecting on the blue coordinates to reveal a set of navigation controls. 
 
-Select Change on the right to enter new genomic coordinates.
+Select 'Change' on the right to enter new genomic coordinates.
 
 Use the plus and minus icons to zoom in and out and the arrows to move left and right.
 

@@ -41,6 +41,7 @@ You can see the genome coordinates of your region of interest in the Navigation 
 
 The track panel lists all available tracks that can be viewed in the browser. 
 
+
 Tracks
 
 Tracks show sets of data such as transcripts, genes (coding and non-coding), genetic variants or regulatory regions plotted horizontally along the genome. 
