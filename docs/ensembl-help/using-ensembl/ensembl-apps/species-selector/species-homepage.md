@@ -26,7 +26,13 @@ If you select 'Don't use' the species genome will be disabled in all other apps,
 
 ## How to remove a species genome
 
-To remove the species from your list in the Species selector, select 'Remove species'.
+To remove the species from your list in the Species selector, select 'Remove species'. 
+
+You will be shown a warning to confirm you want to delete the species genome from your list. 
+
+If you are still sure you want to delete the species genome from your list select the green 'Remove' button.
+
+If you decide not to delete that species genome select the 'Do not remove' option.
 
 ## Finding a gene in a species genome
 

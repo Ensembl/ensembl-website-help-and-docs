@@ -47,7 +47,7 @@ You can navigate to a Species homepage by clicking on the individual species' na
 
 ## Removing a species genome
 
-You can remove or disable selected species from the Species homepage.
+You can remove or disable selected species from the Species homepage by selecting the 'Remove' button.
 
 
 
