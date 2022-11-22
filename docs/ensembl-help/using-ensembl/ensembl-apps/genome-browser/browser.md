@@ -27,7 +27,7 @@ The Genome browser displays a genomic region of interest. There are five parts t
 The main part of the page is the browser image, showing your gene, variant or location of interest within the genome. The genomic features within that location, are represented on horizontal tracks across the genome. 
 
 
-### Focus entity
+Focus entity
 
 If you have gone to the Genome browser by searching for a gene or other entity, this will be highlighted as your Focus entity.
 
@@ -41,7 +41,7 @@ You can see the genome coordinates of your region of interest in the Navigation 
 
 The track panel lists all available tracks that can be viewed in the browser. 
 
-### Tracks
+Tracks
 
 Tracks show sets of data such as transcripts, genes (coding and non-coding), genetic variants or regulatory regions plotted horizontally along the genome. 
 

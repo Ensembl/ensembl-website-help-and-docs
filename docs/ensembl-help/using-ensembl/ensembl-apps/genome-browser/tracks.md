@@ -19,13 +19,13 @@ Tracks are sets of data such as genes, variants or regulatory motifs displayed a
 
 Individual entities ie genes, variants or regulatory regions within a track are shown on horizontal rows. There may be multiple rows within a track, ensuring that there is no entity overlap within a row. 
 
-### Forward and reverse strands
+Forward and reverse strands
 
 Some tracks, such as genes, are associated with a specific strand of the genome. Strands are represented by small arrows pointing in the direction of transcription set behind the track information. 
 
 ## How to reveal the Track names
 
-### Opening the Track panel
+Opening the Track panel
 
 The Track names are revealed in the Track panel. To open the Track panel select the arrow pointing right at the top of Action bar. A panel listing all Track names will appear to the right of the browser and Action bar. 
 

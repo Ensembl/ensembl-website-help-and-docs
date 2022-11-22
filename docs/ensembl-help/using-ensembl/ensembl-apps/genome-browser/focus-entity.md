@@ -16,4 +16,8 @@ status: draft
 
 The gene, variant (or any other entity) you have searched for will be front and centre in the Genome browser view and is known as the Focus entity. 
 
-The boundaries of Focus entity are highlighted in the browser by red dotted lines. The name and/or identifier and coordinates of the Focus entity are displayed in the Navigation bar. Details of the Focus entity are displayed at the top of the right-hand Track panel.
+The boundaries of Focus entity are highlighted in the browser by red dotted lines. 
+
+The name and/or identifier and coordinates of the Focus entity are displayed in the Navigation bar. 
+
+Details of the Focus entity are displayed at the top of the right-hand Track panel.
