@@ -12,16 +12,18 @@ status: draft
 
 # Find out about a gene
 
-In order to find your gene of interest, you must first use the Species selector to choose your species of interest.
+To find your gene of interest, you must start by selecting your species genome of interest using the Species selector:
 
 ![](../../img/id-species-selector.svg)
 
-Gene data is available in the Genome browser and the Entity viewer:
+Gene data is found in both the Genome browser and the Entity viewer apps:
 
 ![](../../img/id-genome-browser.svg)
 
-View a gene in the Genome browser to see it in the context of the genomic region, see different transcripts and see other annotations overlapping and nearby.
+Use the Genome browser to view a gene and its transcripts in the context of the genome. The gene is shown in the context of genomic features such as neighbouring genes(coding and non-coding), forward or reverse strands and assembly information.
 
 ![](../../img/id-entity-viewer.svg)
 
-Go to the Entity viewer to get details about the gene and its different transcripts, including protein domains, links out to other databases and sequences.
+Use the Entity viewer to find details about the gene and its different transcripts, including protein domains, links out to other databases and sequences.
+
+Select either the Genome browser or the Entity viewer app. Once in your chosen app use search to find your gene of interest and select to display the gene's data in the app.

@@ -11,10 +11,10 @@ status: draft
 
 # Choosing a species genome to work with
 
-Before using the other apps, you will need to select a species genome using the Species selector app:
+To start use the Species selector to select a species genome to work with in other apps:
 
 ![](../../img/id-species-selector.svg)
 
-Here you can choose the species genomes, genome assemblies and strains/breeds/varieties of interest to you. 
+Here you can choose the species genomes, genome assemblies, strains, breeds and varieties of interest to you. 
 
-You can select multiple species genomes to create a list in the species selector that can be accessed in other apps.
+You can select multiple species genomes to create a list in the Species selector to be used in other apps.

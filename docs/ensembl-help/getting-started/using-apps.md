@@ -10,9 +10,7 @@ tags:
 status: draft
 ---
 
-Each Ensembl apps allow you to complete a specific set of genomic tasks and analyses. 
-
-An individual app is represented by a unique icon. 
+Each Ensembl apps allow you to complete a specific set of genomic tasks and analyses. An individual app is represented by a unique icon. 
 
 To access an app select it's icon from the App bar at the top of page.
 

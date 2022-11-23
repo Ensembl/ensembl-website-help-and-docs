@@ -27,7 +27,7 @@ The five apps currently available:
 
 ![](../../img/id-species-selector.svg)
 
-The Species selector allows you to view and select the species and genome assemblies that you wish to view in the Genome browser and Entity viewer.
+The Species selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Entity viewer.
 
 
 ![](../../img/id-genome-browser.svg)
