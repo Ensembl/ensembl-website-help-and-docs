@@ -11,12 +11,12 @@ status: draft
 
 # Browse a genomic region
 
-In order to find your region of interest, you must first use the Species selector to choose your species of interest.
+In order to find your region of interest, you must first use the Species selector app to choose your species genome of interest.
 
 ![](../../img/id-species-selector.svg)
 
-You can then find your region of interest using the Genome browser:
+You can then find your location of interest using the Genome browser:
 
 ![](../../img/id-genome-browser.svg)
 
-You can search by either genome coordinates or genes.
+You can search by genes.
