@@ -9,18 +9,17 @@ tags:
   - gene
 status: draft
 ---
+# Using the Ensembl apps
 
-Each Ensembl apps allow you to complete a specific set of genomic tasks and analyses. An individual app is represented by a unique icon. 
+Each Ensembl app allows you to complete a specific set of genomic tasks and analyses. 
 
-To access an app select it's icon from the App bar at the top of page.
+Individual apps are represented by unique icons. To open an app select it's icon from the App bar at the top of page.
 
 The apps currently available to you are:
 
 ![](../../img/id-species-selector.svg)
 
-Use the Species selector to choose a species genome of interest. 
-
-You must select a species genome to use the other apps.
+Use the Species selector to choose a species genome of interest. You must select a species genome to use the other apps.
 
 ![](../../img/id-genome-browser.svg)
 
