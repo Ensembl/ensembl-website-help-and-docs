@@ -20,7 +20,7 @@ Gene data is found in both the Genome browser and the Entity viewer apps:
 
 ![](../../img/id-genome-browser.svg)
 
-Use the Genome browser to view a gene and its transcripts in the context of the genome. The gene is shown in the context of genomic features such as neighbouring genes(coding and non-coding), forward or reverse strands and assembly information.
+Use the Genome browser to view a gene and its transcripts in the context of the genome. The gene is shown in the context of genomic features such as neighbouring genes (coding and non-coding), forward or reverse strands and assembly information.
 
 ![](../../img/id-entity-viewer.svg)
 
