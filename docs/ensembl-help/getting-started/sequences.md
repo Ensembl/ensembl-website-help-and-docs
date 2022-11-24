@@ -11,13 +11,13 @@ tags:
 status: draft
 ---
 
-# Get sequences
+# Download sequences
 
-You can export sequences from the Genome browser and Entity viewer apps.
+You can download sequences from the Genome browser and Entity viewer apps.
 
 ![](../../img/id-genome-browser.svg)
 
-In the Genome browser, you can download gene and transcript sequences by selecting the quick download link in the drawer or by selecting on the interactive transcript model and selecting the appropriate sequence to download.
+In the Genome browser, you can download sequences of genomic regions, cDNAs, CDSs and peptides sequences. The download in the  by selecting the quick download link in the drawer or by selecting on the interactive transcript model and selecting the appropriate sequence to download.
 
 You can download sequences as a FASTA file which is suitable for using with sequence analysis tools.
 
