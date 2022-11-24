@@ -13,15 +13,13 @@ status: draft
 
 # How to download sequences
 
-You can download sequences from the Genome browser and Entity viewer apps.
+You can download gene, cDNA, CDS and peptide sequences from the Genome browser and Entity viewer apps.
 
 ![](../../img/id-genome-browser.svg)
 
-In the Genome browser, you can download sequences of genomic regions, cDNAs, CDSs and peptides sequences. 
+In the Genome browser, sequence download is found in the Track drawer.
 
-The option to download in the by selecting the quick download link in the drawer or by selecting on the interactive transcript model and selecting the appropriate sequence to download.
-
-![](../../img/sequence-download-genome-browser.png)
+![Genome browser drawer revealing download ](media/sequence-download-genome-browser.png)
 
 ![](../../img/id-genome-browser.svg)
 
