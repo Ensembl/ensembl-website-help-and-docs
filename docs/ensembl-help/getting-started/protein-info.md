@@ -20,4 +20,6 @@ Protein data is available in the Entity viewer:
 
 ![](../../img/id-entity-viewer.svg)
 
-Select the Entity viewer app. Search for and select your gene of interest. You will find details of the gene's protein-coding transcripts, their peptide sequence, protein isoforms, protein domains and links to more information in other protein databases.
+Select the Entity viewer app. Search for and select your gene of interest. 
+
+You will find details of the gene's protein-coding transcripts, their peptide sequence, protein isoforms, protein domains and links to more information in other protein databases.
