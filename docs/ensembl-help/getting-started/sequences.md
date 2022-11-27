@@ -23,6 +23,7 @@ The Track drawer is opened by selecting the elipses to the right of the Track na
 
 ![Genome browser drawer revealing download ](media/sequence-download-genome-browser.png)
 
+Space
 
 ![](../../img/id-entity-viewer.svg)
 
