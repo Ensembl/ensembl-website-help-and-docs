@@ -18,7 +18,7 @@ Within the Entity viewer and Genome browser, you can search for genes of interes
 
 Here you can do a simple search for a gene symbol (eg BRCA2) or ID (ENSG00000139618.17). The results will list the gene symbols and ID of a gene. 
 
-![](media/genome-browser-search-gene.png)
+![](media/gene-symbol-search-150-225.png)
 
 Select your gene of interest from the search results.
 
