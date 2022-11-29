@@ -14,7 +14,7 @@ status: draft
 
 Within the Entity viewer and Genome browser, you can search for genes of interest. To search, select the magnifying glass icon in the Action bar.
 
-![](media/genome-browser-search-for-a-gene.png)
+![](media/gene-search-300-200.png)
 
 Here you can do a simple search for a gene symbol (eg BRCA2) or ID (ENSG00000139618.17). The results will list the gene symbols and ID of a gene. 
 
