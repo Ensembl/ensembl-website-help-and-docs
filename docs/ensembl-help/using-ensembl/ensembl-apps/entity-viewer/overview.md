@@ -14,4 +14,10 @@ status: draft
 
 # What’s in the overview panel?
 
-The Overview panel provides gene summary data including the gene name and Ensembl stable ID, gene description, synonyms and additional information such as biotype and gene function summary together with links to data sources. The Publications section at the bottom links out to a list of relevant publications in Europe PMC archives.
+The Overview panel to the right of the main view provides gene summary data ie the gene name, Ensembl stable ID, gene description and synonyms.
+
+The Publications section at the bottom links out to a list of relevant publications about the gene of interest in Europe PMC archives.
+
+## Find a gene
+
+Select Find a gene to search for another gene of interest in the same genome.
