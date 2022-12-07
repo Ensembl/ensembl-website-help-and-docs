@@ -34,8 +34,7 @@ If you have gone to the Genome browser by searching for a gene or other entity, 
 
 ## Navigation bar
 
-You can see the genome coordinates of your region of interest in the Navigation bar. If you have a Focus entity, details of this will be displayed too. You can expand the Navigation bar and use the navigation tools revealed to alter the location.
-
+You can see the genome coordinates of your region of interest in the Navigation bar. If you have a Focus entity, details of this will be displayed too. 
 
 ## Track panel
 

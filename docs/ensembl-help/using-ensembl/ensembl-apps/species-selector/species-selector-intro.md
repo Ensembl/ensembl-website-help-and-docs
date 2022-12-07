@@ -19,7 +19,7 @@ In order to start using the Genome browser and Entity viewer, you need to select
 
 There are two ways to select a species genome:
 
-1.  Select from the 42 most popular species genomes
+1.  Select from an initial selection of 7 popular species genomes. The 42 most popular species genomes will be available in the future.
 
 > Select the icon representing your species genome of interest from the 42 most popular species genomes and select the green 'Add' button.
  
@@ -41,7 +41,7 @@ The list of species genomes between them when in other apps such as the Genome b
 
 ## The Species homepage  
 
-The Species homepage contains more information about the genes, variants and assembly of a genome, along with the controls to manage a list of species genomes. 
+The Species homepage contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
 
 You can navigate to a Species homepage by clicking on the individual species' name. 
 

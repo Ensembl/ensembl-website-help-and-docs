@@ -15,13 +15,13 @@ status: draft
 
 ## What is a track ? 
 
-Tracks are sets of data such as genes, variants or regulatory motifs displayed along a genome. A track displays a single set of data ie genes on the forward strand.
+Tracks are sets of data such as genes, variants or regulatory features displayed along a genome. A track displays a single set of data eg protein coding genes on the forward strand.
 
 Individual entities ie genes, variants or regulatory regions within a track are shown on horizontal rows. There may be multiple rows within a track, ensuring that there is no entity overlap within a row. 
 
 Forward and reverse strands
 
-Some tracks, such as genes, are associated with a specific strand of the genome. Strands are represented by small arrows pointing in the direction of transcription set behind the track information. 
+Some tracks, such as genes, are associated with a specific strand of the genome. Strands are represented by small arrows pointing in the direction of the assembly set behind the track information. 
 
 ## How to reveal the track names
 
@@ -47,5 +47,5 @@ Use the arrow at the top of the Action bar to close the Track drawer containing 
 
 ## How to reveal track and features labels
 
-You can modify the appearance of tracks by selecting on the cog icon to the right of the track on the Browser. This allows you to show or hide labels on the tracks and/or other features ie gene symbols.
+You can modify the appearance of tracks by selecting on the cog icon to the right of the track on the Browser. This allows you to show or hide labels on the tracks or names of features, for example Transcript IDs.
 
