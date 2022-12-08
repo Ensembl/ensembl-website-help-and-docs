@@ -1,5 +1,5 @@
 ---
-slug: species-selector-intro
+slug: species-selector
 title: How do I add or remove a species?
 description: How to select a species and genome assembly of interest to visualise in the Genome browser and Entity viewer
 tags:
