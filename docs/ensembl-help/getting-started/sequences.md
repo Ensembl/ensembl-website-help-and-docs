@@ -21,8 +21,6 @@ In the Genome browser, you can access sequence download through the pop-menus on
 
 The Track drawer is opened by selecting the elipses to the right of the Track name in the Track panel.
 
-![Genome browser drawer revealing download ](media/sequence-download-genome-browser.png)
-
 
 ![](../../img/id-entity-viewer.svg)
 
