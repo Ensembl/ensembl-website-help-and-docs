@@ -39,7 +39,7 @@ Please note that the gene is always displayed in the direction of transcription 
 You can also go to the Genome browser from here to view your gene of interest plotted against the genome, by clicking the ‘View in Genome browser’ icon.
 
 
-Detailed data panels
+Transcript and Gene function panels
 
 Detailed data about an entity is found in the panels below the visual summary, for genes the Transcript panel shows all transcripts for the gene. 
 
@@ -57,7 +57,13 @@ The Right-hand panel provides additional information about the entity of interes
 
 The Action bar displays a variety of actions you can take. Each action is represented by a specific icon.
 
+
+Open the Right-hand panel
+
 Select the right pointing arrow to open and close the Right-hand panel.
+
+
+Find a gene
 
 Select the magnifying glass icon to search for an entity ie a gene. 
 
