@@ -12,7 +12,7 @@ tags:
 status: draft
 ---
 
-# What’s in the transcripts view?
+# What’s in the transcripts panel?
 
 Information about all the transcripts of a gene of interest is displayed in the Transcript panel. 
 
@@ -20,21 +20,21 @@ Each transcript is represented graphically as a white on a black background and 
 
 Transcripts are positioned relative to the gene start and end, so that the yellow grid matches the coordinates in the gene image above. 
 
+The Transcript panel is the default panel in the Entity viewer.
+
 
 ## Introns and exons
 
 Exons are depicted as white boxes and introns as the line connecting the exons. Coding exons are coloured, while non-coding exons are empty.
-
-The Transcript panel view is set by default in the Entity viewer.
 
 
 ## Filter and sort
 
 You can manipulate the transcript list by selecting Filter & sort on the left. 
 
-The Expanded menu offers options to sort by exon length and count and  filter by transcript biotype and scores (multiple choice). 
+The Expanded menu offers options to sort by exon length and count and filter by transcript biotype and other attributes where available. 
 
-Changes to the transcript list will be applied to subsequent views unless the default is reselected.
+Changes to the transcript list order will be applied the Gene function panel view too unless the default is reselected.
 
 
 ## Detailed transcript information
