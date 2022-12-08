@@ -12,7 +12,7 @@ tags:
 status: draft
 ---
 
-# What’s in the transcripts panel?
+# What’s in the Transcript panel?
 
 Information about all the transcripts of a gene of interest is displayed in the Transcript panel. 
 
