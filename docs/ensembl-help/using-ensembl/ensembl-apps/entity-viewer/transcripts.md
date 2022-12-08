@@ -27,6 +27,7 @@ The Transcript panel is the default panel in the Entity viewer.
 
 Exons are depicted as white boxes and introns as the line connecting the exons. Coding exons are coloured, while non-coding exons are empty.
 
+![](media/transcript-panel.png)
 
 ## Filter and sort
 

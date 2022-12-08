@@ -18,6 +18,7 @@ Entity viewer reveals detailed information about an entity ie a gene of interest
 
 The Entity viewer consists of a Navigation bar, the Main display, the Right-hand panel and an Action bar.
 
+![](media/entity-viewer.png)
 
 ## Navigation bar
 
