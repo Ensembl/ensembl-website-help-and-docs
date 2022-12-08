@@ -5,11 +5,10 @@ description: How to select a species and genome assembly of interest to visualis
 tags:
   - species selector
 related_articles:
-  - href: videos/find-and-add-species.yml
-status: draft
+status:
 ---
 
-# Species selector
+# What is the Species selector?
 
 The Species selector allows you to view and select the species genomes and assemblies that you wish to view in the Genome browser and Entity viewer.
 
