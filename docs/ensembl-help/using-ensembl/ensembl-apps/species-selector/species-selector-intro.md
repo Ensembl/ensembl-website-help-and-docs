@@ -8,7 +8,7 @@ related_articles:
 status:
 ---
 
-# What is the Species selector?
+#  How do I add or remove a species?
 
 The Species selector allows you to view and select the species genomes and assemblies that you wish to view in the Genome browser and Entity viewer.
 
