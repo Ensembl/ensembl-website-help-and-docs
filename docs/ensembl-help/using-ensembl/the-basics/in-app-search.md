@@ -12,19 +12,21 @@ status: draft
 
 # In-app search
 
-Within the Entity viewer and Genome browser, you can search for genes of interest. To search, select the magnifying glass icon in the Action bar.
+You can search for a gene of interest within the Entity viewer and Genome browser apps.
 
-![](media/scoped-search-gene-250-300.png)
+To search, either select the magnifying glass icon in the Action bar or select 'Find a gene' in the Right-hand panel of each app.
 
-Here you can do a simple search for a gene symbol (eg BRCA2) or ID (ENSG00000139618.17). The results will list the gene symbols and ID of a gene. 
+![](media/in-app-search.png)
 
-![](media/scoped-search-gene-250-300.png))
+Here you can do a simple search for a gene symbol (eg MAPK10) or ID (ENSG00000109339.24). The results will list the gene symbols and ID of a gene. 
+
+![](media/in-app-search-results.png)
 
 Select your gene of interest from the search results.
 
 A z-menu giving details of the gene will pop up with links to the Genome browser and Entity viewer.
 
-![](media/genome-browser-main-search-brca2-pop-up-400-250.png)
+![](media/in-app-search-z-menu.png)
 
 To view the gene with in the genome select the Genome browser icon. For details of the gene, its transcripts and proteins select the Entity viewer icon.
 
