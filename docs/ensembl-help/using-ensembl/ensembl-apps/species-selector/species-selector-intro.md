@@ -23,7 +23,7 @@ There are two ways to select a species genome:
 
 > Select the icon representing your species genome of interest from the 42 most popular species genomes and select the green 'Add' button.
  
-2.  Search for a species genomes
+2.  Search for a species genome
 
 > Type the name of a species genome or assembly into the search box and select a species genome from the auto-complete options in the drop-down menu. 
 
@@ -32,7 +32,7 @@ Use the green 'Add' button to select the species genome.
 
 When a species genome has been selected the species and assembly name will appear at the top of the page.
 
-## Creating a list of Species 
+## Creating a list of species 
 
 You can add multiple species genomes and create a list of species genomes in the Species selector. 
 
