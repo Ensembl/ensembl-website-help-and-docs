@@ -5,7 +5,8 @@ description: How to select a species and genome assembly of interest to visualis
 tags:
   - species selector
 related_articles:
-status:
+ - href: species-homepage.md
+status: draft
 ---
 
 #  How do I add or remove a species?
