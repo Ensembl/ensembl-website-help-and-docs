@@ -20,6 +20,8 @@ The Entity viewer consists of a Navigation bar, the Main display, the Right-hand
 
 ![](media/entity-viewer.png)
 
+![](media/image-aa.png)
+
 ## Navigation bar
 
 The Navigation bar summarises details of an entity such as a gene. For a gene the summary lists the gene symbol, Ensembl stable ID, biotype, strand and genomic coordinates. 
