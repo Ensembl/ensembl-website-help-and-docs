@@ -20,6 +20,8 @@ The Entity viewer consists of a Navigation bar, the Main display, the Right-hand
 
 ![](media/entity-viewer.png)
 
+Second image
+
 ![](media/image-aa.png)
 
 ## Navigation bar
