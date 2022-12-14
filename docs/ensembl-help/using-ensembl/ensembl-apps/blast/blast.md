@@ -53,14 +53,14 @@ The results page shows summary results for each sequence submitted with a graphi
 The results table lists the sequence similarity hits in order of E-value, but can be customised to reorder the table based on the different columns by clicking on the arrow next to each column heading. You can customise all rows, or select specific hits, by clicking on the box in the first column of each row.
 
 The table provides information on:
-**E-value**: The number of times a match is expected to occur by chance.
-**Length**: Length of alignment between query and target sequence.
-**Alignment**: You can view alignment between the query sequence and the hit sequence.
-**%ID**: Indicates the extent to which the query sequence and the hit have the same residue at the same position in an alignment. 
-**Score**: The score gives an indication of how good the alignment is, with a higher score indicating a more exact alignment.
-**Genomic location**: Shows the genomic location of the hit in this species
-**Hit orientation**: The orientation of the hit against the query sequence
-**Hit start**: The position within the target sequence at which the hit started
-**Query start**: The first position within the query sequence that matches the beginning of the hit that BLAST returns
-**Query end**: The last position within the query sequence that matches the beginning of the hit that BLAST returns
+- **E-value**: The number of times a match is expected to occur by chance.
+- **Length**: Length of alignment between query and target sequence.
+- **Alignment**: You can view alignment between the query sequence and the hit sequence.
+- **%ID**: Indicates the extent to which the query sequence and the hit have the same residue at the same position in an alignment. 
+- **Score**: The score gives an indication of how good the alignment is, with a higher score indicating a more exact alignment.
+- **Genomic location**: Shows the genomic location of the hit in this species
+- **Hit orientation**: The orientation of the hit against the query sequence
+- **Hit start**: The position within the target sequence at which the hit started
+- **Query start**: The first position within the query sequence that matches the beginning of the hit that BLAST returns
+- **Query end**: The last position within the query sequence that matches the beginning of the hit that BLAST returns
 
