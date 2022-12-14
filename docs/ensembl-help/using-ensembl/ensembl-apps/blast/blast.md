@@ -28,7 +28,7 @@ Paste the query sequence into the text box (the suggested format is FASTA) or up
  
 Up to 50 sequences can be added by clicking on ‘Add another sequence’.
 
-![The BLAST app](BLAST.png)
+![The BLAST app](media/BLAST.png)
 
 ## Select target species
 
@@ -48,7 +48,7 @@ You can view the results by clicking on the Results button or you can download t
 
 The results page shows summary results for each sequence submitted with a graphical display of hits on the query sequence. A table of results for each combination of sequences and target database can be found by clicking on the drop down icon next to the species and genome assembly name.
 
-![Blast results page](BLAST_results.png)
+![Blast results page](media/BLAST_results.png)
 
 The results table lists the sequence similarity hits in order of E-value, but can be customised to reorder the table based on the different columns by clicking on the arrow next to each column heading. You can customise all rows, or select specific hits, by clicking on the box in the first column of each row.
 
