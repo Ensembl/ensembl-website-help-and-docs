@@ -4,3 +4,5 @@
   href: genome-browser/toc.yml
 - name: Entity viewer
   href: entity-viewer/toc.yml
+- name: BLAST
+  href: blast/toc.yml
