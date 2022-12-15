@@ -43,11 +43,9 @@ You can give a name or description to this BLAST query in the ‘Submission name
 
 ## What does the result table show
 
-The submissions page will show the jobs that are currently running or recently completed. You have the option to Edit/rerun the job. Results are available for 7 days and queries can be rerun for 28 days.
+The submissions page will show the jobs that are currently running or recently completed. Jobs are divided into two lists: ‘Unviewed Jobs’ and ‘Jobs list’. A submission ID is assigned to each submission and additional information is provided, including the date and time of submission. If you navigate away from the BLAST interface, the status of the query is indicated by the BLAST icon in the top panel changing from red to green to prompt you that it has successfully completed.
 
-A submission ID is assigned to each job and additional information is provided, including the date and time of submission. The progression of the job gets automatically refreshed every 10 seconds until the job is fully completed. If you navigate away from the BLAST interface, the status of the query is indicated by the BLAST icon in the top panel changing from red to green to prompt you that it has successfully completed.
-
-You can view the results by clicking on the Results button or you can download the results by clicking on the blue Download icon. 
+You can view the results by clicking on the Results button or you can download the results by clicking on the blue Download icon. A submission in the ‘Unviewed jobs’ list, when viewed, is transferred to the ‘Jobs list’ for future reference. Results are available for 7 days and queries can be rerun for 28 days.
 
 The results page shows summary results for each sequence submitted with a graphical display of hits on the query sequence. A table of results for each combination of sequences and target database can be found by clicking on the drop down icon next to the species and genome assembly name.
 
