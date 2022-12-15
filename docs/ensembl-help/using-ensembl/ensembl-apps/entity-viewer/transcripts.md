@@ -49,12 +49,12 @@ The expanded view includes the transcripts biotype, genomic coordinates, exon co
 The Ensembl protein stable ID links to a graphical representation of the protein in the Gene function panel. 
 
 
-More information 
+### More information 
 
 Transcript flags, such as APPRIS, GENCODE basic and TSL are found under More information, alongside links to any external records for a transcripts in the RefSeq and CCDS datasets.
 
 
-Download
+### Download
 
 Sequence download of transcripts and their gene is also available in the expanded transcript view. 
 
@@ -63,7 +63,7 @@ You can export genomic sequence, cDNA, CDS and protein sequence for a transcript
 Select Download to reveal customisation options, make your sequence choices by ticking the appropriate boxes and hit the green Download button to export sequence data in FASTA format. You can select multiple options at once.
 
 
-Swap to Genome browser 
+### Swap to Genome browser 
 
 There is also an option to view a transcript in the Genome browser on the right-hand side of the expanded view.
 

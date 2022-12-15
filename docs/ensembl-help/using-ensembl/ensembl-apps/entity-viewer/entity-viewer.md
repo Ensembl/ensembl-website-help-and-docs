@@ -18,7 +18,6 @@ Entity viewer reveals detailed information about an entity ie a gene of interest
 
 The Entity viewer consists of a Navigation bar, the Main display, the Right-hand panel and an Action bar.
 
-First image 
 
 ![](media/entity-viewer.png)
 
@@ -33,7 +32,7 @@ The Navigation bar summarises details of an entity such as a gene. For a gene th
 The Main display presents detailed data relating to the entity ie a gene, its transcripts and proteins. 
 
 
-Visual summary
+### Visual summary
 
 The visual summary for a gene shows a Ensembl gene stable ID, the genes length, strand and transcript count. Exon are represented with grey boxes and introns with grey lines.
 
@@ -42,7 +41,7 @@ Please note that the gene is always displayed in the direction of transcription 
 You can also go to the Genome browser from here to view your gene of interest plotted against the genome, by clicking the ‘View in Genome browser’ icon.
 
 
-Transcript and Gene function panels
+### Transcript and Gene function panels
 
 Detailed data about an entity is found in the panels below the visual summary, for genes the Transcript panel shows all transcripts for the gene. 
 
@@ -61,24 +60,24 @@ The Right-hand panel provides additional information about the entity of interes
 The Action bar displays a variety of actions you can take. Each action is represented by a specific icon.
 
 
-Open the Right-hand panel
+### Open the Right-hand panel
 
 Select the right pointing arrow to open and close the Right-hand panel.
 
 
-Find a gene
+### Find a gene
 
 Select the magnifying glass icon to search for an entity ie a gene. 
 
 
-Previously viewed
+### Previously viewed
 
 Select the bookmark icon to see previously viewed entities ie genes or transcripts.
 
 Previously viewed is an auto-generated browsing history of up to 20 genes (or other entities) previously loaded within the Entity viewer application.
  
 
-Download
+### Download
 
 Select the underlined down arrow icon to download sequence data.
 
