@@ -9,18 +9,21 @@ tags:
   - gene
 status: draft
 ---
+# Using the Ensembl apps
 
-There are different apps to do different kinds of task in Ensembl. Different apps can be accessed by the blue buttons across the top of Ensembl pages, with your current app button highlighted.
+Each Ensembl app allows you to complete a specific set of genomic tasks and analyses. 
 
-The apps available to you are:
+Individual apps are represented by unique icons. To open an app select its icon from the App bar at the top of page.
+
+The apps currently available to you are:
 
 ![](../../img/id-species-selector.svg)
 
-Use the Species selector to choose which species and genome assembly you are working with. You must select this before using any other apps.
+Use the Species selector to choose a species genome of interest. You must select a species genome to use the other apps.
 
 ![](../../img/id-genome-browser.svg)
 
-Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
+Use the Genome browser to explore a genomic region, to view a gene and its transcripts in the context of the genome.
 
 ![](../../img/id-entity-viewer.svg)
 
@@ -29,4 +32,4 @@ Use the Entity viewer to look at gene details, including transcript structures, 
 ![](../../img/id-help.svg)
 Help & documentation icon
 
-Explore our Help & documentation to learn more about our data and tools.
+Explore our Help & documentation to learn more about how to use our data and tools.

@@ -4,8 +4,6 @@
   href: species.md 
 - name: Find out about a gene
   href: gene-info.md 
-- name: Browse a genomic region
-  href: genomic-region.md 
 - name: Get protein information
   href: protein-info.md 
 - name: Get sequences

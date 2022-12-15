@@ -12,29 +12,43 @@ status: draft
 
 # How to get started with the Ensembl website
 
-The new Ensembl website is an ongoing project to provide access and visualisation to Ensembl data in a redesigned web interface. A very limited data set has been made available for our initial releases. New interfaces for presenting a range of other data types will be released periodically.
+The new Ensembl website is an ongoing project to provide access to Ensembl data through visualisation in a redesigned web interface. 
+
+A very limited data set of the genes, transcripts and proteins for seven genomes has been made available for the initial releases. 
+
+New interfaces for presenting a range of other data types, such as variation, homology and regulation will be released periodically.
 
 ## Apps
 
-There are currently four different apps, each allowing you to perform a specific task or providing visualisation of different data types for your genomes of interest. The currently available apps are:
+There are currently five different apps, each allowing you to perform a specific task or providing visualisation of different data types for your genomes of interest. 
+
+The five apps currently available:
+
 
 ![](../../img/id-species-selector.svg)
 
-The Species selector allows you to view and select the species and genome assemblies that you wish to view in the Genome browser and Entity viewer.
+The Species selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Entity viewer.
+
 
 ![](../../img/id-genome-browser.svg)
 
 Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
 
+
 ![](../../img/id-entity-viewer.svg)
 
 Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
+
 
 ![](../../img/id-help.svg)
 
 Explore our Help & documentation to learn more about our data and tools.
 
 To begin visualising data using the apps, you need to select a species and genome assembly using the Species selector. Once you have selected your species, you can switch between apps by clicking on the app icons in the page header.
+
+BLAST
+
+The BLAST app allows you to compare DNA, RNA and/or protein sequence information.
 
 ## Selecting a species
 

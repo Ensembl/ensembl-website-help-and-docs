@@ -14,30 +14,73 @@ status: draft
 
 # What is the Entity viewer?
 
-Entity viewer collates information about the gene of interest and related entities, such as its transcripts and proteins. This page is composed of the Main display, Right-hand panel, Navigation bar and Action bar.
- 
-## Main display
+Entity viewer reveals detailed information about an entity ie a gene of interest and their related transcripts, proteins and functions.
 
-Main display presents data relating to the gene of interest. The gene summary is found at the top of the view, while data tabs including Transcripts, Gene function and Gene relationships are located beneath. Active tab is shown in black.
- 
-The gene summary section includes the gene image, Ensembl gene stable ID, gene length, strand and transcript count. Please note that the gene is always displayed in the 5’->3’ orientation, regardless of the strand. You can also go to the Genome browser from here to view your gene of interest plotted against the genome, by clicking the ‘View in Genome browser’ icon.
- 
- ## Right-hand panel
- 
-Right-hand panel provides additional information about the gene of interest such as Overview and External references.
- 
+The Entity viewer consists of a Navigation bar, the Main display, the Right-hand panel and an Action bar.
+
+
+![](media/entity-viewer.png)
+
+
 ## Navigation bar
 
-Navigation bar shows gene summary details including its name, Ensembl gene stable ID, biotype, strand and genomic coordinates. It also lists available views in the Right-hand panel.
+The Navigation bar summarises details of an entity such as a gene. For a gene the summary lists the gene symbol, Ensembl stable ID, biotype, strand and genomic coordinates. 
+
+
+## Main display
+
+The Main display presents detailed data relating to the entity ie a gene, its transcripts and proteins. 
+
+
+### Visual summary
+
+The visual summary for a gene shows a Ensembl gene stable ID, the genes length, strand and transcript count. Exon are represented with grey boxes and introns with grey lines.
+
+Please note that the gene is always displayed in the direction of transcription (5'->3') regardless of the strand of the genome on which it is located.
+
+You can also go to the Genome browser from here to view your gene of interest plotted against the genome, by clicking the ‘View in Genome browser’ icon.
+
+
+### Transcript and Gene function panels
+
+Detailed data about an entity is found in the panels below the visual summary, for genes the Transcript panel shows all transcripts for the gene. 
+
+The Gene function panel presents protein information for all coding transcripts for the gene of interest.  
+
+An ‘active’ tab appears black.
+
+
+## Right-hand panel
  
+The Right-hand panel provides additional information about the entity of interest. For a gene this information is found in the Overview and External reference tabs in the Right-hand panel.
+ 
+
 ## Action bar
 
-Action bar allows you to show/hide the Right-hand panel, Search, view Bookmarks, Share the view or Download sequences.
- 
-### Bookmarks
+The Action bar displays a variety of actions you can take. Each action is represented by a specific icon.
 
-Bookmarks view is an auto-generated browsing history of up to 20 genes previously loaded within the Entity viewer application.
+
+### Open the Right-hand panel
+
+Select the right pointing arrow to open and close the Right-hand panel.
+
+
+### Find a gene
+
+Select the magnifying glass icon to search for an entity ie a gene. 
+
+
+### Previously viewed
+
+Select the bookmark icon to see previously viewed entities ie genes or transcripts.
+
+Previously viewed is an auto-generated browsing history of up to 20 genes (or other entities) previously loaded within the Entity viewer application.
  
+
 ### Download
 
-Download enables custom export of the sequence data for the gene of interest and all of its transcripts and translations. Select your options by ticking the boxes, then click on the green Download button to export sequences in FASTA format.
+Select the underlined down arrow icon to download sequence data.
+
+Download enables export of the sequence data for an entity. If your entity is a gene you can download the genomic sequence and all of its transcripts and translations.
+
+To download tick the box next to the sequence data you need then select the green Download button. Sequence data are exported in FASTA format.

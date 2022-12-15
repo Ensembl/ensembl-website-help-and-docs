@@ -12,7 +12,7 @@ status: draft
 
 # Get protein information
 
-In order to find your protein of interest, you must first use the Species selector to choose your species of interest.
+In order to find your protein of interest, you must first use the Species selector to choose your species genome of interest.
 
 ![](../../img/id-species-selector.svg)
 
@@ -20,4 +20,6 @@ Protein data is available in the Entity viewer:
 
 ![](../../img/id-entity-viewer.svg)
 
-In the Entity viewer you can find details of the different transcripts and protein isoforms, protein domains, links out to other protein databases and peptide sequences.
+Select the Entity viewer app. Search for and select your gene of interest. 
+
+You will find details of the gene's protein-coding transcripts, their peptide sequences, protein isoforms, protein domains and links to more information in other protein databases.
