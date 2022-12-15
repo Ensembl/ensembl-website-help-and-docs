@@ -24,7 +24,7 @@ Here you can do a simple search for a gene symbol (eg MAPK10) or ID (ENSG0000010
 
 Select your gene of interest from the search results.
 
-A z-menu giving details of the gene will pop up with links to the Genome browser and Entity viewer.
+A pop-up menu giving details of the gene will pop up with links to the Genome browser and Entity viewer.
 
 ![](media/in-app-search-z-menu.png)
 

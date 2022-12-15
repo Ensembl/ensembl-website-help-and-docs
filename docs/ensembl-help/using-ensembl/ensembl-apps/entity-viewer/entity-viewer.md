@@ -22,13 +22,6 @@ First image
 
 ![](media/entity-viewer.png)
 
-Second image - 125kb
-
-![](media/image-aa-125.png)
-
-Third image - 32kb
-
-![](media/image-aa-32.png)
 
 ## Navigation bar
 
