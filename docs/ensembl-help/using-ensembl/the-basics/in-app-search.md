@@ -20,7 +20,7 @@ To search, either select the magnifying glass icon in the Action bar or select '
 
 Here you can do a simple search for a gene symbol (eg MAPK10) or ID (ENSG00000109339.24). The results will list the gene symbols and ID of a gene. 
 
-![](media/in-app-search-results.png)
+![](media/in-app-search-result.png)
 
 Select your gene of interest from the search results.
 
