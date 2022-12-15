@@ -16,8 +16,12 @@ BLAST is a sequence similarity search tool that can be used for both DNA and pro
 The target databases available for similarity searches are DNA, transcripts and proteins. Click on the ‘Database’ dropdown menu and choose from these options. 
 
 The following BLAST programs are available:
-- BLASTN: nucleotide sequences against nucleotide databases 
-- TBLASTX: translated nucleotide sequences against a translated nucleotide database
+- BLASTn: nucleotide sequences against nucleotide databases
+- tBLASTn: translated nucleotide sequences against a nucleotide database
+- tBLASTx: translated nucleotide sequences against a translated nucleotide database
+- BLASTp: peptide sequences against peptide databases
+- BLASTx: nucleotide sequences against amino acid databases
+
 
 The relevant BLAST program is selected automatically when the target database is selected and the Nucleotide or Protein option is selected above the sequence text box. The BLAST programs have pre-configured parameters, which you can view and change by clicking on the ‘Parameters’ option.
 
