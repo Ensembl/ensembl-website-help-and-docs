@@ -23,7 +23,7 @@ The following BLAST programs are available:
 - BLASTx: nucleotide sequences against amino acid databases
 
 
-The relevant BLAST program is selected automatically when the target database is selected and the Nucleotide or Protein option is selected above the sequence text box. The BLAST programs have pre-configured parameters, which you can view and change by clicking on the ‘Parameters’ option.
+The relevant BLAST programs are selected automatically and displayed in the *Program* drop-down menu when the target database is selected and the Nucleotide or Protein option is selected above the sequence text box. The BLAST programs have pre-configured parameters, which you can view and change by clicking on the ‘Parameters’ option.
 
 ## Entering a query sequence
 
