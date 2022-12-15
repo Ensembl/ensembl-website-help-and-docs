@@ -13,7 +13,7 @@ status: draft
 
 # Tracks in the Genome browser
 
-## What is a track ? 
+## What is a track? 
 
 Tracks are sets of data such as genes, variants or regulatory features displayed along a genome. A track displays a single set of data eg protein coding genes on the forward strand.
 
