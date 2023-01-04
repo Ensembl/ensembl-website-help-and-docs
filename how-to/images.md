@@ -57,4 +57,23 @@ Any image that is less than 980 px wide will not be scaled to fit into the pages
 
 Images should be stored in a subfolder alongside the Markdown file. For consistency, we use the name `media` for image folders. If one does not exist in the folder you want to put your Markdown file in, go ahead and create it.
 
-Example: `![this is alt text that appears if image doesn't show up](media/my-image.jpg)`. (The alt text block can also be empty: `![](media/my-image.jpg)`).
+### Linking an image to the document
+
+There are two ways for adding an image to a Markdown document.
+
+The first option is to use a special Markdown syntax for images: exclamation mark followed by a pair of square brackets with optional alt text (short image desctiption) inside, followed by a pair of parentheses with a link to the image. This is convenient, but does not allow fine-grained control of the image.
+
+Examples:
+- with the alt text: `![Brief description of the image](media/my-image.jpg)`
+- without the alt text: `![](media/my-image.jpg)`
+
+Note that although the alt text for an image is optional, the best practice is always to include it. For detailed information about the purpose of image alt text, see [MDN docs](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/alt).
+
+The second option is to write the HTML image tag directly, which enables more precise control over the image. The main reason for picking this option would be to specify the image width, thus making sure that a high-density image has a desired size when displayed on the screen.
+
+Examples:
+- an html image tag with both the width and alt text set up: `<img src="media/my-image.jpg" width="320" alt="Brief description of the image">`
+- an html image tag with only the width specified: `<img src="media/my-image.jpg" width="320">`
+- an html image tag with only the image source (but in this case, you might as well just use the Markdown shorthand above): `<img src="media/my-image.jpg" width="320">`
+
+Note that the `width` attribute of an image tag is a number without units (i.e. `width="320"`, not `width="320px"`). Note also that, as with the Markdown syntax above, providing an alt text for an image is always a good practice. For more information about the HTML `img` tag, see [MDN docs](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img).
