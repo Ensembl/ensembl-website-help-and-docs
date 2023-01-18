@@ -18,7 +18,7 @@ These updates ensure:
 ## Website and tools
 Our new website is being delivered in three phases of development: 
 
-1. Minimal Acceptable Product (MAP) will be delivered in 2022 providing genome browsing, viewing attributes of key entities, search and help.
+1. The beta version of the website was delivered in 2022 and provides genome browsing, viewing attributes of key entities, search, BLAST, and help.
 2. Minimal Viable Product (MVP) will provide equivalent functionality to the Ensembl Rapid Release site, including variation visualisations, homologies and support for all new genomes. The Ensembl Rapid Release site will then be scheduled for retirement.
 3. New website functionality reaches that of the current site. The current Ensembl sites will then receive minimal updates and will be archived in due course.
 
