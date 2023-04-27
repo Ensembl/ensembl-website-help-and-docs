@@ -2,6 +2,8 @@
 slug: how-to-run-blast
 title: How to run BLAST
 description: How to run BLAST queries
+related_articles:
+  - href: the_different_blast_programs.md
 tags:
   - blast
 status: draft
