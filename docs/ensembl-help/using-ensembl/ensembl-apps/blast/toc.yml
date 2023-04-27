@@ -1,2 +1,4 @@
 - name: How to run BLAST
   href: how_to_run_blast.md
+- name: The different BLAST programs
+  href: the_different_blast_programs.md
