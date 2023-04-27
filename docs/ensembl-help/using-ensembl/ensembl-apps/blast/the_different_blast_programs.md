@@ -2,6 +2,8 @@
 slug: the-different-blast-programs
 title: The different BLAST programs
 description: The different BLAST programs
+related_articles:
+  - href: how_to_run_blast.md
 tags:
   - blast
 status: draft
