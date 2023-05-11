@@ -2,6 +2,8 @@
   href: the-basics/toc.yml
 - name: Ensembl apps
   href: ensembl-apps/toc.yml
+- name: Getting Ensembl data
+  href: getting-ensembl-data/toc.yml
 # Not for MAP
 # - name: External tracks
 # - name: Tools
