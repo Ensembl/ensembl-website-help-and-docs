@@ -19,6 +19,8 @@ Sequence input errors are indicated in 3 ways, with
 * a red exclamation mark above the box with the offending sequence.
 * a red keyline around the box with the offending sequence.
 
+![BLAST error message](blast_error_message.png)
+
 Error messages are the red exclamation mark(s) and red key lines are displayed when mistakes are made in sequence input .
 
 ## Reasons for error messages
