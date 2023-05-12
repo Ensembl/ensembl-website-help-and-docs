@@ -3,7 +3,5 @@
   url: /about
 - name: About us
   href: about-us/toc.yml
-- name: Annotation
-  href: annotation-and-prediction/toc.yml
 - name: Legal & privacy
   href: legal-and-privacy/toc.yml

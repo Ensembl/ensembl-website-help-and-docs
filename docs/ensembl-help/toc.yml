@@ -4,6 +4,8 @@
   href: getting-started/toc.yml
 - name: Using Ensembl 
   href: using-ensembl/toc.yml
+- name: Ensembl data
+  href: ensembl-data/toc.yml
 # NOT FOR MAP
 # - name: Annotation and Prediction
 # - href: annotation/toc.yml

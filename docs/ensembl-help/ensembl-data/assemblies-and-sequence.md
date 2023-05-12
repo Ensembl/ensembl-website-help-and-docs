@@ -13,4 +13,4 @@ We select species to annotate on a case-by-case basis according to a number of f
 ## Genome Browser Agreement
 In order to improve consistency between the data provided by different genome browsers/annotation groups, the Genome Browser Agreement was established between Ensembl, UCSC and NSBI to define the minimum requirements for public display of genome data.
 
-[Browser Genome Release Agreement](../../legal-and-privacy/browser-genome-release-agreement.md)
+[Browser Genome Release Agreement](/about/articles/browser-genome-release-agreement)
