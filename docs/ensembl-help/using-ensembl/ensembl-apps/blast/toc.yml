@@ -6,3 +6,5 @@
   href: error_messages.md
 - name: blast_parameters
   href: blast_parameters.md  
+- name: blast_results_table
+  href: blast_results_table.md  
