@@ -3,7 +3,7 @@ slug: blast_results_table
 title: BLAST results table
 description: What does the information in the BLAST results table mean
 related_articles:
-  - href: the_different_blast_programs.md
+  - href: blast_parameters.md
 tags:
   - blast
 status: draft
