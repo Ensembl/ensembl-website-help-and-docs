@@ -4,3 +4,5 @@
   href: the_different_blast_programs.md
 - name: I have an error message - what can I do?
   href: error_messages.md
+- name: blast_parameters
+  href: blast_parameters.md  
