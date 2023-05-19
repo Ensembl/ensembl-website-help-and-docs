@@ -8,3 +8,5 @@
   href: blast_parameters.md  
 - name: blast_results_table
   href: blast_results_table.md  
+- name: download_blast_results
+  href: download_blast_results.md 
