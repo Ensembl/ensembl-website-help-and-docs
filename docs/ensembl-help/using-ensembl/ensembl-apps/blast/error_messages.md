@@ -5,6 +5,9 @@ description: How to resolve different error messages commonly encountered in BLA
 related_articles:
   - href: how_to_run_blast.md
   - href: the_different_blast_programs.md
+  - href: blast_parameters.md
+  - href: blast_results_table.md
+  - href: download_blast_results.md
 tags:
   - blast
 status: draft
