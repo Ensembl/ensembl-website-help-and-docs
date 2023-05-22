@@ -1,5 +1,5 @@
 ---
-slug: blast_parameters
+slug: blast-parameters
 title: What are the different BLAST parameters and how to use them
 description: How to use the different parameters for your BLAST query and what does each parameter do
 related_articles:
