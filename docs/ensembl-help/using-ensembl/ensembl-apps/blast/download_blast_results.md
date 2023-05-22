@@ -5,6 +5,9 @@ description: The different ways you can download results from your BLAST query
 related_articles:
   - href: how_to_run_blast.md
   - href: the_different_blast_programs.md
+  - href: blast_parameters.md
+  - href: blast_results_table.md
+  - href: error_messages.md
 tags:
   - blast
 status: draft
