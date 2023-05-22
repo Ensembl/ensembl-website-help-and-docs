@@ -1,5 +1,5 @@
 ---
-slug: blast_results_table
+slug: blast-results-table
 title: BLAST results table
 description: What does the information in the BLAST results table mean
 related_articles:
