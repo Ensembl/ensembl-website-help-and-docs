@@ -5,7 +5,7 @@ description: How to use the different parameters for your BLAST query and what d
 related_articles:
   - href: how_to_run_blast.md
   - href: the_different_blast_programs.md
-  - href: blast_parameters.md
+  - href: error_messages.md
   - href: blast_results_table.md
   - href: download_blast_results.md
 tags:
