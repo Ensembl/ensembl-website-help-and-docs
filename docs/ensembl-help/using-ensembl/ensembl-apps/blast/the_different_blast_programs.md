@@ -4,6 +4,10 @@ title: The different BLAST programs
 description: The different BLAST programs
 related_articles:
   - href: how_to_run_blast.md
+  - href: blast_parameters.md
+  - href: error_messages.md
+  - href: blast_results_table.md
+  - href: download_blast_results.md
 tags:
   - blast
 status: draft
