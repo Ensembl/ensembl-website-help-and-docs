@@ -43,5 +43,4 @@ The position within the target sequence at which the hit ends.
 The first position within the query sequence that matches the beginning of the hit that BLAST returns
 
 ## Query end
-Query end
 The last position within the query sequence that matches the beginning of the hit that BLAST returns
