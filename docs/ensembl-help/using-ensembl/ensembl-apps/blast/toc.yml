@@ -4,9 +4,9 @@
   href: the_different_blast_programs.md
 - name: I have an error message - what can I do?
   href: error_messages.md
-- name: blast_parameters
+- name: What are the different BLAST parameters and how to use them
   href: blast_parameters.md  
-- name: blast_results_table
+- name: BLAST results table
   href: blast_results_table.md  
-- name: download_blast_results
+- name: How to download BLAST results
   href: download_blast_results.md 
