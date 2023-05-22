@@ -1,5 +1,5 @@
 ---
-slug: download_blast_results
+slug: download-blast-results
 title: How to download BLAST results
 description: The different ways you can download results from your BLAST query
 related_articles:
