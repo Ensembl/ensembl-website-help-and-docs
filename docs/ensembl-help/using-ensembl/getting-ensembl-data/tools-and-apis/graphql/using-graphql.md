@@ -3,6 +3,7 @@ slug: using-graphql
 title: Accessing Ensembl GraphQL service
 description: How to access the GraphQL services provided by Ensembl
 related_articles:
+  - href: ./getting-started.md
 tags:
   - api
   - tools

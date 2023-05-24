@@ -26,7 +26,7 @@ However the pages are not served as-is from the directories in this repository; 
 
 ### Index pages
 
-One of the decisions we made when working out the structure of these apps is that we would not have index pages (equivalent to index.html on the current site), as these so often end up as a boring list of links to the pages in that folder. Instead we use Table-of-Contents files that allow us to include these lists of links in the navigation, without the user having to go to a separate page just to find the next link in the hierarchy. See the [toc.yml documentation](toc.yml) for more information on how to use these files.
+One of the decisions we made when working out the structure of these apps is that we would not have index pages (equivalent to index.html on the current site), as these so often end up as a boring list of links to the pages in that folder. Instead we use Table-of-Contents files that allow us to include these lists of links in the navigation, without the user having to go to a separate page just to find the next link in the hierarchy. See the [toc.yml documentation](toc.md) for more information on how to use these files.
 
 ### Page layout
 
@@ -34,7 +34,7 @@ For readability, the body of the page has a fixed width that is narrow enough fo
 
 However this rule does not apply to all images, some of which may be wider than the text if that makes them more readable, e.g. a large screenshot.
 
-We are in the process of finalising the types of images we use and how they should be sized - please check the [images guide](media.md) for the latest information.
+We are in the process of finalising the types of images we use and how they should be sized - please check the [images guide](images.md) for the latest information.
 
 ## How to add content
 
