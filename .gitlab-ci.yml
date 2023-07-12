@@ -149,8 +149,6 @@ Live:WP-HH:
 
 Live:wp40:HL:
   extends: .deploy-wp40
-  variables:
-    BASE: k8s/overlays/prod/
   environment:
     name: wp40-hl-prod
   rules:
