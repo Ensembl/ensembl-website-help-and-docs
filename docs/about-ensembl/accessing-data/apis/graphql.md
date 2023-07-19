@@ -49,4 +49,4 @@ Ensembl's new website also utilises the GraphQL services offered to the public, 
 
 
 ## Documentation
-If you wish to interrogate the service and explore the documentation, a GraphQL [playground](https://alpha.ensembl.org/data/graphql) can be accessed via your browser.
+If you wish to interrogate the service and explore the documentation, a GraphQL [playground](https://beta.ensembl.org/data/graphql) can be accessed via your browser.
