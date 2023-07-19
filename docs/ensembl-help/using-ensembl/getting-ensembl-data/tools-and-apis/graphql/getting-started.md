@@ -11,10 +11,10 @@ status: draft
 ---
 # Accessing Ensembl GraphQL services
 
-The Ensembl GraphQL services can be accessed at < INSERT URL HERE >.
+The Ensembl GraphQL services can be accessed at [https://alpha.ensembl.org/data/graphql](https://alpha.ensembl.org/data/graphql).
 
 ## Schemas and documentation
-If you wish to interrogate the service and explore the documentation, [a GraphQL playground](./< INSERT URL HERE >) can be accessed via your browser.
+If you wish to interrogate the service and explore the documentation, [a GraphQL playground](https://alpha.ensembl.org/data/graphql) can be accessed via your browser.
 
 ## Genomes
 
@@ -25,30 +25,35 @@ In many of queries, there is a parameter for `genome_id`.  This identifier (a [U
 To get a `genome_id` you will need to provide the query below a lookup `keyword`, and optionally a `release_number` (if `release_number` is left blank, it will default to the latest genomes).  
 
 The `keyword` can be one of the following:
-- [ToLID]("https://id.tol.sanger.ac.uk/") (e.g. aRanTem1)
-- assembly accession id (e.g. GCA_000001405.28)
-- taxon ID (e.g. 6239)
-- scientific name (e.g. Triticum aestivum)
-- parlance name (e.g. human)
+- [ToLID](https://id.tol.sanger.ac.uk/) (e.g. aRanTem1)
+- Assembly accession id (e.g. GCA_000001405.28)
+- Taxon ID (e.g. 6239)
+- Scientific name (e.g. Triticum aestivum)
+- Parlance name (e.g. human)
 
 
 Currently partial matches are *not* supported.
 
 For example:
+
+#### Query
 ```
 query {
   genomes(
     by_keyword: {
-      keyword:"Triticum aestivum"
+      keyword:"Triticum aestivum",
+      release_version: 108  # Optional
     }
   ) {
     genome_id
     assembly_accession
-    scientific_name    
+    scientific_name
+    release_number
   }
 }
 ```
 
+#### Response
 ```json
 {
   "data": {
@@ -56,9 +61,13 @@ query {
       {
         "genome_id": "a73357ab-93e7-11ec-a39d-005056b38ce3",
         "assembly_accession": "GCA_900519105.1",
-        "scientific_name": "Triticum aestivum"
+        "scientific_name": "Triticum aestivum",
+        "release_number": 108
       }
     ]
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.11
   }
 }
 ```
@@ -67,17 +76,20 @@ The `genome_id` can then be used in subsequent queries.
 
 ## Examples 
 
-### Find a Gene by a symbol
+## Find a Gene by a symbol
 
-Purpose: to find the Ensembl identifier for a Gene with a specified symbol within a genome.
+Purpose: Find the Ensembl identifier for a Gene with a specified symbol within a genome.
+
+First we need to find the `genome_id`:
+
+It can be done either by searching using `by_keyword` (as explained above) or `by_assembly_accession_id`.
 
 #### Query
-Find the `genome_id`.
-``` json
+```
 query {
   genomes(
-    by_keyword: {
-      keyword:"GCA_000001405.28"
+    by_assembly_accession_id: {
+      assembly_accession_id:"GCA_000001405.28"
     }
   ) {
     genome_id
@@ -85,12 +97,29 @@ query {
 }
 ```
 
+#### Response
+```json
+{
+  "data": {
+    "genomes": [
+      {
+        "genome_id": "<genome_id>"
+      }
+    ]
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.1
+  }
+}
+```
+
 Use the `genome_id` in a subsequent query to look up the `stable_id` of a gene
 
-``` json
+#### Query
+```
 query {
-  genes_by_symbol(
-    bySymbol: {
+  genes(
+    by_symbol: {
       symbol: "JAG1"
       genome_id: "<insert genome_id here>" })
         {
@@ -101,26 +130,32 @@ query {
       }
 ```
 
-#### Results
+#### Response
 ```json
 {
   "data": {
     "genes": [
       {
-        "stable_id": "ENSG00000101384.12"
+        "stable_id": "ENSG00000101384.12",
+        "unversioned_stable_id": "ENSG00000101384",
+        "version": 12
       }
     ]
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.42
   }
 }
 ```
 
 ## Find a Gene by its Stable ID
 
-Purpose: Find a Gene by its `stable_id` and list is `external_references`.
+Purpose: Find a Gene by its `stable_id` and list its `external_references`.
+
+Find the `genome_id`.
 
 #### Query
-Find the `genome_id`.
-``` json
+```
 query {
   genomes(
     by_keyword: {
@@ -132,8 +167,26 @@ query {
 }
 ```
 
+#### Response
+```json
+{
+  "data": {
+    "genomes": [
+      {
+        "genome_id": "a7335667-93e7-11ec-a39d-005056b38ce3"
+      }
+    ]
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.04
+  }
+}
+```
+
 Find the Gene by its `stable_id` and list its external references
-``` json
+
+#### Query
+```
 query{
   gene(by_id: {genome_id:"<insert genome_id here>", stable_id: "ENSG00000101384.12"})
   {
@@ -147,9 +200,7 @@ query{
 }
 ```
 
-
-
-### Results
+#### Response
 NB: Results reduced for readability.
 ``` json
 {
@@ -175,11 +226,12 @@ NB: Results reduced for readability.
         ...
       ]
     }
+  },
+  "extensions": {
+    "execution_time_in_seconds": 0.1
   }
 }
 ```
-
-
 
 ## Example script
 
@@ -193,7 +245,7 @@ base_url = '<base URL>'
 
 genome_id_graphql_query = '''query{
   genomes(
-    by_assembly_acc_id: {
+    by_assembly_accession_id: {
       assembly_accession_id:"GCA_000001405.28"
     }) 
   {
@@ -221,5 +273,4 @@ for genome in genomes:
 
     genes = requests.post(base_url, json={'query': gene_graphql_query})
     print(genes.text)
-
 ```

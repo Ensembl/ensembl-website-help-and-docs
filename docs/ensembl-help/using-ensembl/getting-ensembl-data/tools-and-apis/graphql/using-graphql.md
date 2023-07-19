@@ -24,7 +24,7 @@ The Ensembl GraphQL service is currently only available to the public as a beta 
 If you want to check the version of the API, you can do so with this query:
 
 ``` json
-query{
+query {
   version{
     api{
       major
@@ -51,10 +51,10 @@ The query above will provide data about the major, minor and patch versions of t
 }
 ```
 
-While the service is in beta, please assume that any change could potentially be a breaking change.  However, when we move out of beta, we will use semantic versioning (i.e. major.minor.patch).  Those version numbers can be interpreted as:-
-- major version change: This is a breaking change
-- minor version change: This is a non-breaking change
-- patch version change: This is a non-breaking change, but one we did not expect to make
+While the service is in beta, please assume that any change could potentially be a breaking change.  However, when we move out of beta, we will use semantic versioning (i.e. major.minor.patch).  Those version numbers can be interpreted as:
+- Major version change: This is a breaking change
+- Minor version change: This is a non-breaking change
+- Patch version change: This is a non-breaking change, but one we did not expect to make
 
 ## Authentication
 
