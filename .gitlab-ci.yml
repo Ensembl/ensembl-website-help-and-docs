@@ -19,8 +19,6 @@ variables:
     - docker push ${DOCKER_IMAGE}
     - docker rmi ${DOCKER_IMAGE}
     - docker logout $CI_REGISTRY
-  rules:
-    - if: '$CI_DEPLOY_FREEZE == null && $CI_COMMIT_BRANCH == "k8s-migration"'
 
 .deploy:
   stage: deploy
@@ -151,5 +149,5 @@ Live:wp40:HL:
   extends: .deploy-wp40
   environment:
     name: wp40-hl-prod
-  rules:
-    - if: '$CI_DEPLOY_FREEZE == null && $CI_COMMIT_BRANCH == "k8s-migration"'
+  only:
+    - main
