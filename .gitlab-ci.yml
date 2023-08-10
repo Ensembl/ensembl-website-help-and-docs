@@ -176,7 +176,7 @@ Internal:WP40:HL:
 
 Dev:WP40:HL:
   extends: .deploy-newk8s
-  <<: *deploy-rulesn
+  <<: *deploy-rules
   environment:
     name: wp40-hl-development
 
