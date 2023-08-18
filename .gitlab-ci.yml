@@ -99,57 +99,6 @@ Review:
   except:
   - main
 
-
-# Job to deploy to staging environment (WP-HX k8s cluster)
-Staging:WP-HX:
-  extends: .deploy-wp
-  environment:
-    name : wp-hx-staging
-  only:
-  - main
-
-
-# Job to deploy to staging environment (WP-HH k8s cluster)
-Staging:WP-HH:
-  extends: .deploy-wp
-  environment:
-    name : wp-hh-staging
-  only:
-  - main
-
-
-# Job to deploy to internal environment (WP-HX k8s cluster)
-Internal:WP-HX:
-  extends: .deploy-wp
-  environment:
-    name : wp-hx-internal
-  only:
-  - main
-
-# Job to deploy to internal environment (WP-HH k8s cluster)
-Internal:WP-HH:
-  extends: .deploy-wp
-  environment:
-    name : wp-hh-internal
-  only:
-  - main
-
-# Job to deploy to live environment (WP-HX k8s cluster)
-Live:WP-HX:
-  extends: .deploy-wp
-  environment:
-    name : wp-hx-live
-  only:
-  - main
-
-# Job to deploy to live environment (WP-HH k8s cluster)
-Live:WP-HH:
-  extends: .deploy-wp
-  environment:
-    name : wp-hh-live
-  only:
-  - main
-
 Live:WP40:HL:
   extends: .deploy-newk8s
   <<: *deploy-rules
