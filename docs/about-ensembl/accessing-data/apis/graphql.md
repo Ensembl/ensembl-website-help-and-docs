@@ -9,11 +9,11 @@ status: draft
 ---
 # Ensembl GraphQL service
 
-Ensembl offers access to its data via a GraphQL service, allowing you to access the data they want by tailoring their responses from the service.
+Ensembl offers access to its data via a GraphQL service, allowing you to access the data you want by tailoring the responses from the service.
 
 ## What is GraphQL?
 
-GraphQL is a query language.  GraphQL services typically have one end point (as oppose to REST APIs which have multiple end points), and they allow you to specify exactly what data is returned to you.
+GraphQL is a query language.  GraphQL services typically have one end point (as opposed to REST APIs which have multiple end points), and they allow you to specify exactly what data is returned to you.
 
 For example, the following query requests the `symbol` of a particular gene based on its `stable_id`.
 
