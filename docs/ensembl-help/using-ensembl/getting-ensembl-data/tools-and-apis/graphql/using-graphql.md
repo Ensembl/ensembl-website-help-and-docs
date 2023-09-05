@@ -11,7 +11,7 @@ status: draft
 ---
 # Using the Ensembl GraphQL service
 
-The Ensembl GraphQL service can be used to access information about Genes, Transcripts, Assemblies and associated Metadata held by Ensembl.  
+The Ensembl GraphQL service can be used to access information about genes, transcripts, assemblies and associated metadata held by Ensembl.  
 
 The followings sections provide example queries to return commonly accessed data.  These can be expanded and adapted to meet your own needs.
 
