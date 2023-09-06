@@ -4,9 +4,6 @@ title: Choosing a species to work with
 description: Here is how to select a species
 related_articles:
   - href: ../using-ensembl/ensembl-apps/species-selector/species-selector-intro.md 
-tags:
-  - gene
-status: draft
 ---
 
 # Choosing a species genome to work with

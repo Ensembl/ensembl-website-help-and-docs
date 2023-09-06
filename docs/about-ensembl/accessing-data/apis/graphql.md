@@ -2,10 +2,6 @@
 slug: about-graphql
 title: About Ensembl GraphQL service
 description: Information about Ensembl's GraphQL service
-tags:
-  - api
-  - tools
-status: draft
 ---
 # Ensembl GraphQL service
 

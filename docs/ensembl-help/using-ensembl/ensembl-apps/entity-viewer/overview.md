@@ -7,9 +7,6 @@ related_articles:
   - href: transcripts.md
   - href: gene-function.md
   - href: external-references.md
-tags:
-  - entity
-status: draft
 ---
 
 # What’s in the overview panel?

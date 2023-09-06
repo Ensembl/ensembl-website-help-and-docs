@@ -6,9 +6,6 @@ related_articles:
   - href: ../using-ensembl/the-basics/sequence-download.md
   - href: ../using-ensembl/ensembl-apps/entity-viewer/entity-viewer.md
   - href: ../using-ensembl/ensembl-apps/genome-browser/browser.md
-tags:
-  - sequence
-status: draft
 ---
 
 # How to download sequences

@@ -5,9 +5,6 @@ description: Here is how to find out about a gene
 related_articles:
   - href: ../using-ensembl/ensembl-apps/entity-viewer/entity-viewer.md
   - href: ../using-ensembl/ensembl-apps/genome-browser/browser.md
-tags:
-  - gene
-status: draft
 ---
 
 # Find out about a gene

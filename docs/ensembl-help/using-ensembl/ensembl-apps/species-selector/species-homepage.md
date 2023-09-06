@@ -2,9 +2,6 @@
 slug: species-homepage
 title: Species homepage
 description: How to navigate the species homepage
-tags:
-  - species homepage
-status: draft
 ---
 
 # Species homepage
