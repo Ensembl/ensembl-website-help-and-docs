@@ -7,7 +7,7 @@ related_articles:
 ---
 # Accessing Ensembl GraphQL services
 
-The Ensembl GraphQL services can be accessed [here](/data/graphql).
+The Ensembl GraphQL services can be accessed here:[https://beta.ensembl.org/data/graphql](https://beta.ensembl.org/data/graphql).
 
 ## Schemas and documentation
 If you wish to interrogate the service and explore the documentation, [a GraphQL playground](/data/graphql) can be accessed via your browser.
@@ -16,7 +16,7 @@ If you wish to interrogate the service and explore the documentation, [a GraphQL
 
 The data within a GraphQL service is represented as a graph. The way in which the Ensembl data are logically grouped together is by genome.  Genomes are defined to be a collection of datasets and related annotation for a given assembly.  Some assemblies will have a new genome generated for each release whilst other assemblies will have genomes which span multiple releases.
 
-In many of queries, there is a parameter for `genome_id`.  This identifier (a [UUID]("https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=11746&lang=en")) is used to scope queries to the data belonging to a given genome.
+In many of queries, there is a parameter for `genome_id`.  This identifier (a [UUID](https://www.itu.int/ITU-T/recommendations/rec.aspx?rec=11746&lang=en)) is used to scope queries to the data belonging to a given genome.
 
 To get a `genome_id` you will need to provide the query below a lookup `keyword`, and optionally a `release_number` (if `release_number` is left blank, it will default to the latest genomes).  
 
@@ -61,9 +61,6 @@ query {
         "release_number": 108
       }
     ]
-  },
-  "extensions": {
-    "execution_time_in_seconds": 0.11
   }
 }
 ```
@@ -102,9 +99,6 @@ query {
         "genome_id": "<genome_id>"
       }
     ]
-  },
-  "extensions": {
-    "execution_time_in_seconds": 0.1
   }
 }
 ```
@@ -137,9 +131,6 @@ query {
         "version": 12
       }
     ]
-  },
-  "extensions": {
-    "execution_time_in_seconds": 0.42
   }
 }
 ```
@@ -172,9 +163,6 @@ query {
         "genome_id": "a7335667-93e7-11ec-a39d-005056b38ce3"
       }
     ]
-  },
-  "extensions": {
-    "execution_time_in_seconds": 0.04
   }
 }
 ```
@@ -222,9 +210,6 @@ NB: Results reduced for readability.
         ...
       ]
     }
-  },
-  "extensions": {
-    "execution_time_in_seconds": 0.1
   }
 }
 ```
@@ -237,7 +222,7 @@ This example Python script shows how data can be accessed using GraphQL.
 import requests
 import json
 
-base_url = '<base URL>'
+base_url = 'https://beta.ensembl.org/data/graphql'
 
 genome_id_graphql_query = '''query{
   genomes(
