@@ -2,10 +2,6 @@
 slug: looking-at-genes-and-transcripts
 title: Looking at genes and transcripts
 description: Overview of Ensembl genome browser
-tags:
-  - genes
-  - transcripts
-status: draft
 ---
 
 # Looking at genes and transcripts

@@ -5,9 +5,6 @@ description: How Ensembl keeps track of the pages you've visited previously
 related_articles:
   - href: ../ensembl-apps/entity-viewer/entity-viewer.md
   - href: ../ensembl-apps/genome-browser/browser.md
-tags:
-  - gene
-status: draft
 ---
 
 # Previously viewed

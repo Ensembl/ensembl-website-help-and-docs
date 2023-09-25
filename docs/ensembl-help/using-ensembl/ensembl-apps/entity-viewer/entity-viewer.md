@@ -7,9 +7,6 @@ related_articles:
   - href: gene-function.md
   - href: overview.md
   - href: external-references.md
-tags:
-  - entity
-status: draft
 ---
 
 # What is the Entity viewer?

@@ -5,9 +5,6 @@ description: Using search within the apps
 related_articles:
   - href: ../ensembl-apps/entity-viewer/entity-viewer.md
   - href: ../ensembl-apps/genome-browser/browser.md
-tags:
-  - search
-status: draft
 ---
 
 # In-app search

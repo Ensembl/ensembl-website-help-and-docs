@@ -6,9 +6,6 @@ related_articles:
   - href: browser.md
   - href: tracks.md
   - href: focus-entity.md
-tags:
-  - browser
-status: draft
 ---
 
 # Genome browser navigation

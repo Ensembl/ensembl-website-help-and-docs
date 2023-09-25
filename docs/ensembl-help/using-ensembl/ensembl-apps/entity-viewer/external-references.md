@@ -7,9 +7,6 @@ related_articles:
   - href: transcripts.md
   - href: gene-function.md
   - href: overview.md
-tags:
-  - entity
-status: draft
 ---
 
 # What’s in the external references tab?

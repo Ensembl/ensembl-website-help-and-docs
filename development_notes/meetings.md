@@ -1,6 +1,4 @@
-draft field — likely not needed (but we will need internal deployments)
-
-tags -> keywords
+> Update (06/09/2023): Removed `status` and `tags` per our discussion [here](https://github.com/Ensembl/ensembl-website-help-and-docs/pull/59#discussion_r1314847058)
 
 references
   - get from api

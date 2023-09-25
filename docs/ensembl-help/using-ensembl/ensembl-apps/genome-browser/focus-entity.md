@@ -7,9 +7,6 @@ related_articles:
   - href: browser.md
   - href: navigation.md
   - href: tracks.md
-tags:
-  - browser
-status: draft
 ---
 
 # What is a Focus entity?
