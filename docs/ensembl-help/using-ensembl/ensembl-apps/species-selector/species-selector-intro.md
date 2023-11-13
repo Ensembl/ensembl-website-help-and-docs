@@ -1,52 +1,85 @@
 ---
-slug: species-selector
+slug: species-selector-intro
 title: How do I add or remove a species?
 description: How to select a species and genome assembly of interest to visualise in the Genome browser and Entity viewer
 related_articles:
  - href: species-homepage.md
 ---
 
-#  How do I add or remove a species?
+# What is the Species selector for?
 
-The Species selector allows you to view and select the species genomes and assemblies that you wish to view in the Genome browser and Entity viewer.
+You can use the Species selector to:
 
-## Selecting a species
+* choose a species genome, to work with in other apps; and
+* explore the genetic composition of a species genome.
 
-In order to start using the Genome browser and Entity viewer, you need to select a species genome and assembly. 
+## How to choose a species genome
 
-There are two ways to select a species genome:
+You must select a species genome to start using any Ensembl app. 
 
-1.  Select from an initial selection of 7 popular species genomes. The 42 most popular species genomes will be available in the future.
+You can then investigate the genes, variants and orthologues of that species genome in another app ie the Genome browser or Entity viewer.
 
-> Select the icon representing your species genome of interest from the 42 most popular species genomes and select the green 'Add' button.
- 
-2.  Search for a species genome
+There are two ways to select a species genome in the Species selector:
 
-> Type the name of a species genome or assembly into the search box and select a species genome from the auto-complete options in the drop-down menu. 
+### Choose a genome from the 42 most popular species.
 
-If there are more than one genome assembly available for your species of interest, a drop-down menu will appear allowing you to select your genome assembly of interest. 
-Use the green 'Add' button to select the species genome.
+Select the icon representing your species of interest from the 42 most popular species.
 
-When a species genome has been selected the species and assembly name will appear at the top of the page.
+A table of the genome assemblies for that species is shown. 
 
-## Creating a list of species 
+Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the Add button.
 
-You can add multiple species genomes and create a list of species genomes in the Species selector. 
+The selected genome name and assembly appear in a lozenge at the top of the view in each app.
 
-The list of species genomes between them when in other apps such as the Genome browser or Entity viewer.
+### Search for a species genome
+
+You can search for a species genome, using the 
+* common name 
+* scientific name
+* type, strain or cultivar
+* assembly name and
+* assembly accession number.
+
+Depending on your search term you will see
+
+* a species genome assembly or
+* a table of the genome assemblies.
+
+Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the green Add button.
+
+The selected genome name and assembly appear in a lozenge at the top of each app.
+
+## How to create a collection of species genomes
+
+You can create a collection of species genomes by adding multiple genomes from a table of assemblies.
+
+The collection of species genomes can be used in all other apps, ie the Genome browser or Entity viewer.
+
+The species genome lozenges are displayed in a row at the top of each app.
+
+### How to find specific genomes in a large table of assemblies
+
+The genome assembly table for each species displays information chosen to help you decide which genome assemblies you would like to work with. ie Assembly name, Assembly accession number, type, strain and cultivar.
+
+You can also filter a table of genome assemblies by entering the
+* common name 
+* scientific name
+* type, strain or cultivar
+* assembly name and
+* assembly accession number
+* annotation provider or
+* annotation method
+into the filter box above the table of genome assemblies.
 
 
 ## The Species homepage  
 
 The Species homepage contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
 
-You can navigate to a Species homepage by clicking on the individual species' name. 
+You can navigate to a Species homepage by clicking on the individual species name. 
 
 ## Removing a species genome
 
 You can remove or disable selected species from the Species homepage by selecting the 'Remove' button.
-
-
-
 
 
