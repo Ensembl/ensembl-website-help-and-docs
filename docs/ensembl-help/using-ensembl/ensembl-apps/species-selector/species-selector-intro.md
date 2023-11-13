@@ -5,7 +5,6 @@ description: How to select a species and genome assembly of interest to visualis
 related_articles:
  - href: species-homepage.md
 ---
-
 # What is the Species selector for?
 
 You can use the Species selector to:
