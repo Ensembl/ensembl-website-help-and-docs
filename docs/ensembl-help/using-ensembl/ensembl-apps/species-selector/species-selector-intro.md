@@ -9,9 +9,8 @@ related_articles:
 
 You can use the Species selector to:
 
-- list choose a species genome, to work with in other apps and
-
-- list explore the genetic composition of a species genome.
+- choose a species genome, to work with in other apps and
+- explore the genetic composition of a species genome.
 
 ## How to choose a species genome
 
@@ -21,7 +20,7 @@ You can then investigate the genes, variants and orthologues of that species gen
 
 There are two ways to select a species genome in the Species selector:
 
-### 1) Choose a genome from the 42 most popular species.
+### Choose a genome from the 42 most popular species.
 
 Select the icon representing your species of interest from the 42 most popular species.
 
@@ -31,7 +30,7 @@ Pick the genome assembly you are interested in by marking the box to the left of
 
 The selected genome name and assembly appear in a lozenge at the top of the view in each app.
 
-### 2) Search for a species genome
+### Search for a species genome
 
 You can search for a species genome, using the 
 * common name 
