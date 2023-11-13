@@ -34,14 +34,19 @@ The selected genome name and assembly appear in a lozenge at the top of the view
 
 You can search for a species genome, using the 
 * common name 
+
 * scientific name
+
 * type, strain or cultivar
+
 * assembly name and
+
 * assembly accession number.
 
 Depending on your search term you will see
 
 * a species genome assembly or
+
 * a table of the genome assemblies.
 
 Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the green Add button.
@@ -62,14 +67,20 @@ The genome assembly table for each species displays information chosen to help y
 
 You can also filter a table of genome assemblies by entering the
 * common name 
-* scientific name
-* type, strain or cultivar
-* assembly name and
-* assembly accession number
-* annotation provider or
-* annotation method
-into the filter box above the table of genome assemblies.
 
+* scientific name
+
+* type, strain or cultivar
+
+* assembly name
+
+* assembly accession number
+
+* annotation provider or
+
+* annotation method
+
+into the filter box above the table of genome assemblies.
 
 ## The Species homepage  
 
