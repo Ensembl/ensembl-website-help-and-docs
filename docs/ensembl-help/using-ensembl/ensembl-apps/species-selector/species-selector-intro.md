@@ -12,6 +12,8 @@ You can use the Species selector to:
 - choose a species genome, to work with in other apps and
 - explore the genetic composition of a species genome.
 
+![](media/species-selector.png)
+
 ## How to choose a species genome
 
 You must select a species genome to start using any Ensembl app. 
