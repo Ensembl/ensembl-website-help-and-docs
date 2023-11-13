@@ -9,9 +9,9 @@ related_articles:
 
 You can use the Species selector to:
 
-* choose a species genome, to work with in other apps and
+- choose a species genome, to work with in other apps and
 
-* explore the genetic composition of a species genome.
+- explore the genetic composition of a species genome.
 
 ## How to choose a species genome
 
