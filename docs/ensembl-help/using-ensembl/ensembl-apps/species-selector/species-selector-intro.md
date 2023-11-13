@@ -7,9 +7,10 @@ related_articles:
 ---
 # What is the Species selector for?
 
-You can use the Species selector to
+You can use the Species selector to:
 
 * choose a species genome, to work with in other apps and
+
 * explore the genetic composition of a species genome.
 
 ## How to choose a species genome
