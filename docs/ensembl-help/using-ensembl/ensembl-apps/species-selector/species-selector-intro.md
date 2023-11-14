@@ -26,7 +26,7 @@ There are two ways to select a species genome in the Species selector:
 
 Select the icon representing your species of interest from the 42 most popular species.
 
-A table of the genome assemblies for that species is shown. 
+You will see a table of the genome assemblies for that species. 
 
 Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the Add button.
 
@@ -36,19 +36,14 @@ The selected genome name and assembly appear in a lozenge at the top of the view
 
 You can search for a species genome, using the 
 * common name 
-
 * scientific name
-
 * type, strain or cultivar
-
 * assembly name and
-
 * assembly accession number.
 
 Depending on your search term you will see
 
 * a species genome assembly or
-
 * a table of the genome assemblies.
 
 Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the green Add button.
@@ -68,30 +63,29 @@ The species genome lozenges are displayed in a row at the top of each app.
 The genome assembly table for each species displays information chosen to help you decide which genome assemblies you would like to work with. ie Assembly name, Assembly accession number, type, strain and cultivar.
 
 You can also filter a table of genome assemblies by entering the
+
 * common name 
-
 * scientific name
-
 * type, strain or cultivar
-
 * assembly name
-
 * assembly accession number
-
 * annotation provider or
-
 * annotation method
 
 into the filter box above the table of genome assemblies.
+
+## Removing a species genome
+
+You can remove by selecting the 'Remove' button on the Species homepage.
+
+## Deactivating a species genome in your list 
+
+You can deactivate a species genome by toogling to 'Don't use' at the top of the Species homepage.
+
+The deactivated species genome lozenge will remain in your list and turn grey. Active species genome lozenges reamin blue.
 
 ## The Species homepage  
 
 The Species homepage contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
 
 You can navigate to a Species homepage by clicking on the individual species name. 
-
-## Removing a species genome
-
-You can remove or disable selected species from the Species homepage by selecting the 'Remove' button.
-
-
