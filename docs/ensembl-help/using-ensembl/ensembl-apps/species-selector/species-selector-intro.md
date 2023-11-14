@@ -31,11 +31,11 @@ There are two ways to select a species genome in the Species selector:
 
 ### Choose a genome from the 42 most popular species.
 
-![Icons of eight popular species](media/popular-species-icons.png)
+<img src="media/popular-species-icons.png" width="320" alt="eight species icons">
 
 <figcaption>
 
- The Species selector landing page showing a search box and icons of the 42 most popular species.
+ Eight icons of the 42 most popular species showing the number of genome assemblies available for each species.
 
 </figcaption>
 
