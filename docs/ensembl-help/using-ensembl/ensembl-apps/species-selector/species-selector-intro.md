@@ -103,11 +103,11 @@ into the filter box above the table of genome assemblies.
 
 You can remove by selecting the 'Remove' button on the Species homepage.
 
-<img src="media/remove-button-species-homepage.png" width="320" alt="Remove species button on species homepage">
+![Remove species button on species homepage](media/remove-button-species-homepage.png)
 
 A warning message will be displayed. Select the green 'Remove species' button to delete the species genome fron your list.
 
-<img src="media/remove-species-genome.png" width="320" alt="Remove button and warning message">
+![Remove button and warning message](media/remove-species-genome.png)
 
 
 ## Deactivating a species genome in your list 
