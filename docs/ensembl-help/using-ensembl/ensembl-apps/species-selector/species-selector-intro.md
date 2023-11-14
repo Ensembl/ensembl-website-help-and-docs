@@ -26,9 +26,18 @@ You must select a species genome to start using any Ensembl app.
 
 You can then investigate the genes, variants and orthologues of that species genome in another app ie the Genome browser or Entity viewer.
 
+
 There are two ways to select a species genome in the Species selector:
 
 ### Choose a genome from the 42 most popular species.
+
+![Icons of eight popular species](media/popular-species-icons.png)
+
+<figcaption>
+
+ The Species selector landing page showing a search box and icons of the 42 most popular species.
+
+</figcaption>
 
 Select the icon representing your species of interest from the 42 most popular species.
 
