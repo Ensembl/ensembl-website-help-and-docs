@@ -79,6 +79,10 @@ The species genome lozenges are displayed in a row at the top of each app.
 
 The genome assembly table for each species displays information chosen to help you decide which genome assemblies you would like to work with. ie Assembly name, Assembly accession number, type, strain and cultivar.
 
+![A table of genome assembly information](media/genome-assembly-table-full-width.png)
+
+#### How to filter the table contents
+
 You can also filter a table of genome assemblies by entering the
 
 * common name 
@@ -90,8 +94,6 @@ You can also filter a table of genome assemblies by entering the
 * annotation method
 
 into the filter box above the table of genome assemblies.
-
-![A table of genome assembly information](media/genome-assembly-table-full-width.png)
 
 ## Removing a species genome
 
