@@ -77,7 +77,7 @@ The collection of species genomes can be used in all other apps, ie the Genome b
 
 The species genome lozenges are displayed in a row at the top of each app.
 
-<img src="media/media/multiple-species-selected.png" width="320" alt="Selected species genome lozenges">
+<img src="/media/multiple-species-selected.png" width="320" alt="Selected species genome lozenges">
 
 ### How to find specific genomes in a large table of assemblies
 
