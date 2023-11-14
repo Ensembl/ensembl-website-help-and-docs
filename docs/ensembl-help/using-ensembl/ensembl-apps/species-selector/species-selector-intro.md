@@ -79,8 +79,6 @@ The species genome lozenges are displayed in a row at the top of each app.
 
 ![Species marked for selection in a genome assembly table](media/multiple-species-selected.png)
 
-<img src="media/multiple-species-selected.png" width="320" alt="Three species genome lozenges">
-
 ### How to find specific genomes in a large table of assemblies
 
 The genome assembly table for each species displays information chosen to help you decide which genome assemblies you would like to work with. ie Assembly name, Assembly accession number, type, strain and cultivar.
