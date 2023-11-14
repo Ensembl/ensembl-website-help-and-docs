@@ -16,7 +16,7 @@ The apps currently available to you are:
 
 ![](../../img/id-species-selector.svg)
 
-Use the Species selector to choose a species genome of interest. You must select a species genome to use the other apps.
+Use the Species selector to choose a species genome of interest. You must select a species genome to use the Ensembl other apps ie Genome browser and Entity viewer.
 
 ![](../../img/id-genome-browser.svg)
 
