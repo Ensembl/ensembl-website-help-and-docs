@@ -43,6 +43,8 @@ Select the icon representing your species of interest from the 42 most popular s
 
 You will see a table of the genome assemblies for that species. 
 
+![A table of genome assembly information](media/genome-assembly-table.png)
+
 Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the Add button.
 
 The selected genome name and assembly appear in a lozenge at the top of the view in each app.
@@ -88,6 +90,8 @@ You can also filter a table of genome assemblies by entering the
 * annotation method
 
 into the filter box above the table of genome assemblies.
+
+![A table of genome assembly information](media/genome-assembly-table-full-width.png)
 
 ## Removing a species genome
 
