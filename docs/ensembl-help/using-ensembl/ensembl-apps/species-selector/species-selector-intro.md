@@ -12,7 +12,13 @@ You can use the Species selector to:
 - choose a species genome, to work with in other apps and
 - explore the genetic composition of a species genome.
 
-![](media/species-selector.png)
+![Species selector showing search box and the 42 most popular species](media/species-selector.png)
+
+<figcaption>
+
+ The Species selector landing page showing a search box and icons of the 42 most popular species.
+
+</figcaption>
 
 ## How to choose a species genome
 
