@@ -51,14 +51,14 @@ The selected genome name and assembly appear in a lozenge at the top of the view
 
 ### Search for a species genome
 
-You can search for a species genome, using the 
+You can search for a species genome, using the: 
 * common name 
 * scientific name
 * type, strain or cultivar
 * assembly name and
 * assembly accession number.
 
-Depending on your search term you will see
+Depending on your search term you will see:
 
 * a species genome assembly or
 * a table of the genome assemblies.
@@ -71,9 +71,15 @@ The selected genome name and assembly appear in a lozenge at the top of each app
 
 You can create a collection of species genomes by adding multiple genomes from a table of assemblies.
 
+![Species marked for selection in a genome assembly table](media/selecting-from-table.png)
+
 The collection of species genomes can be used in all other apps, ie the Genome browser or Entity viewer.
 
 The species genome lozenges are displayed in a row at the top of each app.
+
+![Species marked for selection in a genome assembly table](media/multiple-species-selected.png)
+
+<img src="media/multiple-species-selected.png" width="320" alt="Three species genome lozenges">
 
 ### How to find specific genomes in a large table of assemblies
 
@@ -83,7 +89,7 @@ The genome assembly table for each species displays information chosen to help y
 
 #### How to filter the table contents
 
-You can also filter a table of genome assemblies by entering the
+You can also filter a table of genome assemblies by entering the:
 
 * common name 
 * scientific name
