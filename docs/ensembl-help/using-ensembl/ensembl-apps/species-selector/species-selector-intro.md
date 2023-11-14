@@ -77,7 +77,7 @@ The collection of species genomes can be used in all other apps, ie the Genome b
 
 The species genome lozenges are displayed in a row at the top of each app.
 
-![Species marked for selection in a genome assembly table](media/multiple-species-selected.png)
+<img src="media/media/multiple-species-selected.png" width="320" alt="Selected species genome lozenges">
 
 ### How to find specific genomes in a large table of assemblies
 
@@ -103,7 +103,7 @@ into the filter box above the table of genome assemblies.
 
 You can remove by selecting the 'Remove' button on the Species homepage.
 
-<img src="media/remove-button-species-homepage" width="320" alt="Remove button on species homepage">
+<img src="media/remove-button-species-homepage.png" width="320" alt="Remove button on species homepage">
 
 A warning message will be displayed. Select the green Remove button to delete the species genome fron your list.
 
