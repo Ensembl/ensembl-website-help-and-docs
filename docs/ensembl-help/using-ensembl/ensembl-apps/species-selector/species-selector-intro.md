@@ -76,7 +76,7 @@ You can create a list of genomes by adding one or more genome assemblies from th
 
 ![Species marked for selection in a genome assembly table](media/selecting-from-table.png)
 
-The collection of species genomes can be used in all other apps, ie the Genome browser or Entity viewer.
+Your list of species genomes can be used in all other apps, ie the Genome browser or Entity viewer.
 
 The species genome lozenges are displayed in a row at the top of each app.
 
