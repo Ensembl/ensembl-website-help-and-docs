@@ -78,7 +78,7 @@ You can create a list of genomes by adding one or more genome assemblies from th
 
 Your list of species genomes can be used in all other apps, ie the Genome browser or Entity viewer.
 
-The species genome lozenges are displayed in a row at the top of each app.
+The lozenges representing the species genomes are displayed in a row at the top of each app.
 
 <img src="/media/multiple-species-selected.png" width="320" alt="Selected species genome lozenges">
 
