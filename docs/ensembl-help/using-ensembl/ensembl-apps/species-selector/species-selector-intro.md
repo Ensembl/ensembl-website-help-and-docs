@@ -47,7 +47,8 @@ You will see a table of the genome assemblies for that species.
 
 ![A table of genome assembly information](media/genome-assembly-table.png)
 
-Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the Add button.
+Pick the genome assemblies of interest to you by selecting the box to the left of each genome assembly followed by
+the Add button.
 
 The selected genome name and assembly appear in a lozenge at the top of the view in each app.
 
@@ -62,16 +63,16 @@ You can search for a species genome, using the:
 
 Depending on your search term you will see:
 
-- a species genome assembly or
-- a table of the genome assemblies.
+- a single species genome or
+- a table of genome assemblies for a species.
 
-Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the green Add button.
+Pick the genome assembly you are interested in using the box to the left of an assembly and select the green Add button.
 
-The selected genome name and assembly appear in a lozenge at the top of each app.
+The details of the chosen species genome will appear in a lozenge at the top of each app.
 
-## How to create a list of species genomes
+## How to create a list of genomes
 
-You can create a of species genomes by adding multiple genomes from a table of assemblies.
+You can create a list of genomes by adding one or more genome assemblies from the table.
 
 ![Species marked for selection in a genome assembly table](media/selecting-from-table.png)
 
@@ -83,9 +84,11 @@ The species genome lozenges are displayed in a row at the top of each app.
 
 ### How to find specific genomes in a large table of assemblies
 
-The genome assembly table for each species displays information chosen to help you decide which genome assemblies you would like to work with. ie Assembly name, Assembly accession number, type, strain and cultivar.
+The genome assembly table for each species displays information chosen to help you decide which genome you would like to work with. ie Assembly name, Assembly accession number, type, strain and cultivar.
 
 ![A table of genome assembly information](media/genome-assembly-table-full-width.png)
+
+Select Show more to see the whole table.
 
 #### How to filter the table contents
 
