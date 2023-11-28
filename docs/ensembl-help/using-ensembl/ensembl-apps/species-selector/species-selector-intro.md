@@ -9,10 +9,10 @@ related_articles:
 
 You can use the Species selector to:
 
-- choose a genome for a species, to work with in other apps 
+- choose a species genome, to work with in other apps 
 - create a list of genomes, to work with in other apps 
 - remove a genome from your list and 
-- explore the genes of genome.
+- explore the composition of a genome ie the number of coding and non coding genes, variants, regulatory features and pseudogenes.
 
 ![Species selector showing search box and the 42 most popular species](media/species-selector.png)
 
@@ -22,7 +22,7 @@ You can use the Species selector to:
 
 </figcaption>
 
-## How to choose a species genome
+## How to choose a genome for a species
 
 You must select a species genome to start using any Ensembl app. 
 
@@ -31,7 +31,7 @@ You can then investigate the genes, variants and orthologues of that species gen
 
 There are two ways to select a species genome in the Species selector:
 
-### Choose a genome from the 42 most popular species.
+### Choosing a genome from the 42 most popular species.
 
 <img src="media/popular-species-icons.png" width="320" alt="eight species icons">
 
@@ -51,19 +51,19 @@ Pick the genome assembly you are interested in by marking the box to the left of
 
 The selected genome name and assembly appear in a lozenge at the top of the view in each app.
 
-### Search for a species genome
+### Searching for a species genome
 
 You can search for a species genome, using the: 
-* common name 
-* scientific name
-* type, strain or cultivar
-* assembly name and
-* assembly accession number.
+- common name 
+- scientific name
+- type, strain or cultivar
+- assembly name and
+- assembly accession number.
 
 Depending on your search term you will see:
 
-* a species genome assembly or
-* a table of the genome assemblies.
+- a species genome assembly or
+- a table of the genome assemblies.
 
 Pick the genome assembly you are interested in by marking the box to the left of an assembly and selecting the green Add button.
 
@@ -91,13 +91,13 @@ The genome assembly table for each species displays information chosen to help y
 
 You can also filter a table of genome assemblies by entering the:
 
-* common name 
-* scientific name
-* type, strain or cultivar
-* assembly name
-* assembly accession number
-* annotation provider or
-* annotation method
+- common name 
+- scientific name
+- type, strain or cultivar
+- assembly name
+- assembly accession number
+- annotation provider or
+- annotation method
 
 into the filter box above the table of genome assemblies.
 
