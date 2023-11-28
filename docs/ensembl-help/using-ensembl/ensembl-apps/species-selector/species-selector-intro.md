@@ -88,7 +88,7 @@ The genome assembly table for each species displays information chosen to help y
 
 ![A table of genome assembly information](media/genome-assembly-table-full-width.png)
 
-Select Show more to see the whole table.
+Select Show more (top right) to see the whole table.
 
 #### How to filter the table contents
 
