@@ -123,7 +123,7 @@ You can deactivate a species genome by toogling to 'Don't use' at the top of the
 
 <img src="media/do-not-use-ss.png" width="320" alt="Do not use selected">
 
-The deactivated species genome lozenge will remain in your list and turn grey. Active species genome lozenges reamin blue.
+The deactivated species genome lozenge will remain in your list and turn grey. Active species genome lozenges remain blue.
 
 ## The Species homepage  
 
