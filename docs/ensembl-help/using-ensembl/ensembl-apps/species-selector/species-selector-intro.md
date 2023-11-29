@@ -108,15 +108,17 @@ into the filter box above the table of genome assemblies.
 
 You can remove a genome by selecting the 'Remove species' button, on the top right of the Species homepage. 
 
-### The Species homepage 
-
-The Species homepage also contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
+#### The Species homepage 
 
 You can navigate to a Species homepage by clicking on the species genome lozenge. 
 
+The Species homepage also contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
+
 ![Remove species button on species homepage](media/remove-button-species-homepage.png)
 
-A warning message will be displayed. Select the green 'Remove species' button to delete the species genome fron your list.
+### Remove genome
+
+A warning message will be displayed. Select the green 'Remove' button to delete the species genome fron your list.
 
 ![Remove button and warning message](media/remove-species-genome.png)
 
