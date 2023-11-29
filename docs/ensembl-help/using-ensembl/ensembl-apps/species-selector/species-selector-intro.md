@@ -106,7 +106,13 @@ into the filter box above the table of genome assemblies.
 
 ## Removing a species genome
 
-You can remove by selecting the 'Remove' button on the Species homepage.
+### The Species homepage 
+
+You can remove by selecting the 'Remove' button on the Species homepage. 
+
+The Species homepage also contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
+
+You can navigate to a Species homepage by clicking on the species genome lozenge. 
 
 ![Remove species button on species homepage](media/remove-button-species-homepage.png)
 
@@ -125,8 +131,4 @@ You can deactivate a species genome by toogling to 'Don't use' at the top of the
 
 The deactivated species genome lozenge will remain in your list and turn grey. Active species genome lozenges remain blue.
 
-## The Species homepage  
 
-The Species homepage contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes. 
-
-You can navigate to a Species homepage by clicking on the individual species name. 
