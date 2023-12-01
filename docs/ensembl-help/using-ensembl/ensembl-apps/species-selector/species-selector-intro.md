@@ -14,13 +14,12 @@ You can use the Species selector to:
 - remove a genome from your list and 
 - explore the composition of a genome ie the number of coding and non coding genes, variants, regulatory features and pseudogenes.
 
-![Species selector showing search box and the 42 most popular species](media/species-selector.png)
-
-<figcaption>
-
- The Species selector landing page showing a search box and icons of the 42 most popular species.
-
-</figcaption>
+<figure>
+  <img src="media/species-selector.png" />
+  <figcaption>
+    The Species selector landing page showing a search box and icons of the 42 most popular species.
+  </figcaption>
+</figure>
 
 ## How to choose a genome for a species
 
@@ -33,13 +32,13 @@ There are two ways to select a species genome in the Species selector:
 
 ### Choosing a genome from the 42 most popular species.
 
-<img src="media/popular-species-icons.png" width="320" alt="eight species icons">
+<figure>
+  <img src="media/popular-species-icons.png" width="320" alt="eight species icons">
+  <figcaption>
+    Eight icons of the 42 most popular species showing the number of genome assemblies available for each species.
+  </figcaption>
+</figure>
 
-<figcaption>
-
- Eight icons of the 42 most popular species showing the number of genome assemblies available for each species.
-
-</figcaption>
 
 Select the icon representing your species of interest from the 42 most popular species.
 

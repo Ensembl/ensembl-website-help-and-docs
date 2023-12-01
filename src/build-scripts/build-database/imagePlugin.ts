@@ -15,7 +15,6 @@ const imagePlugin = () => (tree: Node, file: any) => {
     test,
     (node: Node, ancestors) => {
       updateImagePath(node as Element, file);
-      updateImageWrapperElement(ancestors as Element[]);
     }
   );
 };
@@ -41,11 +40,6 @@ const updateImagePath = (imageNode: Element, file: any) => {
 
 
   imageNode.properties.src = destImagePath;
-};
-
-const updateImageWrapperElement = (imageAncestors: Element[]) => {
-  const immediateAncestor = imageAncestors[imageAncestors.length - 1];
-  immediateAncestor.tagName = 'figure';
 };
 
 
