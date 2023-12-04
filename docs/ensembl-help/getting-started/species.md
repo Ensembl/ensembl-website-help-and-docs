@@ -12,6 +12,6 @@ To start use the Species selector to select a species genome to work with in oth
 
 ![](../../img/id-species-selector.svg)
 
-Here you can choose the species genomes and assemblies of interest to you. This will be extended to strains, breeds and varieties in the future. 
+Here you can choose the genomes of species, specific assemblies, strains, breeds and varieties of interest to you, for use in other apps ie the Genome browser and Entity viewer.
 
-You can select multiple species genomes to create a list in the Species selector to be used in other apps.
+You can also select multiple species genomes to create a list of your ‘favourite’ genomes for use in the other apps.
