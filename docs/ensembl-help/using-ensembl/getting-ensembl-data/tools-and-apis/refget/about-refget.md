@@ -26,7 +26,7 @@ CACCCTAAACCCTAACCCCTAACCCTAACCCTAACCCTAACCCTAACCCTAACCCCTAAACCCTAACCCTAACCCTAACC
 To retrieve metadata about a sequence (such as length and other known identifiers) you can use the metadata endpoint.
 
 ```bash
-$ curl -H'Accept: application/json' 'https://beta.ensembl.org/data/refget/sequence/e469247288ceb332aee524caec92bb22/,metadata'
+$ curl -H'Accept: application/json' 'https://beta.ensembl.org/data/refget/sequence/e469247288ceb332aee524caec92bb22/metadata'
 {"metadata": {"aliases": [{"alias": "ga4gh:SQ.S9dv70MOE6RecB0OYnc32EilaGTDWca-", "naming_authority": "ga4gh"}, {"alias": "1", "naming_authority": "Ensembl"}], "length": 248387328, "md5": "e469247288ceb332aee524caec92bb22", "trunc512": "4bd76fef430e13a45e701d0e627737d848a56864c359c6be"}}
 ```
 
