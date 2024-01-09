@@ -5,7 +5,7 @@ description: Downloading sequences
 related_articles:
   - href: ../ensembl-apps/entity-viewer/entity-viewer.md
   - href: ../ensembl-apps/genome-browser/browser.md
-  - href: ../getting-ensembl-data/refget.md
+  - href: ../getting-ensembl-data/tools-and-apis/refget/refget.md
 
 ---
 

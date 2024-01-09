@@ -39,7 +39,7 @@ You can use the [Python `refget`](https://pypi.org/project/refget/) library to f
 
 ## Accessing sequence data for features in Ensembl
 
-The ["Getting started with Graphql"](../tools-and-apis/graphql/using-graphql.md) and ["Using Graphql"](../tools-and-apis/graphql/using-graphql.md) pages cover how to access data through Ensembl GraphQL service and the example below assumes that this service is being used.
+The ["Getting started with Graphql"](/help/articles/getting-started-with-ensembl-graph-ql-services) and ["Using Graphql"](/help/articles/using-graph-ql) pages cover how to access data through Ensembl GraphQL service and the example below assumes that this service is being used.
 
 Before starting you must obtain a `genome_id` for the genome (assembly + annotation) of interest. We are using `"GCA_000001405.29`, which represents the human assembly GRCh38.p14 (hg38).
 
@@ -69,7 +69,7 @@ returns:
 
 ### Fetching the genomic sequence for a feature
 
-Using the previously retrieved `genome_id`, we can search for a feature (such as a gene) you myst find the checksum for a feature's (gene, transcript etc.) region, and its start and end coordinates via `slice`
+Using the previously retrieved `genome_id`, we can search for a feature (such as a gene) you must find the checksum for a feature's (gene, transcript etc.) region, and its start and end coordinates via `slice`
 
 ```text
 query {
@@ -126,7 +126,7 @@ curl -H'Accept: text/plain' "https://beta.ensembl.org/data/refget/sequence/b18e6
 returns:
 
 ```text
-GGCCATTAATCCAGTGGTGTTTATT ... CCCGGAGAGCCCGTCT% 
+GGCCATTAATCCAGTGGTGTTTATT ... CCCGGAGAGCCCGTCT 
 ```
 
 ### Fetching cDNA, CDS and protein sequences
