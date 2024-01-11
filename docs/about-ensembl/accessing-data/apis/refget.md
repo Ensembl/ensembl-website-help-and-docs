@@ -15,7 +15,7 @@ curl -H'Accept: text/plain' "https://beta.ensembl.org/data/refget/sequence/17dab
 AAGCTTTTGTAAGATCGGCTCGCTTTGGGGAACAGGTCTTGAGAGAACATCCCTTTTAAGGTCAGAACAAAGGTATTTCATAGGTCCCAGGTCGTGTCCC%
 ```
 
-In the example above, the reference sequence identified by the checksum `17dab79b963ccd8e7377cef59a54fe1c` and the data between the genomic coordinates 32315086 and 32315185 (100bp) is returned.
+In the example above, the reference sequence identified by the checksum `17dab79b963ccd8e7377cef59a54fe1c` and the data between the genomic coordinates (1-based) 32315086 and 32315185 (100bp) is returned.
 
 ### Locations and coordinates in refget
 
