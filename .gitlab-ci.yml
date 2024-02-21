@@ -68,4 +68,3 @@ Dev:WP51:HL:
   <<: *deploy-rules
   environment:
     name: wp51-hl-development
-
