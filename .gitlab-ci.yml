@@ -35,51 +35,12 @@ variables:
 
 .deploy-template: &deploy-rules
   rules:
-    - if: '$CI_DEPLOY_FREEZE == null && $CI_COMMIT_BRANCH == "main"'
+    - if: '$CI_DEPLOY_FREEZE == null && $CI_COMMIT_BRANCH == "use-gitlab-agent"'
       when: always
 
 build:
   extends: .build
 
-# Live (production) deployment: beta.ensembl.org
-Live:
-  extends: .deploy
-  <<: *deploy-rules
-  environment:
-    name: production
-  variables:
-    AGENT: ${FALLBACK_AGENT}
-    NS: ${FALLBACK_NS}
-
-# Fallback deployment for the live (production) deployment: beta.ensembl.org (Hinxton)
-LiveFallback:
-  extends: .deploy
-  <<: *deploy-rules
-  environment:
-    name: fallback
-  variables:
-    AGENT: ${FALLBACK_AGENT}
-    NS: ${FALLBACK_NS}
-
-# Staging deployment: staging-2020.ensembl.org
-Staging:
-  extends: .deploy
-  <<: *deploy-rules
-  environment:
-    name: staging
-  variables: 
-    AGENT: ${FALLBACK_AGENT}
-    NS: ${FALLBACK_NS}
-
-# Internal deployment: internal-2020.ensembl.org
-Internal:
-  extends: .deploy
-  <<: *deploy-rules
-  environment:
-    name: internal
-  variables:
-    AGENT: ${FALLBACK_AGENT}
-    NS: ${FALLBACK_NS}
 
 # Development deployment: dev-2020.ensembl.org
 Dev:
@@ -88,5 +49,5 @@ Dev:
   environment:
     name: development
   variables:
-    AGENT: ${FALLBACK_AGENT}
-    NS: ${FALLBACK_NS}
+    AGENT: ${DEV_AGENT}
+    NS: ${DEV_NS}
