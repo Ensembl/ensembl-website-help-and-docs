@@ -15,6 +15,7 @@ const imagePlugin = () => (tree: Node, file: any) => {
     test,
     (node: Node, ancestors) => {
       updateImagePath(node as Element, file);
+      updateImageWrapper(ancestors[ancestors.length - 1]);
     }
   );
 };
@@ -41,6 +42,17 @@ const updateImagePath = (imageNode: Element, file: any) => {
 
   imageNode.properties.src = destImagePath;
 };
+
+/**
+ * Markdown, by default, wraps inline elements in a paragraph tag.
+ * For images, this behaviour is undesirable.
+ */
+const updateImageWrapper = (imageParentNode: Node) => {
+  if (imageParentNode.tagName === 'p' && (imageParentNode.children as any[]).length === 1) {
+    // i.e. if the image parent is a paragraph with only one child, which is the image
+    imageParentNode.tagName = 'div';
+  }
+}
 
 
 export default imagePlugin;
