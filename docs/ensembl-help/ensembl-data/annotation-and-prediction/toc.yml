@@ -1,2 +1,4 @@
 - name: Gene annotation
   href: gene-annotation.md
+- name: Homology annotation
+  href: homology-annotation.md
