@@ -37,15 +37,15 @@ Technical details
 To optimise computational efficiency and ensure the most informative genome comparisons, we utilise reference genome collections representing major clades in the tree of life (along with genomes of special interest as outgroups). For each query species, we select the taxonomically closest collection for homology inference or employ a default collection if a more specific one is not found.
 The current reference collections are the following (with links to their NCBI taxonomy trees):
 
-[Actinopterygii](https://itol.embl.de/tree/1722225465338081713949786)
-[Arthropoda](https://itol.embl.de/tree/1722225465354261713949845)
-[Hexapoda](https://itol.embl.de/tree/1722225465378991713949952)
-[Mammalia](https://itol.embl.de/tree/1722225465387561713950008)
-[Metazoa](https://itol.embl.de/tree/1722225465403071713950062)
-[Protostomia](https://itol.embl.de/tree/1722225465415291713950101)
-[Sauropsida](https://itol.embl.de/tree/1722225465437341713950191)
-[Vertebrata](https://itol.embl.de/tree/172222546557211713950590)
-[default](https://itol.embl.de/tree/1722225465372551713949911)
+- [Actinopterygii](https://itol.embl.de/tree/1722225465338081713949786)
+- [Arthropoda](https://itol.embl.de/tree/1722225465354261713949845)
+- [Hexapoda](https://itol.embl.de/tree/1722225465378991713949952)
+- [Mammalia](https://itol.embl.de/tree/1722225465387561713950008)
+- [Metazoa](https://itol.embl.de/tree/1722225465403071713950062)
+- [Protostomia](https://itol.embl.de/tree/1722225465415291713950101)
+- [Sauropsida](https://itol.embl.de/tree/1722225465437341713950191)
+- [Vertebrata](https://itol.embl.de/tree/172222546557211713950590)
+- [default](https://itol.embl.de/tree/1722225465372551713949911)
 
 After selecting the appropriate reference collection, the annotation pipeline first runs a BLAST search of the query proteome sequences against the proteins from the reference collection using DIAMOND [11], which has proven to be a good basis for RBBH homology inference [9] by offering a combination of speed and sensitivity that is essential for large-scale analyses. In the second step, the proteins from the reference collection are searched against the query proteome.
 The hits from both searches are ranked by alignment features:
