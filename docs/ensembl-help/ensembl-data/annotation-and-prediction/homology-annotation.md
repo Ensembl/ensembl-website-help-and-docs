@@ -13,7 +13,6 @@ Background on homologies
 ![image](media/homology.png)
 **Fig 1.** **Gene phylogeny as red and blue branches within grey species phylogeny**. Modified from  [Wikipedia](https://en.wikipedia.org/wiki/Sequence_homology#/media/File:Ortholog_paralog_analog_examples.svg) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
 
-
 Understanding the evolutionary relationships between genes is essential for deciphering their functions and histories [1, 2, 3]. Homologous genes share a common ancestor, being separated (“split”) by either a speciation event (giving rise to orthologues, e.g. Gene A1 and Gene A2 in  **Fig 1.**) or a gene duplication event (resulting in paralogues, e.g.  Gene A1 and Gene B1 in **Fig 1.**) [1, 4].
 Identifying homologous genes is fundamental to inferring the function of genes in newly sequenced genomes by transferring annotation from better-studied organisms [3, 5].
 
@@ -49,6 +48,7 @@ The current reference collections are the following (with links to their NCBI ta
 
 After selecting the appropriate reference collection, the annotation pipeline first runs a BLAST search of the query proteome sequences against the proteins from the reference collection using DIAMOND [11], which has proven to be a good basis for RBBH homology inference [9] by offering a combination of speed and sensitivity that is essential for large-scale analyses. In the second step, the proteins from the reference collection are searched against the query proteome.
 The hits from both searches are ranked by alignment features:
+
 - score
 - E-value
 - percent identity
@@ -63,24 +63,14 @@ References
 ----------
 
  1. Altenhoff, A.M., & Dessimoz, C. (2012). “Inferring orthology and paralogy.” in *Evolutionary Genomics: Statistical and Computational Methods, Volume 1*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/22407712/)
-
  2. Kristensen, D.M., Wolf, Y.I., Mushegian, A.R., & Koonin, E.V. (2011). “Computational methods for Gene Orthology inference.” *Briefings in Bioinformatics*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/21690100/)
-
  3. Altenhoff AM, Studer RA, Robinson-Rechavi M, Dessimoz C. (2012). "Resolving the ortholog conjecture: orthologs tend to be weakly, but significantly, more similar in function than paralogs." *PLoS Computational Biology*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/22615551/)
-
  4. Sequence homology. (2024, February 17). In *Wikipedia*. [https://en.wikipedia.org/wiki/Sequence_homology](https://en.wikipedia.org/wiki/Sequence_homology).
-
  5. Poptsova MS, Gogarten JP. (2007). "BranchClust: a phylogenetic algorithm for selecting gene families." *BMC Bioinformatics*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/17425803/)
-
  6. Emms DM, Kelly S. (2019). "OrthoFinder: phylogenetic orthology inference for comparative genomics." *Genome Biology*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/31727128/)
-
  7. Moreno-Hagelsieb G, Latimer K. (2008). "Choosing BLAST options for better detection of orthologs as reciprocal best hits." *Bioinformatics*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/18042555/)
-
  8. Ward N, Moreno-Hagelsieb G. (2014). "Quickly finding orthologs as reciprocal best hits with BLAT, LAST, and UBLAST: how much do we miss?" *PLoS One*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/25013894/)
-
  9. Hernández-Salmerón JE, Moreno-Hagelsieb G. (2020). "Progress in quickly finding orthologs as reciprocal best hits: comparing blast, last, diamond and MMseqs2." *BMC Genomics*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/33099302/)
-
  10. Dalquen DA, Dessimoz C. (2013). "Bidirectional best hits miss many orthologs in duplication-rich clades such as plants and animals." *Genome Biology and Evolution*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/24013106/)
-
  11. Buchfink B, Reuter K, Drost HG. (2021). "Sensitive protein alignments at tree-of-life scale using DIAMOND." *Nature Methods*. [PubMed](https://pubmed.ncbi.nlm.nih.gov/33828273/)
 
