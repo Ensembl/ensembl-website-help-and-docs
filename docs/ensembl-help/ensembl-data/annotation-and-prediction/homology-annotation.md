@@ -18,6 +18,7 @@ Background on homologies
   </figcaption>
 </figure>
 
+
 Understanding the evolutionary relationships between genes is essential for deciphering their functions and histories [1, 2, 3]. Homologous genes share a common ancestor, being separated (“split”) by either a speciation event (giving rise to orthologues, e.g. Gene A1 and Gene A2 in  **Fig 1.**) or a gene duplication event (resulting in paralogues, e.g.  Gene A1 and Gene B1 in **Fig 1.**) [1, 4].
 Identifying homologous genes is fundamental to inferring the function of genes in newly sequenced genomes by transferring annotation from better-studied organisms [3, 5].
 
@@ -34,6 +35,7 @@ The most fine-grained methods for inferring homology relationships, following an
   Fig 2. Illustration of reciprocal best BLAST hits (RBBH) and best BLAST hits (BBH). The genes from the query genome are searched against the reference genome and the best hits are identified (green arrows). Conversely, the best hits from the reference genome to the query genome are identified (orange arrows). When two genes find each other as the best match in both directions, they are considered reciprocal best BLAST hits (RBBH) and are strong candidates for being orthologs (e.g.query Gene A and reference Gene A). In the absence of reciprocal best hits, the best blast hit(s) can be identified as putative homologs (query Gene C2 and reference Gene C2).
   </figcaption>
 </figure>
+
 
 A more scalable approach for inferring homologies, primarily orthologies, is the reciprocal best BLAST hit (RBBH) strategy [1, 5, 7, 8, 9]. The core idea behind RBBH is that true orthologues (genes separated by speciation) are likely to be the most similar sequence between two different genomes. This is because orthologues tend to have conserved functions subjected to similar evolutionary pressures [2, 3].
 Hence, RBBH involves searching a query protein sequence from one genome against another genome and checking if the best hit finds the original query sequence as its best hit when searching back against the original genome (**Fig 2.**) [1, 5, 7, 8, 9].
