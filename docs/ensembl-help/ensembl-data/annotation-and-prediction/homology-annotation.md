@@ -10,8 +10,13 @@ The homology annotation pipeline
 Background on homologies
 ------------------------
 
-![image](media/homology.png)
-**Fig 1.** **Gene phylogeny as red and blue branches within grey species phylogeny**. Modified from  [Wikipedia](https://en.wikipedia.org/wiki/Sequence_homology#/media/File:Ortholog_paralog_analog_examples.svg) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+<figure>
+  <img src="media/homology.png" />
+  <figcaption>
+  Fig 1. Gene phylogeny as red and blue branches within grey species phylogeny. Modified from  [Wikipedia](https://en.wikipedia.org/wiki/Sequence_
+homology#/media/File:Ortholog_paralog_analog_examples.svg) under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+  </figcaption>
+</figure>
 
 Understanding the evolutionary relationships between genes is essential for deciphering their functions and histories [1, 2, 3]. Homologous genes share a common ancestor, being separated (“split”) by either a speciation event (giving rise to orthologues, e.g. Gene A1 and Gene A2 in  **Fig 1.**) or a gene duplication event (resulting in paralogues, e.g.  Gene A1 and Gene B1 in **Fig 1.**) [1, 4].
 Identifying homologous genes is fundamental to inferring the function of genes in newly sequenced genomes by transferring annotation from better-studied organisms [3, 5].
@@ -23,8 +28,12 @@ Homologous genes, due to their common ancestry, demonstrate sequence similarity 
 
 The most fine-grained methods for inferring homology relationships, following an initial grouping into potential homologous sets, considers sequence similarity in the context of a [multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) which is used to build a [gene tree](https://en.wikipedia.org/wiki/Phylogenetic_tree). By comparing the gene tree to the known species phylogeny (a process known as reconciliation) the speciation and duplication nodes are identified and the pairwise orthology and paralogy relationships are inferred [1 ,6]. However, these methods do not scale well with an increasing number of considered genomes.
 
-![image](media/RBBH.png)
-**Fig 2.** **Illustration of reciprocal best BLAST hits (RBBH) and best BLAST hits (BBH)**. The genes from the query genome are searched against the reference genome and the best hits are identified (green arrows). Conversely, the best hits from the reference genome to the query genome are identified (orange arrows). When two genes find each other as the best match in both directions, they are considered reciprocal best BLAST hits (RBBH) and are strong candidates for being orthologs (e.g.query Gene A and reference Gene A). In the absence of reciprocal best hits, the best blast hit(s) can be identified as putative homologs (query Gene C2 and reference Gene C2).
+<figure>
+  <img src="media/RBBH.png" />
+  <figcaption>
+  Fig 2. Illustration of reciprocal best BLAST hits (RBBH) and best BLAST hits (BBH). The genes from the query genome are searched against the reference genome and the best hits are identified (green arrows). Conversely, the best hits from the reference genome to the query genome are identified (orange arrows). When two genes find each other as the best match in both directions, they are considered reciprocal best BLAST hits (RBBH) and are strong candidates for being orthologs (e.g.query Gene A and reference Gene A). In the absence of reciprocal best hits, the best blast hit(s) can be identified as putative homologs (query Gene C2 and reference Gene C2).
+  </figcaption>
+</figure>
 
 A more scalable approach for inferring homologies, primarily orthologies, is the reciprocal best BLAST hit (RBBH) strategy [1, 5, 7, 8, 9]. The core idea behind RBBH is that true orthologues (genes separated by speciation) are likely to be the most similar sequence between two different genomes. This is because orthologues tend to have conserved functions subjected to similar evolutionary pressures [2, 3].
 Hence, RBBH involves searching a query protein sequence from one genome against another genome and checking if the best hit finds the original query sequence as its best hit when searching back against the original genome (**Fig 2.**) [1, 5, 7, 8, 9].
