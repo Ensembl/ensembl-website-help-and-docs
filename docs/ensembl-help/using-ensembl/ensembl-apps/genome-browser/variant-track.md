@@ -21,12 +21,21 @@ Your gene of interest is the focus of the view in the Genome browser.
 
 The gene boundaries are highlighted in the browser by red dotted lines.
 
-
 The variant track is displayed toward the bottom of the view as a green line. 
+
+<figure>
+  <img src="media/variant-track-focus-gene.png" />
+  <figcaption>
+    A focus gene view of the genome browser showing the variant track in green. The track is marked with a V on the right-hand side.
+  </figcaption>
+</figure>
+
 
 Currently the variant track only displays short variants. 
 
 Use your mouse or keypad to zoom into the variant track to reveal individual variants in the region, their variant types and their variant consequences.
+
+
 
 ### Variant types:
 
@@ -57,6 +66,13 @@ The variants in each short variant group are represented by different colours:
 ## How do I focus on a specific variant? 
 
 If you see a variant you would like to focus on select the variant on the track.
+
+<figure>
+  <img src="media/variation-track-zoom.png" />
+  <figcaption>
+    A zoomed in view of the variant track. Showing a selected variants pop up menu.
+  </figcaption>
+</figure>
 
 A menu will pop up that lists the variant’s:
 
