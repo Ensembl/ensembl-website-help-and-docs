@@ -6,3 +6,5 @@
   href: navigation.md
 - name: What is a Focus entity?
   href: focus-entity.md
+- name: How to view variants in the Genome browser?
+  href: variant-track.md
