@@ -15,8 +15,12 @@ The Entity viewer reveals detailed information about a variant, such as its tran
 
 The view of variants in the Entity viewer consists of a navigation bar, the main display, the right-hand panel and an action bar.
 
-![](media/entity-viewer.png)
-
+<figure>
+  <img src="media/variant-ev.png" />
+  <figcaption>
+    A view of the variant rs699 in the Entity viewer.
+  </figcaption>
+</figure>
 
 ## How do I find key information about a variant? 
 
@@ -78,6 +82,13 @@ All altered, deleted, substituted, indels and inserted bases are coloured to rep
 
 The transcript consequence panel shows all the Ensembl transcripts that overlap a variant and the effects that each allele of the variant may have on their transcripts ie the transcript consequences.
 
+<figure>
+  <img src="media/transcript-consequences.png" />
+  <figcaption>
+    A view of the transcript-consequences panel in the Entity viewer.
+  </figcaption>
+</figure>
+
 The main view of transcript consequence panel shows the: 
 * variant ID eg rs699
 * variant type eg SNV
@@ -115,3 +126,9 @@ The allele frequencies for global and sub-populations are displayed both numeric
 
 The visual representation is a pie chart in which the altered allele frequency in each population is shown in dark grey and the reference allele frequency in a light grey. 
 
+<figure>
+  <img src="media/allele-frequency.png" />
+  <figcaption>
+    A view of the allele frequency panel in the Entity viewer.
+  </figcaption>
+</figure>
