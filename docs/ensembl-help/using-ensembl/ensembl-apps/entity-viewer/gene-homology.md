@@ -2,8 +2,6 @@
 slug: gene-homology
 title: How to find homologous genes in the Entity viewer
 description: A table of the homologous genes found in other species for an individual gene of interest.
-related_articles:
-  - href:homology-annotation.md
 ---
 
 # How to find homologous genes in the Entity viewer
