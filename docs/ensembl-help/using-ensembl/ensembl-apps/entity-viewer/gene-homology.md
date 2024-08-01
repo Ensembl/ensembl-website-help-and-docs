@@ -1,7 +1,7 @@
 ---
 slug: gene-homology
 title: How to find homologous genes in the Entity viewer
-description: How to find homologous genes for a specific gene of interest.
+description: A table of the homologous genes found in other species for an individual gene of interest.
 related_articles:
   - href: ensembl-help/ensembl-data/annotation-and-prediction/homology-annotation.md
 ---
@@ -21,7 +21,7 @@ The homology table for a gene is the first tab in the gene relationship panel fo
   </figcaption>
 </figure>
 
-For each homologous gene found in another species genome the following information is provided:
+For each gene homologue found in another species genome the following information is provided:
 
 * Common name: Domestic guinea pig
 * Scientific name: Cavia porcellus
