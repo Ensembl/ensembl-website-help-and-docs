@@ -3,6 +3,7 @@ slug: gene-homology
 title: How to find homologous genes in the Entity viewer
 description: A table of the homologous genes found in other species for an individual gene of interest.
 ---
+
 # How to find homologous genes in the Entity viewer
 
 Homologous genes share a common ancestor, being separated 'split' by a speciation event or a gene duplication event.
