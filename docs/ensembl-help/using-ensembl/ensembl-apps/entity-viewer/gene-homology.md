@@ -21,11 +21,11 @@ The homology table for a gene is the first tab in the gene relationship panel fo
   </figcaption>
 </figure>
 
-For each gene homologue found in another species genome the following information is provided:
+For each homologous gene found in another species genome the following information is provided:
 
 * __Common name__: Domestic guinea pig
 * __Scientific name__: _Cavia porcellus_
-* __% Protein similarity__../../../: The percentage of identical amino acid residues aligned against each other.
+* __% Protein similarity__: The percentage of identical amino acid residues aligned against each other.
 * __% Coverage__: The percent of query which is in local alignment with the respective reference.
 * __Gene symbol__: Gene symbol for homologues in each species - these may vary between species .
 * __Gene ID__: the Ensembl ID - ENSG eg ENSCPOG00000005153.4.
@@ -38,7 +38,7 @@ You can reorder the table by sorting on a specific column. To sort the content o
 
 Sorting a specific column will in turn reorganise the information in all other columns of the table.
 
-You can also customise the table by hiding unwanted rows and columns by selecting the appropriate option in the Action dropdown at the top left of the homology table.
+You can also customise the table by hiding unwanted rows and columns by selecting the appropriate option in the Actions dropdown at the top left of the homology table.
 
-You can download both a customised or uncustomised version of the table selecting the download option in the Action dropdown.
+You can download both a customised or uncustomised version of the table selecting the download option in the Actions dropdown.
 
