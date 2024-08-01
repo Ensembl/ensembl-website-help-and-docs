@@ -3,7 +3,7 @@ slug: gene-homology
 title: How to find homologous genes in the Entity viewer
 description: A table of the homologous genes found in other species for an individual gene of interest.
 related_articles:
-  - href: /ensembl-data/annotation-and-prediction/homology-annotation.md
+  - href: ../../../ensembl-data/annotation-and-prediction/homology-annotation.md
 ---
 
 # How to find homologous genes in the Entity viewer
@@ -25,12 +25,12 @@ For each gene homologue found in another species genome the following informatio
 
 * __Common name__: Domestic guinea pig
 * __Scientific name__: _Cavia porcellus_
-* % Protein similarity: The percentage of identical amino acid residues aligned against each other.
-* % Coverage: The percent of query which is in local alignment with the respective reference.
-* Gene symbol: Gene symbol for homologues in each species - these may vary between species .
-* Gene ID: the Ensembl ID - ENSG eg ENSCPOG00000005153.4.
-* Hit type: The type of homology: RBBH: reciprocal best blast hit, BBH: best blast hit.
-* Assembly: Genome assembly.
+* __% Protein similarity__../../../: The percentage of identical amino acid residues aligned against each other.
+* __% Coverage__: The percent of query which is in local alignment with the respective reference.
+* __Gene symbol__: Gene symbol for homologues in each species - these may vary between species .
+* __Gene ID__: the Ensembl ID - ENSG eg ENSCPOG00000005153.4.
+* __Hit type__: The type of homology: RBBH: reciprocal best blast hit, BBH: best blast hit.
+* __Assembly__: Genome assembly.
 
 ### Customising the table
 
