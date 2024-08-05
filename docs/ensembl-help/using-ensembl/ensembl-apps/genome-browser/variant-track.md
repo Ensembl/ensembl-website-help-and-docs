@@ -13,11 +13,11 @@ related_articles:
 
 ## How do I find the variants within a gene?
 
-Search for your gene of interest, using Find a gene. 
+Search for your gene of interest using Find a gene. 
 
-Select your gene of interest and pick the DNA symbol to view the gene in the genome browser.
+Select your gene of interest and pick the DNA symbol to view the gene in the Genome browser.
 
-Your gene of interest is the focus of the view in the Genome browser. 
+Your gene of interest is now the focus of the view in the Genome browser. 
 
 The gene boundaries are highlighted in the browser by red dotted lines.
 
@@ -33,7 +33,7 @@ The variant track is displayed toward the bottom of the view as a green line.
 
 Currently the variant track only displays short variants. 
 
-Use your mouse or keypad to zoom into the variant track to reveal individual variants in the region, their variant types and their variant consequences.
+Use your mouse or keypad to zoom into the variant track to reveal individual variants in the region, their types (eg insertion, SNV) and their predicted molecular consequences (eg missense variant, frameshift variant).
 
 
 
@@ -49,13 +49,13 @@ Different types of variants have specific visual representations in the variant 
 
 ### Short variant groups:
 
-The types of variant consequence have been organised into five groups based on the effect the short variants have on the proteins, splicing, transcripts, regulatory and intergenic regions, as shown in the right-hand panel under short variant groups.
+Variant have been organised into five groups based on the molecular effect they are predicted to have as shown in the right-hand panel under short variant groups.
 
-The individual variant consequences found in each group are listed in the right-hand drawer which   can be accessed by selecting the three dots to the right of each group.
+The specific consequences types in each group are listed in the right-hand drawer which   can be accessed by selecting the three dots to the right of each group.
 
-eg A list of individual variant consequences in the Protein altering variant group
+eg A list of more specific consequences in the Protein altering variant group
 
-The variants in each short variant group are represented by different colours:
+The variants in each group are represented by different colours:
 
 * Protein altering variants are red
 * Splicing variants are orange
@@ -77,12 +77,12 @@ If you see a variant you would like to focus on select the variant on the track.
 A menu will pop up that lists the variant’s:
 
 * name 
-* most severe consequences
+* most severe predicted consequences
 * type
 * location
 * alleles
 
-and the option to see view the variant in the genome browser or entity viewer.
+and the option to view the variant in the genome browser or entity viewer.
 
 If you select the genome browser the variant track will move to the top of the genome browser and the variant of interest will become the central focus of the view.
 
@@ -95,10 +95,10 @@ Key information about the variant is summarised on the navigation bar and in the
 The key information on the navigation bar and right-hand panel lists the variant’s:
 * id eg rs1663519126
 * type eg insertion
-* most severe consequences of the variant eg non_coding_transcript_exon_variant
+* most severe predicted consequences eg non_coding_transcript_exon_variant
 * reference allele eg G
-* variant allele(s) eg GC
-* genomic coordinates eg 1:230,709,875.
+* alternative allele(s) eg GC
+* genomic coordinates for the assembly you are viewing eg 1:230,709,875.
 
 
 

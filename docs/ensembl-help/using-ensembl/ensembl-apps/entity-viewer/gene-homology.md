@@ -10,7 +10,11 @@ related_articles:
 
 Homologous genes share a common ancestor, being separated 'split' by a speciation event or a gene duplication event.
 
+<<<<<<< Updated upstream
 A list of homologous genes for a given gene are found in the homology table.
+=======
+A list of homologous genes for a given gene is found in the homology table.
+>>>>>>> Stashed changes
 
 The homology table for a gene is the first tab in the gene relationship panel found in the detailed view of a gene in the Entity viewer.
 
@@ -21,13 +25,13 @@ The homology table for a gene is the first tab in the gene relationship panel fo
   </figcaption>
 </figure>
 
-For each homologous gene found in another species genome the following information is provided:
+For each homologous gene found in another species' genome the following information is provided:
 
 * __Common name__: Domestic guinea pig
 * __Scientific name__: _Cavia porcellus_
 * __% Protein similarity__: The percentage of identical amino acid residues aligned against each other.
 * __% Coverage__: The percent of query which is in local alignment with the respective reference.
-* __Gene symbol__: Gene symbol for homologues in each species - these may vary between species .
+* __Gene symbol__: Gene symbol for homologues in each species - these may vary between species.
 * __Gene ID__: the Ensembl ID - ENSG eg ENSCPOG00000005153.4.
 * __Hit type__: The type of homology: RBBH: reciprocal best blast hit, BBH: best blast hit.
 * __Assembly__: Genome assembly.
