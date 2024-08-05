@@ -11,7 +11,7 @@ related_articles:
 
 # How to view variants in the Entity viewer?
 
-The Entity viewer reveals detailed information about a variant, such as its transcript consequences, allele frequencies and phenotypes.
+The Entity viewer reveals detailed information about a variant, such as its predicted molecular consequences, population allele frequencies and phenotype associations.
 
 The view of variants in the Entity viewer consists of a navigation bar, the main display, the right-hand panel and an action bar.
 
@@ -29,40 +29,38 @@ Key information about a variant is summarised on the navigation bar and in the r
 ### Variant summary on the navigation bar 
 
 The key information listed on the navigation bar, for each variant, is the  
-* variant id eg rs1663519126
-* variant type eg insertion
-* most severe consequences of the variant eg non_coding_transcript_exon_variant
+* id eg rs1663519126
+* type eg insertion
+* most severe predicted consequence eg missense_variant
 * reference allele eg G
-* variant allele eg GC
-* genomic coordinates of the variant eg 1:230,709,875.
+* alternative allele eg GC
+* genomic coordinates on the specific genome assembly eg 1:230,709,875.
 
 ### Variant information on the right-hand panel 
 
-The key information listed on the right-hand panel for each variant, includes all the information displayed in the navigation bar (see above),
+The information listed on the right-hand panel for each variant, includes all the information displayed in the navigation bar (see above),
 along with additional information about the variant’s:
 
-* data source eg dbSNP
-* release number (of data source)
-* link to the Sequence ontology (SO) terms for variant types
-* biotype of the variant eg protein altering variant
+* source and version eg dbSNP release 156
+* link to the Sequence ontology (SO) terms for the most severe predicted molecular consequence
 * all variant alleles 
-* change tolerance scores for  (CADD and GERP) 
-* strand (forward or reverse) on which the variant is found
-* Variant call format (VCF).
+* change tolerance scores (CADD and GERP) 
+* location and strand (forward or reverse) on which the variant is reported
+* representation in Variant Call Format (VCF).
 
 ## How do I find detailed information about a variant? 
 
-Detailed data about a variant is (are?) presented in the nine panels in the main body of the Entity viewer.
+Detailed information about a variant is presented within the nine panels found in the main body of the Entity viewer.
 
 Currently only three panels contain data 
 
-* Variant ID 
+* Variant summary panel (default panel)
 * Transcript consequences
 * Allele frequency.
 
-### What's in the variant ID panel?
+### What's in the variant summary panel (default)?
 
-The variant ID tab displays a zoomed in view of the reference sequence showing the location of the reference allele on the forward strand and the alternative allele(s) directly below. 
+The variant summary panel (default) displays a zoomed in view of the reference sequence showing the location of the reference allele on the forward strand and the alternative allele(s) directly below. 
 
 #### Variant types
 
@@ -92,10 +90,9 @@ The transcript consequence panel shows all the Ensembl transcripts that overlap 
 The main view of transcript consequence panel shows the: 
 * variant ID eg rs699
 * variant type eg SNV
-* transcript strand allele eg C
-* reference strand allele eg G
-* gene containing the variant eg AGT
-* gene id eg ENSG 00000135744.9
+* transcript strand allele eg C  (this will differ from the allele on the genomic forward strand for genes on the reverse strand)
+* genomic reference strand allele eg G
+* name and identifier of gene the transcript belongs to containing the variant eg BRCA2, ENSG00000139618
 * number of transcripts eg 12 
 
 This information is followed by a list of the Ensembl transcripts overlapping the variant, displaying each transcript’s:
