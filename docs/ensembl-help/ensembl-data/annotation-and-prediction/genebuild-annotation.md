@@ -11,13 +11,13 @@ The first phase of the Ensembl genome annotation pipeline involves loading an as
 
 ### Repeat Elements
 
-After the genomic sequence has been loaded into a database, it is screened for sequence patterns, including repeats, using (Red Girgis, H.Z., 2015), dustmasker (Morgulis, A., et al., 2006), and TRF (Benson, G., 1999).
+After the genomic sequence has been loaded into a database, it is screened for sequence patterns, including repeats, using [(Red Girgis, H.Z., 2015)](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0654-5), dustmasker (Morgulis, A., et al., 2006), and TRF (Benson, G., 1999).
 
 Combined, these tools provide a quick and acqurate identification of repeat elements, low-complexity DNA structures, and tandem repeats, respecfully, as well as a soft-masked version of the genome that will be used for the remaining of the analyses
 
-### Low complexity features, ab initio predictions 
+### Low complexity features, _ab initio_ predictions 
 
-On the soft-masked genome, Transcription Start Sites are predicted using Eponine–scan (Down, T.A., et al, 2002). Additionally, CpG islands (Larsen, F., et al, 1992) longer than 200 bases are predicted using the command line version of CpG Finder (Gardiner-Garden, M., et al, 1987).
+On the soft-masked genome, Transcription Start Sites are predicted using Eponine–scan [(Down, T.A., _et al_, 2002)](https://bmcbioinformatics.biomedcentral.com/articles/10.1186/s12859-015-0654-5). Additionally, CpG islands (Larsen, F., _et al_, 1992) longer than 200 bases are predicted using the command line version of CpG Finder (Gardiner-Garden, M., _et al_, 1987).
 
 These predictions and features are for display purposes only; they are not used in the gene annotation process.
 
@@ -35,7 +35,7 @@ We retrieve pretein sequences with Experimental evidence at protein or transcrip
 
 With these in hand we perform a series of protein to genome alignments in an attempt to identify highly conserved structures.
 
-We process this data using GenBlast (She, R., et al, 2011), a splice-aware aligner protein-to-genome. This analysis is run with a cut-off 50% of coverage and 30% identity, an e-value of e-1, and the exon-repair option turned on. Only the top 10 models that pass the cut-offs were kept.
+We process this data using GenBlast (She, R., _et al_, 2011), a splice-aware aligner protein-to-genome. This analysis is run with a cut-off 50% of coverage and 30% identity, an e-value of e-1, and the exon-repair option turned on. Only the top 10 models that pass the cut-offs were kept.
 
 ### Transcriptomic
 
@@ -43,9 +43,9 @@ We process this data using GenBlast (She, R., et al, 2011), a splice-aware align
 
 We retrieve RNA-Seq data available at ENA for the species of interest. On the absence of specific-level data, genus-level reads can be used. The reads are preprocessed with Trim Galore! for trimming.
 
-This data is then aligned to the genome using STAR (Dobin, A., et al, 2013), and assembled into models using Scallop (Shao, M., et al, 2017). The BAMs (sorted and indexed) are provided as interactive tracks for the annotated genome, with expresion and models data available for review.
+This data is then aligned to the genome using STAR (Dobin, A., _et al_, 2013), and assembled into models using Scallop (Shao, M., _et al_, 2017). The BAMs (sorted and indexed) are provided as interactive tracks for the annotated genome, with expresion and models data available for review.
 
-Protein coding potential of these predictions is then validated via DIAMOND (Buchfink, B., et al, 2021) alignment of the longest ORF agains a UniProt database containing Eukaryote proteins. When this is insuficient, RNASamba (Camargo, A.P., et al, 2020)and CPC2 (Kang, Y., et al, 2017)are used.
+Protein coding potential of these predictions is then validated via DIAMOND (Buchfink, B., _et al_, 2021) alignment of the longest ORF agains a UniProt database containing Eukaryote proteins. When this is insuficient, RNASamba (Camargo, A.P., _et al_, 2020)and CPC2 (Kang, Y., _et al_, 2017)are used.
 
 #### Long-read
 
@@ -54,9 +54,9 @@ Long-read data (e.g. IsoSeq or Nanopore) is retrieved in a similar fashion from 
 This data is mapped to the genome using Minimap2 (Li, H., 2018), with the recommended setting for each type of data. Additionally, low frequency intron/exon boundaries that are non-canonical are replaced with high frequency boundary coordinates within 50bp, and the low frequency potential gaps between adjoining exons are filled in based on high frequency observations of single exons with the same terminal boundary coordinates.
 
 ## sncRNA
-Using a database containing known sncRNAs from RFAM archive (Kalvari, I., et al, 2018), we use CMsearch (part of the Infernal suite; Cui, X., et al, 2016) to search for homology models of the sequences provided in the database.
+Using a database containing known sncRNAs from RFAM archive (Kalvari, I., _et al_, 2018), we use CMsearch (part of the Infernal suite; Cui, X., _et al_, 2016) to search for homology models of the sequences provided in the database.
 
-Additionally, tRNAscan-SE (Chan, P.P., et al, 2019) allows us to find tRNA genes, some of the largest and most complex non coding RNA sequences.
+Additionally, tRNAscan-SE (Chan, P.P., _et al_, 2019) allows us to find tRNA genes, some of the largest and most complex non coding RNA sequences.
 
 ## Filtering and finalization of the models
 
