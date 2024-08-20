@@ -1,6 +1,10 @@
 - name: Gene annotation
   href: gene-annotation.md
-- name: Genome annotation
-  href: genebuild-annotation.md
+- name: Vertebrate genome annotation
+  href: vertebrate-annotation.md
+- name: Non vertebrate genome annotation
+  href: non-vertebrate-annotation.md
+- name: BRAKER2 genome annotation
+  href: braker2-annotation.md
 - name: Homology annotation
   href: homology-annotation.md
