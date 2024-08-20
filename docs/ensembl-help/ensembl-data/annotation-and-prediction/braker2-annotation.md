@@ -1,11 +1,11 @@
 ---
-slug: braker2-annotation
-title: Genome annotation using Braker2
-description: How genomes are annotated using the   provided by Ensembl
+slug: braker2-genome-annotation
+title: BRAKER2 genome annotation
+description: How genomes are annotated using the annotation pipeline BRAKER2 by Ensembl.
 ---
-# Genome annotation using the annotation pipeline BRAKER2 
+# Genome annotation using the annotation pipeline BRAKER2
 
-How genomes are annotation by Ensembl using BRAKER2 annotation pipeline.
+How genomes are annotation by Ensembl using the BRAKER2 annotation pipeline.
 
 ## Genome preparation
 The first phase of the Ensembl genome annotation pipeline involves loading an assembly into the Ensembl core database schema and then running a series of analyses on the loaded assembly to identify an initial set of genomic features.

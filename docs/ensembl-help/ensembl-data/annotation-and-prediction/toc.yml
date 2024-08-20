@@ -5,6 +5,6 @@
 - name: Non vertebrate genome annotation
   href: non-vertebrate-annotation.md
 - name: BRAKER2 genome annotation
-  href: braker2-genome-annotation.md
+  href: braker2-annotation.md
 - name: Homology annotation
   href: homology-annotation.md

@@ -1,10 +1,11 @@
 ---
 slug: vertebrate-genome-annotation
 title: Vertebrate genome annotation
-description: How vertebrate genome annotation is provided by Ensembl
+description: How vertebrate genomes are annotated by Ensembl
 ---
 
-# Genome annotation
+# Vertebrate genome annotation
+
 How vertebrate genomes are annotation by Ensembl.
 
 ## Genome preparation

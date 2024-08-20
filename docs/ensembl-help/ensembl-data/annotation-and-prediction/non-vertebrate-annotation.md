@@ -1,7 +1,7 @@
 ---
-slug: non-vertebrate-annotation
+slug: non-vertebrate-genome-annotation
 title: Non vertebrate genome annotation
-description: How non-vertebrate genome annotation is provided by Ensembl
+description: How non-vertebrate genomes are annotated by Ensembl.
 ---
 
 # Non-vertebrate genome annotation
