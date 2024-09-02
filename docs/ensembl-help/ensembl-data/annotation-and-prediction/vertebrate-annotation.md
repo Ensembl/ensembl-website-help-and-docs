@@ -63,4 +63,4 @@ If a model fails to meet the criteria of any of the previously described categor
 ## Appendix
 The Ensembl gene set is generated automatically, meaning that gene models are annotated using the Ensembl gene annotation pipelines. The main focus of the pipelines is to generate a conservative set of protein-coding gene models.
 
-Every gene model produced by the Ensembl gene annotation pipeline is supported by biological sequence evidence (see the “Supporting evidence” link on the left-hand menu of a Gene page or Transcript page); _ab initio_ models are not included in our gene set.
+Every gene model produced by the Ensembl gene annotation pipeline is supported by biological sequence evidence (see the “External references” tab in the right hand panel of the Entity Viewer), _ab initio models_ are not included in our gene set.
