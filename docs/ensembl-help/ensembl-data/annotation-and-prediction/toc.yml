@@ -1,7 +1,7 @@
 - name: Gene annotation
   href: gene-annotation.md
-- name: Human genome annotation
-  href: human-annotation-pipeline.md
+- name: Human genome automated annotation
+  href: human-automated-annotation.md
 - name: Vertebrate genome annotation
   href: vertebrate-annotation.md
 - name: Non vertebrate genome annotation
