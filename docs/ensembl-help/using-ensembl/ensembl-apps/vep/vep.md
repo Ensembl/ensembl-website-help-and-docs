@@ -38,7 +38,7 @@ You can search for a species genome or assembly, using the:
 * assembly accession number.
 
 <figure>
-  <img src="media/search-common-name-vep.png" />
+  <img src="media/search-common-name-vep.png" width="320" alt="search for human" />
   <figcaption>
     A search for human genomes using the common name.
   </figcaption>
