@@ -6,3 +6,5 @@
   href: entity-viewer/toc.yml
 - name: BLAST
   href: blast/toc.yml
+- name: VEP
+  href: vep/toc.yml
