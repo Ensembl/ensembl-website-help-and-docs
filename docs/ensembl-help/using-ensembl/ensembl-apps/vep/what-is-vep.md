@@ -1,6 +1,6 @@
 ---
 slug: what-is-vep
-title: What is VEP
+title: What is the Variant Effect Predictor (VEP)
 description: What is the Variant Effect Predictor(VEP)
 ---
 # What is the Variant Effect Predictor(VEP)

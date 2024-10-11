@@ -9,7 +9,7 @@ description: How to run the Variant Effect Predictor(VEP)
 The Ensembl Variant Effect Predictor (VEP) tool can be found on the toolbar at the top of the Beta site.
 
 <figure>
-  <img src="media/toolbar-vep.png" />
+  <img src="media/toolbar-vep.png" width="450" alt="toolbar showing the VEP icon" />
   <figcaption>
     A view of the tool bar showing the Ensembl Variant Effect Predictor (VEP) icon.
   </figcaption>
@@ -38,7 +38,7 @@ You can search for a species genome or assembly, using the:
 * assembly accession number.
 
 <figure>
-  <img src="media/search-common-name-vep.png" width="320" alt="search for human" />
+  <img src="media/search-common-name-vep.png" width="450" alt="Search term human in the search box" />
   <figcaption>
     A search for human genomes using the common name.
   </figcaption>
