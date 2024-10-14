@@ -79,7 +79,7 @@ Your list of species genomes can be used in all other apps, ie the Genome browse
 
 The lozenges representing the species genomes are displayed in a row at the top of each app.
 
-<img src="/media/multiple-species-selected.png" width="320" alt="Selected species genome lozenges">
+<img src="/media/multiple-species-selected.png" width="450" alt="Selected species genome lozenges">
 
 ### How to find specific genomes in a large table of assemblies
 
@@ -126,11 +126,11 @@ A warning message will be displayed. Select the green 'Remove' button to delete 
 
 ## Deactivating a species genome in your list 
 
-<img src="media/use-ss.png" width="320" alt="A Use or do not use slider">
+<img src="media/use-ss.png" width="450" alt="A Use or do not use slider">
 
 You can deactivate a species genome by toogling to 'Don't use' at the top of the Species homepage.
 
-<img src="media/do-not-use-ss.png" width="320" alt="Do not use selected">
+<img src="media/do-not-use-ss.png" width="450" alt="Do not use selected">
 
 The deactivated species genome lozenge will remain in your list and turn grey. Active species genome lozenges remain blue.
 
