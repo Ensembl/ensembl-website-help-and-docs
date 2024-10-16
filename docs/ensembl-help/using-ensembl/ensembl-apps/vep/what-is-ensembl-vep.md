@@ -1,9 +1,9 @@
 ---
-slug: what-is-vep
-title: What is the Variant Effect Predictor (VEP)
-description: What is the Variant Effect Predictor(VEP)
+slug: what-is-ensembl-vep
+title: What is the Ensembl Variant Effect Predictor (VEP)
+description: What is the Variant Effect Predictor (VEP)
 ---
-# What is the Ensembl Variant Effect Predictor(VEP)
+# What is the Ensembl Variant Effect Predictor (VEP)
 
 The Ensembl Variant Effect Predictor (VEP) predicts the molecular consequence of your variants, (both SNPs and structural variants) on genes, transcripts, protein sequences and regulatory regions.
 
