@@ -44,7 +44,7 @@ You can search for a species genome or assembly, using the:
   </figcaption>
 </figure>
 
-A  table of the genome assemblies for that species will be displayed.
+A table of the genome assemblies for that species will be displayed.
 
 <figure>
   <img src="media/human-genome-list-vep.png" alt="A table of all the genome assemblies"/>
@@ -90,19 +90,6 @@ Then select the blue Open button and your input data will be displayed in the Va
 
 The variants you are running against the chosen genome assembly will be displayed in the variant section on the Ensembl VEP input page.
 
-- click inside the box and locate the file on your system. 
-
-<figure>
-  <img src="media/uploadfile-vep.png" width="450" alt="Uploading a file of VCF data into VEP"/>
-  <figcaption>
-    Uploading a file of your VCF data into the Ensembl VEP input form.
-  </figcaption>
-</figure>
-
-Then select the blue Open button and your input data will be displayed in the Variants section.
-
-The variants you are running against the chosen genome assembly will be displayed in the variant section on the Ensembl VEP input page.
-
 <figure>
   <img src="media/showing-variants-vep.png" width="450" alt="VEP input interace showing uploaded variant data"/>
   <figcaption>
@@ -122,7 +109,7 @@ Ensembl VEP can provide additional information about
 * __Variant phenotypes__
 * __Citations__ for variants
 * __Regulatory annotation__ 
-* __Conservation and constraints__ of the location of variants
+* __Conservation and constraints__ of the location of variants.
 
 ### Options in the current versions of Ensembl VEP
 In the current version of Ensembl VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
@@ -157,7 +144,7 @@ To run your job select the green Run button on the top  grey bar to the right-ha
 The submissions page will show the jobs that are currently ‘running’ or recently completed. 
 
 <figure>
-  <img src="media/running-job-vep" width="450" alt=" The Ensembl VEP submission page showing a job running."/>
+  <img src="media/running-job-vep.png" width="450" alt="The Ensembl VEP submission page showing a job running."/>
   <figcaption>
     The Ensembl VEP submission page showing a job running.
   </figcaption>
@@ -192,9 +179,9 @@ The table currently shows the following information about the variant(s) found o
 * __Location__ of the variant eg 1:230,710,048
 * __Gene(s)__ (symbol, ENGS ID(s) and strand) displayed only if they contain the variant
 	eg AGT, ENSG00000135744, reverse strand
-* __Transcripts__, (ENST ID(s) and their biotype(s)) displayed only if they contain the variant
+* __Transcripts__ (ENST ID(s) and their biotype(s)) displayed only if they contain the variant
 	eg ENST00000366667.1, protein_coding
-* __Predicted molecular consequence__ for each transcript containing the variant eg coding-sequence-variant
+* __Predicted molecular consequence__ for each transcript containing the variant eg coding-sequence-variant.
 
 ### Downloading your Ensembl VEP results
 You can download the results table by clicking on the blue Download icon to the left hand side of the black Results button.
