@@ -15,7 +15,7 @@ The Ensembl (VEP) tool can be found on the toolbar at the top of the Beta site.
   </figcaption>
 </figure>
 
-To use the Ensembl VEP tool, you need to 
+To use the Ensembl VEP tool, you need to: 
 * select a species genome assembly
 * enter your data
 * run your job.
@@ -34,8 +34,8 @@ Searching for a species genome
 You can search for a species genome or assembly, using the:
 * common name
 * scientific name
-* assembly name and
-* assembly accession number.
+* assembly name
+* assembly accession number
 
 <figure>
   <img src="media/search-common-name-vep.png" width="450" alt="search term human in search box"/>
@@ -63,7 +63,7 @@ More formats will be supported in future versions of Ensembl VEP.
 
 There are two ways to upload your variant data:
 
-1. __Paste__: simply copy and paste your variant information (in VCF) into the large text box displaying ‘Paste data’. 
+- __Paste__: simply copy and paste your variant information (in VCF) into the large text box displaying ‘Paste data’.
 
 <figure>
   <img src="media/paste-data-vep.png" width="450" alt="Pasting data into VEP"/>
@@ -74,10 +74,10 @@ There are two ways to upload your variant data:
 
 Then select the Add button and your input data will be displayed in the Variants section
 
-2. __File upload__: to upload your file of variants (in VCF) you can either:  
-- drag and drop the file directly onto the cloud icon inside the box  
+- __File upload__: to upload your file of variants (in VCF) you can either:  
+* drag and drop the file directly onto the cloud icon inside the box  
 or
-- click inside the box and locate the file on your system. 
+* click inside the box and locate the file on your system. 
 
 <figure>
   <img src="media/uploadfile-vep.png" width="450" alt="Uploading a file of VCF data into Ensembl VEP"/>
@@ -102,17 +102,15 @@ To update or edit your choice of variants select Change to the right-hand side o
 ## Additional information associated with test variants 
 Ensembl VEP can provide information associated with the variants identified in a specific genome assembly. 
 
-Ensembl VEP can provide additional information about 
+Ensembl VEP can provide additional information about:
+ 
 * __Gene and transcripts__ in which variants are located
-* __Predictions__ of the effect of variants on transcripts, protein structure and function and pathogenicity 
+* __Predictions__ of the effect of variants on transcripts, protein structure and function and pathogenicity
 * __Variant population frequencies__
 * __Variant phenotypes__
-* __Citations__ for variants
+* __Citations__ for known variants
 * __Regulatory annotation__ 
 * __Conservation and constraints__ of the location of variants.
-
-### Options in the current versions of Ensembl VEP
-In the current version of Ensembl VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
 
 ### Options in the current versions of Ensembl VEPs
 In the current version of Ensembl VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
@@ -128,7 +126,7 @@ In the current version of Ensembl VEP the Gene symbol and Transcript biotype ass
 In future versions of Ensembl VEP you will be able to select additional types of information (listed above) associated with your variants of interest.   
 
 ### Naming your job(s)
-You can add a name for the data you upload by typing it into  the box alongside the Submission name. 
+You can add a name for the data you upload by typing it into the box alongside the Submission name. 
 This can make it easier for you to identify jobs and files that you have uploaded to the Ensembl VEP at a later point.
 
 <figure>
@@ -144,7 +142,7 @@ To run your job select the green Run button on the top  grey bar to the right-ha
 The submissions page will show the jobs that are currently ‘running’ or recently completed. 
 
 <figure>
-  <img src="media/running-job-vep.png" width="450" alt="The Ensembl VEP submission page showing a job running."/>
+  <img src="media/running-job-vep.png" alt="The Ensembl VEP submission page showing a job running."/>
   <figcaption>
     The Ensembl VEP submission page showing a job running.
   </figcaption>
@@ -166,13 +164,13 @@ To view the results of your Ensembl VEP job select the Results button to the rig
 You will be taken to the results page which will display the table of results for the variant(s) submitted against the genome assembly chosen.
 
 <figure>
-  <img src="media/results-table-vep.png" width="450" alt="A table of VEP results."/>
+  <img src="media/results-table-vep.png" alt="A table of VEP results."/>
   <figcaption>
     A table of Ensembl VEP results.
   </figcaption>
 </figure>
 
-The table currently shows the following information about the variant(s) found on the chosen genome assembly.
+The table currently shows the following information about the variant(s) found on the chosen genome assembly:
 * __Variant type__ eg SNP
 * __Reference allele__ for the variant eg A
 * __Alternative allele__ for the variant eg G
@@ -185,4 +183,3 @@ The table currently shows the following information about the variant(s) found o
 
 ### Downloading your Ensembl VEP results
 You can download the results table by clicking on the blue Download icon to the left hand side of the black Results button.
-
