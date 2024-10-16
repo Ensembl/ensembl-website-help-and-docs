@@ -1,7 +1,7 @@
 ---
-slug: vep
-title: How to use VEP
-description: How to use the Ensembl Variant Effect Predictor(VEP)
+slug: how-to-use-ensembl-vep
+title: How to use the Ensembl Variant Effect Predictor (VEP)
+description: How to use the Ensembl Variant Effect Predictor (VEP)
 ---
 
 # How to use the Ensembl Variant Effect Predictor (VEP)
@@ -23,7 +23,7 @@ To use the Ensembl VEP tool, you need to
 <figure>
   <img src="media/vep-landing-page.png"/>
   <figcaption>
-    A view of the VEP input interface.
+    A view of the Ensembl VEP input interface.
   </figcaption>
 </figure>
 
@@ -63,9 +63,7 @@ More formats will be supported in future versions of Ensembl VEP.
 
 There are two ways to upload your variant data:
 
-Paste: simply copy and paste your variant information (in VCF) into the large text box displaying ‘Paste data’. 
-
-- Paste: simply copy and paste your variant information (in VCF) into the large text box displaying ‘Paste data’. 
+1. __Paste__: simply copy and paste your variant information (in VCF) into the large text box displaying ‘Paste data’. 
 
 <figure>
   <img src="media/paste-data-vep.png" width="450" alt="Pasting data into VEP"/>
@@ -76,20 +74,20 @@ Paste: simply copy and paste your variant information (in VCF) into the large te
 
 Then select the Add button and your input data will be displayed in the Variants section
 
-- File upload: to upload your file of variants (in VCF) you can either:  
+2. __File upload__: to upload your file of variants (in VCF) you can either:  
 - drag and drop the file directly onto the cloud icon inside the box  
 or
 - click inside the box and locate the file on your system. 
 <figure>
-  <img src="media/uploading-data-vep.png" width="450" alt="Uploading a file of VCF data into VEP"/>
+  <img src="media/uploading-data-vep.png" width="450" alt="Uploading a file of VCF data into Ensembl VEP"/>
   <figcaption>
-    Uploading a file of your VCF data into the VEP input form.
+    Uploading a file of your VCF data into the Ensembl VEP input form.
   </figcaption>
 </figure>
 
 Then select the blue Open button and your input data will be displayed in the Variants section.
 
-The variants you are running against the chosen genome assembly will be displayed in the variant section on the VEP input page.
+The variants you are running against the chosen genome assembly will be displayed in the variant section on the Ensembl VEP input page.
 
 - click inside the box and locate the file on your system. 
 
@@ -114,9 +112,9 @@ The variants you are running against the chosen genome assembly will be displaye
 To update or edit your choice of variants select Change to the right-hand side of the Variant section. 
 
 ## Additional information associated with test variants 
-VEP can provide information associated with the variants identified in a specific genome assembly. 
+Ensembl VEP can provide information associated with the variants identified in a specific genome assembly. 
 
-VEP can provide additional information about 
+Ensembl VEP can provide additional information about 
 * __Gene and transcripts__ in which variants are located
 * __Predictions__ of the effect of variants on transcripts, protein structure and function and pathogenicity 
 * __Variant population frequencies__
@@ -128,22 +126,22 @@ VEP can provide additional information about
 ### Options in the current versions of Ensembl VEP
 In the current version of Ensembl VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
 
-### Options in the current versions of VEPs
-In the current version of VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
+### Options in the current versions of Ensembl VEPs
+In the current version of Ensembl VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
 
 <figure>
-  <img src="media/current-options-vep.png" width="450" alt="More information options currently available on the VEP interface"/>
+  <img src="media/current-options-vep.png" width="450" alt="More information options currently available on the Ensembl VEP interface"/>
   <figcaption>
-    More information options currently available on the VEP data input interface.
+    More information options currently available on the Ensembl VEP data input interface.
   </figcaption>
 </figure>
 
 ### Options in future versions of Ensembl VEP
-In future versions of VEP you will be able to select additional types of information (listed above) associated with your variants of interest.   
+In future versions of Ensembl VEP you will be able to select additional types of information (listed above) associated with your variants of interest.   
 
 ### Naming your job(s)
 You can add a name for the data you upload by typing it into  the box alongside the Submission name. 
-This can make it easier for you to identify jobs and files that you have uploaded to the VEP at a later point.
+This can make it easier for you to identify jobs and files that you have uploaded to the Ensembl VEP at a later point.
 
 <figure>
   <img src="media/job-name-vep.png" width="450" alt=" A VEP input interface showing a filled in job name."/>
@@ -152,11 +150,10 @@ This can make it easier for you to identify jobs and files that you have uploade
   </figcaption>
 </figure>
 
-## Running your VEP job
+## Running your Ensembl VEP job
 To run your job select the green Run button on the top  grey bar to the right-hand side of the Transcript set and you will be taken to the submission page. 
 
 The submissions page will show the jobs that are currently ‘running’ or recently completed. 
-
 
 <figure>
   <img src="media/running-job-vep" width="450" alt=" A VEP input interface showing a filled in job name."/>
@@ -167,7 +164,7 @@ The submissions page will show the jobs that are currently ‘running’ or rece
 
 A submission ID is assigned to each submission and additional information is provided, including the date and time of submission. 
 
-If you navigate away from the VEP interface, while the job is still running  the status of the query is indicated by the VEP icon in the top panel changing from red to green to prompt you that it has successfully completed.
+If you navigate away from the Ensembl VEP interface, while the job is still running  the status of the query is indicated by the Ensembl VEP icon in the top panel changing from red to green to prompt you that it has successfully completed.
 Jobs are divided into two lists: ‘Unviewed Jobs’ and ‘Jobs list’.
 
 A submission in the ‘Unviewed jobs’ list, when viewed, is transferred to the ‘Jobs list’ for future reference. Results are available for 7 days and queries can be rerun for 28 days.
@@ -176,7 +173,7 @@ Select the blue New job button in the top grey bar (to the left-hand side of ENS
 
 ## How to view your Ensembl VEP results 
 
-To view the results of your VEP job select the Results button to the right-hand side of the job on the submissions page, once the job has completed and the Results button has turned blue.
+To view the results of your Ensembl VEP job select the Results button to the right-hand side of the job on the submissions page, once the job has completed and the Results button has turned blue.
 
 You will be taken to the results page which will display the table of results for the variant(s) submitted against the genome assembly chosen.
 
