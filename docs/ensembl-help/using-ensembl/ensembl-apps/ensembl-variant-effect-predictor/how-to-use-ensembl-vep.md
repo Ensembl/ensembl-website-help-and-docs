@@ -78,8 +78,9 @@ Then select the Add button and your input data will be displayed in the Variants
 - drag and drop the file directly onto the cloud icon inside the box  
 or
 - click inside the box and locate the file on your system. 
+
 <figure>
-  <img src="media/uploading-data-vep.png" width="450" alt="Uploading a file of VCF data into Ensembl VEP"/>
+  <img src="media/uploadfile-vep.png" width="450" alt="Uploading a file of VCF data into Ensembl VEP"/>
   <figcaption>
     Uploading a file of your VCF data into the Ensembl VEP input form.
   </figcaption>
@@ -105,7 +106,7 @@ The variants you are running against the chosen genome assembly will be displaye
 <figure>
   <img src="media/showing-variants-vep.png" width="450" alt="VEP input interace showing uploaded variant data"/>
   <figcaption>
-    VEP input interace showing uploaded variant data.
+    Ensembl VEP input interace showing uploaded variant data.
   </figcaption>
 </figure>
 
@@ -156,9 +157,9 @@ To run your job select the green Run button on the top  grey bar to the right-ha
 The submissions page will show the jobs that are currently ‘running’ or recently completed. 
 
 <figure>
-  <img src="media/running-job-vep" width="450" alt=" A VEP input interface showing a filled in job name."/>
+  <img src="media/running-job-vep" width="450" alt=" The Ensembl VEP submission page showing a job running."/>
   <figcaption>
-    An Ensembl VEP input interface showing a filled in job name.
+    The Ensembl VEP submission page showing a job running.
   </figcaption>
 </figure>
 
