@@ -11,7 +11,7 @@ Background on homologies
 ------------------------
 
 <figure>
-  <img src="media/homology.png" />
+  <img src="media/homology.png" width="450" />
   <figcaption>
   Fig 1. Gene phylogeny as red and blue branches within grey species phylogeny. Modified from  <a href="https://en.wikipedia.org/wiki/Sequence_
   homology#/media/File:Ortholog_paralog_analog_examples.svg">Wikipedia</a> under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.
@@ -30,7 +30,7 @@ Homologous genes, due to their common ancestry, demonstrate sequence similarity 
 The most fine-grained methods for inferring homology relationships, following an initial grouping into potential homologous sets, considers sequence similarity in the context of a [multiple sequence alignment](https://en.wikipedia.org/wiki/Multiple_sequence_alignment) which is used to build a [gene tree](https://en.wikipedia.org/wiki/Phylogenetic_tree). By comparing the gene tree to the known species phylogeny (a process known as reconciliation) the speciation and duplication nodes are identified and the pairwise orthology and paralogy relationships are inferred [1 ,6]. However, these methods do not scale well with an increasing number of considered genomes.
 
 <figure>
-  <img src="media/RBBH.png" />
+  <img src="media/RBBH.png" width="450" />
   <figcaption>
   Fig 2. Illustration of reciprocal best BLAST hits (RBBH) and best BLAST hits (BBH). The genes from the query genome are searched against the reference genome and the best hits are identified (green arrows). Conversely, the best hits from the reference genome to the query genome are identified (orange arrows). When two genes find each other as the best match in both directions, they are considered reciprocal best BLAST hits (RBBH) and are strong candidates for being orthologs (e.g.query Gene A and reference Gene A). In the absence of reciprocal best hits, the best blast hit(s) can be identified as putative homologs (query Gene C2 and reference Gene C2).
   </figcaption>
