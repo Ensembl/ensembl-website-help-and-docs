@@ -11,9 +11,9 @@ related_articles:
 
 The new Ensembl website is an ongoing project to provide access to Ensembl data through visualisation in a redesigned web interface. 
 
-A very limited data set of the genes, transcripts and proteins for seven genomes has been made available for the initial releases. 
+A data set of the genes, transcripts and proteins for over 300 genomes has been made available so far and more will continue to be released. 
 
-New interfaces for presenting a range of other data types, such as variation, homology and regulation will be released periodically.
+New interfaces for presenting a range of other data types, such as variation, homology and regulation are also being released periodically.
 
 ## Apps
 
@@ -37,25 +37,13 @@ Use the Genome browser to explore a genomic region and view a gene and its trans
 Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
 
+![](../../img/id-blast.svg)
+
+The BLAST app allows you to compare DNA, RNA and/or protein sequence information.
+
+
 ![](../../img/id-help.svg)
 
 Explore our Help & documentation to learn more about our data and tools.
 
-To begin visualising data using the apps, you need to select a species and genome assembly using the Species selector. Once you have selected your species, you can switch between apps by clicking on the app icons in the page header.
 
-BLAST
-
-The BLAST app allows you to compare DNA, RNA and/or protein sequence information.
-
-## Selecting a species
-
-You can select your species and genomes of interest using the Species selector app. You can select multiple species and genome assemblies, and switch between them by clicking on the species tabs when viewing data in the other apps.
-
-## Navigating the website
-
-While the general layout of the webpage differs between the apps, the page header contains icons which you can use to move between apps and species tabs.
- 
-Blue icons and text are clickable and will allow you to navigate around the app or configure the data display. Grey icons indicate apps and functionality that is planned, but not available yet.
- 
-## Help and documentation
-There is help available for using each app. To access the help pages, click on the Help icon in the top-right corner of the page from within each app. 
