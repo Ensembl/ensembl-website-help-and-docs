@@ -11,7 +11,7 @@ related_articles:
 
 The new Ensembl website is an ongoing project to provide access to Ensembl data through visualisation in a redesigned web interface. 
 
-A data set of the genes, transcripts and proteins for over 300 genomes has been made available so far and more will continue to be released. 
+A data set of the genes, transcripts and proteins for over 3000 genomes has been made available so far and more will continue to be released. 
 
 New interfaces for presenting a range of other data types, such as variation, homology and regulation are also being released periodically.
 

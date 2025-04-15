@@ -15,17 +15,13 @@ Individual apps are represented by unique icons. To open an app select its icon 
 The apps currently available to you are:
 
 ![](../../img/id-species-selector.svg)
-
 Use the Species selector to choose a species genome of interest. You must select a species genome to use the Ensembl other apps ie Genome browser and Entity viewer.
 
 ![](../../img/id-genome-browser.svg)
-
 Use the Genome browser to explore a genomic region, to view a gene and its transcripts in the context of the genome.
 
 ![](../../img/id-entity-viewer.svg)
-
 Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
 ![](../../img/id-help.svg)
-
 Explore our Help & documentation to learn more about how to use our data and tools.
