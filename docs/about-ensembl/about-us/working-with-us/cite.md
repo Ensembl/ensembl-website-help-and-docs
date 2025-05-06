@@ -11,9 +11,9 @@ the Ensembl release your data was retrieved from:
 
 ## For vertebrate genomes
 
-**Ensembl 2024**\
-_Nucleic Acids Res._ 2024, vol. 52(D1):D891-D899\
-[doi:10.1093/nar/gkad1049](https://doi.org/10.1093/nar/gkad1049)
+**Ensembl 2025**\
+_Nucleic Acids Res._ 2025, 53(D1):D948–D957\
+[doi:10.1093/nar/gkae1071](https://doi.org/10.1093/nar/gkae1071)
 
 ## For invertebrate, plant, fungal and prokaryote genomes
 
