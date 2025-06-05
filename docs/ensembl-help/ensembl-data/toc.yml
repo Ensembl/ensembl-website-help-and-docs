@@ -2,3 +2,5 @@
   href: annotation-and-prediction/toc.yml
 - name: Assemblies and sequence
   href: assemblies-and-sequence.md
+- name: Release information
+  href: release-information/toc.yml
