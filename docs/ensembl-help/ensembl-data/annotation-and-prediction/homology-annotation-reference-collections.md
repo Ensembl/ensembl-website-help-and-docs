@@ -6,11 +6,11 @@ description: A listing of reference collections used in Ensembl homology annotat
 
 # Homology annotation reference collections
 
-To optimise computational efficiency and ensure the most informative genome comparisons,
-we utilise reference genome collections representing major clades in the tree of life
-(along with genomes of special interest as outgroups). For each query species, we select
-the taxonomically closest collection for homology inference or employ a default collection
-if a more specific one is not found.
+To optimise computational efficiency of [homology annotation](/help/articles/homology-annotation)
+and ensure the most informative genome comparisons, we utilise reference genome collections
+representing major clades in the tree of life (along with genomes of special interest as
+outgroups). For each query species, we select the taxonomically closest collection for
+homology inference or employ a default collection if a more specific one is not found.
 
 ## Reference collections as of June 2025
 
