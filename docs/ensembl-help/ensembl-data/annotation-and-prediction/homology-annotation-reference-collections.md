@@ -1,3 +1,9 @@
+---
+slug: homology-annotation-reference-collections
+title: Homology annotation reference collections
+description: A listing of reference collections used in Ensembl homology annotation
+---
+
 # Homology annotation reference collections
 
 To optimise computational efficiency and ensure the most informative genome comparisons,
