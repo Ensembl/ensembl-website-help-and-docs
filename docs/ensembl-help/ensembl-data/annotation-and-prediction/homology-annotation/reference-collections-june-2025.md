@@ -1,22 +1,20 @@
 ---
-slug: homology-annotation-reference-collections
-title: Homology annotation reference collections
-description: A listing of reference collections used in Ensembl homology annotation
+slug: homology-annotation-reference-collections-june-2025
+title: Homology annotation reference collections (June 2025)
+description: Reference collections used in Ensembl homology annotation as of June 2025
 ---
 
-# Homology annotation reference collections
+# Homology annotation reference collections as of June 2025
 
 To optimise computational efficiency of [homology annotation](/help/articles/homology-annotation)
 and ensure the most informative genome comparisons, we utilise reference genome collections
 representing major clades in the tree of life (along with genomes of special interest as
 outgroups). For each query species, we select the taxonomically closest collection for
-homology inference or employ a default collection if a more specific one is not found.
-
-## Reference collections as of June 2025
+homology inference, or employ a default collection if a more specific one is not found.
 
 The current reference collections as of June 2025 are listed below (with links to their genome pages).
 
-### Actinopterygii
+## Actinopterygii
 
 - [Amblyraja radiata](/species/9395fbdf-6d3e-4c95-80e3-6dac8fac78a9)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
@@ -58,7 +56,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Takifugu rubripes](/species/9011136a-1efd-4afd-8310-08b3823a666f)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-### Arthropoda
+## Arthropoda
 
 - [Aedes aegypti](/species/4c89a993-76c2-4f40-a3b4-30dfb5701616)
 - [Anoplius nigerrimus](/species/edb0408c-3847-4480-8fbc-942828295027)
@@ -100,7 +98,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Uloborus diversus](/species/3708b66b-2ade-4176-b27e-b90c3b4c8d23)
 - [Varroa destructor](/species/1b6accce-817c-4e9d-bd20-31b13736316f)
 
-### Eudicotyledons
+## Eudicotyledons
 
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
 - [Arachis hypogaea](/species/e83bce97-f6dc-4b78-98c6-eee67a937178)
@@ -142,7 +140,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Vigna angularis](/species/f8d22618-46d3-4b2e-8ea7-3a8458060c5d)
 - [Vitis vinifera](/species/08c83543-c3d9-4a7a-85d8-52f75d61aab0)
 
-### Hexapoda
+## Hexapoda
 
 - [Acyrthosiphon pisum](/species/65ff9c62-cd67-4a93-ae23-f0fd737e5128)
 - [Aedes aegypti](/species/4c89a993-76c2-4f40-a3b4-30dfb5701616)
@@ -184,7 +182,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Vespula vulgaris](/species/ab3283a0-7ba4-44ec-aaca-39938301aa08)
 - [Zootermopsis nevadensis](/species/f39c236e-0322-4923-a073-ffb561b1ceaa)
 
-### Liliopsida
+## Liliopsida
 
 - [Aegilops tauschii subsp. strangulata](/species/750e67f5-4811-441d-be46-a436786dfb27)
 - [Ananas comosus](/species/88bba166-bea4-4306-949d-8fdf819699a6)
@@ -219,7 +217,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Triticum turgidum subsp. durum](/species/bc9cb479-b1e3-460b-b4ac-d20b0fe1b350)
 - [Zea mays](/species/4273b9f0-c927-4215-87bf-828ef65de984)
 
-### Mammalia
+## Mammalia
 
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
 - [Artibeus jamaicensis](/species/a3e9d01e-fd7b-4849-9c25-2b2581b24a19)
@@ -262,7 +260,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Sus scrofa](/species/da38d82b-df50-419b-af74-886463b7bfa3)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-### Metazoa
+## Metazoa
 
 - [Acropora millepora](/species/a866592d-107e-43a1-b15c-830c4659fbb3)
 - [Agrilus planipennis](/species/e0251893-452e-4179-87cf-f2db38594e85)
@@ -303,7 +301,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Trichoplax adhaerens](/species/079144ec-7d2e-4d80-9ad5-b190ffb8f0ec)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-### Protostomia
+## Protostomia
 
 - [Acropora millepora](/species/a866592d-107e-43a1-b15c-830c4659fbb3)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
@@ -344,7 +342,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Trichoplax adhaerens](/species/079144ec-7d2e-4d80-9ad5-b190ffb8f0ec)
 - [Trichuris muris](/species/78635f00-7df6-46d9-a63d-5562aecc93e7)
 
-### Sauropsida
+## Sauropsida
 
 - [Anas platyrhynchos](/species/600ea67d-5f86-479b-8155-cd8cf4b2d0f9)
 - [Anolis carolinensis](/species/2c433260-4a25-4b25-9f3e-0fcb9a9f1df0)
@@ -386,7 +384,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 - [Zootoca vivipara](/species/d1ca93eb-cdbf-4709-a321-06bc64011884)
 
-### Vertebrata
+## Vertebrata
 
 - [Amblyraja radiata](/species/9395fbdf-6d3e-4c95-80e3-6dac8fac78a9)
 - [Anas platyrhynchos](/species/600ea67d-5f86-479b-8155-cd8cf4b2d0f9)
@@ -428,7 +426,7 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Sus scrofa](/species/da38d82b-df50-419b-af74-886463b7bfa3)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-### Default
+## Default
 
 - [Amphimedon queenslandica](/species/a51718ac-6693-488b-b3a3-dabd54329847)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
@@ -468,19 +466,3 @@ The current reference collections as of June 2025 are listed below (with links t
 - [Triticum aestivum](/species/a73357ab-93e7-11ec-a39d-005056b38ce3)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 - [Zymoseptoria tritici](/species/9699a220-8ba0-4ddb-a5ec-84493755d498)
-
-## Reference collections prior to June 2025
-
-For genomes processed before June 2025, homology annotation was
-conducted against one of the following reference collections
-(with links to their NCBI Taxonomy trees):
-
-- [Actinopterygii](https://itol.embl.de/tree/1722225465338081713949786)
-- [Arthropoda](https://itol.embl.de/tree/1722225465354261713949845)
-- [Hexapoda](https://itol.embl.de/tree/1722225465378991713949952)
-- [Mammalia](https://itol.embl.de/tree/1722225465387561713950008)
-- [Metazoa](https://itol.embl.de/tree/1722225465403071713950062)
-- [Protostomia](https://itol.embl.de/tree/1722225465415291713950101)
-- [Sauropsida](https://itol.embl.de/tree/1722225465437341713950191)
-- [Vertebrata](https://itol.embl.de/tree/172222546557211713950590)
-- [default](https://itol.embl.de/tree/1722225465372551713949911)
