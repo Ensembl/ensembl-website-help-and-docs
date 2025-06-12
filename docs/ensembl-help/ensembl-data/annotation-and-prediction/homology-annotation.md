@@ -44,7 +44,18 @@ The RBBH strategy is very stringent and it selects conserved orthologues with a 
 Technical details
 -----------------
 
-To optimise computational efficiency and ensure the most informative genome comparisons, we utilise [homology annotation reference genome collections](/help/articles/homology-annotation-reference-collections) representing major clades in the tree of life (along with genomes of special interest as outgroups). For each query species, we select the taxonomically closest collection for homology inference or employ a default collection if a more specific one is not found.
+To optimise computational efficiency of homology annotation
+and ensure the most informative genome comparisons, we utilise reference genome collections
+representing major clades in the tree of life (along with genomes of special interest as
+outgroups). For each query species, we select the taxonomically closest collection for
+homology inference or employ a default collection if a more specific one is not found.
+
+The set of reference genome collections may be updated periodically. Homologies are available for two reference-collection sets:
+- [reference genome collections before June 2025](/help/articles/homology-annotation-reference-collections-pre-june-2025)
+- [reference genome collections from June 2025](/help/articles/homology-annotation-reference-collections-june-2025)
+
+Please contact the Ensembl helpdesk if you would like to know which reference
+collection was used in homology annotation of a particular genome.
 
 After selecting the appropriate reference collection, the annotation pipeline first runs a BLAST search of the query proteome sequences against the proteins from the reference collection using DIAMOND [11], which has proven to be a good basis for RBBH homology inference [9] by offering a combination of speed and sensitivity that is essential for large-scale analyses. In the second step, the proteins from the reference collection are searched against the query proteome.
 The hits from both searches are ranked by alignment features:
