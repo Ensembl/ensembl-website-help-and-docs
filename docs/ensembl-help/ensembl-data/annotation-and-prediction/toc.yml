@@ -8,7 +8,5 @@
   href: non-vertebrate-annotation.md
 - name: BRAKER2 genome annotation
   href: braker2-annotation.md
-- name: Homology annotation
-  href: homology-annotation.md
 - name: Community genome annotation
   href: community-annotation.md
