@@ -8,7 +8,7 @@ Ensembl collaborates with a range of global genome assembly and annotation initi
 
 # Community annotation formatting
 
-While we encourage users, collaborators, and data providers to submit their assembly annotations to [INSDC](https://www.insdc.org/about-insdc/), we understand that this process can sometimes take longer than expected, potentially delaying the availability of the genome on our site. To help mitigate such delays, we may accept GFF3 annotation files for public assemblies submitted directly to us, provided the assembly is already publicly available in INSDC.
+While we encourage users, collaborators, and data providers to submit their assembly annotations to [INSDC](https://www.insdc.org/about-insdc/), we understand that this process can sometimes take longer than expected, potentially delaying the availability of the genome on our site. To help mitigate such delays, we may accept GFF3 annotation files submitted directly to us, provided the assembly is already publicly available in INSDC.
 
 Please note that importing annotations directly incurs a higher processing cost compared to retrieving them from INSDC, so such requests will be evaluated on a case-by-case basis. Priority will be given to annotations for key species not yet represented in Ensembl, particularly those from underrepresented genera, or for assemblies that are part of collaborative projects involving Ensembl.
 
