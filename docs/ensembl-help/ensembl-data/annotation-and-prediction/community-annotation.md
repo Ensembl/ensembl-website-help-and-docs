@@ -53,4 +53,4 @@ Additionally, if some protein sequences contain sequence edits (e.g. selenocyste
 
 ## Submitting your GFF3 file to Ensembl
 
-To have your annotation considered for inclusion in Ensembl, please contact helpdesk.ensembl.org with information about the project your genome is associated with, the importance of including your genome in Ensembl and your validated and formatted GFF3 file.
+To have your annotation considered for inclusion in Ensembl, please contact [helpdesk@ensembl.org](mailto:helpdesk@ensembl.org) with information about the project your genome is associated with, the importance of including your genome in Ensembl and your validated and formatted GFF3 file.
