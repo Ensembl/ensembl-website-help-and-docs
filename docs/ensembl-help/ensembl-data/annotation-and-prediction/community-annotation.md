@@ -16,7 +16,7 @@ To facilitate the process, we have prepared a brief protocol to help ensure subm
 
 ## Preparing your GFF3 file for submission
 
-First and foremost, it is important the file must be in valid GFF3 format ([specifications](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md)). This can be checked by up loading the file to the [GFF3 Validator](https://genometools.org/cgi-bin/gff3validator.cgi) from “GenomeTools” and clicking on `Validate this file!`. Run it at least once without the `tidy` box ticked to check what the issues are. You can then attempt to validate it again with the `tidy` option checked. Note that if your GFF3 file is larger than the specified limit in the site, you will need to download the tool ([installation instructions](https://github.com/genometools/genometools/blob/master/README.md)) and run it on your computer with the command:
+First and foremost, it is important the file must be in valid GFF3 format ([specifications](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md)). This can be checked by uploading the file to the [GFF3 Validator](https://genometools.org/cgi-bin/gff3validator.cgi) from “GenomeTools” and clicking on `Validate this file!`. Run it at least once without the `tidy` box ticked to check what the issues are. You can then attempt to validate it again with the `tidy` option checked. Note that if your GFF3 file is larger than the specified limit in the site, you will need to download the tool ([installation instructions](https://github.com/genometools/genometools/blob/master/README.md)) and run it on your computer with the command:
 
 ```bash
 gt gff3validator <file.gff3>
