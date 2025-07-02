@@ -23,6 +23,8 @@ Please contact the Ensembl helpdesk if you would like to know which reference
 collection was used in homology annotation of a particular genome.
 
 ## Actinopterygii
+<details>
+<summary>Actinopterygii Reference Collection</summary>
 
 - [Amblyraja radiata](/species/9395fbdf-6d3e-4c95-80e3-6dac8fac78a9)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
@@ -64,8 +66,12 @@ collection was used in homology annotation of a particular genome.
 - [Takifugu rubripes](/species/9011136a-1efd-4afd-8310-08b3823a666f)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-## Arthropoda
+</details>
 
+## Arthropoda
+<details>
+<summary>Arthropoda Reference Collection</summary>
+  
 - [Aedes aegypti](/species/4c89a993-76c2-4f40-a3b4-30dfb5701616)
 - [Anoplius nigerrimus](/species/edb0408c-3847-4480-8fbc-942828295027)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
@@ -106,8 +112,12 @@ collection was used in homology annotation of a particular genome.
 - [Trichuris muris](/species/78635f00-7df6-46d9-a63d-5562aecc93e7)
 - [Varroa destructor](/species/1b6accce-817c-4e9d-bd20-31b13736316f)
 
-## Hexapoda
+</details>
 
+## Hexapoda
+<details>
+<summary>Hexapoda Reference Collection</summary>
+  
 - [Acyrthosiphon pisum](/species/daf16092-3fa0-4f14-b506-719191020ef0)
 - [Aedes aegypti](/species/4c89a993-76c2-4f40-a3b4-30dfb5701616)
 - [Agrilus planipennis](/species/e0251893-452e-4179-87cf-f2db38594e85)
@@ -148,8 +158,12 @@ collection was used in homology annotation of a particular genome.
 - [Vespula vulgaris](/species/ab3283a0-7ba4-44ec-aaca-39938301aa08)
 - [Zootermopsis nevadensis](/species/f39c236e-0322-4923-a073-ffb561b1ceaa)
 
-## Mammalia
+</details>
 
+## Mammalia
+<details>
+<summary>Mammalia Reference Collection</summary>
+  
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
 - [Artibeus jamaicensis](/species/a3e9d01e-fd7b-4849-9c25-2b2581b24a19)
 - [Balaenoptera musculus](/species/04d98308-b980-45ee-9a92-bb4e62f6ad02)
@@ -191,8 +205,12 @@ collection was used in homology annotation of a particular genome.
 - [Sus scrofa](/species/da38d82b-df50-419b-af74-886463b7bfa3)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-## Metazoa
+</details>
 
+## Metazoa
+<details>
+<summary>Metazoa Reference Collection</summary>
+  
 - [Acropora millepora](/species/a866592d-107e-43a1-b15c-830c4659fbb3)
 - [Adineta vaga](/species/7c4e3698-a2c2-41e2-ac41-38323847c3e1)
 - [Agrilus planipennis](/species/e0251893-452e-4179-87cf-f2db38594e85)
@@ -233,8 +251,12 @@ collection was used in homology annotation of a particular genome.
 - [Trichoplax adhaerens](/species/079144ec-7d2e-4d80-9ad5-b190ffb8f0ec)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 
-## Protostomia
+</details>
 
+## Protostomia
+<details>
+<summary>Protostomia Reference Collection</summary>
+  
 - [Acropora millepora](/species/a866592d-107e-43a1-b15c-830c4659fbb3)
 - [Adineta vaga](/species/7c4e3698-a2c2-41e2-ac41-38323847c3e1)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
@@ -275,8 +297,12 @@ collection was used in homology annotation of a particular genome.
 - [Trichoplax adhaerens](/species/079144ec-7d2e-4d80-9ad5-b190ffb8f0ec)
 - [Trichuris muris](/species/78635f00-7df6-46d9-a63d-5562aecc93e7)
 
-## Sauropsida
+</details>
 
+## Sauropsida
+<details>
+<summary>Sauropsida Reference Collection</summary>
+  
 - [Anas platyrhynchos](/species/600ea67d-5f86-479b-8155-cd8cf4b2d0f9)
 - [Anolis carolinensis](/species/2c433260-4a25-4b25-9f3e-0fcb9a9f1df0)
 - [Aptenodytes patagonicus](/species/63f189e1-8d07-4c9f-9add-f69f831bbbe2)
@@ -317,8 +343,12 @@ collection was used in homology annotation of a particular genome.
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 - [Zootoca vivipara](/species/d1ca93eb-cdbf-4709-a321-06bc64011884)
 
-## Vertebrata
+</details>
 
+## Vertebrata
+<details>
+<summary>Vertebrata Reference Collection</summary>
+  
 - [Amblyraja radiata](/species/9395fbdf-6d3e-4c95-80e3-6dac8fac78a9)
 - [Anas platyrhynchos](/species/600ea67d-5f86-479b-8155-cd8cf4b2d0f9)
 - [Anolis carolinensis](/species/2c433260-4a25-4b25-9f3e-0fcb9a9f1df0)
@@ -358,9 +388,12 @@ collection was used in homology annotation of a particular genome.
 - [Struthio camelus australis](/species/e297cf2b-652d-4406-af46-8922425e26a4)
 - [Sus scrofa](/species/da38d82b-df50-419b-af74-886463b7bfa3)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
+</details>
 
 ## Default
-
+<details>
+<summary>Default Reference Collection</summary>
+  
 - [Amphimedon queenslandica](/species/3eda9972-6c07-4918-84b8-393e6589c41f)
 - [Arabidopsis thaliana](/species/c0410902-1007-404d-a8dd-3adee003811e)
 - [Aspergillus nidulans FGSC A4](/species/944ece8e-a8f8-4338-b905-26092498facd)
@@ -400,3 +433,4 @@ collection was used in homology annotation of a particular genome.
 - [Triticum aestivum](/species/a73357ab-93e7-11ec-a39d-005056b38ce3)
 - [Xenopus tropicalis](/species/eda03508-879d-4ee6-82a8-42ad68fbaf19)
 - [Zymoseptoria tritici](/species/9699a220-8ba0-4ddb-a5ec-84493755d498)
+</details>
