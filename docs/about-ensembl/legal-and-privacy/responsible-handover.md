@@ -83,7 +83,7 @@ In the event of issues being detected with data published on the Ensembl site, a
 A new version of the Ensembl site will be released as new features are developed and tested, with significant updates being detailed on the [Ensembl blog](https://www.ensembl.info/). New data are released to the new Ensembl site approximately every two weeks. Periodically, an integrated release is produced which forms a stable set of interoperable data which will not change (RH 4.5)
 
 
-### Risk Assessment B
+### Risk Assessment B
 To ensure long term data stability, only data linked to integrated releases should be used in research and analysis. Partial releases are subject to change, with the potential of data being made inaccessible in the future (if more complete data are released). (RH B1)
 
 
