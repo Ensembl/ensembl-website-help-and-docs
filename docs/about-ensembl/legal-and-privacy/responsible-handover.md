@@ -28,7 +28,7 @@ We also recommend that when users use data from Ensembl in their research they c
 
 ## EBI (proposer)
 
-### Tier 1: What is the purpose of the tool?
+### Tier 1: What is the purpose of the tool?
 The Ensembl project has three goals: 
 1. to provide a comprehensive source of stable genome annotation
 2. to enable genomic interpretation
