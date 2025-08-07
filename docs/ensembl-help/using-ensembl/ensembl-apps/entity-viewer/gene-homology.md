@@ -1,27 +1,32 @@
 ---
-slug: gene-homology
+slug: how-to-find-homologous-genes
 title: How to find homologous genes in the Entity viewer
 description: A table of the homologous genes found in other species for an individual gene of interest.
 related_articles:
   - href: ../../../ensembl-data/comparative-genomics/homology-annotation.md
+  - href: ../../../ensembl-data/comparative-genomics/reference-collections/reference-collections-pre-june-2025.md
+  - href: ../../../ensembl-data/comparative-genomics/reference-collections/reference-collections-june-2025.md
 ---
 
 # How to find homologous genes in the Entity viewer
 
+The Gene relationships panel in the detailed view of a gene contains a homology table.
+
+The table lists genes homologous to the user's gene of interest found in a reference collection of species genomes. 
+
 Homologous genes share a common ancestor, being separated 'split' by a speciation event or a gene duplication event.
 
-A list of homologous genes for a given gene are found in the homology table.
 
 The homology table for a gene is the first tab in the gene relationship panel found in the detailed view of a gene in the Entity viewer.
 
 <figure>
   <img src="media/gene-homology.png" />
   <figcaption>
-    A view of the homology table for BRCA2 in the Entity viewer.
+    A view of the homology table for BRCA2 in the Gene relationship panel of the Entity viewer.
   </figcaption>
 </figure>
 
-For each homologous gene found in another species genome the following information is provided:
+For each homologous gene found in a species genome from the reference collection the following information is provided:
 
 * __Common name__: Domestic guinea pig
 * __Scientific name__: _Cavia porcellus_

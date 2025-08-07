@@ -5,8 +5,10 @@ description: How to browse gene, transcript and protein data in the Entity viewe
 related_articles:
   - href: transcripts.md
   - href: gene-function.md
+  - href: gene-homology.md
   - href: overview.md
   - href: external-references.md
+
 ---
 
 # What is the Entity viewer?
