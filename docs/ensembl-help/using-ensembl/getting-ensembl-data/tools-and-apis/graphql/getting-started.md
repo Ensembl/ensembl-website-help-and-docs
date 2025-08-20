@@ -228,7 +228,7 @@ base_url = 'https://beta.ensembl.org/data/graphql'
 
 genome_id_graphql_query = '''query{
   genomes(
-    by_assembly_accession_id: {
+    by_keyword: {
       assembly_accession_id:"GCA_000001405.29"
     }) 
   {
