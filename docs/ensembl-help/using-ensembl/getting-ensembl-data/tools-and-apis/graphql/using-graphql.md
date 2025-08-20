@@ -39,7 +39,7 @@ The query above will provide data about the major, minor and patch versions of t
     "version": {
       "api": {
         "major": "0",
-        "minor": "1",
+        "minor": "2",
         "patch": "0-beta"
       }
     }
@@ -59,14 +59,26 @@ Currently the Ensembl GraphQL service does not require authentication.
 ## Error messages and status codes
 Unlike REST, GraphQL is more restricted with the HTTP codes it returns.  For example, if an object cannot be found, then a 200 response is returned (rather than a 404 for example).  To help make it clearer, additional information is returned in the response:
 
+#### Query
+```
+query {
+  genes(
+    by_symbol: {genome_id: "9caa2cae-d1c8-4cfc-9ffd-2e13bc3e95b1", symbol: "BRCA22"}
+  ) {
+    name
+  }
+}
+```
+
+#### Response
 ```json
 {
   "data": {
-    "genes_by_symbol": null
+    "genes": null
   },
   "errors": [
     {
-      "message": "Failed to find gene with ids: symbol=BRCA22, genome_id=...",
+      "message": "Failed to find gene with ids: symbol=BRCA22, genome_id=9caa2cae-d1c8-4cfc-9ffd-2e13bc3e95b1",
       "locations": [
         {
           "line": 2,
@@ -74,12 +86,12 @@ Unlike REST, GraphQL is more restricted with the HTTP codes it returns.  For exa
         }
       ],
       "path": [
-        "genes_by_symbol"
+        "genes"
       ],
       "extensions": {
         "code": "GENE_NOT_FOUND",
         "symbol": "BRCA22",
-        "genome_id": "..."
+        "genome_id": "9caa2cae-d1c8-4cfc-9ffd-2e13bc3e95b1"
       }
     }
   ]
@@ -88,20 +100,40 @@ Unlike REST, GraphQL is more restricted with the HTTP codes it returns.  For exa
 If there is an issue which makes the service unavailable, then a 500 range status code will be returned.
 
 If malformed queries are submitted to the Ensembl GraphQL Service, the errors returned will be structured like this:
-``` json
-{
-  "error": {
-    "errors": [
-      {
-        "message": "Unknown argument 'not_the_right_argument' on field 'Query.gene'.",
-        "locations": [
-          {
-            "line": 2,
-            "column": 8
-          }
-        ]
-      }
-    ]
+
+#### Query
+```
+query {
+  genes (
+    not_the_right_argument: {genome_id: "9caa2cae-d1c8-4cfc-9ffd-2e13bc3e95b1", symbol: "BRCA22"}
+  ) {
+    name
   }
+}
+```
+
+#### Response
+```json
+{
+  "errors": [
+    {
+      "message": "Unknown argument 'not_the_right_argument' on field 'Query.genes'.",
+      "locations": [
+        {
+          "line": 3,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "message": "Field 'genes' argument 'by_symbol' of type 'SymbolInput!' is required, but it was not provided.",
+      "locations": [
+        {
+          "line": 2,
+          "column": 3
+        }
+      ]
+    }
+  ]
 }
 ```

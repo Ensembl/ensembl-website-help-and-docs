@@ -37,8 +37,7 @@ For example:
 query {
   genomes(
     by_keyword: {
-      keyword:"Triticum aestivum",
-      release_version: 108  # Optional
+      scientific_name:"Triticum aestivum",
     }
   ) {
     genome_id
@@ -50,16 +49,17 @@ query {
 ```
 
 #### Response
-```json
+```
 {
   "data": {
     "genomes": [
       {
-        "genome_id": "a73357ab-93e7-11ec-a39d-005056b38ce3",
-        "assembly_accession": "GCA_900519105.1",
+        "genome_id": "ae794660-8751-41cc-8883-b2fcdc7a74e8",
+        "assembly_accession": "GCA_903995565.1",
         "scientific_name": "Triticum aestivum",
-        "release_number": 108
-      }
+        "release_number": 110.1
+      },
+      ...
     ]
   }
 }
@@ -81,8 +81,8 @@ It can be done either by searching using `by_keyword` (as explained above) or `b
 ```
 query {
   genomes(
-    by_assembly_accession_id: {
-      assembly_accession_id:"GCA_000001405.28"
+    by_keyword: {
+      assembly_accession_id:"GCA_000001405.29"
     }
   ) {
     genome_id
@@ -96,7 +96,7 @@ query {
   "data": {
     "genomes": [
       {
-        "genome_id": "<genome_id>"
+        "genome_id": "2b5fb047-5992-4dfb-b2fa-1fb4e18d1abb"
       }
     ]
   }
@@ -111,13 +111,15 @@ query {
   genes(
     by_symbol: {
       symbol: "JAG1"
-      genome_id: "<insert genome_id here>" })
-        {
-          stable_id
-          unversioned_stable_id
-          version
-        }
-      }
+      genome_id: "2b5fb047-5992-4dfb-b2fa-1fb4e18d1abb" 
+    }
+  ) 
+  {
+    stable_id
+    unversioned_stable_id
+    version
+  }
+}
 ```
 
 #### Response
@@ -146,7 +148,7 @@ Find the `genome_id`.
 query {
   genomes(
     by_keyword: {
-      keyword:"GCA_000001405.28"
+      assembly_accession_id:"GCA_000001405.29"
     }
   ) {
     genome_id
@@ -160,7 +162,7 @@ query {
   "data": {
     "genomes": [
       {
-        "genome_id": "a7335667-93e7-11ec-a39d-005056b38ce3"
+        "genome_id": "2b5fb047-5992-4dfb-b2fa-1fb4e18d1abb"
       }
     ]
   }
@@ -172,7 +174,7 @@ Find the Gene by its `stable_id` and list its external references
 #### Query
 ```
 query{
-  gene(by_id: {genome_id:"<insert genome_id here>", stable_id: "ENSG00000101384.12"})
+  gene(by_id: {genome_id:"2b5fb047-5992-4dfb-b2fa-1fb4e18d1abb", stable_id: "ENSG00000101384.12"})
   {
     symbol
     external_references{
@@ -227,7 +229,7 @@ base_url = 'https://beta.ensembl.org/data/graphql'
 genome_id_graphql_query = '''query{
   genomes(
     by_assembly_accession_id: {
-      assembly_accession_id:"GCA_000001405.28"
+      assembly_accession_id:"GCA_000001405.29"
     }) 
   {
     genome_id
