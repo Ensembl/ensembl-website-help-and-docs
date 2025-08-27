@@ -75,7 +75,7 @@ Purpose: Find the Ensembl identifier for a Gene with a specified symbol within a
 
 First we need to find the `genome_id`:
 
-It can be done either by searching using `by_keyword` (as explained above) or `by_assembly_accession_id`.
+It can be done by searching using `by_keyword`.
 
 #### Query
 ```
