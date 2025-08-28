@@ -46,7 +46,7 @@ Before starting you must obtain a `genome_id` for the genome (assembly + annotat
 ```text
 query {
   genomes(
-    by_assembly_accession_id: {assembly_accession_id: "GCA_000001405.29"})
+    by_keyword: {assembly_accession_id: "GCA_000001405.29"})
   {
     genome_id
   }
