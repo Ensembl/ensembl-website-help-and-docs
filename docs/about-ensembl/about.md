@@ -6,7 +6,7 @@ description: Learn more about the Ensembl project
 
 # What we do
 
-The Ensembl project has three goals: to provide a comprehensive source of stable genome annotation, to enable genomic interpretation, and to support researcher driven analysis.
+The Ensembl project's goal is to enable genomic science by providing high-quality, integrated and consistent annotation on all cellular genomes within a harmonious, scalable and accessible infrastructure.
 
 Ensembl generates and imports genome annotation such as genes, variation, regulation and comparative genomics for vertebrates, non-vertebrates and key model organisms, and makes this information freely available online.
 
