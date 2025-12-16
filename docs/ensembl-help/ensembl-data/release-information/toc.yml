@@ -1,4 +1,6 @@
 - name: Release news
   href: release-news.md
+- name: Partial and Integrated data releases
+  href: partial-integrated-releases.md
 - name: Known bugs
   href: known-bugs.md
