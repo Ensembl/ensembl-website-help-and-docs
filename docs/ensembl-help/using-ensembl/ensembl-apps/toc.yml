@@ -2,6 +2,8 @@
   href: species-selector/toc.yml
 - name: Genome browser
   href: genome-browser/toc.yml
+- name: Alignments viewer
+  href: alignments-viewer/toc.yml
 - name: Entity viewer
   href: entity-viewer/toc.yml
 - name: BLAST
