@@ -6,12 +6,12 @@ description: How genomes are annotated using the annotation pipeline Prokka by E
 # Genome annotation using the annotation pipeline Prokka
 An overview of the integration of the Prokka annotation pipeline within Ensembl.
 
+
+## How the annotation is generated
+
 [Prokka](https://github.com/tseemann/prokka) is an automated genome annotation pipeline used to generate gene annotations for prokaryotic genomes (bacteria and archaea). It performs rapid identification of genomic features and assigns functional information to predicted genes.
 
 In Ensembl Bacteria, Prokka annotations are generated centrally and integrated into the Ensembl genome browser as a complete gene set.
-
-
-## How the annotation is generated
 
 ### Gene prediction
 
