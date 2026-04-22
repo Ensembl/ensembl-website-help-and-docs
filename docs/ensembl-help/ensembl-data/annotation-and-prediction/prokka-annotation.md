@@ -55,4 +55,4 @@ The annotations displayed in Ensembl Bacteria are based on standard Prokka outpu
 - **Integration**  
   Features are loaded into the Ensembl database and made available through the browser, APIs and downloads
 
-Aside from locus tag replacement and formatting, Prokka is run using its standard configuration.
+Aside from locus tag replacement, and formatting, Prokka is run using its standard configuration. ncRNA predictions made by Prokka are removed and replaced with cmscan predictions, as described above.
