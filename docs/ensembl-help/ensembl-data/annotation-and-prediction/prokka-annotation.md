@@ -17,13 +17,6 @@ In Ensembl Bacteria, Prokka annotations are generated centrally and integrated i
 
 Prokka uses Prodigal, an ab initio gene predictor, to identify protein-coding genes.
 
-- Protein-coding genes are predicted using ab initio gene finders (e.g. Prodigal)
-- tRNA genes are identified using tRNAscan-SE
-- rRNA genes are detected using specialised rRNA prediction tools
-
-These tools are combined into a single automated workflow to produce a set of gene models for each genome.
-
-
 ### Functional annotation
 
 Predicted genes are assigned functional information based on sequence similarity to known proteins:
