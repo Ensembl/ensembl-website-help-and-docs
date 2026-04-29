@@ -30,8 +30,8 @@ Predicted genes are assigned functional information based on sequence similarity
 
 Non-coding RNA (ncRNA) annotation is supplemented outside of the core Prokka pipeline:
 
-- cmscan (from the Infernal suite) is used to identify structured RNAs
-- Searches are performed against Rfam, a collection of covariance models for RNA families
+- [cmscan](http://eddylab.org/infernal/) (from the Infernal suite) is used to identify structured RNAs
+- Searches are performed against [Rfam](https://rfam.org/), a collection of covariance models for RNA families
 - This improves detection of small and regulatory RNAs
 
 
