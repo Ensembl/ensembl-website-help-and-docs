@@ -4,3 +4,5 @@
   href: partial-integrated-releases.md
 - name: Known bugs
   href: known-bugs.md
+  - name: Changelogs
+  href: Changelogs.md
