@@ -1,11 +1,11 @@
 ---
 slug: Changelogs.md
 title: Changelogs
-description: Information on new genome data in partial data releases on Ensembl Beta
+description: Information on new genome data and annotation in data releases on Ensembl
 ---
 
 # Changelogs
 
+Changelogs document new genomes or annotations that become available as part of a data release in Ensembl.
 
-Changelogs will document new genomes or annotations that become available as part of a partial data release in Ensembl Beta.
-You can use the changelog files [here](https://ftp.ebi.ac.uk/pub/ensemblorganisms/test/CHANGELOG/) to identify exactly which species and assemblies have been updated in a given partial Ensembl Beta release.
+You can use the changelog files [here](https://ftp.ebi.ac.uk/pub/ensemblorganisms/CHANGELOG/) to identify exactly which species and assemblies have been added or updated in a given Ensembl release.
