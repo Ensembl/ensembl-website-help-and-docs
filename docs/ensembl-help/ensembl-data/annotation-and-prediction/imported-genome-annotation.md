@@ -12,6 +12,7 @@ Genomes are imported via a computational pipeline which identifies genomes, reco
 
 The method of annotation for these genomes depends on the annotation provider, who are listed on the Species selector table and in the species homepage. Details on how the genome was annotated can be obtained from the annotation provider.
 
+![](media/import-annot-labels.png)
 
 
 ## How to get your annotation data into Ensembl?
