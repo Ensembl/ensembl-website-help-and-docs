@@ -1,5 +1,5 @@
 ---
-slug: Changelogs.md
+slug: changelogs.md
 title: Changelogs
 description: Information on new genome data and annotation in data releases on Ensembl
 ---
