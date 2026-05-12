@@ -2,5 +2,7 @@
   href: release-news.md
 - name: Partial and Integrated data releases
   href: partial-integrated-releases.md
+- name: Changelogs
+  href: changelogs.md
 - name: Known bugs
   href: known-bugs.md
