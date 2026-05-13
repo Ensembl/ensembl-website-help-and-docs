@@ -1,20 +1,33 @@
 ---
-slug: community-genome-annotation
-title: Community genome annotation
-description: Requirements for community annotations to be imported into Ensembl.
+slug: imported-genome-annotation
+title: Imported genome annotation
+description: How external genome annotations are imported into Ensembl
 ---
 
-Ensembl collaborates with a range of global genome assembly and annotation initiatives. We recognise that contributors to these efforts may be producing high-quality annotations they wish to see represented in Ensembl. If you would like to submit such annotations, please follow the instructions below.
+# Imported genome annotation
 
-# Community annotation formatting
+Many genomes made available through Ensembl are imported from annotated records in the [International Nucleotide Sequence Database Collaboration (INSDC)](http://www.insdc.org/) archives ([ENA](http://www.ebi.ac.uk/ena), [GenBank](http://www.ncbi.nlm.nih.gov/genbank/) and [DDBJ](http://www.ddbj.nig.ac.jp/)) or [NCBI RefSeq](https://www.ncbi.nlm.nih.gov/refseq/about/). 
 
-While we encourage users, collaborators, and data providers to submit their assembly annotations to [INSDC](https://www.insdc.org/about-insdc/), we understand that this process can sometimes take longer than expected, potentially delaying the availability of the genome on our site. To help mitigate such delays, we may accept GFF3 annotation files submitted directly to us, provided the assembly is already publicly available in INSDC.
+Genomes are imported via a computational pipeline which identifies genomes, reconstructs  gene models from submitted features, and imports identifiers for genes and gene products. Software used in Ensembl import pipelines is accessible via the [Ensembl Project GitHub Organisation](https://github.com/ensembl). 
+
+The method of annotation for these genomes depends on the annotation provider, who are listed on the Species selector table and in the species homepage. Details on how the genome was annotated can be obtained from the annotation provider.
+
+![](media/import-annot-labels.png)
+
+
+## How to get your annotation data into Ensembl?
+
+As part of Ensembl’s collaborative efforts with a range of global genome assembly and annotation initiatives, we recognise that contributors to these efforts may be producing high-quality annotations they wish to see represented in Ensembl. We encourage users, collaborators, and data providers to submit their assemblies and annotations to [INSDC](https://www.insdc.org/about-insdc/).
+
+For specific cases, we may accept GFF3 annotation files submitted directly to us, provided the assembly is already publicly available in INSDC.
+
+In all cases, genomes imported from the resources mentioned above must be uniquely identified by an INSDC assembly accession corresponding to an entry in the INSDC [Genome Assembly Database](http://www.ebi.ac.uk/ena/about/genome_assembly_database), which is used as an authoritative source of assemblies. Each assembly record comprises basic metadata about the organism plus INSDC accessions for replicons, unassembled scaffolds and WGS sets.
 
 Please note that importing annotations directly incurs a higher processing cost compared to retrieving them from INSDC, so such requests will be evaluated on a case-by-case basis. Priority will be given to annotations for key species not yet represented in Ensembl, particularly those from underrepresented genera, or for assemblies that are part of collaborative projects involving Ensembl.
 
 To facilitate the process, we have prepared a brief protocol to help ensure submitted GFF3 files are valid and meet our requirements.
 
-## Preparing your GFF3 file for submission
+### Preparing your GFF3 file for submission
 
 First and foremost, it is important the file must be in valid GFF3 format ([specifications](https://github.com/The-Sequence-Ontology/Specifications/blob/master/gff3.md)). This can be checked by uploading the file to the [GFF3 Validator](https://genometools.org/cgi-bin/gff3validator.cgi) from “GenomeTools” and clicking on `Validate this file!`. Run it at least once without the `tidy` box ticked to check what the issues are. You can then attempt to validate it again with the `tidy` option checked. Note that if your GFF3 file is larger than the specified limit in the site, you will need to download the tool ([installation instructions](https://github.com/genometools/genometools/blob/master/README.md)) and run it on your computer with the command:
 
@@ -51,6 +64,8 @@ Additionally, if some protein sequences contain sequence edits (e.g. selenocyste
 
 > Note: *Bear in mind that any handed over GFF3 files that have not passed this validation process will be returned to the provider and the genome will be postponed by at least one release.*
 
-## Submitting your GFF3 file to Ensembl
+### Submitting your GFF3 file to Ensembl
 
 To have your annotation considered for inclusion in Ensembl, please contact [helpdesk@ensembl.org](mailto:helpdesk@ensembl.org) with information about the project your genome is associated with, the importance of including your genome in Ensembl and your validated and formatted GFF3 file.
+
+
