@@ -1,2 +1,4 @@
 - name: Homology annotation
   href: homology-annotation.md
+- name: Genomic alignments in the alignments viewer
+  href: alignments-viewer-genomic-alignments.md
