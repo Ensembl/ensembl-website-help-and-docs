@@ -1,7 +1,7 @@
 ---
 slug: species-homepage
 title: Species homepage
-description: How to navigate the species homepage
+description: How to navigate the genome homepage
 ---
 
 # Species homepage
@@ -19,11 +19,11 @@ If you select 'Use' the species genome will appear for use in all the apps.
 
 ### 'Off'
 
-If you select 'Don't use' the species genome will be disabled in all other apps, but will still appear in your list of species genomes in the Species selector. 
+If you select 'Don't use' the species genome will be disabled in all other apps, but will still appear in your list of species genomes in the Genome selector. 
 
 ## How to remove a species genome
 
-To remove the species from your list in the Species selector, select 'Remove species'. 
+To remove the species from your list in the Genome selector, select 'Remove species'. 
 
 You will be shown a warning to confirm you want to delete the species genome from your list. 
 
@@ -55,4 +55,4 @@ The Summary panel contains information about the genome assembly and gene annota
 
 ## How to leave the Species homepage
 
-To leave the Species homepage and return to the Species selector, select '<' or 'Find a species' to the left of the 'Species homepage' header.
+To leave the Species homepage and return to the Genome selector, select '<' or 'Find a species' to the left of the 'Species homepage' header.

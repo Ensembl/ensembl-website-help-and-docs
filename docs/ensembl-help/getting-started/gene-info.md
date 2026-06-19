@@ -9,7 +9,7 @@ related_articles:
 
 # Find out about a gene
 
-To find your gene of interest, you must start by selecting your species genome of interest using the Species selector:
+To find your gene of interest, you must start by selecting your species genome of interest using the Genome selector:
 
 ![](../../img/id-species-selector.svg)
 

@@ -7,7 +7,7 @@ related_articles:
 ---
 # How do I add or remove a species?
 
-You can use the Species selector to:
+You can use the Genome selector to:
 
 - choose a species genome, to work with in other apps 
 - create a list of genomes, to work with in other apps 
@@ -17,7 +17,7 @@ You can use the Species selector to:
 <figure>
   <img src="media/species-selector.png" />
   <figcaption>
-    The Species selector landing page showing a search box and icons of the 42 most popular species.
+    The Genome selector landing page showing a search box and icons of the 42 most popular species.
   </figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ You must select a species genome to start using any Ensembl app.
 You can then investigate the genes, variants and orthologues of that species genome in another app ie the Genome browser or Entity viewer.
 
 
-There are two ways to select a species genome in the Species selector:
+There are two ways to select a species genome in the Genome selector:
 
 ### Choosing a genome from the 42 most popular species.
 
@@ -113,7 +113,7 @@ You can navigate to a Species homepage by clicking on the species genome lozenge
 
 The Species homepage also contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes.
 
-![Remove species button on species homepage](media/remove-button-species-homepage.png)
+![Remove species button on genome homepage](media/remove-button-species-homepage.png)
 
 ### How to remove a genome
 

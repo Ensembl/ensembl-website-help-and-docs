@@ -8,7 +8,7 @@ related_articles:
 
 # Choosing a species genome to work with
 
-To start use the Species selector to select a species genome to work with in other apps:
+To start use the Genome selector to select a species genome to work with in other apps:
 
 ![](../../img/id-species-selector.svg)
 
