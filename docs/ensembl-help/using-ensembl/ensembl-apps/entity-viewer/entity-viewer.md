@@ -1,7 +1,7 @@
 ---
 slug: entity-viewer
-title: What is the Entity viewer?
-description: How to browse gene, transcript and protein data in the Entity viewer
+title: What is the Feature explorer?
+description: How to browse gene, transcript and protein data in the Feature explorer
 related_articles:
   - href: transcripts.md
   - href: gene-function.md
@@ -11,11 +11,11 @@ related_articles:
 
 ---
 
-# What is the Entity viewer?
+# What is the Feature explorer?
 
-Entity viewer reveals detailed information about an entity ie a gene of interest and their related transcripts, proteins and functions.
+Feature explorer reveals detailed information about an entity ie a gene of interest and their related transcripts, proteins and functions.
 
-The Entity viewer consists of a Navigation bar, the Main display, the Right-hand panel and an Action bar.
+The Feature explorer consists of a Navigation bar, the Main display, the Right-hand panel and an Action bar.
 
 
 ![](media/entity-viewer.png)
@@ -73,7 +73,7 @@ Select the magnifying glass icon to search for an entity ie a gene.
 
 Select the bookmark icon to see previously viewed entities ie genes or transcripts.
 
-Previously viewed is an auto-generated browsing history of up to 20 genes (or other entities) previously loaded within the Entity viewer application.
+Previously viewed is an auto-generated browsing history of up to 20 genes (or other entities) previously loaded within the Feature explorer application.
  
 
 ### Download

@@ -1,7 +1,7 @@
 ---
 slug: species-selector-intro
 title: How do I add or remove a species?
-description: How to select a species genome of interest to visualise in the Genome browser, Entity viewer and other Ensembl apps.
+description: How to select a species genome of interest to visualise in the Genome browser, Feature explorer and other Ensembl apps.
 related_articles:
  - href: species-homepage.md
 ---
@@ -25,7 +25,7 @@ You can use the Genome selector to:
 
 You must select a species genome to start using any Ensembl app. 
 
-You can then investigate the genes, variants and orthologues of that species genome in another app ie the Genome browser or Entity viewer.
+You can then investigate the genes, variants and orthologues of that species genome in another app ie the Genome browser or Feature explorer.
 
 
 There are two ways to select a species genome in the Genome selector:
@@ -75,7 +75,7 @@ You can create a list of genomes by adding one or more genome assemblies from th
 
 ![Species marked for selection in a genome assembly table](media/selecting-from-table.png)
 
-Your list of species genomes can be used in all other apps, ie the Genome browser or Entity viewer.
+Your list of species genomes can be used in all other apps, ie the Genome browser or Feature explorer.
 
 The lozenges representing the species genomes are displayed in a row at the top of each app.
 

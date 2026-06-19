@@ -35,7 +35,7 @@ If you decide not to delete that species genome select the 'Do not remove' optio
 
 To find a gene from a Species homepage select 'Find a gene' or the magnifying glass icon in the Action bar and search for your gene of interest.
 
-Select the gene of interest and you will be given the option to view the gene in the Genome browser or Entity viewer app.
+Select the gene of interest and you will be given the option to view the gene in the Genome browser or Feature explorer app.
 
 ## Statistics table 
 
@@ -45,7 +45,7 @@ The table also contains a summary of the genome assembly and the variation, regu
 
 Select the expand icon to find more detailed information about each category.
 
-You can also select the 'Example gene' to view a gene in the Entity viewer or Genome browser respectively.
+You can also select the 'Example gene' to view a gene in the Feature explorer or Genome browser respectively.
 
 ## Summary panel
 

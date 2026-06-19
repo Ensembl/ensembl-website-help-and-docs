@@ -13,7 +13,7 @@ To find your gene of interest, you must start by selecting your species genome o
 
 ![](../../img/id-species-selector.svg)
 
-Gene data is found in both the Genome browser and the Entity viewer apps:
+Gene data is found in both the Genome browser and the Feature explorer apps:
 
 ![](../../img/id-genome-browser.svg)
 
@@ -21,6 +21,6 @@ Use the Genome browser to view a gene and its transcripts in the context of the 
 
 ![](../../img/id-entity-viewer.svg)
 
-Use the Entity viewer to find details about the gene and its different transcripts, including protein domains, links out to other databases and sequences.
+Use the Feature explorer to find details about the gene and its different transcripts, including protein domains, links out to other databases and sequences.
 
-Select either the Genome browser or the Entity viewer app. Once in your chosen app use search to find your gene of interest and select to display the gene's data in the app.
+Select either the Genome browser or the Feature explorer app. Once in your chosen app use search to find your gene of interest and select to display the gene's data in the app.

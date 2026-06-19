@@ -13,10 +13,10 @@ In order to find your protein of interest, you must first use the Genome selecto
 
 ![](../../img/id-species-selector.svg)
 
-Protein data is available in the Entity viewer:
+Protein data is available in the Feature explorer:
 
 ![](../../img/id-entity-viewer.svg)
 
-Select the Entity viewer app. Search for and select your gene of interest. 
+Select the Feature explorer app. Search for and select your gene of interest. 
 
 You will find details of the gene's protein-coding transcripts, their peptide sequences, protein isoforms, protein domains and links to more information in other protein databases.
