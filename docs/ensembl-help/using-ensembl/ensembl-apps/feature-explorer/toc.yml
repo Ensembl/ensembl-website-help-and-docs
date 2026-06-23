@@ -1,5 +1,5 @@
-- name: What is the Entity viewer?
-  href: entity-viewer.md
+- name: What is the Feature explorer?
+  href: feature-explorer.md
 - name: What’s in the Transcripts view?
   href: transcripts.md
 - name: What’s in the Gene function?
@@ -8,7 +8,7 @@
   href: overview.md
 - name: What’s in the External references panel?
   href: external-references.md
-- name: How to view variants in the Entity viewer?
-  href: variant-entity-viewer.md
-- name: How to find homologous genes in the Entity viewer?
+- name: How to view variants in the Feature explorer?
+  href: variant-feature-explorer.md
+- name: How to find homologous genes in the Feature explorer?
   href: gene-homology.md
