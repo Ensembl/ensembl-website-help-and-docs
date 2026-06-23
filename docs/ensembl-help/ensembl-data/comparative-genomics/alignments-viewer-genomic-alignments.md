@@ -8,7 +8,7 @@ description: Information about the genomic alignments presented in the Alignment
 
 ## Genomic alignment datasets
 
-Currently, the Alignments viewer includes [genomic alignment datasets](/help/articles/alignments-viewer-datasets-april-2026)
+Currently, the Alignments viewer includes [genomic alignment datasets](/help/articles/genomic-alignment-datasets-april-2026)
 obtained from the human pangenome graph generated as part of the
 [Human Pangenome Reference Consortium data release 2](https://humanpangenome.org/hprc-data-release-2/)
 ([Liao, W.W., <em>et al.</em> 2023](https://doi.org/10.1038/s41586-023-05896-x)).
@@ -114,7 +114,7 @@ a bigChain file for presentation alongside structural variants in the Alignments
   <img alt="MAF processing subworkflow diagram"
        style="width:450px;"
        src="media/maf_processing_subworkflow_small.png"
-       srcset="media/maf_processing_subworkflow_small.png 1x, media/maf_processing_subworkflow_medium.png 2x" />
+  />
   <figcaption>
   Fig 1. MAF processing subworkflow diagram. The third step of the genomic alignment
   preparation workflow is a subworkflow with several multiple alignment (MAF) processing

@@ -9,7 +9,7 @@ description: Genomic alignment datasets in the Alignments viewer as of April 202
 The current version of the Alignments viewer has made use of pairwise genomic alignments which were obtained from the human pangenome
 graph generated as part of the [Human Pangenome Reference Consortium data release 2](https://humanpangenome.org/hprc-data-release-2/)
 ([Liao, W.W., *et al.* 2023](https://doi.org/10.1038/s41586-023-05896-x)). These pairwise alignments were processed using the steps
-described for [genomic alignments in the Alignments viewer](/help/articles/alignments-viewer-genomic-alignments).
+described for [genomic alignments in the Alignments viewer](/help/articles/genomic-alignments-in-the-alignments-viewer).
 
 The current genomic alignment datasets are listed below (with links to their genome pages).
 
