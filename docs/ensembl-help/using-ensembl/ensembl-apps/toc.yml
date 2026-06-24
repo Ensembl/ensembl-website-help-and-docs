@@ -4,8 +4,8 @@
   href: genome-browser/toc.yml
 - name: Alignments viewer
   href: alignments-viewer/toc.yml
-- name: Entity viewer
-  href: entity-viewer/toc.yml
+- name: Feature explorer
+  href: feature-explorer/toc.yml
 - name: BLAST
   href: blast/toc.yml
 - name: Ensembl Variant Effect Predictor (VEP)

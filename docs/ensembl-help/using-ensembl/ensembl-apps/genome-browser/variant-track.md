@@ -82,7 +82,7 @@ A menu will pop up that lists the variant’s:
 * location
 * alleles
 
-and the option to see view the variant in the genome browser or entity viewer.
+and the option to see view the variant in the Genome browser or Feature explorer.
 
 If you select the genome browser the variant track will move to the top of the genome browser and the variant of interest will become the central focus of the view.
 

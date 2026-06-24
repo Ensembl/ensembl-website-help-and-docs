@@ -3,7 +3,7 @@ slug: overview
 title: What’s in the overview panel?
 description: Where to find gene summary data and publication records
 related_articles:
-  - href: entity-viewer.md
+  - href: feature-explorer.md
   - href: transcripts.md
   - href: gene-function.md
   - href: external-references.md
