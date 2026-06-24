@@ -7,10 +7,10 @@ related_articles:
 ---
 # Accessing Ensembl GraphQL services
 
-The Ensembl GraphQL services can be accessed here:[https://beta.ensembl.org/data/graphql](https://beta.ensembl.org/data/graphql).
+The Ensembl GraphQL services can be accessed at [https://beta.ensembl.org/data/graphql](https://beta.ensembl.org/data/graphql).
 
 ## Schemas and documentation
-If you wish to interrogate the service and explore the documentation, [a GraphQL playground](/data/graphql) can be accessed via your browser.
+If you wish to interrogate the service and explore the documentation, [a GraphQL playground](https://beta.ensembl.org/data/graphql) can be accessed via your browser.
 
 ## Genomes
 
