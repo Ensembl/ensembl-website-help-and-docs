@@ -68,7 +68,7 @@ The variant ID tab displays a zoomed in view of the reference sequence showing t
 
 The variant allele(s) are shown directly below the reference allele for all variant types.
 
-Different types of variants have specific visual representations in the entity viewer.
+Different types of variants have specific visual representations in the Feature explorer.
 
 All altered, deleted, substituted, indels and inserted bases are coloured to represent the specific group of short variants to which they belong (see short variant groups in the right-hand panel of the Genome browser.)
 
