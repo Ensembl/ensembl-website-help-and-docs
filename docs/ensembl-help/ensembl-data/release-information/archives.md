@@ -1,13 +1,13 @@
 ---
-slug: previous-ensembl-versions
+slug: archives
 
-title: Previous Ensembl versions
-description: Lists of previous versions and data releases from the Ensembl project
+title: Ensembl archives
+description: Lists of previous versions and archived releases from the Ensembl project
 ---
 
-# Previous Ensembl versions
+# Ensembl archives and previous sites
 
-This version of Ensembl (from 2026 onwards) uses a different versioning system and release cycle to that of previous Ensembl versions. 
+This Ensembl site uses a different versioning system and release cycle to that of previous Ensembl versions. 
 
 Ensembl versions released prior to July 2026 were numbered numerically following a 3-4 month long release cycle. 
 
