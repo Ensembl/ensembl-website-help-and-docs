@@ -3,7 +3,7 @@ slug: sequence-download
 title: Sequence downloads
 description: Downloading sequences
 related_articles:
-  - href: ../ensembl-apps/entity-viewer/entity-viewer.md
+  - href: ../ensembl-apps/feature-explorer/feature-explorer.md
   - href: ../ensembl-apps/genome-browser/browser.md
   - href: ../getting-ensembl-data/tools-and-apis/refget/refget.md
 
@@ -11,13 +11,13 @@ related_articles:
 
 # Downloading sequences
 
-You can download genomic sequence, cDNA, CDS and peptide sequences from the Genome browser and Entity viewer apps.
+You can download genomic sequence, cDNA, CDS and peptide sequences from the Genome browser and Feature explorer apps.
 
 ## Where to find Download 
 
 In the Genome browser, you can access sequence Download in the pop-up menus on a transcripts track or in its Track drawer.
 
-In the Entity viewer, you can access sequence Download through the pop-up menus on a transcripts track, in its Track drawer or the Download icon in the Action bar.
+In the Feature explorer, you can access sequence Download through the pop-up menus on a transcripts track, in its Track drawer or the Download icon in the Action bar.
 
 ## Download options
 

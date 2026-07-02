@@ -1,7 +1,7 @@
 ---
-slug: variant-entity-viewer
-title: How to view variants in the Entity viewer?
-description: How to view variants, their transcripts and allele frequencies in the Entity viewer
+slug: variant-feature-explorer
+title: How to view variants in the Feature explorer?
+description: How to view variants, their transcripts and allele frequencies in the Feature explorer
 related_articles:
   - href: transcripts.md
   - href: gene-function.md
@@ -9,16 +9,16 @@ related_articles:
   - href: external-references.md
 ---
 
-# How to view variants in the Entity viewer?
+# How to view variants in the Feature explorer?
 
-The Entity viewer reveals detailed information about a variant, such as its transcript consequences, allele frequencies and phenotypes.
+The Feature explorer reveals detailed information about a variant, such as its transcript consequences, allele frequencies and phenotypes.
 
-The view of variants in the Entity viewer consists of a navigation bar, the main display, the right-hand panel and an action bar.
+The view of variants in the Feature explorer consists of a navigation bar, the main display, the right-hand panel and an action bar.
 
 <figure>
   <img src="media/variant-ev.png" />
   <figcaption>
-    A view of the variant rs699 in the Entity viewer.
+    A view of the variant rs699 in the Feature explorer.
   </figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ along with additional information about the variant’s:
 
 ## How do I find detailed information about a variant? 
 
-Detailed data about a variant is (are?) presented in the nine panels in the main body of the Entity viewer.
+Detailed data about a variant is (are?) presented in the nine panels in the main body of the Feature explorer.
 
 Currently only three panels contain data 
 
@@ -68,7 +68,7 @@ The variant ID tab displays a zoomed in view of the reference sequence showing t
 
 The variant allele(s) are shown directly below the reference allele for all variant types.
 
-Different types of variants have specific visual representations in the entity viewer.
+Different types of variants have specific visual representations in the Feature explorer.
 
 All altered, deleted, substituted, indels and inserted bases are coloured to represent the specific group of short variants to which they belong (see short variant groups in the right-hand panel of the Genome browser.)
 
@@ -85,7 +85,7 @@ The transcript consequence panel shows all the Ensembl transcripts that overlap 
 <figure>
   <img src="media/transcript-consequences.png" />
   <figcaption>
-    A view of the transcript-consequences panel in the Entity viewer.
+    A view of the transcript-consequences panel in the Feature explorer.
   </figcaption>
 </figure>
 
@@ -129,6 +129,6 @@ The visual representation is a pie chart in which the altered allele frequency i
 <figure>
   <img src="media/allele-frequency.png" />
   <figcaption>
-    A view of the allele frequency panel in the Entity viewer.
+    A view of the allele frequency panel in the Feature explorer.
   </figcaption>
 </figure>

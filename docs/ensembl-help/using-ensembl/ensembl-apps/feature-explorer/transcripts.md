@@ -3,7 +3,7 @@ slug: transcripts
 title: What’s in the transcripts view?
 description: How to browse and download transcript data
 related_articles:
-  - href: entity-viewer.md
+  - href: feature-explorer.md
   - href: gene-function.md
   - href: overview.md
   - href: external-references.md
@@ -17,7 +17,7 @@ Each transcript is represented graphically as a white on a black background and 
 
 Transcripts are positioned relative to the gene start and end, so that the yellow grid matches the coordinates in the gene image above. 
 
-The Transcript panel is the default panel in the Entity viewer.
+The Transcript panel is the default panel in the Feature explorer.
 
 
 ## Introns and exons

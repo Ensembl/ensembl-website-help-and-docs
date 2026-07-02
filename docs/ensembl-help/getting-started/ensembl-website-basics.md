@@ -3,7 +3,7 @@ slug: ensembl-website-basics
 title: How to get started with the Ensembl website
 description: Here is how to use the apps in Ensembl
 related_articles:
-  - href: ../using-ensembl/ensembl-apps/entity-viewer/entity-viewer.md
+  - href: ../using-ensembl/ensembl-apps/feature-explorer/feature-explorer.md
   - href: ../using-ensembl/ensembl-apps/genome-browser/browser.md
 ---
 
@@ -24,7 +24,7 @@ The five apps currently available:
 
 ![](../../img/id-species-selector.svg)
 
-The Species selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Entity viewer.
+The Species selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Feature explorer.
 
 
 ![](../../img/id-genome-browser.svg)
@@ -32,9 +32,9 @@ The Species selector allows you to view and select the species genome assemblies
 Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
 
 
-![](../../img/id-entity-viewer.svg)
+![](../../img/id-feature-explorer.svg)
 
-Use the Entity viewer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
+Use the Feature explorer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
 
 ![](../../img/id-blast.svg)

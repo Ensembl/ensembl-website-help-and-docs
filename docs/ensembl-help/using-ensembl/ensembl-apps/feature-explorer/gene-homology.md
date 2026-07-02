@@ -1,6 +1,6 @@
 ---
 slug: how-to-find-homologous-genes
-title: How to find homologous genes in the Entity viewer
+title: How to find homologous genes in the Feature explorer
 description: A table of the homologous genes found in other species for an individual gene of interest.
 related_articles:
   - href: ../../../ensembl-data/comparative-genomics/homology-annotation.md
@@ -8,7 +8,7 @@ related_articles:
   - href: ../../../ensembl-data/comparative-genomics/reference-collections/reference-collections-june-2025.md
 ---
 
-# How to find homologous genes in the Entity viewer
+# How to find homologous genes in the Feature explorer
 
 The Gene relationships panel in the detailed view of a gene contains a homology table.
 
@@ -17,12 +17,12 @@ The table lists genes homologous to the user's gene of interest found in a refer
 Homologous genes share a common ancestor, being separated 'split' by a speciation event or a gene duplication event.
 
 
-The homology table for a gene is the first tab in the gene relationship panel found in the detailed view of a gene in the Entity viewer.
+The homology table for a gene is the first tab in the gene relationship panel found in the detailed view of a gene in the Feature explorer.
 
 <figure>
   <img src="media/gene-homology.png" />
   <figcaption>
-    A view of the homology table for BRCA2 in the Gene relationship panel of the Entity viewer.
+    A view of the homology table for BRCA2 in the Gene relationship panel of the Feature explorer.
   </figcaption>
 </figure>
 
