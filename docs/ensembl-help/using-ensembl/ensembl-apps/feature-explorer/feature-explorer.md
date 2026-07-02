@@ -13,7 +13,7 @@ related_articles:
 
 # What is the Feature explorer?
 
-Feature explorer reveals detailed information about an entity ie a gene of interest and their related transcripts, proteins and functions.
+Feature explorer reveals detailed information about a feature, such as a gene of interest and their related transcripts, proteins and functions.
 
 The Feature explorer consists of a Navigation bar, the Main display, the Right-hand panel and an Action bar.
 
@@ -23,12 +23,12 @@ The Feature explorer consists of a Navigation bar, the Main display, the Right-h
 
 ## Navigation bar
 
-The Navigation bar summarises details of an entity such as a gene. For a gene the summary lists the gene symbol, Ensembl stable ID, biotype, strand and genomic coordinates. 
+The Navigation bar summarises details of a feature such as a gene. For a gene the summary lists the gene symbol, Ensembl stable ID, biotype, strand and genomic coordinates. 
 
 
 ## Main display
 
-The Main display presents detailed data relating to the entity ie a gene, its transcripts and proteins. 
+The Main display presents detailed data relating to the feature i.e. a gene, its transcripts and proteins. 
 
 
 ### Visual summary
@@ -42,7 +42,7 @@ You can also go to the Genome browser from here to view your gene of interest pl
 
 ### Transcript and Gene function panels
 
-Detailed data about an entity is found in the panels below the visual summary, for genes the Transcript panel shows all transcripts for the gene. 
+Detailed data about a feature is found in the panels below the visual summary, for genes the Transcript panel shows all transcripts for the gene. 
 
 The Gene function panel presents protein information for all coding transcripts for the gene of interest.  
 
@@ -51,7 +51,7 @@ An ‘active’ tab appears black.
 
 ## Right-hand panel
  
-The Right-hand panel provides additional information about the entity of interest. For a gene this information is found in the Overview and External reference tabs in the Right-hand panel.
+The Right-hand panel provides additional information about the feature of interest. For a gene this information is found in the Overview and External reference tabs in the Right-hand panel.
  
 
 ## Action bar
@@ -66,20 +66,20 @@ Select the right pointing arrow to open and close the Right-hand panel.
 
 ### Find a gene
 
-Select the magnifying glass icon to search for an entity ie a gene. 
+Select the magnifying glass icon to search for a gene. 
 
 
 ### Previously viewed
 
-Select the bookmark icon to see previously viewed entities ie genes or transcripts.
+Select the bookmark icon to see previously viewed features, i.e. genes, transcripts, or variants.
 
-Previously viewed is an auto-generated browsing history of up to 20 genes (or other entities) previously loaded within the Feature explorer application.
+Previously viewed is an auto-generated browsing history of up to 20 genes (or other features) previously loaded within the Feature explorer application.
  
 
 ### Download
 
 Select the underlined down arrow icon to download sequence data.
 
-Download enables export of the sequence data for an entity. If your entity is a gene you can download the genomic sequence and all of its transcripts and translations.
+Download enables export of the sequence data for a feature. If your feature is a gene, you can download the genomic sequence and all of its transcripts and translations.
 
-To download tick the box next to the sequence data you need then select the green Download button. Sequence data are exported in FASTA format.
+To download tick the box next to the sequence data you need, then select the green Download button. Sequence data are exported in FASTA format.
