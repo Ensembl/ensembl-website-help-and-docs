@@ -22,27 +22,199 @@ There are currently five different apps, each allowing you to perform a specific
 The five apps currently available:
 
 
-![](../../img/id-species-selector.svg)
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 70%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-genome-selector.svg" alt="">
+  </div>
+  <div>Species selector</div>
+</div>
 
 The Species selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Feature explorer.
 
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
 
-![](../../img/id-genome-browser.svg)
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 59.375%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-genome-browser.svg" alt="">
+  </div>
+  <div>Genome browser</div>
+</div>
 
 Use the Genome browser to explore a genomic region and view a gene and its transcripts in the context of the genome.
 
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
 
-![](../../img/id-feature-explorer.svg)
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 100%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-feature-explorer.svg" alt="">
+  </div>
+  <div>Feature explorer</div>
+</div>
 
 Use the Feature explorer to look at gene details, including transcript structures, protein domains, links out to other databases and sequences.
 
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
 
-![](../../img/id-blast.svg)
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 75%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-blast.svg" alt="">
+  </div>
+  <div>BLAST</div>
+</div>
 
 The BLAST app allows you to compare DNA, RNA and/or protein sequence information.
 
 
-![](../../img/id-help.svg)
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 70%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-help.svg" alt="">
+  </div>
+  <div>Help</div>
+</div>
 
 Explore our Help & documentation to learn more about our data and tools.
 

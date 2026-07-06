@@ -11,15 +11,120 @@ related_articles:
 
 To find your gene of interest, you must start by selecting your species genome of interest using the Species selector:
 
-![](../../img/id-species-selector.svg)
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 70%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-genome-selector.svg" alt="">
+  </div>
+  <div>Species selector</div>
+</div>
 
 Gene data is found in both the Genome browser and the Feature explorer apps:
 
-![](../../img/id-genome-browser.svg)
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 59.375%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-genome-browser.svg" alt="">
+  </div>
+  <div>Genome browser</div>
+</div>
 
 Use the Genome browser to view a gene and its transcripts in the context of the genome. The gene is shown in the context of genomic features such as neighbouring genes (coding and non-coding), forward or reverse strands and assembly information.
 
-![](../../img/id-feature-explorer.svg)
+<div>
+  <style>
+    @scope {
+      :scope {
+        display: grid;
+        grid-template-columns: auto auto;
+        column-gap: 0.6rem;
+        align-items: center;
+        justify-content: start;
+      }
+
+      .image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        background-color: #6f8190;
+      }
+
+      .image-container img {
+        margin: 0;
+      }
+
+      img {
+        filter: invert(1);
+        height: 100%;
+        aspect-ratio: 1;
+      }
+    }
+  </style>
+  <div class="image-container">
+    <img src="../../img/icon-feature-explorer.svg" alt="">
+  </div>
+  <div>Feature explorer</div>
+</div>
 
 Use the Feature explorer to find details about the gene and its different transcripts, including protein domains, links out to other databases and sequences.
 
