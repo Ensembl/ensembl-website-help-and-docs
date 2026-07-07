@@ -9,7 +9,7 @@ related_articles:
 
 # Find out about a gene
 
-To find your gene of interest, you must start by selecting your species genome of interest using the Species selector:
+To find your gene of interest, you must start by selecting your species genome of interest using the Genome selector:
 
 <div>
   <style>
@@ -45,7 +45,7 @@ To find your gene of interest, you must start by selecting your species genome o
   <div class="image-container">
     <img src="../../img/icon-genome-selector.svg" alt="">
   </div>
-  <div>Species selector</div>
+  <div>Genome selector</div>
 </div>
 
 Gene data is found in both the Genome browser and the Feature explorer apps:

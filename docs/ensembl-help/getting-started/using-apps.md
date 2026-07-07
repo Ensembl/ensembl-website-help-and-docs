@@ -72,10 +72,10 @@ The apps currently available to you are:
     <div class="image-container">
       <img class="genome-selector" src="../../img/icon-genome-selector.svg" alt="">
     </div>
-    <div>Species selector</div>
+    <div>Genome selector</div>
   </div>
   <div>
-    Use the Species selector to choose a species genome of interest.
+    Use the Genome selector to choose a species genome of interest.
     You must select a species genome to use the Ensembl other apps ie Genome browser and Feature explorer.
   </div>
 

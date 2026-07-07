@@ -1,13 +1,13 @@
 ---
-slug: species-selector-intro
+slug: genome-selector-intro
 title: How do I add or remove a species?
 description: How to select a species genome of interest to visualise in the Genome browser, Feature explorer and other Ensembl apps.
 related_articles:
- - href: species-homepage.md
+ - href: genome-homepage.md
 ---
 # How do I add or remove a species?
 
-You can use the Species selector to:
+You can use the Genome selector to:
 
 - choose a species genome, to work with in other apps 
 - create a list of genomes, to work with in other apps 
@@ -17,7 +17,7 @@ You can use the Species selector to:
 <figure>
   <img src="media/species-selector.png" />
   <figcaption>
-    The Species selector landing page showing a search box and icons of the 42 most popular species.
+    The Genome selector landing page showing a search box and icons of the 42 most popular species.
   </figcaption>
 </figure>
 
@@ -28,7 +28,7 @@ You must select a species genome to start using any Ensembl app.
 You can then investigate the genes, variants and orthologues of that species genome in another app ie the Genome browser or Feature explorer.
 
 
-There are two ways to select a species genome in the Species selector:
+There are two ways to select a species genome in the Genome selector:
 
 ### Choosing a genome from the 42 most popular species.
 
@@ -105,19 +105,19 @@ into the filter box above the table of genome assemblies.
 
 #### Removing a species genome
 
-You can remove a genome by selecting the 'Remove species' button, on the top right of the Species homepage. 
+You can remove a genome by selecting the 'Remove species' button, on the top right of the Genome homepage. 
 
-The Species homepage
+The Genome homepage
 
-You can navigate to a Species homepage by clicking on the species genome lozenge. 
+You can navigate to a Genome homepage by clicking on the species genome lozenge. 
 
-The Species homepage also contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes.
+The Genome homepage also contains more information about the genes, variants of species genome, details about the genome assembly and the controls to manage a list of species genomes.
 
 ![Remove species button on species homepage](media/remove-button-species-homepage.png)
 
 ### How to remove a genome
 
-Select the 'Remove species' button, on the top right of the Species homepage. 
+Select the 'Remove species' button, on the top right of the Genome homepage. 
 
 A warning message will be displayed. Select the green 'Remove' button to delete the species genome fron your list.
 
@@ -128,7 +128,7 @@ A warning message will be displayed. Select the green 'Remove' button to delete 
 
 <img src="media/use-ss.png" width="450" alt="A Use or do not use slider">
 
-You can deactivate a species genome by toogling to 'Don't use' at the top of the Species homepage.
+You can deactivate a species genome by toggling to 'Don't use' at the top of the Genome homepage.
 
 <img src="media/do-not-use-ss.png" width="450" alt="Do not use selected">
 

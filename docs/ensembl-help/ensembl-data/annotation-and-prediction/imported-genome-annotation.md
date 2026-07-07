@@ -10,7 +10,7 @@ Many genomes made available through Ensembl are imported from annotated records 
 
 Genomes are imported via a computational pipeline which identifies genomes, reconstructs  gene models from submitted features, and imports identifiers for genes and gene products. Software used in Ensembl import pipelines is accessible via the [Ensembl Project GitHub Organisation](https://github.com/ensembl). 
 
-The method of annotation for these genomes depends on the annotation provider, who are listed on the Species selector table and in the species homepage. Details on how the genome was annotated can be obtained from the annotation provider.
+The method of annotation for these genomes depends on the annotation provider, who are listed on the Genome selector table and in the Genome homepage. Details on how the genome was annotated can be obtained from the annotation provider.
 
 ![](media/import-annot-labels.png)
 
