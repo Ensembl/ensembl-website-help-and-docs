@@ -76,7 +76,7 @@ The apps currently available to you are:
   </div>
   <div>
     Use the Genome selector to choose a species genome of interest.
-    You must select a species genome to use the Ensembl other apps ie Genome browser and Feature explorer.
+    You must select a species genome to use other Ensembl apps e.g. Genome browser and Feature explorer.
   </div>
 
   <div class="labelled-app-icon">
