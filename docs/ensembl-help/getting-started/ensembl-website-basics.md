@@ -56,10 +56,10 @@ The five apps currently available:
   <div class="image-container">
     <img src="../../img/icon-genome-selector.svg" alt="">
   </div>
-  <div>Species selector</div>
+  <div>Genome selector</div>
 </div>
 
-The Species selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Feature explorer.
+The Genome selector allows you to view and select the species genome assemblies that you wish to view in the Genome browser and Feature explorer.
 
 <div>
   <style>

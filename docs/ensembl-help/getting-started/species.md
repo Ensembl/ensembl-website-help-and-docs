@@ -3,12 +3,12 @@ slug: species
 title: Choosing a species to work with
 description: Here is how to select a species
 related_articles:
-  - href: ../using-ensembl/ensembl-apps/species-selector/species-selector-intro.md 
+  - href: ../using-ensembl/ensembl-apps/genome-selector/genome-selector-intro.md 
 ---
 
 # Choosing a species genome to work with
 
-To start use the Species selector to select a species genome to work with in other apps:
+To start use the Genome selector to select a species genome to work with in other apps:
 
 <div>
   <style>
@@ -44,7 +44,7 @@ To start use the Species selector to select a species genome to work with in oth
   <div class="image-container">
     <img src="../../img/icon-genome-selector.svg" alt="">
   </div>
-  <div>Species selector</div>
+  <div>Genome selector</div>
 </div>
 
 Here you can choose the genomes of species, specific assemblies, strains, breeds and varieties of interest to you, for use in other apps ie the Genome browser and Feature explorer.

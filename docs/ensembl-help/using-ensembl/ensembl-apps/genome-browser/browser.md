@@ -49,7 +49,7 @@ Track and feature labels can be turned on and off using controls found in the co
 
 ## Genome tabs
 
-The Genome tabs display the genomes you have chosen to look at using the Species selector app, which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
+The Genome tabs display the genomes you have chosen to look at using the Genome selector app, which may include multiple genomes of the same species. The genome you are currently using is shown in black. You can click on other genomes to see regions of interest in these genomes. When you navigate to another genome, the region and track configuration set on this genome will be held in state until you return to it.
 
 
 ## Action bar

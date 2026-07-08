@@ -9,7 +9,7 @@ related_articles:
 
 # Get protein information
 
-In order to find your protein of interest, you must first use the Species selector to choose your species genome of interest.
+In order to find your protein of interest, you must first use the Genome selector to choose your species genome of interest.
 
 <div>
   <style>
@@ -45,7 +45,7 @@ In order to find your protein of interest, you must first use the Species select
   <div class="image-container">
     <img src="../../img/icon-genome-selector.svg" alt="">
   </div>
-  <div>Species selector</div>
+  <div>Genome selector</div>
 </div>
 
 Protein data is available in the Feature explorer:
