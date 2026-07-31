@@ -68,7 +68,7 @@ Authorised EMBL-EBI staff part of the project
 Genomics Technology Infrastructure team  
 Non-vertebrate Genomics team
 
-**External recipient categories: **
+**External recipient categories:**
 Data processors processing data on EMBL’s behalf
 
 Data Processor 1: Google (for Google forms and Google drive)
