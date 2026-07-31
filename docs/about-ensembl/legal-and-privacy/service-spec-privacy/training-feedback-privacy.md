@@ -84,7 +84,7 @@ Countries outside EEA: USA
 **Retention envisaged time limits:**
 Personal data will be retained even if the project ends for report purposes and/or possibility to undergo internal and external audits 
 
-**Retention period rational:**
+**Retention period rationale:**
 We keep the data to continuously refine and improve training offerings. We also provide the feedback to Ensembl development teams to help provide better services and resources.
 
 
