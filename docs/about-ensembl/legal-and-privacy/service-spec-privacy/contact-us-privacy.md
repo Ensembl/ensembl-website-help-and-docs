@@ -82,7 +82,7 @@ Your personal data will be kept for the following period of time:
 Personal data will be retained even if the service is no longer available. Data is kept for the minimum amount of time possible to ensure  
 legal compliance and the possibility to undergo internal and external audits
 
-**Retention period rational:**  
+**Retention period rationale:**  
 The requests are kept for service improvements and as a history log for future queries.
 
 
