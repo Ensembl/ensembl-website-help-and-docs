@@ -119,11 +119,11 @@ These are sites where details concerning your anonymous browsing is collected by
 ### **Service specific privacy statements**
 
 * Mailing Lists  
-  * [Ensembl mailing lists](/about/articles/mailing-list-privacy)
+  * [Ensembl mailing lists](/about/articles/mailing-list-privacy-statement)
 * Using the Contact us for Helpdesk  
-  * [Ensembl Contact us](/about/articles/contact-us-privacy)
+  * [Ensembl Contact us](/about/articles/contact-us-privacy-statement)
 * Ensembl Training feedback forms  
-  * [Ensembl Training feedback](/about/articles/training-feedback-privacy) 
+  * [Ensembl Training feedback](/about/articles/training-feedback-privacy-statement) 
 * Ensembl legacy privacy notice (includes services specific to Ensembl archives):  
   * [https://jun2026.archive.ensembl.org/info/about/legal/privacy.html](https://jun2026.archive.ensembl.org/info/about/legal/privacy.html) 
 
