@@ -8,7 +8,7 @@ description: The team of talented scientists and programmers who make Ensembl po
 
 Currently, the Ensembl group consists of over 100 people, divided into a number of smaller teams.
 
-![Members of the Ensembl team at our retreat in 2023](media/retreat-2023.jpg)
+![Members of the Ensembl team at our retreat in 2025](media/retreat2025.jpg)
 
 ## Annotation
 
@@ -18,7 +18,7 @@ Responsible for our internal annotation of genomes, including assembly loading, 
 
 ### Variation
 
-Creates infrastructure to manage and annotate genomic variation data and phenotype/disease associations. Develops and maintains tools including VEP, Variant recoder, LD calculator. Projects include Ensembl, IGSR and G2P.
+Creates infrastructure to manage and annotate genomic variation data and phenotype/disease associations. Develops and maintains tools including Ensembl VEP, Variant recoder, LD calculator. Projects include Ensembl, IGSR and G2P.
 
 ### Regulation
 
@@ -44,21 +44,21 @@ Responsible for importing community annotation of plant genomes, focusing partic
 
 Responsible for importing community annotation of invertebrate genomes, generation of new genome assemblies and annotations (African Cassava Whitefly, Infravec2),  and providing EBI's contribution to the VEuPathDB eukaryotic pathogen and vector database.
 
-### WormBase/AGR
+### WormBase/Alliance of Genome Resources
 
 Responsible for EBI's contribution to a collection of collaborative resources in the area of nematode, flatworm and model organism genomics (WormBase, WormBase ParaSite, The Alliance of Genome Resources)
 
 ## Development and support
 
-### Infrastructure
+### Platforms
 
-Develops and maintains the core database and associated API, the current [REST API](https://rest.ensembl.org), and eHive.
+Develops and maintains the core database and associated APIs.
 
 ### Applications
 
 Develops and maintains various projects, including [Tark](http://tark.ensembl.org/) and the [Trackhub Registry](https://www.trackhubregistry.org).
 
-### Production
+### Automation
 
 Responsible for management of data release, execution of pipelines during the release cycle and development of associated software infrastructure.
 
