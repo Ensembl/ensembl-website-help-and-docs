@@ -4,5 +4,7 @@
   href: assemblies-and-sequence.md
 - name: Comparative genomics
   href: comparative-genomics/toc.yml
+- name: Regulation
+  href: regulation/toc.yml
 - name: Release information
   href: release-information/toc.yml
