@@ -46,11 +46,33 @@ Features such as genes and transcripts are still identified by their own identif
 ## Genome identifiers
 Ensembl uses different identifier types for different purposes. Together, they define the assembly, the feature, and the Ensembl genome dataset.
 
-| Identifier type | Example | Purpose |
-|---|---|---|
-| Assembly accession | `GCA_000001405.29` | Identifies the submitted genome assembly. |
-| Stable ID | `ENSG00000141499` | Identifies a specific Ensembl feature such as a gene or transcript. |
-| Ensembl UUID | `59871324-7803-4234-856e-2a2bd96d7b3c` | Identifies a specific genome dataset in the Ensembl Data Platform. |
+<table>
+  <thead>
+    <tr>
+      <th>Identifier type</th>
+      <th>Example</th>
+      <th>Purpose</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Assembly accession</td>
+      <td><code>GCA_000001405.29</code></td>
+      <td>Identifies the submitted genome assembly.</td>
+    </tr>
+    <tr>
+      <td>Stable ID</td>
+      <td><code>ENSG00000141499</code></td>
+      <td>Identifies a specific Ensembl feature such as a gene or transcript.</td>
+    </tr>
+    <tr>
+      <td>Ensembl UUID</td>
+      <td><code>59871324-7803-4234-856e-2a2bd96d7b3c</code></td>
+      <td>Identifies a specific genome dataset in the Ensembl Data Platform.</td>
+    </tr>
+  </tbody>
+</table>
+
 
 ## Current limitations
 There is currently no general portal for searching Ensembl UUIDs directly on the website. For now, Ensembl UUIDs are mainly encountered in Ensembl links, metadata and related outputs.
