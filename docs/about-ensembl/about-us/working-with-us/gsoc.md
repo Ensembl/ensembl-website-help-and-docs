@@ -8,6 +8,9 @@ description:
 
 For the past several years Ensembl has participated in the Google Summer of Code, enabling students to work with us on developing small projects for potitional integration into our infrastructure. Examples of past projects can be found in the GSOC archives:
 
+- [2026](https://summerofcode.withgoogle.com/programs/2026/organizations/genome-assembly-and-annotation)
+- [2023](https://summerofcode.withgoogle.com/archive/2023/organizations/genome-assembly-and-annotation)
+- [2022](https://summerofcode.withgoogle.com/archive/2022/organizations/genome-assembly-and-annotation)
 - [2021](https://summerofcode.withgoogle.com/archive/2021/organizations/5794597745197056/)
 - [2019](https://summerofcode.withgoogle.com/archive/2019/organizations/4535509118877696/)
 - [2018](https://summerofcode.withgoogle.com/archive/2018/organizations/5477445075468288/)
