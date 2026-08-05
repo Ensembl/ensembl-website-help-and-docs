@@ -44,16 +44,40 @@ Subject to data availability, each annotation date directory includes
 
 Files on the Ensembl FTP are grouped by data type within each assembly. The exact content can vary between assemblies and providers.
 
-| Data type | Description |
-|---|---|
-| Genome sequence  | Files in `<path>/genome/` include whole-genome sequence data such as `hardmasked.fa.bgz`, `softmasked.fa.bgz` and `unmasked.fa.bgz`. |
-| Gene annotation  | Files in `<path>/geneset/` include annotations and related sequence files such as `genes.gff3.bgz`, `genes.gtf.bgz`, `genes.embl.gz`, `cdna.fa.bgz` and `pep.fa.bgz`. |
-| Cross-references  | The `xref.tsv.gz` file within `<path>/geneset/` provide identifier mappings in the `geneset` directory. |
-| Homology  | Files in `<path>/homology/<release>/` provide homology data in TSV format. |
-| Variation  | Files in `<path>/variation/<release>/` provide variation data in VCF, where available. |
-| Checksums  | `md5sum.txt` files are provided for file integrity checking. |
-
-
+<table>
+  <thead>
+    <tr>
+      <th>Data type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Genome sequence</td>
+      <td>Files in <code>&lt;path&gt;/genome/</code> include whole-genome sequence data such as <code>hardmasked.fa.bgz</code>, <code>softmasked.fa.bgz</code> and <code>unmasked.fa.bgz</code>.</td>
+    </tr>
+    <tr>
+      <td>Gene annotation</td>
+      <td>Files in <code>&lt;path&gt;/geneset/</code> include annotations and related sequence files such as <code>genes.gff3.bgz</code>, <code>genes.gtf.bgz</code>, <code>genes.embl.gz</code>, <code>cdna.fa.bgz</code> and <code>pep.fa.bgz</code>.</td>
+    </tr>
+    <tr>
+      <td>Cross-references</td>
+      <td>The <code>xref.tsv.gz</code> file within <code>&lt;path&gt;/geneset/</code> provide identifier mappings in the <code>geneset</code> directory.</td>
+    </tr>
+    <tr>
+      <td>Homology</td>
+      <td>Files in <code>&lt;path&gt;/homology/&lt;release&gt;/</code> provide homology data in TSV format.</td>
+    </tr>
+    <tr>
+      <td>Variation</td>
+      <td>Files in <code>&lt;path&gt;/variation/&lt;release&gt;/</code> provide variation data in VCF, where available.</td>
+    </tr>
+    <tr>
+      <td>Checksums</td>
+      <td><code>md5sum.txt</code> files are provided for file integrity checking.</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Example file paths
 
