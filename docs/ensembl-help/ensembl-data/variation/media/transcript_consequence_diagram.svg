@@ -1,0 +1,138 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="2500" viewBox="0 0 3600 2500">
+<defs>
+  <style type="text/css"><![CDATA[
+@font-face{font-family:"Lato";font-style:normal;font-weight:400;src:url("file:///Users/jma/projects/beta_docs/Lato/Lato-Regular.ttf") format("truetype");}
+@font-face{font-family:"Lato";font-style:normal;font-weight:600;src:url("file:///Users/jma/projects/beta_docs/Lato/Lato-Bold.ttf") format("truetype");}
+@font-face{font-family:"Lato";font-style:normal;font-weight:700;src:url("file:///Users/jma/projects/beta_docs/Lato/Lato-Bold.ttf") format("truetype");}
+  ]]></style>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto" markerUnits="strokeWidth">
+    <path d="M0,0 L10,5 L0,10 Z" fill="#EFF0F2" />
+  </marker>
+  <filter id="shadow" x="-15%" y="-15%" width="130%" height="130%">
+    <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.12"/>
+  </filter>
+  <clipPath id="canvas-clip" clipPathUnits="userSpaceOnUse">
+    <rect x="0" y="0" width="3600" height="2500" rx="26"/>
+  </clipPath>
+</defs>
+<g clip-path="url(#canvas-clip)">
+<rect x="0" y="0" width="3600" height="2500" rx="26" fill="#FFFFFF" stroke="none" stroke-width="0"/>
+<rect x="1073" y="90" width="1888" height="684" rx="31" fill="#FFFFFF" stroke="#B8C2CB" stroke-width="2" filter="url(#shadow)"/>
+<path d="M1073,227 L1073,121 Q1073,90 1104,90 L2930,90 Q2961,90 2961,121 L2961,227 Z" fill="#EFF0F2"/>
+<text x="1139" y="165" font-family="'Lato', sans-serif" font-size="49" font-weight="700" fill="#243142" text-anchor="start">Transcript variants</text>
+<rect x="1147" y="250" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="1220" y="281" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">incomplete_terminal_codon_variant</text>
+<rect x="1147" y="340" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="1220" y="372" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">start_retained_variant</text>
+<rect x="1147" y="430" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="1220" y="461" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">stop_retained_variant</text>
+<rect x="1147" y="520" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="1220" y="551" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">synonymous_variant</text>
+<rect x="1147" y="610" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="1220" y="640" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">coding_sequence_variant</text>
+<rect x="1147" y="700" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="1220" y="732" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">mature_miRNA_variant</text>
+<rect x="2087" y="250" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="2160" y="281" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">5_prime_UTR_variant</text>
+<rect x="2087" y="340" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="2160" y="371" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">3_prime_UTR_variant</text>
+<rect x="2087" y="430" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="2160" y="460" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">non_coding_transcript_exon_variant</text>
+<rect x="2087" y="520" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="2160" y="552" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">intron_variant</text>
+<rect x="2087" y="610" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="2160" y="641" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">NMD_transcript_variant</text>
+<rect x="2087" y="700" width="39" height="39" rx="0" fill="#84FA3A" stroke="none" stroke-width="0"/>
+<text x="2160" y="730" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">non_coding_transcript_variant</text>
+<line x1="1800.0" y1="774" x2="1800.0" y2="933.5" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="620" y1="933.5" x2="3140" y2="933.5" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="0" y1="1100.0" x2="3600" y2="1100.0" stroke="#0099FF" stroke-width="6.8" stroke-linecap="round"/>
+<text x="58" y="1018.5" font-family="'Lato', sans-serif" font-size="78" font-weight="700" fill="#6F7D86" text-anchor="middle">5&#x27;</text>
+<text x="3542" y="1018.5" font-family="'Lato', sans-serif" font-size="78" font-weight="700" fill="#6F7D86" text-anchor="middle">3&#x27;</text>
+<rect x="620" y="1054.5" width="230" height="91" rx="0" fill="#FFFFFF" stroke="#0099FF" stroke-width="6.8"/>
+<rect x="850" y="1054.5" width="460" height="91" rx="0" fill="#0099FF" stroke="#0099FF" stroke-width="6.8"/>
+<rect x="1650" y="1054.5" width="460" height="91" rx="0" fill="#0099FF" stroke="#0099FF" stroke-width="6.8"/>
+<rect x="2450" y="1054.5" width="460" height="91" rx="0" fill="#0099FF" stroke="#0099FF" stroke-width="6.8"/>
+<rect x="2910" y="1054.5" width="230" height="91" rx="0" fill="#FFFFFF" stroke="#0099FF" stroke-width="6.8"/>
+<path d="M 1310 1100.0 L 1480.0 1033.5 L 1650 1100.0" fill="none" stroke="#0099FF" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 9"/>
+<path d="M 2110 1100.0 L 2280.0 1033.5 L 2450 1100.0" fill="none" stroke="#0099FF" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 9"/>
+<polygon points="400,1049.0 451,1100.0 400,1151.0 349,1100.0" fill="#327C89" stroke="none" stroke-width="1"/>
+<text x="400" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">regulatory feature</text>
+<text x="735.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">5&#x27; UTR</text>
+<text x="1080.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">coding exon</text>
+<text x="1480.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">splice junction</text>
+<text x="1880.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">coding exon</text>
+<text x="2280.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">splice junction</text>
+<text x="2680.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">coding exon</text>
+<text x="3025.0" y="1017.25" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">3&#x27; UTR</text>
+<text x="115" y="1228.5" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">upstream /</text>
+<text x="115" y="1287.5" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">intergenic</text>
+<text x="3200" y="1228.5" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">downstream /</text>
+<text x="3200" y="1287.5" font-family="'Lato', sans-serif" font-size="47" font-weight="600" fill="#6F7D86" text-anchor="middle">intergenic</text>
+<line x1="400" y1="774" x2="400" y2="933.5" stroke="#EFF0F2" stroke-width="6.8" stroke-linecap="round"/>
+<line x1="850" y1="1266.5" x2="1310" y2="1266.5" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="1080.0" y1="1266.5" x2="1080.0" y2="1396" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="2110" y1="1210.5" x2="2160" y2="1210.5" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="2135" y1="1210.5" x2="2135" y2="1396" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="2400" y1="1210.5" x2="2450" y2="1210.5" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<line x1="2425" y1="1210.5" x2="2425" y2="1396" stroke="#EFF0F2" stroke-width="9.4" stroke-linecap="round"/>
+<rect x="27" y="450" width="746" height="324" rx="31" fill="#FFFFFF" stroke="#B8C2CB" stroke-width="2" filter="url(#shadow)"/>
+<path d="M27,587 L27,481 Q27,450 58,450 L742,450 Q773,450 773,481 L773,587 Z" fill="#EFF0F2"/>
+<text x="93" y="525" font-family="'Lato', sans-serif" font-size="49" font-weight="700" fill="#243142" text-anchor="start">Regulatory region variants</text>
+<rect x="101" y="610" width="39" height="39" rx="0" fill="#327C89" stroke="none" stroke-width="0"/>
+<text x="174" y="640" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">TF_binding_site_variant</text>
+<rect x="101" y="700" width="39" height="39" rx="0" fill="#327C89" stroke="none" stroke-width="0"/>
+<text x="174" y="730" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">regulatory_region_variant</text>
+<rect x="726" y="1396" width="707" height="864" rx="31" fill="#FFFFFF" stroke="#B8C2CB" stroke-width="2" filter="url(#shadow)"/>
+<path d="M726,1533 L726,1427 Q726,1396 757,1396 L1402,1396 Q1433,1396 1433,1427 L1433,1533 Z" fill="#EFF0F2"/>
+<text x="792" y="1471" font-family="'Lato', sans-serif" font-size="49" font-weight="700" fill="#243142" text-anchor="start">Protein altering variants</text>
+<rect x="800" y="1556" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="1586" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">stop_gained</text>
+<rect x="800" y="1646" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="1678" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">frameshift_variant</text>
+<rect x="800" y="1736" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="1767" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">stop_lost</text>
+<rect x="800" y="1826" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="1858" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">start_lost</text>
+<rect x="800" y="1916" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="1948" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">inframe_insertion</text>
+<rect x="800" y="2006" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="2038" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">inframe_deletion</text>
+<rect x="800" y="2096" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="2128" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">missense_variant</text>
+<rect x="800" y="2186" width="39" height="39" rx="0" fill="#EB768A" stroke="none" stroke-width="0"/>
+<text x="873" y="2216" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">protein_altering_variant</text>
+<rect x="1812" y="1396" width="935" height="684" rx="31" fill="#FFFFFF" stroke="#B8C2CB" stroke-width="2" filter="url(#shadow)"/>
+<path d="M1812,1533 L1812,1427 Q1812,1396 1843,1396 L2716,1396 Q2747,1396 2747,1427 L2747,1533 Z" fill="#EFF0F2"/>
+<text x="1878" y="1471" font-family="'Lato', sans-serif" font-size="49" font-weight="700" fill="#243142" text-anchor="start">Splicing variants</text>
+<rect x="1886" y="1556" width="39" height="39" rx="0" fill="#F8C041" stroke="none" stroke-width="0"/>
+<text x="1959" y="1587" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">splice_acceptor_variant</text>
+<rect x="1886" y="1646" width="39" height="39" rx="0" fill="#F8C041" stroke="none" stroke-width="0"/>
+<text x="1959" y="1677" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">splice_donor_variant</text>
+<rect x="1886" y="1736" width="39" height="39" rx="0" fill="#F8C041" stroke="none" stroke-width="0"/>
+<text x="1959" y="1767" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">splice_donor_5th_base_variant</text>
+<rect x="1886" y="1826" width="39" height="39" rx="0" fill="#F8C041" stroke="none" stroke-width="0"/>
+<text x="1959" y="1856" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">splice_region_variant</text>
+<rect x="1886" y="1916" width="39" height="39" rx="0" fill="#F8C041" stroke="none" stroke-width="0"/>
+<text x="1959" y="1946" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">splice_donor_region_variant</text>
+<rect x="1886" y="2006" width="39" height="39" rx="0" fill="#F8C041" stroke="none" stroke-width="0"/>
+<text x="1959" y="2037" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">splice_polypyrimidine_tract_variant</text>
+<!-- Intergenic variants: vertically centred with protein/splicing boxes; routed to avoid other boxes -->
+<path d="M 3200 1396 L 3200 1331.5" fill="none" stroke="#EFF0F2" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M 3200 1810 L 3200 2297 Q 3200 2341 3156 2341 L 159 2341 Q 115 2341 115 2297 L 115 1331.5" fill="none" stroke="#EFF0F2" stroke-width="6.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="2824" y="1396" width="753" height="414" rx="31" fill="#FFFFFF" stroke="#B8C2CB" stroke-width="2" filter="url(#shadow)"/>
+<path d="M2824,1533 L2824,1427 Q2824,1396 2855,1396 L3546,1396 Q3577,1396 3577,1427 L3577,1533 Z" fill="#EFF0F2"/>
+<text x="2890" y="1471" font-family="'Lato', sans-serif" font-size="49" font-weight="700" fill="#243142" text-anchor="start">Intergenic variants</text>
+<rect x="2898" y="1556" width="39" height="39" rx="0" fill="#96D0C9" stroke="none" stroke-width="0"/>
+<text x="2971" y="1586" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">upstream_gene_variant</text>
+<rect x="2898" y="1646" width="39" height="39" rx="0" fill="#96D0C9" stroke="none" stroke-width="0"/>
+<text x="2971" y="1676" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">downstream_gene_variant</text>
+<rect x="2898" y="1736" width="39" height="39" rx="0" fill="#96D0C9" stroke="none" stroke-width="0"/>
+<text x="2971" y="1766" font-family="'Lato', sans-serif" font-size="46" font-weight="400" fill="#243142" text-anchor="start">intergenic_variant</text>
+<rect x="1073" y="90" width="1888" height="684" rx="31" fill="none" stroke="#B8C2CB" stroke-width="6.8"/>
+<rect x="27" y="450" width="746" height="324" rx="31" fill="none" stroke="#B8C2CB" stroke-width="6.8"/>
+<rect x="726" y="1396" width="707" height="864" rx="31" fill="none" stroke="#B8C2CB" stroke-width="6.8"/>
+<rect x="1812" y="1396" width="935" height="684" rx="31" fill="none" stroke="#B8C2CB" stroke-width="6.8"/>
+<rect x="2824" y="1396" width="753" height="414" rx="31" fill="none" stroke="#B8C2CB" stroke-width="6.8"/>
+</g>
+</svg>
