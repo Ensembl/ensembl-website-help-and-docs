@@ -11,6 +11,17 @@ This Ensembl site uses a different versioning system and release cycle to that o
 
 Ensembl versions released prior to July 2026 were numbered numerically following a 3-4 month long release cycle. 
 
+## The legacy Ensembl archives for versions 116 and Ensembl Genomes version 63
+
+These archives have enhanced tool functionality and features compared to older archive sites. Use these sites if you are searching for a feature or view which is unavailable in the new Ensembl.
+- [Ensembl 116: Jun 2026](https://jun2026.archive.ensembl.org/)
+- [Ensembl Plants eg63: Jun 2026](https://eg63-plants.ensembl.org)
+- [Ensembl Metazoa eg63: Jun 2026](https://eg63-metazoa.ensembl.org)
+- [Ensembl Protists eg63: Jun 2026](https://eg63-protists.ensembl.org)
+- [Ensembl Fungi eg63: Jun 2026](https://eg63-fungi.ensembl.org)
+- [Ensembl Bacteria eg63: Jun 2026](https://eg63-bacteria.ensembl.org)
+
+
 ## Previous versions of Ensembl (vertebrates)
 - [Ensembl 116: Jun 2026](https://jun2026.archive.ensembl.org/) - Latest legacy Ensembl version - tool support enabled over Ensembl transition
 - [Ensembl 115: Sep 2025](https://sep2025.archive.ensembl.org/)
@@ -32,22 +43,27 @@ The previous version for the **human GRCh37 assembly** is available at our dedic
 
 ## Previous versions of Ensembl Genomes (non-vertebrates)
 ### Ensembl Plants
+- [Ensembl Plants eg63: June 2026](https://eg63-plants.ensembl.org) - Latest legacy Ensembl version - tool support enabled over Ensembl transition
 - [Ensembl Plants eg59: May 2024](https://eg59-plants.ensembl.org)
 - [Ensembl Plants eg56: Feb 2023](https://eg56-plants.ensembl.org/)
 
 ### Ensembl Metazoa
+- [Ensembl Metazoa eg63: June 2026](https://eg63-metazoa.ensembl.org) - Latest legacy Ensembl version - tool support enabled over Ensembl transition
 - [Ensembl Metazoa eg59: May 2024](https://eg59-metazoa.ensembl.org/)
 - [Ensembl Metazoa eg56: Feb 2023](https://eg56-metazoa.ensembl.org/)
 
 ### Ensembl Protists
+- [Ensembl Protists eg63: June 2026](https://eg63-protists.ensembl.org) - Latest legacy Ensembl version - tool support enabled over Ensembl transition
 - [Ensembl Protists eg59: May 2024](https://eg59-protists.ensembl.org/)
 - [Ensembl Protists eg56: Feb 2023](https://eg56-protists.ensembl.org/)
 
 ### Ensembl Fungi
+- [Ensembl Fungi eg63: June 2026](https://eg63-fungi.ensembl.org) - Latest legacy Ensembl version - tool support enabled over Ensembl transition
 - [Ensembl Fungi eg59: May 2024](https://eg59-fungi.ensembl.org/)
 - [Ensembl Fungi eg56: Feb 2023](https://eg56-fungi.ensembl.org/)
 
 ### Ensembl Bacteria
+- [Ensembl Bacteria eg63: June 2026](https://eg63-bacteria.ensembl.org) - Latest legacy Ensembl version - tool support enabled over Ensembl transition
 - [Ensembl Bacteria eg59: May 2024](https://eg59-bacteria.ensembl.org/)
 - [Ensembl Bacteria eg56: Feb 2023](https://eg56-bacteria.ensembl.org/)
 
