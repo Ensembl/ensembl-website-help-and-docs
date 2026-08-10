@@ -41,7 +41,7 @@ variables:
 build:
   extends: .build
 
-# Live (production) deployment: beta.ensembl.org
+# Live (production) deployment: www.ensembl.org
 Live:
   extends: .deploy
   <<: *deploy-rules
@@ -51,7 +51,7 @@ Live:
     AGENT: ${PROD_AGENT}
     NS: ${PROD_NS}
 
-# Fallback deployment for the live (production) deployment: beta.ensembl.org (Hinxton)
+# Fallback deployment for the live (production) deployment: www.ensembl.org (Hinxton)
 LiveFallback:
   extends: .deploy
   <<: *deploy-rules
