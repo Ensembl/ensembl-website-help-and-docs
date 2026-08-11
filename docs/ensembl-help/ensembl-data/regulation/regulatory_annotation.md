@@ -19,5 +19,5 @@ Regulatory feature annotation is based on functional genomics primary data. Scaf
 
 More details on the process can be found [here](https://regulation.ensembl.org/help/).
 
-Regulatory annotation is available as a track in the [Genome browser app](https://www.ensembl.org/genome-browser).
+Regulatory annotation is available as a track in the [Genome browser app](/genome-browser).
 
