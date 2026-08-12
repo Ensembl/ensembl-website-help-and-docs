@@ -7,10 +7,10 @@ related_articles:
 ---
 # Accessing Ensembl GraphQL services
 
-The Ensembl GraphQL services can be accessed at [https://beta.ensembl.org/data/graphql](https://beta.ensembl.org/data/graphql).
+The Ensembl GraphQL services can be accessed at [https://www.ensembl.org/data/graphql](https://www.ensembl.org/data/graphql).
 
 ## Schemas and documentation
-If you wish to interrogate the service and explore the documentation, [a GraphQL playground](https://beta.ensembl.org/data/graphql) can be accessed via your browser.
+If you wish to interrogate the service and explore the documentation, [a GraphQL playground](https://www.ensembl.org/data/graphql) can be accessed via your browser.
 
 ## Genomes
 
@@ -224,7 +224,7 @@ This example Python script shows how data can be accessed using GraphQL.
 import requests
 import json
 
-base_url = 'https://beta.ensembl.org/data/graphql'
+base_url = 'https://www.ensembl.org/data/graphql'
 
 genome_id_graphql_query = '''query{
   genomes(
