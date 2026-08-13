@@ -8,7 +8,26 @@ description: Frequently asked questions regarding the Ensembl platform and genom
 ## Ensembl releases and versions
 
 **Why is there a new Ensembl?**
-- As described in our [Ensembl 2026](https://academic.oup.com/nar/article/54/D1/D1053/8343504) publication, our rate of genome annotation and release has rapidly increased over the past few years. Our new platform helps us to share more genome data and provide new opportunities for genomic insights and discoveries.  
+- As described in our [Ensembl 2026](https://academic.oup.com/nar/article/54/D1/D1053/8343504) publication, our rate of genome annotation and release has rapidly increased over the past few years. Our new platform helps us to share more genome data and provide new opportunities for genomic insights and discoveries.
+
+**Why am I being redirected from the Ensembl Archive to the new Ensembl website?**
+
+- If you are being redirected from the Ensembl Archive to the new Ensembl website, your browser may be using cached data from a previous visit. Clearing your browser cache should resolve the issue.
+* How to clear your browser cache:
+1. Open your browser settings.
+2. Find the **Privacy**, **Privacy & Security**, or **Clear browsing data** section.
+3. Select the option to clear **cached images and files**. You usually do not need to clear your passwords or other saved data.
+4. Close and reopen your browser.
+5. Try accessing the Ensembl Archive again.
+
+**Keyboard shortcut**
+
+You can also use the following shortcut in most browsers:
+
+- **Windows/Linux:** `Ctrl + Shift + Delete`
+- **macOS:** `Command + Shift + Delete`
+
+> If the issue persists after clearing your cache, please contact the Ensembl Helpdesk for assistance.
    
 
 **How can I access the previous Ensembl or older releases?**
@@ -28,7 +47,6 @@ description: Frequently asked questions regarding the Ensembl platform and genom
 **Which release type is suitable for long term use?**
 
 - Integrated releases are best for long term use as the data is linked and fixed at a point in time. Partial releases may be superseded due to errors found or new data released before integration.  
-   
 
 ## Genome and species availability
 
