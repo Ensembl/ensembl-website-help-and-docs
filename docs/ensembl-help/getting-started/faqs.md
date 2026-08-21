@@ -19,6 +19,7 @@ description: Frequently asked questions regarding the Ensembl platform and genom
 3. Select the option to clear **cached images and files**. You usually do not need to clear your passwords or other saved data.
 4. Close and reopen your browser.
 5. Try accessing the Ensembl Archive again.
+6. If the redirect persists: search the browser settings for site specific data, locate ensembl.org in the list of sites, and select the option to clear its cookies and site data.
 
 **Keyboard shortcut**
 
@@ -27,7 +28,7 @@ You can also use the following shortcut in most browsers:
 - **Windows/Linux:** `Ctrl + Shift + Delete`
 - **macOS:** `Command + Shift + Delete`
 
-> If the issue persists after clearing your cache, please contact the Ensembl Helpdesk for assistance.
+> If the issue persists after clearing your cache or deleting the site's data, please contact the Ensembl Helpdesk for assistance.
    
 
 **How can I access the previous Ensembl or older releases?**
