@@ -1,14 +1,16 @@
 - name: Browser Genome Release Agreement
   href: browser-genome-release-agreement.md
+- name: Code of conduct 
+  href: conduct.md
 - name: Ensembl content disclaimer
   href: legal.md
-- name: Image Reuse
+- name: Image reuse
   href: image-reuse.md
-- name: Name and Logo Policy
+- name: Name and logo policy
   href: name-logo-policy.md
-- name: Privacy and Cookies
+- name: Privacy and cookies
   href: privacy-and-cookies.md
 - name: Responsible Handover Framework for Ensembl
   href: responsible-handover.md  
-- name: Software License
+- name: Software license
   href: software-license.md
