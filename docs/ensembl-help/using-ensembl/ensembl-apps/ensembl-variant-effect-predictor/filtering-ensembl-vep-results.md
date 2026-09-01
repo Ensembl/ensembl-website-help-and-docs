@@ -91,7 +91,7 @@ Variants with no score for a selected variant impact prediction are removed by d
 
 ## What you can filter on
 
-You can only filter on data your job produced. If you did not ask for CADD when you set the job up, there is no CADD filter; if you asked for no allele frequencies, there is no allele frequency filter. To filter on something you did not choose, use __Edit/rerun__ in the jobs list to run the job again with that option turned on.
+You can only filter on data your job produced. If you did not ask for CADD when you set the job up, there is no CADD data, so no filter; if you asked for no allele frequencies, there is no allele frequency filter. To filter on something you did not choose, use __Edit/rerun__ in the jobs list to run the job again with that option turned on.
 
 ## Downloading filtered results
 

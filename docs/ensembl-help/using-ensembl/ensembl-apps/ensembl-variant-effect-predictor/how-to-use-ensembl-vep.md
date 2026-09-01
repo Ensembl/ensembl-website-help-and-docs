@@ -103,13 +103,13 @@ Once your variants have been added, the __Job options__ appear below them. These
   </figcaption>
 </figure>
 
-Nothing is enabled by default, your results will always name the genes and transcripts your variants fall in and the predicted molecular consequence for each; everything else is yours to choose.
+If none of the additional options are  enabled,  by default your results will always name the genes and transcripts your variants fall in and report the predicted molecular consequence for each.
 
 For a full description of the options, see Choosing what Ensembl VEP annotates.
 
 ## Naming your job
 
-You can add a name for your job by typing it into the box alongside the __Submission name__. This makes it easier to identify your jobs later. The name is optional.
+You can add a name for your job by typing it into the box alongside the __Submission name__. This makes it easier to distinguish between different analysis jobs later. The name is optional.
 
 <figure>
   <img src="media/vep-top-bar.png" alt="The top bar showing transcript set, submission name and the Run button" />
