@@ -1,185 +1,221 @@
 ---
 slug: how-to-use-ensembl-vep
-title: How to use the Ensembl Variant Effect Predictor (VEP)
-description: How to use the Ensembl Variant Effect Predictor (VEP)
+title: How to use the Ensembl Variant Effect Predictor (Ensembl VEP)
+description: How to run a job with the Ensembl Variant Effect Predictor (Ensembl VEP) and read your results
+related_articles:
+  - href: choosing-what-ensembl-vep-annotates.md
+  - href: filtering-ensembl-vep-results.md
 ---
+# How to use the Ensembl Variant Effect Predictor (Ensembl VEP)
 
-# How to use the Ensembl Variant Effect Predictor (VEP)
-
-The Ensembl (VEP) tool can be found on the toolbar at the top of the Beta site.
+The Ensembl VEP app can be found on the toolbar at the top of the Ensembl platform.
 
 <figure>
-  <img src="media/toolbar-vep.png" width="450" alt="toolbar showing VEP icon"/>
+  <img src="media/vep-toolbar.png" alt="Toolbar showing the Ensembl VEP icon" />
   <figcaption>
-    A view of the tool bar showing the Ensembl Variant Effect Predictor (VEP) icon.
+    A view of the toolbar showing the Ensembl Variant Effect Predictor (Ensembl VEP) icon.
   </figcaption>
 </figure>
 
-To use the Ensembl VEP tool, you need to: 
-* select a species genome assembly
-* enter your data
-* run your job.
+To run an analysis job you need to:
+
+* select a genome relevant to the assembly your variants were called against
+* add your variants
+* run your analysis job
+
+For variants called against GRCh38, you can also choose other analysis options before you run the job.
+
 
 <figure>
-  <img src="media/vep-landing-page.png"/>
+  <img src="media/vep-form-empty.png" alt="The Ensembl VEP input interface" />
   <figcaption>
     A view of the Ensembl VEP input interface.
   </figcaption>
 </figure>
 
-## How to select a species genome for Ensembl VEP
-First select the species genome which you would like to run your variants against. 
-Choose Select a species /assembly to reveal a search box.
-Searching for a species genome
-You can search for a species genome or assembly, using the:
+## How to select a genome for Ensembl VEP
+
+First select the genome you would like to run your variants against. We recommend you use the latest integrated release for the assembly your variants were called against so you benefit from the latest functional annotation. You can either click a previously selected species from the bar at the top of the screen, or Choose __Select a genome__ to reveal a search box.
+You can search for a genome using the:
+
+
 * common name
 * scientific name
-* assembly name
-* assembly accession number
+* taxon id
+* assembly id
 
 <figure>
-  <img src="media/search-common-name-vep.png" width="450" alt="search term human in search box"/>
+  <img src="media/vep-genome-search.png" alt="The genome search box" />
   <figcaption>
-    A search for human genomes using the common name.
+    The genome search box.
   </figcaption>
 </figure>
 
-A table of the genome assemblies for that species will be displayed.
+A table of the matching genomes will be displayed. Alongside each assembly the table gives its release, whether it is the reference assembly for that species, its accession, and a link to the files on our FTP site.
 
 <figure>
-  <img src="media/human-genome-list-vep.png" alt="A table of all the genome assemblies"/>
+  <img src="media/vep-genome-table.png" alt="A table of genome assemblies returned by a search" />
   <figcaption>
     A table of the genome assemblies produced from a search for human.
   </figcaption>
 </figure>
 
-Choose the genome assembly of interest by selecting the box to the left of the assembly followed by the green Add button.
+Choose the matching genome of interest by selecting the box to the left of the assembly, followed by the green __Add__ button.
 
-The chosen species genome assembly will be displayed in the Species section of the Ensembl VEP input page.
+The chosen genome will be displayed in the Genome section of the Ensembl VEP input page. To choose a different one, select __Change__.
 
-## How to upload your variant data
-All variant information must be in Variant Call Format(VCF) to be uploaded into Ensembl VEP in the current implementation.
-More formats will be supported in future versions of Ensembl VEP.
 
-There are two ways to upload your variant data:
+### Transcript set
 
-- __Paste__: simply copy and paste your variant information (in VCF) into the large text box displaying ‘Paste data’.
+Once you have chosen a genome, the transcript set your variants will be annotated against is displayed at the top of the page.
+
+## How to add your variant data
+
+All variant data must be in Variant Call Format (VCF). Additional formats will be supported in future versions of Ensembl VEP.
+
+A header line is optional. Each variant needs at least the chromosome, position, reference allele and alternative allele.
+
+There are two ways to add your variants:
+
+
+* __Paste__: copy and paste your variants (in VCF) into the large text box displaying 'Paste data'.
+* __File upload__: drag and drop your VCF file onto the box marked 'Click or drag a VCF here', or click inside the box and locate the file on your system. Files may be up to 250 MB.
 
 <figure>
-  <img src="media/paste-data-vep.png" width="450" alt="Pasting data into VEP"/>
+  <img src="media/vep-variants-input.png" alt="The Variants section of the Ensembl VEP input form" />
   <figcaption>
-    Pasting VCF data into the Ensembl VEP input.
+    Adding variants to the Ensembl VEP input form, by pasting or by uploading a file.
   </figcaption>
 </figure>
 
-Then select the Add button and your input data will be displayed in the Variants section
+If you would like to try the tool without data of your own, select __VCF__ under Example data to fill the box with an example variant (where available).
 
-- __File upload__: to upload your file of variants (in VCF) you can either:  
-* drag and drop the file directly onto the cloud icon inside the box  
-or
-* click inside the box and locate the file on your system. 
+Select the green __Add__ button, and your variants will be displayed in the Variants section. To change them, select __Change__ to the right of the section.
+
+## Choosing which analysis options are run
+
+Once your variants have been added, the __Job options__ appear below them. These are grouped into panels, and enable additional annotation of your variants — availability of these options varies by genome.
 
 <figure>
-  <img src="media/uploadfile-vep.png" width="450" alt="Uploading a file of VCF data into Ensembl VEP"/>
+  <img src="media/vep-job-options.png" alt="The Job options section, with each panel collapsed" />
   <figcaption>
-    Uploading a file of your VCF data into the Ensembl VEP input form.
+    The Job options section of the Ensembl VEP input form.
   </figcaption>
 </figure>
 
-Then select the blue Open button and your input data will be displayed in the Variants section.
+If none of the additional options are  enabled,  by default your results will always name the genes and transcripts your variants fall in and report the predicted molecular consequence for each.
 
-The variants you are running against the chosen genome assembly will be displayed in the variant section on the Ensembl VEP input page.
+For a full description of the options, see Choosing what Ensembl VEP annotates.
 
-<figure>
-  <img src="media/showing-variants-vep.png" width="450" alt="VEP input interace showing uploaded variant data"/>
-  <figcaption>
-    Ensembl VEP input interace showing uploaded variant data.
-  </figcaption>
-</figure>
+## Naming your job
 
-To update or edit your choice of variants select Change to the right-hand side of the Variant section. 
-
-## Additional information associated with test variants 
-Ensembl VEP can provide information associated with the variants identified in a specific genome assembly. 
-
-Ensembl VEP can provide additional information about:
- 
-* __Gene and transcripts__ in which variants are located
-* __Predictions__ of the effect of variants on transcripts, protein structure and function and pathogenicity
-* __Variant population frequencies__
-* __Variant phenotypes__
-* __Citations__ for known variants
-* __Regulatory annotation__ 
-* __Conservation and constraints__ of the location of variants.
-
-### Options in the current versions of Ensembl VEPs
-In the current version of Ensembl VEP the Gene symbol and Transcript biotype associated with a variant are selected by default and will be displayed in the results.
+You can add a name for your job by typing it into the box alongside the __Submission name__. This makes it easier to distinguish between different analysis jobs later. The name is optional.
 
 <figure>
-  <img src="media/current-options-vep.png" width="450" alt="More information options currently available on the Ensembl VEP interface"/>
+  <img src="media/vep-top-bar.png" alt="The top bar showing transcript set, submission name and the Run button" />
   <figcaption>
-    More information options currently available on the Ensembl VEP data input interface.
-  </figcaption>
-</figure>
-
-### Options in future versions of Ensembl VEP
-In future versions of Ensembl VEP you will be able to select additional types of information (listed above) associated with your variants of interest.   
-
-### Naming your job(s)
-You can add a name for the data you upload by typing it into the box alongside the Submission name. 
-This can make it easier for you to identify jobs and files that you have uploaded to the Ensembl VEP at a later point.
-
-<figure>
-  <img src="media/job-name-vep.png" width="450" alt=" A VEP input interface showing a filled in job name."/>
-  <figcaption>
-    An Ensembl VEP input interface showing a filled in job name.
+    The transcript set, submission name and Run button at the top of the Ensembl VEP input form.
   </figcaption>
 </figure>
 
 ## Running your Ensembl VEP job
-To run your job select the green Run button on the top  grey bar to the right-hand side of the Transcript set and you will be taken to the submission page. 
 
-The submissions page will show the jobs that are currently ‘running’ or recently completed. 
+To run your job select the green __Run__ button, and you will be taken to the jobs list.
+
+The jobs list shows the jobs you have submitted, most recent first. Each shows its genome, whether the variants were pasted or uploaded, the submission name if you gave one, and the date and time of submission. While a job is waiting it is marked 'Queued', and while it is being processed, 'Running...'.
+
 
 <figure>
-  <img src="media/running-job-vep.png" alt="The Ensembl VEP submission page showing a job running."/>
+  <img src="media/vep-job-running.png" alt="The Ensembl VEP jobs list showing a queued job" />
   <figcaption>
-    The Ensembl VEP submission page showing a job running.
+    The Ensembl VEP jobs list showing a job that has been submitted.
   </figcaption>
 </figure>
 
-A submission ID is assigned to each submission and additional information is provided, including the date and time of submission. 
-
-If you navigate away from the Ensembl VEP interface, while the job is still running  the status of the query is indicated by the Ensembl VEP icon in the top panel changing from red to green to prompt you that it has successfully completed.
-Jobs are divided into two lists: ‘Unviewed Jobs’ and ‘Jobs list’.
-
-A submission in the ‘Unviewed jobs’ list, when viewed, is transferred to the ‘Jobs list’ for future reference. Results are available for 7 days and queries can be rerun for 28 days.
-
-Select the blue New job button in the top grey bar (to the left-hand side of ENSEMBL VEP logo) to run another job.
-
-## How to view your Ensembl VEP results 
-
-To view the results of your Ensembl VEP job select the Results button to the right-hand side of the job on the submissions page, once the job has completed and the Results button has turned blue.
-
-You will be taken to the results page which will display the table of results for the variant(s) submitted against the genome assembly chosen.
+If you navigate away from Ensembl VEP while a job is running, a green dot appears on the Ensembl VEP icon in the toolbar when it has finished.
 
 <figure>
-  <img src="media/results-table-vep.png" alt="A table of VEP results."/>
+  <img src="media/vep-jobs-list.png" alt="The Ensembl VEP jobs list showing a completed job" />
+  <figcaption>
+    A completed job in the Ensembl VEP jobs list.
+  </figcaption>
+</figure>
+
+From the jobs list you can also:
+
+* __Edit/rerun__ a job, which returns you to the input form with the same genome, variants and options, ready to be changed and run again
+* __delete__ a job, using the bin icon
+* __download__ the results, using the download icon.
+
+Results are available for 7 days from submission. Submissions are available and can be rerun for 28 days.
+
+To run another job, select the blue __New job__ button.
+
+## How to view your Ensembl VEP results
+
+To view your results, select the __Results__ button to the right of the job once it has completed.
+
+<figure>
+  <img src="media/vep-results-table.png" alt="A table of Ensembl VEP results" />
   <figcaption>
     A table of Ensembl VEP results.
   </figcaption>
 </figure>
 
-The table currently shows the following information about the variant(s) found on the chosen genome assembly:
-* __Variant type__ eg SNP
-* __Reference allele__ for the variant eg A
-* __Alternative allele__ for the variant eg G
-* __Location__ of the variant eg 1:230,710,048
-* __Gene(s)__ (symbol, ENGS ID(s) and strand) displayed only if they contain the variant
-	eg AGT, ENSG00000135744, reverse strand
-* __Transcripts__ (ENST ID(s) and their biotype(s)) displayed only if they contain the variant
-	eg ENST00000366667.1, protein_coding
-* __Predicted molecular consequence__ for each transcript containing the variant eg coding-sequence-variant.
+The table shows, for each of your variants:
 
-### Downloading your Ensembl VEP results
-You can download the results table by clicking on the blue Download icon to the left hand side of the black Results button.
+* __Variant:__ its name, if it has one, and its type (e.g. SNV, deletion)
+* __Ref:__ the reference allele
+* __Location:__ the sequence/chromosome name and position
+* __Alt allele:__ each alternative allele in turn, described by type and length for structural variants
+* __Genes:__ the gene symbol, Ensembl gene ID and strand of every gene the variant falls in
+* __Transcripts:__ the Ensembl transcript ID and biotype of every transcript the variant falls in, labelled where the transcript is MANE Select (human GRCh38), GENCODE Primary (human GRCh38) or canonical ( all species/assemblies)
+* __Predicted molecular consequence:__ for each transcript, coloured by the consequence grouping
+* __Annotations:__ any further annotations you selected from in job options
+
+Where a variant falls in many transcripts, the first is shown and the rest are collapsed behind a count, for example __+ 25__ transcripts. Select the count to see them all.
+
+Use the __per page__ menu to show 10, 50 or 100 variants at a time, and the arrows to move between pages.
+
+### Viewing a relevant locations, genes and transcripts elsewhere in Ensembl
+
+Locations, gene IDs and transcript IDs in the table can be selected to open that feature in another Ensembl app, like the Genome browser and Feature explorer, depending on what is available.
+
+<figure>
+  <img src="media/vep-view-in-app.png" width="450" alt="The View in menu on a variant location" />
+  <figcaption>
+    Opening a variant location in another Ensembl app.
+  </figcaption>
+</figure>
+
+### Viewing your annotations
+
+If you chose any additional options, each row has a __Show__ link in the Annotations column. Select it to open a panel  showing all results, grouped under the same headings as the job options.
+
+<figure>
+  <img src="media/vep-annotation-detail.png" alt="An expanded annotation panel below a results row" />
+  <figcaption>
+    The annotations for one variant and transcript.
+  </figcaption>
+</figure>
+
+By default the panel does not show headers for empty results. Tick __Show all__ to see everything you asked for, with a dash where there was no result.
+
+To open every panel on the page at once, select __Expand all__ above the table. This option only expands the first transcript when multiple are available.
+
+## Filtering your results
+
+Select __Filters__ above the table to narrow your results - by consequence, gene, transcript, allele frequency or impact score. For more help with this feature, see Filtering Ensembl VEP results.
+
+## Downloading your Ensembl VEP results
+
+Select the download icon to the left of the Results button, then choose __VCF__ or __TSV__.
+
+<figure>
+  <img src="media/vep-download.png" alt="The download options above the results table" />
+  <figcaption>
+    Downloading Ensembl VEP results as VCF or TSV.
+  </figcaption>
+</figure>
+
+If you have filters applied, the download contains the filtered results only. Clearing any active filters will enable you to download the entire result set again.
