@@ -1,4 +1,8 @@
-- name: How to use the Ensembl Variant Effect Predictor (VEP)
-  href: how-to-use-ensembl-vep.md
-- name: What is the Ensembl Variant Effect Predictor(VEP)
+- name: What is the Ensembl Variant Effect Predictor (Ensembl VEP)
   href: what-is-ensembl-vep.md
+- name: How to use the Ensembl Variant Effect Predictor (Ensembl VEP)
+  href: how-to-use-ensembl-vep.md
+- name: Choosing what Ensembl VEP annotates
+  href: choosing-what-ensembl-vep-annotates.md
+- name: Filtering Ensembl VEP results
+  href: filtering-ensembl-vep-results.md
