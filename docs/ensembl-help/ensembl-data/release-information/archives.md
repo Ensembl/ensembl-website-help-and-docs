@@ -7,9 +7,7 @@ description: Lists of previous versions and archived releases from the Ensembl p
 
 # Ensembl archives and previous sites
 
-This Ensembl site uses a different versioning system and release cycle to that of previous Ensembl versions. 
-
-Ensembl versions released prior to July 2026 were numbered numerically following a 3-4 month long release cycle. 
+This Ensembl site uses a different versioning system and release cycle to that of previous Ensembl versions. Ensembl versions released prior to July 2026 were numbered numerically following a 3-4 month long release cycle. 
 
 ## The legacy Ensembl archives for versions 116 and Ensembl Genomes version 63
 
@@ -34,12 +32,14 @@ These archives have enhanced tool functionality and features compared to older a
 - [Ensembl 108: Oct 2022](https://oct2022.archive.ensembl.org/)
 - [Ensembl 107: Jul 2022](https://jul2022.archive.ensembl.org/)
 - [Ensembl 106: Apr 2022](https://apr2022.archive.ensembl.org/)
+- The previous version for the **human GRCh37 assembly** is available at our dedicated [GRCh37 human](https://grch37.ensembl.org/index.html) site. 
+
+## Special archives - IMPORTANT - will be retired soon
 - [Ensembl 80: May 2015](https://may2015.archive.ensembl.org/) - Annotation on the mouse GRCm38 assembly
 - [Ensembl 77: Oct 2014](https://oct2014.archive.ensembl.org/) - Annotation on the zebrafish Zv9 assembly
 - [Ensembl 75: Feb 2014](https://feb2014.archive.ensembl.org/) - Annotation on the human GRCh37 assembly
 - [Ensembl 54: May 2009](https://may2009.archive.ensembl.org/) - Annotation on the human NCBI36 assembly, zebrafish Zv8 assembly 
 
-The previous version for the **human GRCh37 assembly** is available at our dedicated [GRCh37 human](https://grch37.ensembl.org/index.html) site. 
 
 ## Previous versions of Ensembl Genomes (non-vertebrates)
 ### Ensembl Plants
