@@ -6,3 +6,5 @@
   href: choosing-what-ensembl-vep-annotates.md
 - name: Filtering Ensembl VEP results
   href: filtering-ensembl-vep-results.md
+- name: Ensembl VEP on the command line
+  href: command-line/toc.yml

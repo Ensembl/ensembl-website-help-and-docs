@@ -1,0 +1,18 @@
+- name: VEP basic options
+  href: basic.md
+- name: VEP cache options
+  href: cache.md
+- name: VEP other annotation sources
+  href: annotation.md
+- name: VEP output format options
+  href: output-format.md
+- name: VEP output options
+  href: output.md
+- name: VEP identifiers
+  href: identifiers.md
+- name: VEP co-located variants
+  href: existing-variants.md
+- name: VEP filtering and QC options
+  href: filtering.md
+- name: VEP database options
+  href: database.md

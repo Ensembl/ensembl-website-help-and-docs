@@ -1,0 +1,30 @@
+- name: VEP on the command line
+  href: getting-started.md
+- name: VEP command line tutorial
+  href: tutorial.md
+- name: Download and install VEP
+  href: download-and-install.md
+- name: Running VEP
+  href: running-vep.md
+- name: Option reference
+  href: options/toc.yml
+- name: VEP data formats
+  href: data-formats.md
+- name: VEP annotation sources
+  href: annotation-sources.md
+- name: Filtering VEP results
+  href: filtering-results.md
+- name: VEP custom annotations
+  href: custom-annotations.md
+- name: VEP plugins
+  href: plugins.md
+- name: VEP plugin catalogue
+  href: plugin-catalogue.md
+- name: VEP examples and use cases
+  href: examples-and-use-cases.md
+- name: VEP other information
+  href: other-information.md
+- name: VEP frequently asked questions
+  href: faq.md
+- name: VEP release history
+  href: release-history.md
