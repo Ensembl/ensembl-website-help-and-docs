@@ -37,21 +37,21 @@ These instructions describe VEP release 116 (June 2026). Use matching VEP, cache
 
 **On this page**
 
-- [Download](/help/articles/vep-download-and-install#download)
-- [Requirements](/help/articles/vep-download-and-install#requirements)
-- [Installation](/help/articles/vep-download-and-install#installer)
-- [Additional components](/help/articles/vep-download-and-install#additional)
-- [Using Ensembl VEP in macOS](/help/articles/vep-download-and-install#macos)
-- [Using Ensembl VEP in Windows](/help/articles/vep-download-and-install#windows)
-- [Docker](/help/articles/vep-download-and-install#docker)
-- [Singularity](/help/articles/vep-download-and-install#singularity)
-- [Nextflow](/help/articles/vep-download-and-install#nextflow)
+- [Download](/help/articles/download-and-install-vep#download)
+- [Requirements](/help/articles/download-and-install-vep#requirements)
+- [Installation](/help/articles/download-and-install-vep#installer)
+- [Additional components](/help/articles/download-and-install-vep#additional)
+- [Using Ensembl VEP in macOS](/help/articles/download-and-install-vep#macos)
+- [Using Ensembl VEP in Windows](/help/articles/download-and-install-vep#windows)
+- [Docker](/help/articles/download-and-install-vep#docker)
+- [Singularity](/help/articles/download-and-install-vep#singularity)
+- [Nextflow](/help/articles/download-and-install-vep#nextflow)
 
 <span id="container"></span>
 
 ### Note
 
-To address potential installation challenges with Ensembl VEP dependencies on newer systems, we recommend using [Docker](/help/articles/vep-download-and-install#docker) or [Singularity](/help/articles/vep-download-and-install#singularity) containers.
+To address potential installation challenges with Ensembl VEP dependencies on newer systems, we recommend using [Docker](/help/articles/download-and-install-vep#docker) or [Singularity](/help/articles/download-and-install-vep#singularity) containers.
 
 These containerised environments enable to access all the latest Ensembl VEP features without the hassle of installing dependencies directly on your system. Additionally, they are highly compatible with computer clusters.
 
@@ -59,7 +59,7 @@ These containerised environments enable to access all the latest Ensembl VEP fea
 
 ## Download
 
-Download ensembl-vep package (see below the different ways to download it) and then follow the [installation instructions](/help/articles/vep-download-and-install#installer).
+Download ensembl-vep package (see below the different ways to download it) and then follow the [installation instructions](/help/articles/download-and-install-vep#installer).
 
 ### Using Git
 
@@ -149,17 +149,17 @@ Ensembl VEP requires:
   - [DBD::mysql](https://metacpan.org/release/DVEEDEN/DBD-mysql-4.050/view/lib/DBD/mysql.pm) (version \<=4.050)
   - [DBI](https://metacpan.org/pod/DBI)
 
-  See [this guide](http://www.cpan.org/modules/INSTALL.html) for more information on how to install perl modules. [Additional libraries](/help/articles/vep-download-and-install#additional) can be installed for extra features and enhancements but they are not required to run Ensembl VEP in most of the use cases.
+  See [this guide](http://www.cpan.org/modules/INSTALL.html) for more information on how to install perl modules. [Additional libraries](/help/articles/download-and-install-vep#additional) can be installed for extra features and enhancements but they are not required to run Ensembl VEP in most of the use cases.
 
 Ensembl VEP's INSTALL.pl script will install required components of Ensembl API for you, but Ensembl VEP may also be used with any pre-existing API installations you have, **provided their versions match the version of VEP you are using**.
 
 Ensembl VEP is available in the following platforms:
 
 - Linux (e.g., Ubuntu, Debian, Mint)
-- [macOS](/help/articles/vep-download-and-install#macos)
-- [Windows](/help/articles/vep-download-and-install#windows) (requires a more involved installation process)
+- [macOS](/help/articles/download-and-install-vep#macos)
+- [Windows](/help/articles/download-and-install-vep#windows) (requires a more involved installation process)
 
-Ensembl VEP is also available as [Docker](/help/articles/vep-download-and-install#docker) and [Singularity](/help/articles/vep-download-and-install#singularity) images, allowing to skip the complex installation steps.
+Ensembl VEP is also available as [Docker](/help/articles/download-and-install-vep#docker) and [Singularity](/help/articles/download-and-install-vep#singularity) images, allowing to skip the complex installation steps.
 
 <span id="installer"></span>
 
@@ -172,7 +172,7 @@ Run the following, and follow any prompts as they appear:
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">perl INSTALL.pl
 </code></pre>
 
-[Additional non-essential components](/help/articles/vep-download-and-install#additional) and enhancements must be installed manually.
+[Additional non-essential components](/help/articles/download-and-install-vep#additional) and enhancements must be installed manually.
 
 ### Software components installed
 
@@ -220,7 +220,7 @@ Run installer without prompts. Use the following options to specify parts to ins
 - **l** (Bio::DB::HTS/htslib only)
 - **c** (cache)
 - **f** (FASTA)
-- **p** (plugins) — Require the use of the [--PLUGINS](/help/articles/vep-download-and-install#opt_plugins) flag to list the plugin(s) to install.
+- **p** (plugins) — Require the use of the [--PLUGINS](/help/articles/download-and-install-vep#opt_plugins) flag to list the plugin(s) to install.
 
 e.g. for API and cache:
 
@@ -241,7 +241,7 @@ By default the installer will download the latest version of Ensembl VEP caches 
 
 By default the script will install the cache files in the ".vep" subdirectory in your home area. This option configures where cache files are installed.
 
-The [--dir_cache](/help/articles/vep-options-cache#opt_dir_cache) flag must be passed when running Ensembl VEP if a non-default cache directory is given:
+The [--dir_cache](/help/articles/vep-cache-options#opt_dir_cache) flag must be passed when running Ensembl VEP if a non-default cache directory is given:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep --dir_cache [dir]
 </code></pre>
@@ -303,7 +303,7 @@ perl INSTALL.pl -a p --PLUGINS dbNSFP,CADD,G2P
 
 By default the script will install the plugins files in the "Plugins" subdirectory of the `--CACHEDIR` directory. This option configures where the plugins files are installed.
 
-The [--dir_plugins](/help/articles/vep-options-cache#opt_dir_plugins) flag must be passed when running Ensembl VEP if a non-default plugins directory is given:
+The [--dir_plugins](/help/articles/vep-cache-options#opt_dir_plugins) flag must be passed when running Ensembl VEP if a non-default plugins directory is given:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep --dir_plugins [dir]
 </code></pre>
@@ -322,7 +322,7 @@ Use this if the installer fails with "out of memory" errors.
 
 **Alternate:** `-s`
 
-Comma-separated list of species to install when using `--AUTO`. To install the RefSeq cache, add "\_refseq" to the species name, e.g. "homo_sapiens_refseq", or "\_merged" to install the merged Ensembl/RefSeq cache. Remember to use [--refseq](/help/articles/vep-options-cache#opt_refseq) or [--merged](/help/articles/vep-options-cache#opt_merged) when running the VEP with the relevant cache!
+Comma-separated list of species to install when using `--AUTO`. To install the RefSeq cache, add "\_refseq" to the species name, e.g. "homo_sapiens_refseq", or "\_merged" to install the merged Ensembl/RefSeq cache. Remember to use [--refseq](/help/articles/vep-cache-options#opt_refseq) or [--merged](/help/articles/vep-cache-options#opt_merged) when running the VEP with the relevant cache!
 
 Use `all` to install data for all available species.
 
@@ -362,9 +362,9 @@ cpanm -l $HOME/cpanm Set::IntervalTree
 To make the change to `PERL5LIB` permanent, it is recommended to add the `export` line to your `$HOME/.bashrc` or `$HOME/.profile`.
 
 - Additional features
-  - [JSON](http://search.cpan.org/dist/JSON/) - required to produce [JSON format output](/help/articles/vep-options-output-format#opt_json)
-  - [Set::IntervalTree](http://search.cpan.org/~benbooth/Set-IntervalTree/lib/Set/IntervalTree.pm) - used to find overlaps between entities in coordinate space. Required to use [--nearest](/help/articles/vep-options-output#opt_nearest)
-  - [Bio::DB::BigFile](http://search.cpan.org/~lds/Bio-BigFile-1.07/lib/Bio/DB/BigFile.pm) - required to use bigWig format [custom annotation files](/help/articles/vep-custom-annotations). See [Bio::DB::BigFile instructions](/help/articles/vep-download-and-install#bigfile).
+  - [JSON](http://search.cpan.org/dist/JSON/) - required to produce [JSON format output](/help/articles/vep-output-format-options#opt_json)
+  - [Set::IntervalTree](http://search.cpan.org/~benbooth/Set-IntervalTree/lib/Set/IntervalTree.pm) - used to find overlaps between entities in coordinate space. Required to use [--nearest](/help/articles/vep-output-options#opt_nearest)
+  - [Bio::DB::BigFile](http://search.cpan.org/~lds/Bio-BigFile-1.07/lib/Bio/DB/BigFile.pm) - required to use bigWig format [custom annotation files](/help/articles/vep-custom-annotations). See [Bio::DB::BigFile instructions](/help/articles/download-and-install-vep#bigfile).
 - Speed enhancements - these modules can improve Ensembl VEP runtime
   - [PerlIO::gzip](http://search.cpan.org/~nwclark/PerlIO-gzip-0.19/gzip.pm) - marginal gains in compressed file parsing as used by the Ensembl VEP cache
   - [ensembl-xs](https://github.com/Ensembl/ensembl-xs) - provides pre-compiled replacements for frequently used routines in Ensembl VEP. Requires manual installation, see [README](https://github.com/Ensembl/ensembl-xs) for details
@@ -421,7 +421,7 @@ In order for Ensembl VEP to be able to access bigWig format custom annotation fi
     <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">ln -s $KENT_SRC/lib/x86_64/* $KENT_SRC/lib/
     </code></pre>
 
-6.  We'll now use cpanm to install the perl module for Bio::DB::BigFile itself. See [above](/help/articles/vep-download-and-install#additional) for guidance on this. In this example we're going to install the module to a path within your home directory. In order to do this we must modify the paths that perl looks in to find modules by adding to the `PERL5LIB` environment module. To make this change permanent you must add the `export` line to your `$HOME/.bashrc` or `$HOME/.profile`.
+6.  We'll now use cpanm to install the perl module for Bio::DB::BigFile itself. See [above](/help/articles/download-and-install-vep#additional) for guidance on this. In this example we're going to install the module to a path within your home directory. In order to do this we must modify the paths that perl looks in to find modules by adding to the `PERL5LIB` environment module. To make this change permanent you must add the `export` line to your `$HOME/.bashrc` or `$HOME/.profile`.
 
     <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">mkdir -p $HOME/cpanm
     export PERL5LIB=$PERL5LIB:$HOME/cpanm/lib/perl5
@@ -450,7 +450,7 @@ These instructions have been tested on **macOS High Sierra (10.13)** and **macOS
 
 ### Installation issues with M-series Macs
 
-We advise using the [Docker](/help/articles/vep-download-and-install#docker) or [Singularity](/help/articles/vep-download-and-install#singularity) images for Ensembl VEP if you are having issues installing Ensembl VEP in Apple Silicon (M1 upwards) Macs.
+We advise using the [Docker](/help/articles/download-and-install-vep#docker) or [Singularity](/help/articles/download-and-install-vep#singularity) images for Ensembl VEP if you are having issues installing Ensembl VEP in Apple Silicon (M1 upwards) Macs.
 
 ### Prerequisite Setup
 
@@ -548,13 +548,13 @@ You may also consider using Ensembl VEP's web or REST interfaces.
 Using a virtual machine you can run a virtual Linux system in a window on your machine. There are two ways to do this:
 
 1.  Use the [Ensembl virtual machine image](https://jun2026.archive.ensembl.org/info/data/virtual_machine.html)
-2.  Use [Docker](/help/articles/vep-download-and-install#docker)
+2.  Use [Docker](/help/articles/download-and-install-vep#docker)
 
 <span id="wperl"></span>
 
 ### Perl
 
-If Perl is installed on Windows, Ensembl VEP can be setup. However this may require installation of dependent modules. We recommend using [Docker](/help/articles/vep-download-and-install#docker) to run Ensembl VEP on Windows.
+If Perl is installed on Windows, Ensembl VEP can be setup. However this may require installation of dependent modules. We recommend using [Docker](/help/articles/download-and-install-vep#docker) to run Ensembl VEP on Windows.
 
 1.  Check Perl is installed
 
@@ -741,7 +741,7 @@ The process can be summarised briefly by the following steps:
 - Running Ensembl VEP on the split files in parallel
 - Merging Ensembl VEP outputs into a single file
 
-To run the pipeline in a system with [Nexflow](https://nextflow.io) installed, you will need to prepare a [**vep.ini** config file](/help/articles/vep-options-basic#opt_config). Here are some examples commands to run the Nextflow Ensembl VEP pipeline:
+To run the pipeline in a system with [Nexflow](https://nextflow.io) installed, you will need to prepare a [**vep.ini** config file](/help/articles/vep-basic-options#opt_config). Here are some examples commands to run the Nextflow Ensembl VEP pipeline:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text"># Run Nextflow Ensembl VEP using local Ensembl VEP installation
 # NB: Nextflow automatically downloads the GitHub repository

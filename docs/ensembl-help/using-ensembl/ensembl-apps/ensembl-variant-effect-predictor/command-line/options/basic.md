@@ -35,16 +35,16 @@ related_articles:
 ## Option reference
 
 - **Basic options (this section)**
-- [Cache options](/help/articles/vep-options-cache)
-- [Other annotation sources](/help/articles/vep-options-annotation)
-- [Output format options](/help/articles/vep-options-output-format)
-- [Output options](/help/articles/vep-options-output)
-- [Identifiers](/help/articles/vep-options-identifiers)
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
-- [Database options](/help/articles/vep-options-database)
+- [Cache options](/help/articles/vep-cache-options)
+- [Other annotation sources](/help/articles/vep-other-annotation-sources)
+- [Output format options](/help/articles/vep-output-format-options)
+- [Output options](/help/articles/vep-output-options)
+- [Identifiers](/help/articles/vep-identifiers)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
+- [Database options](/help/articles/vep-database-options)
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="basic"></span>
 
@@ -64,7 +64,7 @@ Display help message and quit
 
 Suppress warning messages.*Not used by default*
 
-**Incompatible with:** [--verbose](/help/articles/vep-options-basic#opt_verbose)
+**Incompatible with:** [--verbose](/help/articles/vep-basic-options#opt_verbose)
 
 <span id="opt_verbose"></span>
 
@@ -74,7 +74,7 @@ Suppress warning messages.*Not used by default*
 
 Print out a bit more information while running. *Not used by default*
 
-**Incompatible with:** [--quiet](/help/articles/vep-options-basic#opt_quiet)
+**Incompatible with:** [--quiet](/help/articles/vep-basic-options#opt_quiet)
 
 <span id="opt_config"></span>
 
@@ -88,7 +88,7 @@ format        vcf
 host          useastdb.ensembl.org
 </code></pre>
 
-A config file can also be implicitly read; save the file as **$HOME/.vep/vep.ini** (or equivalent directory if using [--dir](/help/articles/vep-options-cache#opt_dir)). Any options in this file will be overridden by those specified in a config file using [--config](/help/articles/vep-options-basic#opt_config), and in turn by any options specified on the command line. You can create a quick version file of this by setting the flags as normal and running Ensembl VEP in verbose (**-v**) mode. This will output lines that can be copied to a config file that can be loaded in on the next run using [--config](/help/articles/vep-options-basic#opt_config). *Not used by default*
+A config file can also be implicitly read; save the file as **$HOME/.vep/vep.ini** (or equivalent directory if using [--dir](/help/articles/vep-cache-options#opt_dir)). Any options in this file will be overridden by those specified in a config file using [--config](/help/articles/vep-basic-options#opt_config), and in turn by any options specified on the command line. You can create a quick version file of this by setting the flags as normal and running Ensembl VEP in verbose (**-v**) mode. This will output lines that can be copied to a config file that can be loaded in on the next run using [--config](/help/articles/vep-basic-options#opt_config). *Not used by default*
 
 <span id="opt_everything"></span>
 
@@ -98,7 +98,7 @@ A config file can also be implicitly read; save the file as **$HOME/.vep/vep.ini
 
 Shortcut flag to switch on all of the following:
 
-[--sift b](/help/articles/vep-options-output#opt_sift), [--polyphen b](/help/articles/vep-options-output#opt_polyphen), [--ccds](/help/articles/vep-options-identifiers#opt_ccds), [--hgvs](/help/articles/vep-options-identifiers#opt_hgvs), [--symbol](/help/articles/vep-options-identifiers#opt_symbol), [--numbers](/help/articles/vep-options-output#opt_numbers), [--domains](/help/articles/vep-options-identifiers#opt_domains), [--regulatory](/help/articles/vep-options-output#opt_regulatory), [--canonical](/help/articles/vep-options-identifiers#opt_canonical), [--protein](/help/articles/vep-options-identifiers#opt_protein), [--biotype](/help/articles/vep-options-identifiers#opt_biotype), [--af](/help/articles/vep-options-existing-variants#opt_af), [--af_1kg](/help/articles/vep-options-existing-variants#opt_af_1kg), [--af_gnomade](/help/articles/vep-options-existing-variants#opt_af_gnomade), [--af_gnomadg](/help/articles/vep-options-existing-variants#opt_af_gnomadg), [--max_af](/help/articles/vep-options-existing-variants#opt_max_af), [--pubmed](/help/articles/vep-options-existing-variants#opt_pubmed), [--uniprot](/help/articles/vep-options-identifiers#opt_uniprot), [--mane](/help/articles/vep-options-identifiers#opt_mane), [--tsl](/help/articles/vep-options-identifiers#opt_tsl), [--appris](/help/articles/vep-options-identifiers#opt_appris), [--variant_class](/help/articles/vep-options-output#opt_variant_class), [--gene_phenotype](/help/articles/vep-options-output#opt_gene_phenotype), [--mirna](/help/articles/vep-options-output#opt_mirna)
+[--sift b](/help/articles/vep-output-options#opt_sift), [--polyphen b](/help/articles/vep-output-options#opt_polyphen), [--ccds](/help/articles/vep-identifiers#opt_ccds), [--hgvs](/help/articles/vep-identifiers#opt_hgvs), [--symbol](/help/articles/vep-identifiers#opt_symbol), [--numbers](/help/articles/vep-output-options#opt_numbers), [--domains](/help/articles/vep-identifiers#opt_domains), [--regulatory](/help/articles/vep-output-options#opt_regulatory), [--canonical](/help/articles/vep-identifiers#opt_canonical), [--protein](/help/articles/vep-identifiers#opt_protein), [--biotype](/help/articles/vep-identifiers#opt_biotype), [--af](/help/articles/vep-co-located-variants#opt_af), [--af_1kg](/help/articles/vep-co-located-variants#opt_af_1kg), [--af_gnomade](/help/articles/vep-co-located-variants#opt_af_gnomade), [--af_gnomadg](/help/articles/vep-co-located-variants#opt_af_gnomadg), [--max_af](/help/articles/vep-co-located-variants#opt_max_af), [--pubmed](/help/articles/vep-co-located-variants#opt_pubmed), [--uniprot](/help/articles/vep-identifiers#opt_uniprot), [--mane](/help/articles/vep-identifiers#opt_mane), [--tsl](/help/articles/vep-identifiers#opt_tsl), [--appris](/help/articles/vep-identifiers#opt_appris), [--variant_class](/help/articles/vep-output-options#opt_variant_class), [--gene_phenotype](/help/articles/vep-output-options#opt_gene_phenotype), [--mirna](/help/articles/vep-output-options#opt_mirna)
 
 <span id="opt_species"></span>
 
@@ -179,7 +179,7 @@ Generate a [HTML stats file](/help/articles/vep-data-formats#stats) (default).
 
 ### `--stats_text`
 
-Generate a plain text stats file. Can be combined with [`--stats_html`](/help/articles/vep-options-basic#opt_stats_html) to generate both plain text and HTML stats files.
+Generate a plain text stats file. Can be combined with [`--stats_html`](/help/articles/vep-basic-options#opt_stats_html) to generate both plain text and HTML stats files.
 
 <span id="opt_warning_file"></span>
 

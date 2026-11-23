@@ -48,7 +48,7 @@ Ensembl treats unbalanced variants differently to VCF - your variant hasn't disa
 
 ### Q: Why don't I see any co-located variants when using species X?
 
-Not all species have variants and not all species that do are in the Ensembl variation resource - see [this document](https://jun2026.archive.ensembl.org/info/genome/variation/species/species_data_types.html#source) for details. The [custom](/help/articles/vep-options-annotation#opt_custom) option can be used in the commandline interface to include more variant sets
+Not all species have variants and not all species that do are in the Ensembl variation resource - see [this document](https://jun2026.archive.ensembl.org/info/genome/variation/species/species_data_types.html#source) for details. The [custom](/help/articles/vep-other-annotation-sources#opt_custom) option can be used in the commandline interface to include more variant sets
 
 <span id="multi-vars-mapped"></span>
 
@@ -66,13 +66,13 @@ See [here](/help/articles/vep-other-information#colocated) for a full discussion
 
 ### Q: Ensembl VEP is not assigning a frequency to my input variant - why?
 
-Ensembl VEP's cache contains frequency data only for specific studies. See [here](/help/articles/vep-other-information#colocated) for a full discussion. The [custom](/help/articles/vep-options-annotation#opt_custom) option can be used in the commandline interface to include more frequency sets
+Ensembl VEP's cache contains frequency data only for specific studies. See [here](/help/articles/vep-other-information#colocated) for a full discussion. The [custom](/help/articles/vep-other-annotation-sources#opt_custom) option can be used in the commandline interface to include more frequency sets
 
 <span id="many-lines"></span>
 
 ### Q: Why do I see so many lines of output for each variant in my input?
 
-While it would be convenient to have a simple, one word answer to the question "What is the consequence of this variant?", in reality biology is not this simple! Many genes have more than one transcript, so Ensembl VEP provides a prediction for each transcript that a variant overlaps. Ensembl VEP has options to help select results according to your requirements; the [--canonical](/help/articles/vep-options-identifiers#opt_canonical) and [--mane](/help/articles/vep-options-identifiers#opt_mane) options indicate which transcripts are canonical and belong to the human MANE set respectively, while [--pick](/help/articles/vep-options-filtering#opt_pick), [--per_gene](/help/articles/vep-options-filtering#opt_per_gene), [--summary](/help/articles/vep-options-filtering#opt_summary) and [--most_severe](/help/articles/vep-options-filtering#opt_most_severe) allow you to give a more summary level assessment per variant.
+While it would be convenient to have a simple, one word answer to the question "What is the consequence of this variant?", in reality biology is not this simple! Many genes have more than one transcript, so Ensembl VEP provides a prediction for each transcript that a variant overlaps. Ensembl VEP has options to help select results according to your requirements; the [--canonical](/help/articles/vep-identifiers#opt_canonical) and [--mane](/help/articles/vep-identifiers#opt_mane) options indicate which transcripts are canonical and belong to the human MANE set respectively, while [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick), [--per_gene](/help/articles/vep-filtering-and-qc-options#opt_per_gene), [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary) and [--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) allow you to give a more summary level assessment per variant.
 
 Furthermore, several "compound" consequences are also possible - if, for example, a variant falls in the final few bases of an exon, it may be considered to affect a splicing site, in addition to possibly affecting the coding sequence.
 
@@ -106,7 +106,7 @@ There are a number of factors that influence how fast Ensembl VEP runs. Have a l
 
 ### Q: Why am I not seeing the same variant from my input in the output?
 
-Since the Ensembl 110 release, Ensembl VEP by default will minimise the input allele for display in the output. To see the exact allele representation you provided, use the [--uploaded_allele](/help/articles/vep-options-output#opt_uploaded_allele) option.
+Since the Ensembl 110 release, Ensembl VEP by default will minimise the input allele for display in the output. To see the exact allele representation you provided, use the [--uploaded_allele](/help/articles/vep-output-options#opt_uploaded_allele) option.
 
 <span id="hgvs-n"></span>
 
@@ -124,10 +124,10 @@ Use of uninitialized value in concatenation (.) or string at /nfs/users/nfs_w/wm
 Both of these error types are usually seen when using a [FASTA file](/help/articles/vep-annotation-sources#fasta) for retrieving sequence. There are a couple of steps you can take to try to remedy them:
 
 1.  The index alongside the FASTA can become corrupted. Delete \[fastafile\].index and re-run Ensembl VEP to regenerate it. By default this file is located in your $HOME/.vep/\[species\]/\[version\]\_\[assembly\] directory.
-2.  The FASTA file itself may have been corrupted during download; delete the fasta file and the index and re-download (you can use the [Ensembl VEP installer](/help/articles/vep-download-and-install#installer) to do this).
-3.  Older versions of BioPerl (1.2.3 in particular is known to have this) cannot properly index large FASTA files. Make sure you are using a later (\>=1.6) version of BioPerl. The [Ensembl VEP installer](/help/articles/vep-download-and-install#installer) installs 1.6.924 for you.
+2.  The FASTA file itself may have been corrupted during download; delete the fasta file and the index and re-download (you can use the [Ensembl VEP installer](/help/articles/download-and-install-vep#installer) to do this).
+3.  Older versions of BioPerl (1.2.3 in particular is known to have this) cannot properly index large FASTA files. Make sure you are using a later (\>=1.6) version of BioPerl. The [Ensembl VEP installer](/help/articles/download-and-install-vep#installer) installs 1.6.924 for you.
 
-If you still see problems after taking these steps, or if you were not using a FASTA file in the first place, please [contact us](/help/articles/vep-faq#top).
+If you still see problems after taking these steps, or if you were not using a FASTA file in the first place, please [contact us](/help/articles/vep-frequently-asked-questions#top).
 
 <span id="chr-not-found"></span>
 
@@ -136,7 +136,7 @@ If you still see problems after taking these steps, or if you were not using a F
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">WARNING: Chromosome 21 not found in annotation sources or synonyms on line 160
 </code></pre>
 
-This can occur if the chromosome names differ between your input variant and any annotation source that you are using (cache, database, GFF/GTF file, FASTA file, custom annotation file). To circumvent this you may provide a [synonyms file](/help/articles/vep-options-identifiers#opt_synonyms). A synonym file is included in Ensembl VEP's cache files, so if you have one of these for your species you can use it as follows:
+This can occur if the chromosome names differ between your input variant and any annotation source that you are using (cache, database, GFF/GTF file, FASTA file, custom annotation file). To circumvent this you may provide a [synonyms file](/help/articles/vep-identifiers#opt_synonyms). A synonym file is included in Ensembl VEP's cache files, so if you have one of these for your species you can use it as follows:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i input.vcf -cache -synonyms ~/.vep/homo_sapiens/116_GRCh38/chr_synonyms.txt
 </code></pre>
@@ -178,7 +178,7 @@ If you select the database option rather than using a cache Ensembl VEP will try
 
 ### Q: Can I use Ensembl VEP on Windows?
 
-Yes - see the [documentation](/help/articles/vep-download-and-install#windows) for a few different ways to get the Ensembl VEP running on Windows.
+Yes - see the [documentation](/help/articles/download-and-install-vep#windows) for a few different ways to get the Ensembl VEP running on Windows.
 
 <span id="vep-custom-assemblies"></span>
 

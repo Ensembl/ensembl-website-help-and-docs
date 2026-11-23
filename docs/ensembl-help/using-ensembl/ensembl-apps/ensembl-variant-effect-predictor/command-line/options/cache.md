@@ -34,17 +34,17 @@ related_articles:
 
 ## Option reference
 
-- [Basic options](/help/articles/vep-options-basic)
+- [Basic options](/help/articles/vep-basic-options)
 - **Cache options (this section)**
-- [Other annotation sources](/help/articles/vep-options-annotation)
-- [Output format options](/help/articles/vep-options-output-format)
-- [Output options](/help/articles/vep-options-output)
-- [Identifiers](/help/articles/vep-options-identifiers)
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
-- [Database options](/help/articles/vep-options-database)
+- [Other annotation sources](/help/articles/vep-other-annotation-sources)
+- [Output format options](/help/articles/vep-output-format-options)
+- [Output options](/help/articles/vep-output-options)
+- [Identifiers](/help/articles/vep-identifiers)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
+- [Database options](/help/articles/vep-database-options)
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="cacheopt"></span>
 
@@ -54,9 +54,9 @@ related_articles:
 
 ### `--cache`
 
-Enables use of the [cache](/help/articles/vep-annotation-sources#cache). Add [--refseq](/help/articles/vep-options-cache#opt_refseq) or [--merged](/help/articles/vep-options-cache#opt_merged) to use the refseq or merged cache, (if installed).
+Enables use of the [cache](/help/articles/vep-annotation-sources#cache). Add [--refseq](/help/articles/vep-cache-options#opt_refseq) or [--merged](/help/articles/vep-cache-options#opt_merged) to use the refseq or merged cache, (if installed).
 
-**Incompatible with:** [--database](/help/articles/vep-options-database#opt_database)
+**Incompatible with:** [--database](/help/articles/vep-database-options#opt_database)
 
 <span id="opt_dir"></span>
 
@@ -80,11 +80,11 @@ Specify the plugin directory to use. *Default = "$HOME/.vep/"*
 
 ### `--offline`
 
-Enable [offline mode](/help/articles/vep-annotation-sources#offline). No database connections will be made, and a cache file or [GFF](/help/articles/vep-options-annotation#opt_gff)/[GTF](/help/articles/vep-options-annotation#opt_gtf) file is required for annotation. Add [--refseq](/help/articles/vep-options-cache#opt_refseq) to use the refseq cache (if installed). *Not used by default*
+Enable [offline mode](/help/articles/vep-annotation-sources#offline). No database connections will be made, and a cache file or [GFF](/help/articles/vep-other-annotation-sources#opt_gff)/[GTF](/help/articles/vep-other-annotation-sources#opt_gtf) file is required for annotation. Add [--refseq](/help/articles/vep-cache-options#opt_refseq) to use the refseq cache (if installed). *Not used by default*
 
 **Incompatible with:**
 
-[--database](/help/articles/vep-options-database#opt_database) [--check_svs](/help/articles/vep-options-existing-variants#opt_check_svs) [--lrg](/help/articles/vep-options-database#opt_lrg)
+[--database](/help/articles/vep-database-options#opt_database) [--check_svs](/help/articles/vep-co-located-variants#opt_check_svs) [--lrg](/help/articles/vep-database-options#opt_lrg)
 
 <span id="opt_fasta"></span>
 
@@ -92,7 +92,7 @@ Enable [offline mode](/help/articles/vep-annotation-sources#offline). No databas
 
 **Alternate:** `--fa`
 
-Specify a FASTA file or a directory containing FASTA files to use to look up reference sequence. The first time you run Ensembl VEP with this parameter an index will be built which can take a few minutes. This is required if fetching HGVS annotations ([--hgvs](/help/articles/vep-options-identifiers#opt_hgvs)) or checking reference sequences ([--check_ref](/help/articles/vep-options-filtering#opt_check_ref)) in offline mode ([--offline](/help/articles/vep-options-cache#opt_offline)), and optional with some performance increase in cache mode ([--cache](/help/articles/vep-options-cache#opt_cache)). See [documentation](/help/articles/vep-annotation-sources#fasta) for more details. *Not used by default*
+Specify a FASTA file or a directory containing FASTA files to use to look up reference sequence. The first time you run Ensembl VEP with this parameter an index will be built which can take a few minutes. This is required if fetching HGVS annotations ([--hgvs](/help/articles/vep-identifiers#opt_hgvs)) or checking reference sequences ([--check_ref](/help/articles/vep-filtering-and-qc-options#opt_check_ref)) in offline mode ([--offline](/help/articles/vep-cache-options#opt_offline)), and optional with some performance increase in cache mode ([--cache](/help/articles/vep-cache-options#opt_cache)). See [documentation](/help/articles/vep-annotation-sources#fasta) for more details. *Not used by default*
 
 <span id="opt_refseq"></span>
 
@@ -104,7 +104,7 @@ Specify this option if you have installed the RefSeq cache in order for Ensembl 
 
 **Incompatible with:**
 
-[--gencode_basic](/help/articles/vep-options-filtering#opt_gencode_basic) [--gencode_primary](/help/articles/vep-options-filtering#opt_gencode_primary) [--merged](/help/articles/vep-options-cache#opt_merged)
+[--gencode_basic](/help/articles/vep-filtering-and-qc-options#opt_gencode_basic) [--gencode_primary](/help/articles/vep-filtering-and-qc-options#opt_gencode_primary) [--merged](/help/articles/vep-cache-options#opt_merged)
 
 <span id="opt_merged"></span>
 
@@ -114,7 +114,7 @@ Use the merged Ensembl and RefSeq cache. Consequences are flagged with the SOURC
 
 **Output fields:** REFSEQ_MATCH, BAM_EDIT, SOURCE
 
-**Incompatible with:** [--refseq](/help/articles/vep-options-cache#opt_refseq)
+**Incompatible with:** [--refseq](/help/articles/vep-cache-options#opt_refseq)
 
 <span id="opt_cache_version"></span>
 

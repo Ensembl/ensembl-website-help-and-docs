@@ -34,17 +34,17 @@ related_articles:
 
 ## Option reference
 
-- [Basic options](/help/articles/vep-options-basic)
-- [Cache options](/help/articles/vep-options-cache)
+- [Basic options](/help/articles/vep-basic-options)
+- [Cache options](/help/articles/vep-cache-options)
 - **Other annotation sources (this section)**
-- [Output format options](/help/articles/vep-options-output-format)
-- [Output options](/help/articles/vep-options-output)
-- [Identifiers](/help/articles/vep-options-identifiers)
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
-- [Database options](/help/articles/vep-options-database)
+- [Output format options](/help/articles/vep-output-format-options)
+- [Output options](/help/articles/vep-output-options)
+- [Identifiers](/help/articles/vep-identifiers)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
+- [Database options](/help/articles/vep-database-options)
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="other"></span>
 
@@ -54,7 +54,7 @@ related_articles:
 
 ### `--plugin [plugin name]`
 
-Use named plugin. Plugin modules should be installed in the Plugins subdirectory of the Ensembl VEP cache directory (defaults to $HOME/.vep/). Multiple plugins can be used by supplying the [--plugin](/help/articles/vep-options-annotation#opt_plugin) flag multiple times. See [plugin documentation](/help/articles/vep-plugins). *Not used by default*
+Use named plugin. Plugin modules should be installed in the Plugins subdirectory of the Ensembl VEP cache directory (defaults to $HOME/.vep/). Multiple plugins can be used by supplying the [--plugin](/help/articles/vep-other-annotation-sources#opt_plugin) flag multiple times. See [plugin documentation](/help/articles/vep-plugins). *Not used by default*
 
 **Output fields:** Plugin-dependent
 
@@ -62,7 +62,7 @@ Use named plugin. Plugin modules should be installed in the Plugins subdirectory
 
 ### `--custom file=[filename]`
 
-Add custom annotation to the output. Files must be tabix indexed or in the bigWig format. Multiple files can be specified by supplying the [--custom](/help/articles/vep-options-annotation#opt_custom) flag multiple times. [See here](/help/articles/vep-custom-annotations) for full details. *Not used by default*
+Add custom annotation to the output. Files must be tabix indexed or in the bigWig format. Multiple files can be specified by supplying the [--custom](/help/articles/vep-other-annotation-sources#opt_custom) flag multiple times. [See here](/help/articles/vep-custom-annotations) for full details. *Not used by default*
 
 **Output fields:** SOURCE, Custom file dependent
 
@@ -70,7 +70,7 @@ Add custom annotation to the output. Files must be tabix indexed or in the bigWi
 
 ### `--gff [filename]`
 
-Use [GFF transcript annotations](/help/articles/vep-annotation-sources#gff) in \[filename\] as an annotation source. Requires a [FASTA file](/help/articles/vep-options-cache#opt_fasta) of genomic sequence. *Not used by default*
+Use [GFF transcript annotations](/help/articles/vep-annotation-sources#gff) in \[filename\] as an annotation source. Requires a [FASTA file](/help/articles/vep-cache-options#opt_fasta) of genomic sequence. *Not used by default*
 
 **Output fields:** SOURCE
 
@@ -78,7 +78,7 @@ Use [GFF transcript annotations](/help/articles/vep-annotation-sources#gff) in \
 
 ### `--gtf [filename]`
 
-Use [GTF transcript annotations](/help/articles/vep-annotation-sources#gff) in \[filename\] as an annotation source. Requires a [FASTA file](/help/articles/vep-options-cache#opt_fasta) of genomic sequence. *Not used by default*
+Use [GTF transcript annotations](/help/articles/vep-annotation-sources#gff) in \[filename\] as an annotation source. Requires a [FASTA file](/help/articles/vep-cache-options#opt_fasta) of genomic sequence. *Not used by default*
 
 **Output fields:** SOURCE
 
@@ -86,7 +86,7 @@ Use [GTF transcript annotations](/help/articles/vep-annotation-sources#gff) in \
 
 ### `--bam [filename]`
 
-**ADVANCED** Use BAM file of sequence alignments to correct transcript models not derived from reference genome sequence. Used to correct [RefSeq transcript models](/help/articles/vep-other-information#refseq_bam). Not required when using with the refseq or merged caches as they are already corrected, if used with those caches, errors may occur. Enables [--use_transcript_ref](/help/articles/vep-options-annotation#opt_use_transcript_ref); add [--use_given_ref](/help/articles/vep-options-annotation#opt_use_given_ref) to override this behaviour. *Not used by default*
+**ADVANCED** Use BAM file of sequence alignments to correct transcript models not derived from reference genome sequence. Used to correct [RefSeq transcript models](/help/articles/vep-other-information#refseq_bam). Not required when using with the refseq or merged caches as they are already corrected, if used with those caches, errors may occur. Enables [--use_transcript_ref](/help/articles/vep-other-annotation-sources#opt_use_transcript_ref); add [--use_given_ref](/help/articles/vep-other-annotation-sources#opt_use_given_ref) to override this behaviour. *Not used by default*
 
 **Output fields:** BAM_EDIT
 
@@ -102,7 +102,7 @@ By default Ensembl VEP uses the reference allele provided in the input file to c
 
 ### `--use_given_ref`
 
-Using [--bam](/help/articles/vep-options-annotation#opt_bam) or a [BAM-edited RefSeq cache](/help/articles/vep-other-information#refseq_bam) by default enables [--use_transcript_ref](/help/articles/vep-options-annotation#opt_use_transcript_ref); add this flag to override this behaviour and use the provided reference allele from the input. *Not used by default*
+Using [--bam](/help/articles/vep-other-annotation-sources#opt_bam) or a [BAM-edited RefSeq cache](/help/articles/vep-other-information#refseq_bam) by default enables [--use_transcript_ref](/help/articles/vep-other-annotation-sources#opt_use_transcript_ref); add this flag to override this behaviour and use the provided reference allele from the input. *Not used by default*
 
 <span id="opt_custom_multi_allelic"></span>
 

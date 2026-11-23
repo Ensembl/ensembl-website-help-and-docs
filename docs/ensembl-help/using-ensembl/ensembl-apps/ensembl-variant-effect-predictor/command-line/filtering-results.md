@@ -35,10 +35,10 @@ related_articles:
 
 **On this page**
 
-- [Running filter_vep](/help/articles/vep-filtering-results#filter_run)
-- [Options](/help/articles/vep-filtering-results#filter_opt)
-- [Writing filters](/help/articles/vep-filtering-results#filter_write)
-- [Operators](/help/articles/vep-filtering-results#filter_op)
+- [Running filter_vep](/help/articles/filtering-vep-results#filter_run)
+- [Options](/help/articles/filtering-vep-results#filter_opt)
+- [Writing filters](/help/articles/filtering-vep-results#filter_write)
+- [Operators](/help/articles/filtering-vep-results#filter_op)
 
 The Ensembl VEP package includes a tool, filter_vep, to filter results files on a variety of attributes.
 
@@ -124,7 +124,7 @@ In VCF files, the CSQ field that contains the consequence data will often contai
 
 ### `--vcf_info_field [key]`
 
-With VCF input files, by default filter_vep expects to find Ensembl VEP annotations encoded in the CSQ INFO key; Ensembl VEP itself can be configured to write to a different key (with the equivalent [--vcf_info_field](/help/articles/vep-options-output#opt_vcf_info_field) flag).
+With VCF input files, by default filter_vep expects to find Ensembl VEP annotations encoded in the CSQ INFO key; Ensembl VEP itself can be configured to write to a different key (with the equivalent [--vcf_info_field](/help/articles/vep-output-options#opt_vcf_info_field) flag).
 
 Use this flag to change the INFO key Ensembl VEP expects to decode: e.g. use the command "`--vcf_info_field ANN`" if the Ensembl VEP annotations are stored in the INFO key "ANN".
 
@@ -194,7 +194,7 @@ Note that for numeric fields, such as the \*AF allele frequency fields, filter_v
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">--filter &quot;AF &lt; 0.01 or not AF&quot;
 </code></pre>
 
-You can use regex to do pattern match. For example, using [--sift b](/help/articles/vep-options-output#opt_sift) in Ensembl VEP gives field value that has both string and number and looks like "tolerated(0.46)". To match on the string part, you can do the following:
+You can use regex to do pattern match. For example, using [--sift b](/help/articles/vep-output-options#opt_sift) in Ensembl VEP gives field value that has both string and number and looks like "tolerated(0.46)". To match on the string part, you can do the following:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text"># match string part
 --filter &quot;SIFT match tolerated&quot;

@@ -107,7 +107,7 @@ related_articles:
   <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep --cache -i variants.vcf --shift_3prime 1
   </code></pre>
 
-- Report uploaded allele before minimisation. For more information, see [here](/help/articles/vep-options-output#opt_uploaded_allele).
+- Report uploaded allele before minimisation. For more information, see [here](/help/articles/vep-output-options#opt_uploaded_allele).
 
   <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep --cache -i variants.vcf --uploaded_allele
   </code></pre>
@@ -116,11 +116,11 @@ related_articles:
 
 ## gnomAD
 
-[gnomAD](http://gnomad.broadinstitute.org/) exome frequency data is included in Ensembl VEP's cache files from release 90, replacing ExAC; use [--af_gnomade](/help/articles/vep-options-existing-variants#opt_af_gnomade) to enable using this data. Ensembl VEP can also retrieve frequency data from the gnomAD genomes set or ExAC via Ensembl VEP's custom annotation functionality.
+[gnomAD](http://gnomad.broadinstitute.org/) exome frequency data is included in Ensembl VEP's cache files from release 90, replacing ExAC; use [--af_gnomade](/help/articles/vep-co-located-variants#opt_af_gnomade) to enable using this data. Ensembl VEP can also retrieve frequency data from the gnomAD genomes set or ExAC via Ensembl VEP's custom annotation functionality.
 
 For the latest gnomAD data, please visit [gnomAD downloads](https://gnomad.broadinstitute.org/downloads).
 
-1.  Ensembl VEP requires Bio::DB::HTS to read data from tabix-indexed VCFs - see [installation instructions](/help/articles/vep-download-and-install#installer)
+1.  Ensembl VEP requires Bio::DB::HTS to read data from tabix-indexed VCFs - see [installation instructions](/help/articles/download-and-install-vep#installer)
 
 2.  The Ensembl FTP site hosts abridged VCF files for gnomAD additionally remapped to GRCh38 using [CrossMap](http://crossmap.sourceforge.net/). It is possible for Ensembl VEP to read these files directly from their remote location, though for optimal performance the VCF and index should be downloaded to a local file system.
     - **GRCh38**
@@ -216,7 +216,7 @@ codonpos,fold-degenerate,Ancestral_allele,Ensembl_geneid,Ensembl_transcriptid,
 ...
 </code></pre>
 
-Note that some of these fields are replicates of those produced by the core Ensembl VEP code (e.g. [SIFT](/help/articles/vep-options-output#opt_sift), the [1000 Genomes Project](/help/articles/vep-options-existing-variants#opt_af_1kg) frequencies) - you should use the Ensembl VEP options for frequency information rather than the annotations from dbNSFP as the dbNSFP file covers **only** missense substitutions. Other fields, such as the conservation scores, may be better served by using genome-wide files as described [above](/help/articles/vep-examples-and-use-cases#gerp).
+Note that some of these fields are replicates of those produced by the core Ensembl VEP code (e.g. [SIFT](/help/articles/vep-output-options#opt_sift), the [1000 Genomes Project](/help/articles/vep-co-located-variants#opt_af_1kg) frequencies) - you should use the Ensembl VEP options for frequency information rather than the annotations from dbNSFP as the dbNSFP file covers **only** missense substitutions. Other fields, such as the conservation scores, may be better served by using genome-wide files as described [above](/help/articles/vep-examples-and-use-cases#gerp).
 
 To select fields, just add them as a comma-separated list to your command line:
 
@@ -291,7 +291,7 @@ Ensembl VEP can annotate structural variants (SV) with their predicted effect on
 ### Reported overlaps
 
 - Ensembl VEP calculates the length and proportion of each genomic feature overlapped by a structural variant
-- Use the [--overlaps](/help/articles/vep-options-output#opt_overlaps) option to enable this when using VCF or tab format. (This is reported by default in standard Ensembl VEP and JSON format.)
+- Use the [--overlaps](/help/articles/vep-output-options#opt_overlaps) option to enable this when using VCF or tab format. (This is reported by default in standard Ensembl VEP and JSON format.)
 - The keys `bp_overlap` and `percentage_overlap` are used in JSON format and `OverlapBP` and `OverlapPC` in other formats.
 
 ### Plugin support
@@ -305,9 +305,9 @@ Ensembl VEP can annotate structural variants (SV) with their predicted effect on
 
 ### Changing memory requirements
 
-- By default, Ensembl VEP does not annotate variants larger than 10M. If you are using the command line tool, you can use the [--max_sv_size](/help/articles/vep-options-basic#opt_max_sv_size) option to modify this.
+- By default, Ensembl VEP does not annotate variants larger than 10M. If you are using the command line tool, you can use the [--max_sv_size](/help/articles/vep-basic-options#opt_max_sv_size) option to modify this.
   - This limit is not associated with breakpoint variants: each breakend in a breakpoint variant is analysed by Ensembl VEP as a single base (the alternative sequence is currently ignored).
-- By default, variants are analysed in batches of 5000. Using the [--buffer_size](/help/articles/vep-options-cache#opt_buffer_size) option to reduce this can reduce memory requirements, especially if your data is sparse. A smaller buffer size is essential when annotating structural variants with regulatory data.
+- By default, variants are analysed in batches of 5000. Using the [--buffer_size](/help/articles/vep-cache-options#opt_buffer_size) option to reduce this can reduce memory requirements, especially if your data is sparse. A smaller buffer size is essential when annotating structural variants with regulatory data.
 
 <span id="pangenomes"></span>
 
@@ -362,7 +362,7 @@ This will create the folder `homo_sapiens_gca009914755v4/107_T2T-CHM13v2.0` with
 - Cache version: `107`
 - Assembly: `T2T-CHM13v2.0`
 
-As well as molecular consequence predictions, many gene/transcript-based [options](/help/articles/vep-running-vep) are supported for HPRC assemblies:
+As well as molecular consequence predictions, many gene/transcript-based [options](/help/articles/running-vep) are supported for HPRC assemblies:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">vep -i test.vcf --offline \
     --species homo_sapiens_gca009914755v4 \
@@ -384,8 +384,8 @@ To run Ensembl VEP with the downloaded cache in offline mode, please specify the
 
 When using the cache, supplying the reference genomic sequence in a FASTA file is optional, but is required to enable the following options:
 
-- Create HGVS notations ([--hgvs](/help/articles/vep-options-identifiers#opt_hgvs) and [--hgvsg](/help/articles/vep-options-identifiers#opt_hgvsg))
-- Check the reference sequence given in input data ([--check_ref](/help/articles/vep-options-filtering#opt_check_ref))
+- Create HGVS notations ([--hgvs](/help/articles/vep-identifiers#opt_hgvs) and [--hgvsg](/help/articles/vep-identifiers#opt_hgvsg))
+- Check the reference sequence given in input data ([--check_ref](/help/articles/vep-filtering-and-qc-options#opt_check_ref))
 
 Genomic FASTA files can be found in [Ensembl HPRC data page](https://projects.ensembl.org/hprc/) **\> FTP dumps \> ensembl \> genome**. FASTA files need to be either uncompressed or compressed with **bgzip** (recommended) to be compatible with Ensembl VEP. For instance, to download a compressed FASTA file, uncompress it and then re-compress it with bgzip:
 
@@ -394,7 +394,7 @@ gzip -d Homo_sapiens-GCA_009914755.4-softmasked.fa.gz
 bgzip Homo_sapiens-GCA_009914755.4-softmasked.fa.gz
 </code></pre>
 
-Afterwards, you can run Ensembl VEP using cache and the [--fasta](/help/articles/vep-options-cache#opt_fasta) flag:
+Afterwards, you can run Ensembl VEP using cache and the [--fasta](/help/articles/vep-cache-options#opt_fasta) flag:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">vep -i test.vcf --offline \
     --species homo_sapiens_gca009914755v4 \
@@ -433,7 +433,7 @@ Check [here](/help/articles/vep-annotation-sources#gff) for more information on 
 
 ### Missense deleteriousness predictions
 
-Although PolyPhen-2 and SIFT scores are not directly available for alternative assemblies by using [--polyphen](/help/articles/vep-options-output#opt_polyphen) and [--sift](/help/articles/vep-options-output#opt_sift), they can be retrieved via the [PolyPhen_SIFT plugin](/help/articles/vep-plugin-catalogue#PolyPhen_SIFT).
+Although PolyPhen-2 and SIFT scores are not directly available for alternative assemblies by using [--polyphen](/help/articles/vep-output-options#opt_polyphen) and [--sift](/help/articles/vep-output-options#opt_sift), they can be retrieved via the [PolyPhen_SIFT plugin](/help/articles/vep-plugin-catalogue#PolyPhen_SIFT).
 
 Using our [ProteinFunction pipeline](https://github.com/Ensembl/ensembl-variation/tree/main/nextflow/ProteinFunction), we ran **PolyPhen-2 2.2.3** and **SIFT 6.2.1** on the proteome sequences for GRCh38 and all HPRC assemblies (the protein FASTA files indicated in [Ensembl HPRC data page](https://projects.ensembl.org/hprc/)) and stored their results in a single SQLite file: [`homo_sapiens_pangenome_PolyPhen_SIFT_20240502.db`](https://ftp.ensembl.org/pub/current_variation/pangenomes/Human/homo_sapiens_pangenome_PolyPhen_SIFT_20240502.db).
 
@@ -486,7 +486,7 @@ Retrieves haploinsufficiency and triplosensitivity probability scores for affect
 
 Predicts downstream effects of a frameshift variant on the protein sequence of a transcript.
 
-**Plugin data:** Requires a FASTA file provided via the [--fasta](/help/articles/vep-options-cache#opt_fasta) option
+**Plugin data:** Requires a FASTA file provided via the [--fasta](/help/articles/vep-cache-options#opt_fasta) option
 
 **Usage example:** `--plugin Downstream`
 
@@ -519,7 +519,7 @@ Retrieves Gene Ontology (GO) terms associated with genes (for HGRC assemblies, s
 
 ### [HGVSIntronOffset](https://github.com/Ensembl/VEP_plugins/blob/main/HGVSIntronOffset.pm)
 
-Returns HGVS intron start and end offsets. To be used with [--hgvs](/help/articles/vep-options-identifiers#opt_hgvs) option.
+Returns HGVS intron start and end offsets. To be used with [--hgvs](/help/articles/vep-identifiers#opt_hgvs) option.
 
 **Usage example:** `--plugin HGVSIntronOffset`
 

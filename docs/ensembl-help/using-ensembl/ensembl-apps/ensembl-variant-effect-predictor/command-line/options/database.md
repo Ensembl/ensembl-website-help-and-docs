@@ -34,17 +34,17 @@ related_articles:
 
 ## Option reference
 
-- [Basic options](/help/articles/vep-options-basic)
-- [Cache options](/help/articles/vep-options-cache)
-- [Other annotation sources](/help/articles/vep-options-annotation)
-- [Output format options](/help/articles/vep-options-output-format)
-- [Output options](/help/articles/vep-options-output)
-- [Identifiers](/help/articles/vep-options-identifiers)
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
+- [Basic options](/help/articles/vep-basic-options)
+- [Cache options](/help/articles/vep-cache-options)
+- [Other annotation sources](/help/articles/vep-other-annotation-sources)
+- [Output format options](/help/articles/vep-output-format-options)
+- [Output options](/help/articles/vep-output-options)
+- [Identifiers](/help/articles/vep-identifiers)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
 - **Database options (this section)**
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="dbopt"></span>
 
@@ -58,7 +58,7 @@ Enable Ensembl VEP to use local or remote databases.
 
 **Incompatible with:**
 
-[--af_1kg](/help/articles/vep-options-existing-variants#opt_af_1kg) [--af_exac](/help/articles/vep-options-existing-variants#opt_af_exac) [--af_gnomad](/help/articles/vep-options-existing-variants#opt_af_gnomade) [--af_gnomade](/help/articles/vep-options-existing-variants#opt_af_gnomade) [--af_gnomadg](/help/articles/vep-options-existing-variants#opt_af_gnomadg) [--cache](/help/articles/vep-options-cache#opt_cache) [--max_af](/help/articles/vep-options-existing-variants#opt_max_af) [--offline](/help/articles/vep-options-cache#opt_offline) [--pubmed](/help/articles/vep-options-existing-variants#opt_pubmed) [--var_synonyms](/help/articles/vep-options-existing-variants#opt_var_synonyms)
+[--af_1kg](/help/articles/vep-co-located-variants#opt_af_1kg) [--af_exac](/help/articles/vep-co-located-variants#opt_af_exac) [--af_gnomad](/help/articles/vep-co-located-variants#opt_af_gnomade) [--af_gnomade](/help/articles/vep-co-located-variants#opt_af_gnomade) [--af_gnomadg](/help/articles/vep-co-located-variants#opt_af_gnomadg) [--cache](/help/articles/vep-cache-options#opt_cache) [--max_af](/help/articles/vep-co-located-variants#opt_max_af) [--offline](/help/articles/vep-cache-options#opt_offline) [--pubmed](/help/articles/vep-co-located-variants#opt_pubmed) [--var_synonyms](/help/articles/vep-co-located-variants#opt_var_synonyms)
 
 <span id="opt_host"></span>
 
@@ -106,7 +106,7 @@ Some of the [Ensembl Genomes](https://www.ensemblgenomes.org/) databases (mainly
 
 Map input variants to LRG coordinates (or to chromosome coordinates if given in LRG coordinates), and provide consequences on both LRG and chromosomal transcripts. *Not used by default*
 
-**Incompatible with:** [--offline](/help/articles/vep-options-cache#opt_offline)
+**Incompatible with:** [--offline](/help/articles/vep-cache-options#opt_offline)
 
 <span id="opt_db_version"></span>
 

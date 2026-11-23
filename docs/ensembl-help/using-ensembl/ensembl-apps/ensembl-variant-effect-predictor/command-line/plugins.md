@@ -47,10 +47,10 @@ You can use plugin modules written in Perl to **extend, filter and manipulate** 
 
 To use plugins:
 
-- Install them using the [Ensembl VEP installer script](/help/articles/vep-download-and-install#installer). You can quickly check installed plugins by running:
+- Install them using the [Ensembl VEP installer script](/help/articles/download-and-install-vep#installer). You can quickly check installed plugins by running:
   - <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">perl INSTALL.pl -a p -g list
     </code></pre>
-- Use Ensembl VEP in [Docker](/help/articles/vep-download-and-install#docker) and [Singularity](/help/articles/vep-download-and-install#singularity). The plugins and their dependencies are available in the [Docker image](https://hub.docker.com/r/ensemblorg/ensembl-vep).
+- Use Ensembl VEP in [Docker](/help/articles/download-and-install-vep#docker) and [Singularity](/help/articles/download-and-install-vep#singularity). The plugins and their dependencies are available in the [Docker image](https://hub.docker.com/r/ensemblorg/ensembl-vep).
 
 <span id="plugins_how"></span>
 
@@ -86,7 +86,7 @@ If you are developing a filter plugin, we suggest that you use the [Bio::EnsEMBL
 
 ## Using plugins
 
-In order to run a plugin you need to include the plugin module in Perl's library path somehow; by default Ensembl VEP includes the *~/.vep/Plugins* directory in the path, so this is a convenient place to store plugins, but you are also able to include modules by any other means (e.g using the *$PERL5LIB* environment variable in Unix-like systems). You can then run a plugin using the [--plugin](/help/articles/vep-options-annotation#opt_plugin) command line option, passing the name of the plugin module as the argument.
+In order to run a plugin you need to include the plugin module in Perl's library path somehow; by default Ensembl VEP includes the *~/.vep/Plugins* directory in the path, so this is a convenient place to store plugins, but you are also able to include modules by any other means (e.g using the *$PERL5LIB* environment variable in Unix-like systems). You can then run a plugin using the [--plugin](/help/articles/vep-other-annotation-sources#opt_plugin) command line option, passing the name of the plugin module as the argument.
 
 For example, if your plugin is in a module called *MyPlugin.pm*, stored in *~/.vep/Plugins*, you can run it with a command line like:
 
@@ -100,13 +100,13 @@ You can pass arguments to the plugin's 'new' method by including them after the 
 
 If your plugin inherits from BaseVepPlugin, you can then retrieve these parameters as a list from the *params* method.
 
-You can run multiple plugins by supplying multiple [--plugin](/help/articles/vep-options-annotation#opt_plugin) arguments. Plugins are run serially in the order in which they are specified on the command line, so they can be run as a pipeline, with, for example, a later plugin filtering output based on the results from an earlier plugin. Note though that the first plugin to filter a line 'wins', and any later plugins won't get run on a filtered line.
+You can run multiple plugins by supplying multiple [--plugin](/help/articles/vep-other-annotation-sources#opt_plugin) arguments. Plugins are run serially in the order in which they are specified on the command line, so they can be run as a pipeline, with, for example, a later plugin filtering output based on the results from an earlier plugin. Note though that the first plugin to filter a line 'wins', and any later plugins won't get run on a filtered line.
 
 <span id="nv_species"></span>
 
 ### Plugin warnings
 
-By default, an Ensembl VEP run does not fail even when a plugin raises warnings or compilation errors. To avoid this, please use the [--safe](/help/articles/vep-options-basic#opt_safe) flag. This is particularly useful to ensure plugins run properly when using Ensembl VEP in pipelines.
+By default, an Ensembl VEP run does not fail even when a plugin raises warnings or compilation errors. To avoid this, please use the [--safe](/help/articles/vep-basic-options#opt_safe) flag. This is particularly useful to ensure plugins run properly when using Ensembl VEP in pipelines.
 
 <span id="plugins_intergenic"></span>
 

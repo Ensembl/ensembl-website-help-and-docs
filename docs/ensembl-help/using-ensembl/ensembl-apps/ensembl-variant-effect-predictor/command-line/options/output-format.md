@@ -34,17 +34,17 @@ related_articles:
 
 ## Option reference
 
-- [Basic options](/help/articles/vep-options-basic)
-- [Cache options](/help/articles/vep-options-cache)
-- [Other annotation sources](/help/articles/vep-options-annotation)
+- [Basic options](/help/articles/vep-basic-options)
+- [Cache options](/help/articles/vep-cache-options)
+- [Other annotation sources](/help/articles/vep-other-annotation-sources)
 - **Output format options (this section)**
-- [Output options](/help/articles/vep-options-output)
-- [Identifiers](/help/articles/vep-options-identifiers)
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
-- [Database options](/help/articles/vep-options-database)
+- [Output options](/help/articles/vep-output-options)
+- [Identifiers](/help/articles/vep-identifiers)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
+- [Database options](/help/articles/vep-database-options)
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="format"></span>
 
@@ -54,15 +54,15 @@ related_articles:
 
 ### `--vcf`
 
-Writes output in [VCF format](/help/articles/vep-data-formats#vcfout). Consequences are added in the INFO field of the VCF file, using the key "CSQ". Data fields are encoded separated by "|"; the order of fields is written in the VCF header. Output fields in the "CSQ" INFO field can be selected by using [--fields](/help/articles/vep-options-output-format#opt_fields).
+Writes output in [VCF format](/help/articles/vep-data-formats#vcfout). Consequences are added in the INFO field of the VCF file, using the key "CSQ". Data fields are encoded separated by "|"; the order of fields is written in the VCF header. Output fields in the "CSQ" INFO field can be selected by using [--fields](/help/articles/vep-output-format-options#opt_fields).
 
-If the input format was VCF, the file will remain unchanged save for the addition of the CSQ field (unless using any filtering). Custom data added with [--custom](/help/articles/vep-options-annotation#opt_custom) are added as separate fields, using the key specified for each data file. Commas in fields are replaced with ampersands (&) to preserve VCF format.
+If the input format was VCF, the file will remain unchanged save for the addition of the CSQ field (unless using any filtering). Custom data added with [--custom](/help/articles/vep-other-annotation-sources#opt_custom) are added as separate fields, using the key specified for each data file. Commas in fields are replaced with ampersands (&) to preserve VCF format.
 
 *Not used by default*
 
 **Incompatible with:**
 
-[--json](/help/articles/vep-options-output-format#opt_json) [--tab](/help/articles/vep-options-output-format#opt_tab) [--summary](/help/articles/vep-options-filtering#opt_summary) [--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--ga4gh_vrs](/help/articles/vep-options-identifiers#opt_ga4gh_vrs)
+[--json](/help/articles/vep-output-format-options#opt_json) [--tab](/help/articles/vep-output-format-options#opt_tab) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary) [--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--ga4gh_vrs](/help/articles/vep-identifiers#opt_ga4gh_vrs)
 
 <span id="opt_tab"></span>
 
@@ -72,7 +72,7 @@ Writes output in [tab-delimited format](/help/articles/vep-data-formats#tab). *N
 
 **Incompatible with:**
 
-[--json](/help/articles/vep-options-output-format#opt_json) [--vcf](/help/articles/vep-options-output-format#opt_vcf)
+[--json](/help/articles/vep-output-format-options#opt_json) [--vcf](/help/articles/vep-output-format-options#opt_vcf)
 
 <span id="opt_json"></span>
 
@@ -82,7 +82,7 @@ Writes output in [JSON format](/help/articles/vep-data-formats#json). *Not used 
 
 **Incompatible with:**
 
-[--tab](/help/articles/vep-options-output-format#opt_tab) [--vcf](/help/articles/vep-options-output-format#opt_vcf)
+[--tab](/help/articles/vep-output-format-options#opt_tab) [--vcf](/help/articles/vep-output-format-options#opt_vcf)
 
 <span id="opt_compress_output"></span>
 
@@ -94,7 +94,7 @@ Writes output compressed using either gzip or bgzip. *Not used by default*
 
 ### `--fields [list]`
 
-Configure the output format using a comma separated list of fields. Can only be used with [tab](/help/articles/vep-data-formats#tab) ([--tab](/help/articles/vep-options-output-format#opt_tab)) or [VCF format](/help/articles/vep-data-formats#vcfout) ([--vcf](/help/articles/vep-options-output-format#opt_vcf)) output. For the tab format output, the selected fields may be those present in the default [output columns](/help/articles/vep-data-formats#output), or any of those that appear in the Extra column (including those added by plugins or custom annotations) if the appropriate output is available (e.g. use [--show_ref_allele](/help/articles/vep-options-output#opt_show_ref_allele) to access 'REF_ALLELE'). Output remains tab-delimited. For the VCF format output, the selected fields are those present within the "CSQ" INFO field.
+Configure the output format using a comma separated list of fields. Can only be used with [tab](/help/articles/vep-data-formats#tab) ([--tab](/help/articles/vep-output-format-options#opt_tab)) or [VCF format](/help/articles/vep-data-formats#vcfout) ([--vcf](/help/articles/vep-output-format-options#opt_vcf)) output. For the tab format output, the selected fields may be those present in the default [output columns](/help/articles/vep-data-formats#output), or any of those that appear in the Extra column (including those added by plugins or custom annotations) if the appropriate output is available (e.g. use [--show_ref_allele](/help/articles/vep-output-options#opt_show_ref_allele) to access 'REF_ALLELE'). Output remains tab-delimited. For the VCF format output, the selected fields are those present within the "CSQ" INFO field.
 
 Example of command for the tab output:
 
@@ -112,8 +112,8 @@ Example of command for the VCF format output:
 
 ### `--minimal`
 
-Convert alleles to their most minimal representation before consequence calculation i.e. sequence that is identical between each pair of reference and alternate alleles is trimmed off from both ends, with coordinates adjusted accordingly. Note this may lead to discrepancies between input coordinates and coordinates reported by Ensembl VEP relative to transcript sequences; to avoid issues, use [--allele_number](/help/articles/vep-options-output#opt_allele_number) and/or ensure that your input variants have unique identifiers. The MINIMISED flag is set in the Ensembl VEP output where relevant. For an insertion/deletion, the allele is minimised by default. To access the input allele before minimisation, use [--uploaded_allele](/help/articles/vep-options-output#opt_uploaded_allele). *Not used by default*
+Convert alleles to their most minimal representation before consequence calculation i.e. sequence that is identical between each pair of reference and alternate alleles is trimmed off from both ends, with coordinates adjusted accordingly. Note this may lead to discrepancies between input coordinates and coordinates reported by Ensembl VEP relative to transcript sequences; to avoid issues, use [--allele_number](/help/articles/vep-output-options#opt_allele_number) and/or ensure that your input variants have unique identifiers. The MINIMISED flag is set in the Ensembl VEP output where relevant. For an insertion/deletion, the allele is minimised by default. To access the input allele before minimisation, use [--uploaded_allele](/help/articles/vep-output-options#opt_uploaded_allele). *Not used by default*
 
 **Output fields:** MINIMISED
 
-**Incompatible with:** [--individual](/help/articles/vep-options-output#opt_individual)
+**Incompatible with:** [--individual](/help/articles/vep-output-options#opt_individual)

@@ -373,7 +373,7 @@ Please cite the CAPICE publication alongside Ensembl VEP if you use this resourc
 
 The tabix utility must be installed in your path to use this plugin. The CAPICE SNVs, InDels and respective index (TBI) files for GRCh37 can be downloaded from <https://zenodo.org/record/3928295>
 
-To filter results, please use filter_vep with the output file or standard output. Documentation on filter_vep is available at: [https://www.ensembl.org/info/docs/tools/vep/script/vep_filter.html](/help/articles/vep-filtering-results)
+To filter results, please use filter_vep with the output file or standard output. Documentation on filter_vep is available at: [https://www.ensembl.org/info/docs/tools/vep/script/vep_filter.html](/help/articles/filtering-vep-results)
 
 For recommendations on threshold selection, please read the CAPICE publication.
 
@@ -3516,7 +3516,7 @@ and, for GRCh37 assembly can be downloaded from here:
 - <https://ftp.ensembl.org/pub/current_variation/SpliceVault/SpliceVault_data_hg19.tsv.gz>
 - <https://ftp.ensembl.org/pub/current_variation/SpliceVault/SpliceVault_data_hg19.tsv.gz.tbi>
 
-To filter results, please use filter_vep with the output file or standard output. Documentation on filter_vep is available at: [https://www.ensembl.org/info/docs/tools/vep/script/vep_filter.html](/help/articles/vep-filtering-results)
+To filter results, please use filter_vep with the output file or standard output. Documentation on filter_vep is available at: [https://www.ensembl.org/info/docs/tools/vep/script/vep_filter.html](/help/articles/filtering-vep-results)
 
 **Usage examples:**
 

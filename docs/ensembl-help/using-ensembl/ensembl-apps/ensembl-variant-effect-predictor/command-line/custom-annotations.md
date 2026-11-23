@@ -41,7 +41,7 @@ related_articles:
 - [Using remote files](/help/articles/vep-custom-annotations#custom_remote)
 - [Example - phyloP and phastCons conservation scores](/help/articles/vep-custom-annotations#remote_custom_example)
 
-Ensembl VEP can integrate custom annotation from standard format files into your results by using the [--custom](/help/articles/vep-options-annotation#opt_custom) flag.
+Ensembl VEP can integrate custom annotation from standard format files into your results by using the [--custom](/help/articles/vep-other-annotation-sources#opt_custom) flag.
 
 These files may be hosted locally or remotely, with no limit to the number or size of the files. The files must be indexed using the [tabix](http://samtools.sourceforge.net/tabix.shtml) utility (BED, GFF, GTF, VCF); bigWig files contain their own indices.
 
@@ -95,7 +95,7 @@ A format for storage of dense continuous data.
 
 **Notes:**
 
-Ensembl VEP uses the value for the given position as the identifier. BigWig files contain their own indices, and do not need to be indexed by tabix. Requires [Bio::DB::BigFile](/help/articles/vep-download-and-install#bigfile).
+Ensembl VEP uses the value for the given position as the identifier. BigWig files contain their own indices, and do not need to be indexed by tabix. Requires [Bio::DB::BigFile](/help/articles/download-and-install-vep#bigfile).
 
 Any other files can be easily converted to be compatible with Ensembl VEP; the easiest format to produce is a BED-like file containing coordinates and an (optional) identifier:
 
@@ -468,7 +468,7 @@ These files can be remotely used as Ensembl VEP custom annotations by simply poi
 
 ## Multiple files split by chromosome
 
-Often large annotation files are split into several smaller files for each chromosome. In such cases you can run custom annotation on those files using a single [--custom](/help/articles/vep-options-annotation#opt_custom) flag instead of separate ones for each file.
+Often large annotation files are split into several smaller files for each chromosome. In such cases you can run custom annotation on those files using a single [--custom](/help/articles/vep-other-annotation-sources#opt_custom) flag instead of separate ones for each file.
 
 To do this, you need all the files to have the same name except for chromosome. When providing the `file` option replace the chromosome name with `###CHR###` placeholder.
 

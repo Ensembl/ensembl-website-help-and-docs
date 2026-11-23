@@ -46,20 +46,20 @@ Ensembl VEP can use a variety of annotation sources to retrieve the transcript m
 
 - **[Cache](/help/articles/vep-annotation-sources#cache)** - a downloadable file containing all transcript models, regulatory features and variant data for a species
 - **[GFF or GTF](/help/articles/vep-annotation-sources#gff)** - use transcript models defined in a tabix-indexed GFF or GTF file
-  - Requires a **[FASTA](/help/articles/vep-annotation-sources#fasta)** file in [--offline](/help/articles/vep-options-cache#opt_offline) mode or if the desired species or assembly is not part of the [Ensembl species list](https://jun2026.archive.ensembl.org/info/about/species.html).
+  - Requires a **[FASTA](/help/articles/vep-annotation-sources#fasta)** file in [--offline](/help/articles/vep-cache-options#opt_offline) mode or if the desired species or assembly is not part of the [Ensembl species list](https://jun2026.archive.ensembl.org/info/about/species.html).
 - **[Database](/help/articles/vep-annotation-sources#database)** - connect to a MySQL database server hosting Ensembl databases
 
-Regulatory features can additionally be read from **[Ensembl regulatory annotation GFF files](/help/articles/vep-annotation-sources#reg_gff)** using [--regulatory_gff](/help/articles/vep-options-output#opt_regulatory_gff), as an alternative to the regulatory data in a cache or the funcgen database.
+Regulatory features can additionally be read from **[Ensembl regulatory annotation GFF files](/help/articles/vep-annotation-sources#reg_gff)** using [--regulatory_gff](/help/articles/vep-output-options#opt_regulatory_gff), as an alternative to the regulatory data in a cache or the funcgen database.
 
 Data from VCF, BED and bigWig files can also be incorporated by Ensembl VEP's [Custom annotation](/help/articles/vep-custom-annotations) feature.
 
-Using a cache is the most efficient way to use Ensembl VEP; we would encourage you to use a cache wherever possible. Caches are easy to download and set up using the [installer](/help/articles/vep-download-and-install#installer). Follow the [tutorial](/help/articles/vep-tutorial) for a simple guide. 
+Using a cache is the most efficient way to use Ensembl VEP; we would encourage you to use a cache wherever possible. Caches are easy to download and set up using the [installer](/help/articles/download-and-install-vep#installer). Follow the [tutorial](/help/articles/vep-command-line-tutorial) for a simple guide.
 
 <span id="cache"></span>
 
 ## Caches
 
-Using a cache ([--cache](/help/articles/vep-options-cache#opt_cache)) is the fastest and most efficient way to use Ensembl VEP, as in most cases only a single initial network connection is made and most data is read from local disk. Use [offline](/help/articles/vep-annotation-sources#offline) mode to eliminate all network connections for speed and/or privacy.
+Using a cache ([--cache](/help/articles/vep-cache-options#opt_cache)) is the fastest and most efficient way to use Ensembl VEP, as in most cases only a single initial network connection is made and most data is read from local disk. Use [offline](/help/articles/vep-annotation-sources#offline) mode to eliminate all network connections for speed and/or privacy.
 
 <span id="read_write_access"></span>
 
@@ -73,15 +73,15 @@ This is mainly due to the fact that the cache (data content and structure) is ge
 
 ### Downloading caches
 
-Cache files are created for every species for each Ensembl release. They can be automatically downloaded and configured using [INSTALL.pl](/help/articles/vep-download-and-install#installer).
+Cache files are created for every species for each Ensembl release. They can be automatically downloaded and configured using [INSTALL.pl](/help/articles/download-and-install-vep#installer).
 
-If interested in RefSeq transcripts you may download an alternate cache file (e.g. homo_sapiens_refseq), or a merged file of RefSeq and Ensembl transcripts (eg homo_sapiens_merged); remember to specify [--refseq](/help/articles/vep-options-cache#opt_refseq) or [--merged](/help/articles/vep-options-cache#opt_merged) when running Ensembl VEP to use the relevant cache. See [documentation](/help/articles/vep-other-information#refseq) for full details.
+If interested in RefSeq transcripts you may download an alternate cache file (e.g. homo_sapiens_refseq), or a merged file of RefSeq and Ensembl transcripts (eg homo_sapiens_merged); remember to specify [--refseq](/help/articles/vep-cache-options#opt_refseq) or [--merged](/help/articles/vep-cache-options#opt_merged) when running Ensembl VEP to use the relevant cache. See [documentation](/help/articles/vep-other-information#refseq) for full details.
 
 <span id="manual_cache"></span>
 
 ### Manually downloading caches
 
-It is also simple to download and set up caches without using the installer. By default, Ensembl VEP searches for caches in $HOME/.vep; to use a different directory when running Ensembl VEP, use [--dir_cache](/help/articles/vep-options-cache#opt_dir_cache).
+It is also simple to download and set up caches without using the installer. By default, Ensembl VEP searches for caches in $HOME/.vep; to use a different directory when running Ensembl VEP, use [--dir_cache](/help/articles/vep-cache-options#opt_dir_cache).
 
 - **Indexed cache** (<https://ftp.ensembl.org/pub/release-116/variation/indexed_vep_cache/>)
 
@@ -107,7 +107,7 @@ It is also simple to download and set up caches without using the installer. By 
 </tbody>
 </table>
 
-**NB:** When using Ensembl Genomes caches, you should use the [--cache_version](/help/articles/vep-options-cache#opt_cache_version) option to specify the relevant Ensembl Genomes version number as these differ from the concurrent Ensembl VEP version numbers.
+**NB:** When using Ensembl Genomes caches, you should use the [--cache_version](/help/articles/vep-cache-options#opt_cache_version) option to specify the relevant Ensembl Genomes version number as these differ from the concurrent Ensembl VEP version numbers.
 
 <span id="pangenomes"></span>
 
@@ -225,13 +225,13 @@ The cache **stores** the following information:
 
 The cache **does not store** any information pertaining to, and therefore cannot be used for, the following:
 
-- HGVS names ([--hgvs](/help/articles/vep-options-identifiers#opt_hgvs), [--hgvsg](/help/articles/vep-options-identifiers#opt_hgvsg)) - to retrieve these you must additionally point to a [FASTA](/help/articles/vep-annotation-sources#fasta) file containing the reference sequence for your species ([--fasta](/help/articles/vep-options-cache#opt_fasta))
-- Using HGVS notation as input ([--format hgvs](/help/articles/vep-options-basic#opt_format))
-- Using variant identifiers as input ([--format id](/help/articles/vep-options-basic#opt_format))
-- Finding overlapping structural variants ([--check_svs](/help/articles/vep-options-existing-variants#opt_check_svs))
+- HGVS names ([--hgvs](/help/articles/vep-identifiers#opt_hgvs), [--hgvsg](/help/articles/vep-identifiers#opt_hgvsg)) - to retrieve these you must additionally point to a [FASTA](/help/articles/vep-annotation-sources#fasta) file containing the reference sequence for your species ([--fasta](/help/articles/vep-cache-options#opt_fasta))
+- Using HGVS notation as input ([--format hgvs](/help/articles/vep-basic-options#opt_format))
+- Using variant identifiers as input ([--format id](/help/articles/vep-basic-options#opt_format))
+- Finding overlapping structural variants ([--check_svs](/help/articles/vep-co-located-variants#opt_check_svs))
 - Readthrough transcripts are excluded from the cache
 
-Enabling one of these options with [--cache](/help/articles/vep-options-cache#opt_cache) will cause Ensembl VEP to warn you in its status output with something like the following:
+Enabling one of these options with [--cache](/help/articles/vep-cache-options#opt_cache) will cause Ensembl VEP to warn you in its status output with something like the following:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">2011-06-16 16:24:51 - INFO: Database will be accessed when using --hgvs
 </code></pre>
@@ -261,9 +261,9 @@ When using the public database servers, Ensembl VEP requests transcript and vari
 
 **Only** the **coordinates** are transmitted to the server; no other information is sent.
 
-To use offline mode that does not use any network connections, use the flag [--offline](/help/articles/vep-options-cache#opt_offline).
+To use offline mode that does not use any network connections, use the flag [--offline](/help/articles/vep-cache-options#opt_offline).
 
-The [limitations](/help/articles/vep-annotation-sources#limitations) described above apply absolutely when using offline mode. For example, if you specify [--offline](/help/articles/vep-options-cache#opt_offline) and [--format id](/help/articles/vep-options-basic#opt_format), Ensembl VEP will report an error and refuse to run:
+The [limitations](/help/articles/vep-annotation-sources#limitations) described above apply absolutely when using offline mode. For example, if you specify [--offline](/help/articles/vep-cache-options#opt_offline) and [--format id](/help/articles/vep-basic-options#opt_format), Ensembl VEP will report an error and refuse to run:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">ERROR: Cannot use ID format in offline mode
 </code></pre>
@@ -287,7 +287,7 @@ You may use any number of GFF/GTF files in this way, providing they refer to the
 
 - **GFF file**
 
-  Example of command line with GFF, using flag [--gff](/help/articles/vep-options-annotation#opt_gff) :
+  Example of command line with GFF, using flag [--gff](/help/articles/vep-other-annotation-sources#opt_gff) :
 
   <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i input.vcf --cache --gff data.gff.gz --fasta genome.fa.gz
   </code></pre>
@@ -299,7 +299,7 @@ You may use any number of GFF/GTF files in this way, providing they refer to the
 
 - **GTF file**
 
-  Example of command line with GTF, using flag [--gtf](/help/articles/vep-options-annotation#opt_gtf) :
+  Example of command line with GTF, using flag [--gtf](/help/articles/vep-other-annotation-sources#opt_gtf) :
 
   <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i input.vcf --cache --gtf data.gtf.gz --fasta genome.fa.gz
   </code></pre>
@@ -427,7 +427,7 @@ If the chromosome names used in your GFF/GTF differ from those used in the FASTA
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">WARNING: Chromosome 21 not found in annotation sources or synonyms on line 160
 </code></pre>
 
-To circumvent this you may provide Ensembl VEP with a [synonyms file](/help/articles/vep-options-identifiers#opt_synonyms). A synonym file is included in Ensembl VEP's cache files, so if you have one of these for your species you can use it as follows:
+To circumvent this you may provide Ensembl VEP with a [synonyms file](/help/articles/vep-identifiers#opt_synonyms). A synonym file is included in Ensembl VEP's cache files, so if you have one of these for your species you can use it as follows:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i input.vcf -cache -gff data.gff.gz -fasta genome.fa.gz -synonyms ~/.vep/homo_sapiens/116_GRCh38/chr_synonyms.txt
 </code></pre>
@@ -450,29 +450,29 @@ Ensembl VEP's flexibility does allow some annotation types to be replaced. The f
 </thead>
 <tbody>
 <tr>
-<td>SIFT and PolyPhen-2 predictions (<a href="/help/articles/vep-options-output#opt_sift">--sift</a>, <a href="/help/articles/vep-options-output#opt_polyphen">--polyphen</a>)</td>
+<td>SIFT and PolyPhen-2 predictions (<a href="/help/articles/vep-output-options#opt_sift">--sift</a>, <a href="/help/articles/vep-output-options#opt_polyphen">--polyphen</a>)</td>
 <td>Use the <a href="/help/articles/vep-plugin-catalogue#PolyPhen_SIFT">PolyPhen_SIFT plugin</a></td>
 </tr>
 <tr>
-<td>Co-located variants (<a href="/help/articles/vep-options-existing-variants#opt_check_existing">--check_existing</a>, --af* flags)</td>
+<td>Co-located variants (<a href="/help/articles/vep-co-located-variants#opt_check_existing">--check_existing</a>, --af* flags)</td>
 <td>A couple of options are available:
 <ol>
 <li>Use a <a href="/help/articles/vep-custom-annotations">VCF with --custom</a> to retrieve variant IDs, frequency and other data</li>
-<li>Add <a href="/help/articles/vep-options-cache#opt_cache">--cache</a> to use variants in the <a href="/help/articles/vep-annotation-sources#cache">cache</a>. <strong>*</strong></li>
+<li>Add <a href="/help/articles/vep-cache-options#opt_cache">--cache</a> to use variants in the <a href="/help/articles/vep-annotation-sources#cache">cache</a>. <strong>*</strong></li>
 </ol></td>
 </tr>
 <tr>
-<td>Regulatory consequences (<a href="/help/articles/vep-options-output#opt_regulatory">--regulatory</a>)</td>
+<td>Regulatory consequences (<a href="/help/articles/vep-output-options#opt_regulatory">--regulatory</a>)</td>
 <td>A couple of options are available:
 <ol>
-<li>Use <a href="/help/articles/vep-options-output#opt_regulatory_gff">--regulatory_gff</a> to take regulatory features from <a href="/help/articles/vep-annotation-sources#reg_gff">GFF files</a></li>
-<li>Add <a href="/help/articles/vep-options-cache#opt_cache">--cache</a> to use regulatory features in the <a href="/help/articles/vep-annotation-sources#cache">cache</a>. <strong>*</strong></li>
+<li>Use <a href="/help/articles/vep-output-options#opt_regulatory_gff">--regulatory_gff</a> to take regulatory features from <a href="/help/articles/vep-annotation-sources#reg_gff">GFF files</a></li>
+<li>Add <a href="/help/articles/vep-cache-options#opt_cache">--cache</a> to use regulatory features in the <a href="/help/articles/vep-annotation-sources#cache">cache</a>. <strong>*</strong></li>
 </ol></td>
 </tr>
 </tbody>
 </table>
 
-**\*** Note this will also instruct Ensembl VEP to annotate input variants against transcript models retrieved from the cache **as well as** those from the GFF/GTF file. It is possible to use [--transcript_filter](/help/articles/vep-options-filtering#opt_transcript_filter) to include only the transcripts from your GFF/GTF file:
+**\*** Note this will also instruct Ensembl VEP to annotate input variants against transcript models retrieved from the cache **as well as** those from the GFF/GTF file. It is possible to use [--transcript_filter](/help/articles/vep-filtering-and-qc-options#opt_transcript_filter) to include only the transcripts from your GFF/GTF file:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i input.vcf -cache --custom file=data.gff.gz,short_name=myGFF,format=gff --fasta genome.fa.gz --transcript_filter &quot;_source_cache is myGFF&quot;
 </code></pre>
@@ -481,7 +481,7 @@ Ensembl VEP's flexibility does allow some annotation types to be replaced. The f
 
 ## Regulatory annotation from GFF files
 
-As well as [transcript annotation](/help/articles/vep-annotation-sources#gff), Ensembl VEP can take regulatory annotation from GFF3 files, using [--regulatory_gff](/help/articles/vep-options-output#opt_regulatory_gff). This is an alternative to the regulatory data held in a [cache](/help/articles/vep-annotation-sources#cache) or the funcgen [database](/help/articles/vep-annotation-sources#database), and is useful when annotating against a regulatory build that is not available as a cache, or when working without database access.
+As well as [transcript annotation](/help/articles/vep-annotation-sources#gff), Ensembl VEP can take regulatory annotation from GFF3 files, using [--regulatory_gff](/help/articles/vep-output-options#opt_regulatory_gff). This is an alternative to the regulatory data held in a [cache](/help/articles/vep-annotation-sources#cache) or the funcgen [database](/help/articles/vep-annotation-sources#database), and is useful when annotating against a regulatory build that is not available as a cache, or when working without database access.
 
 This option is designed for the regulatory annotation files published by Ensembl, and expects the feature types and attributes they use. Download them from the [Ensembl FTP site](https://ftp.ensembl.org/pub/current/regulation/), under **species/annotation**. Files from other sources may work, but are not supported.
 
@@ -516,7 +516,7 @@ The feature type — **promoter**, **enhancer**, **CTCF_binding_site**, **open_c
 
 **emars=** reads a second regulatory-feature file (of type EMAR) as an additional source. EMARs are broad container regions that overlap many regulatory features, so enabling them typically adds a second annotation line to variants that already overlap a promoter, enhancer or CTCF binding site. Note that the funcgen database source excludes EMARs, so this is an additional feature in GFF and not available via database.
 
-Promoters in the Ensembl files also define a wider region around the promoter core. This is ignored unless [--extended_promoters](/help/articles/vep-options-output#opt_extended_promoters) is given.
+Promoters in the Ensembl files also define a wider region around the promoter core. This is ignored unless [--extended_promoters](/help/articles/vep-output-options#opt_extended_promoters) is given.
 
 <span id="reg_gff_motifs"></span>
 
@@ -530,7 +530,7 @@ HIGH_INF_POS and MOTIF_SCORE_CHANGE require the position weight matrix frequenci
 
 ### Cell types
 
-[--cell_type](/help/articles/vep-options-output#opt_cell_type) is not supported for GFF-based regulatory annotation: a feature GFF carries no epigenome activity data, so CELL_TYPE is empty. Supplying [--cell_type](/help/articles/vep-options-output#opt_cell_type) produces a warning and is otherwise ignored; the rest of the run is unaffected. Use a cache or database regulatory source if you need cell-type-specific activity.
+[--cell_type](/help/articles/vep-output-options#opt_cell_type) is not supported for GFF-based regulatory annotation: a feature GFF carries no epigenome activity data, so CELL_TYPE is empty. Supplying [--cell_type](/help/articles/vep-output-options#opt_cell_type) produces a warning and is otherwise ignored; the rest of the run is unaffected. Use a cache or database regulatory source if you need cell-type-specific activity.
 
 With **motifs=** supplied, GFF-based regulatory annotation is close to a cache or database regulatory source. The remaining differences are HIGH_INF_POS and MOTIF_SCORE_CHANGE, which need the binding matrix frequencies, and CELL_TYPE, which needs epigenome activity — none of which the GFF files carry.
 
@@ -538,13 +538,13 @@ With **motifs=** supplied, GFF-based regulatory annotation is close to a cache o
 
 ## FASTA files
 
-By pointing Ensembl VEP to a FASTA file (or directory containing several files), it is possible to retrieve reference sequence locally when using [--cache](/help/articles/vep-options-cache#opt_cache) or [--offline](/help/articles/vep-options-cache#opt_offline). This enables Ensembl VEP to:
+By pointing Ensembl VEP to a FASTA file (or directory containing several files), it is possible to retrieve reference sequence locally when using [--cache](/help/articles/vep-cache-options#opt_cache) or [--offline](/help/articles/vep-cache-options#opt_offline). This enables Ensembl VEP to:
 
-- Retrieve HGVS notations ([--hgvs](/help/articles/vep-options-identifiers#opt_hgvs))
-- Check the reference sequence given in input data ([--check_ref](/help/articles/vep-options-filtering#opt_check_ref))
+- Retrieve HGVS notations ([--hgvs](/help/articles/vep-identifiers#opt_hgvs))
+- Check the reference sequence given in input data ([--check_ref](/help/articles/vep-filtering-and-qc-options#opt_check_ref))
 - Construct transcript models from a GFF or GTF file without accessing a database (specially useful for performance reasons or if using data from species/assembly not part of [Ensembl species list](https://jun2026.archive.ensembl.org/info/about/species.html))
 
-FASTA files from Ensembl can be set up using the [installer](/help/articles/vep-download-and-install#installer); files set up using the installer are automatically detected when using [--cache](/help/articles/vep-options-cache#opt_cache) or [--offline](/help/articles/vep-options-cache#opt_offline); you should not need to use [--fasta](/help/articles/vep-options-cache#opt_fasta) to manually specify them.
+FASTA files from Ensembl can be set up using the [installer](/help/articles/download-and-install-vep#installer); files set up using the installer are automatically detected when using [--cache](/help/articles/vep-cache-options#opt_cache) or [--offline](/help/articles/vep-cache-options#opt_offline); you should not need to use [--fasta](/help/articles/vep-cache-options#opt_fasta) to manually specify them.
 
 The following plugins do require the fasta file to be explicitly passed as a command line argument (i.e. `--fasta /VEP_DIR/your_downloaded.fasta`)
 
@@ -554,7 +554,7 @@ The following plugins do require the fasta file to be explicitly passed as a com
 
 To enable this, Ensembl VEP uses one of two modules:
 
-- The [Bio::DB::HTS](https://github.com/Ensembl/Bio-DB-HTS) Perl XS module with [HTSlib](http://www.htslib.org). This module uses compiled C code and can access compressed (bgzipped) or uncompressed FASTA files. It is set up by the [installer](/help/articles/vep-download-and-install#installer).
+- The [Bio::DB::HTS](https://github.com/Ensembl/Bio-DB-HTS) Perl XS module with [HTSlib](http://www.htslib.org). This module uses compiled C code and can access compressed (bgzipped) or uncompressed FASTA files. It is set up by the [installer](/help/articles/download-and-install-vep#installer).
 - The [Bio::DB::Fasta](http://search.cpan.org/~cjfields/BioPerl-1.6.924/Bio/DB/Fasta.pm) module. This may be used on systems where installation of the Bio::DB::HTS module has not been possible. It can access only uncompressed FASTA files. It is also set up by the installer and comes as part of the BioPerl package.
 
 The first time you run Ensembl VEP with a specific FASTA file, an index will be built. This can take a few minutes, depending on the size of the FASTA file and the speed of your system. On subsequent runs the index does not need to be rebuilt (if the FASTA file has been modified, Ensembl VEP will force a rebuild of the index).
@@ -579,16 +579,16 @@ bgzip Homo_sapiens.GRCh38.dna.primary_assembly.fa
 
 Ensembl VEP can use remote or local database servers to retrieve annotations.
 
-- Using [--cache](/help/articles/vep-options-cache#opt_cache) (without [--offline](/help/articles/vep-options-cache#opt_offline)) uses the local cache on disk to fetch most annotations, but allows database connections for some features (see [cache limitations](/help/articles/vep-annotation-sources#limitations))
-- Using [--database](/help/articles/vep-options-database#opt_database) tells Ensembl VEP to retrieve **all** annotations from the database. **Please only use this for small input files or when using a local database server!**
+- Using [--cache](/help/articles/vep-cache-options#opt_cache) (without [--offline](/help/articles/vep-cache-options#opt_offline)) uses the local cache on disk to fetch most annotations, but allows database connections for some features (see [cache limitations](/help/articles/vep-annotation-sources#limitations))
+- Using [--database](/help/articles/vep-database-options#opt_database) tells Ensembl VEP to retrieve **all** annotations from the database. **Please only use this for small input files or when using a local database server!**
 
 <span id="public"></span>
 
 ### Public database servers
 
-By default, Ensembl VEP is configured to connect to the public MySQL instance at ensembldb.ensembl.org. If you are in the USA (or geographically closer to the east coast of the USA than to the Ensembl data centre in Cambridge, UK), a mirror server is available at useastdb.ensembl.org. To use the mirror, use the flag [`--host`](/help/articles/vep-options-database#opt_host)` useastdb.ensembl.org`
+By default, Ensembl VEP is configured to connect to the public MySQL instance at ensembldb.ensembl.org. If you are in the USA (or geographically closer to the east coast of the USA than to the Ensembl data centre in Cambridge, UK), a mirror server is available at useastdb.ensembl.org. To use the mirror, use the flag [`--host`](/help/articles/vep-database-options#opt_host)` useastdb.ensembl.org`
 
-Data for Ensembl Genomes species (e.g. plants, fungi, microbes) is available through a different public MySQL server. The appropriate connection parameters can be automatically loaded by using the flag [--genomes](/help/articles/vep-options-database#opt_genomes)
+Data for Ensembl Genomes species (e.g. plants, fungi, microbes) is available through a different public MySQL server. The appropriate connection parameters can be automatically loaded by using the flag [--genomes](/help/articles/vep-database-options#opt_genomes)
 
 If you have a very small data set (100s of variants), using the public database servers should provide adequate performance. If you have larger data sets, or wish to use Ensembl VEP in a batch manner, consider one of the alternatives below.
 
@@ -600,7 +600,7 @@ It is possible to set up a local MySQL mirror with the databases for your specie
 
 Note that unless you have custom data to insert in the database, in most cases it will be much more efficient to use a [pre-built cache](/help/articles/vep-annotation-sources#cache) in place of a local database.
 
-To connect to your mirror, you can either set the connection parameters using [--host](/help/articles/vep-options-database#opt_host), [--port](/help/articles/vep-options-database#opt_port), [--user](/help/articles/vep-options-database#opt_user) and [--password](/help/articles/vep-options-database#opt_password), or use a registry file. Registry files contain all the connection parameters for your database, as well as any species aliases you wish to set up:
+To connect to your mirror, you can either set the connection parameters using [--host](/help/articles/vep-database-options#opt_host), [--port](/help/articles/vep-database-options#opt_port), [--user](/help/articles/vep-database-options#opt_user) and [--password](/help/articles/vep-database-options#opt_password), or use a registry file. Registry files contain all the connection parameters for your database, as well as any species aliases you wish to set up:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">use Bio::EnsEMBL::DBSQL::DBAdaptor;
 use Bio::EnsEMBL::Variation::DBSQL::DBAdaptor;

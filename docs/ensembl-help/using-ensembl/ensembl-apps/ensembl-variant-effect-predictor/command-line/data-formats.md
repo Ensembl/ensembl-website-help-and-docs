@@ -166,8 +166,8 @@ In order to parse this correctly, Ensembl VEP needs to convert such variants int
 This problem can be overcome with the following:
 
 1.  ensuring each variant has a unique identifier specified in the 3rd column of the VCF
-2.  using VCF format as output ([--vcf](/help/articles/vep-options-output-format#opt_vcf)) - this preserves the formatting of your input coordinates and alleles
-3.  using [--minimal](/help/articles/vep-options-output-format#opt_minimal) and [--allele_number](/help/articles/vep-options-output#opt_allele_number) (see [Complex VCF entries](/help/articles/vep-data-formats#complex_vcf)).
+2.  using VCF format as output ([--vcf](/help/articles/vep-output-format-options#opt_vcf)) - this preserves the formatting of your input coordinates and alleles
+3.  using [--minimal](/help/articles/vep-output-format-options#opt_minimal) and [--allele_number](/help/articles/vep-output-options#opt_allele_number) (see [Complex VCF entries](/help/articles/vep-data-formats#complex_vcf)).
 
 The following examples illustrate how VCF describes a variant and how it is handled internally by Ensembl VEP. Consider the following aligned sequences (for the purposes of discussion on chromosome 20):
 
@@ -249,7 +249,7 @@ Here the input alleles will remain unchanged, and Ensembl VEP will consider the 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">20   3   3   C/CAAG/G   +
 </code></pre>
 
-To modify this behaviour, with the commandline tool you can use [--minimal](/help/articles/vep-options-output-format#opt_minimal). This flag forces Ensembl VEP to consider each REF/ALT pair independently, trimming identical leading and trailing bases from each as appropriate. Since this can lead to confusing output regarding coordinates etc, it is not the default behaviour. It is recommended to use the [--allele_number](/help/articles/vep-options-output#opt_allele_number) flag to track the correspondence between alleles as input and how they appear in the output.
+To modify this behaviour, with the commandline tool you can use [--minimal](/help/articles/vep-output-format-options#opt_minimal). This flag forces Ensembl VEP to consider each REF/ALT pair independently, trimming identical leading and trailing bases from each as appropriate. Since this can lead to confusing output regarding coordinates etc, it is not the default behaviour. It is recommended to use the [--allele_number](/help/articles/vep-output-options#opt_allele_number) flag to track the correspondence between alleles as input and how they appear in the output.
 
 <span id="hgvs"></span>
 
@@ -267,7 +267,7 @@ ENST00000285667.3:c.1047_1048insC
 5:g.140532G&gt;C
 </code></pre>
 
-Examples using RefSeq identifiers (using [--refseq](/help/articles/vep-options-cache#opt_refseq) in the command line or select the 'RefSeq transcripts' on the web interface:
+Examples using RefSeq identifiers (using [--refseq](/help/articles/vep-cache-options#opt_refseq) in the command line or select the 'RefSeq transcripts' on the web interface:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">NM_153681.2:c.7C&gt;T
 NM_005239.6:c.190G&gt;A
@@ -451,7 +451,7 @@ The default output format ("VEP" format when downloading from the web interface)
 10. **Position in protein** - relative position of amino acid in protein
 11. **Amino acid change** - only given if the variant affects the protein-coding sequence
 12. **Codon change** - the alternative codons with the variant base in upper case
-13. **Co-located variation** - identifier of any [existing variants](/help/articles/vep-other-information#colocated). Switch on with [--check_existing](/help/articles/vep-options-existing-variants#opt_check_existing)
+13. **Co-located variation** - identifier of any [existing variants](/help/articles/vep-other-information#colocated). Switch on with [--check_existing](/help/articles/vep-co-located-variants#opt_check_existing)
 14. **Extra** - this column contains extra information as key=value pairs separated by ";", see below.
 
 ### Other output fields:
@@ -475,7 +475,7 @@ The default output format ("VEP" format when downloading from the web interface)
 - **HGVSc** - the HGVS coding sequence name
 - **HGVSp** - the HGVS protein sequence name
 - **HGVSg** - the HGVS genomic sequence name
-- **HGVS_OFFSET** - Indicates by how many bases the HGVS notations for this variant have been [shifted](/help/articles/vep-options-identifiers#opt_shift_hgvs). Value must be greater than 0.
+- **HGVS_OFFSET** - Indicates by how many bases the HGVS notations for this variant have been [shifted](/help/articles/vep-identifiers#opt_shift_hgvs). Value must be greater than 0.
 - **NEAREST** - Identifier(s) of nearest transcription start site
 - **SIFT** - the SIFT prediction and/or score, with both given as prediction(score)
 - **PolyPhen** - the PolyPhen prediction and/or score
@@ -535,7 +535,7 @@ The default output format ("VEP" format when downloading from the web interface)
 - **GENE_PHENO** - Indicates if overlapped gene is associated with a phenotype, disease or trait
 - **ALLELE_NUM** - Allele number from input; 0 is reference, 1 is first alternate etc
 - **MINIMISED** - Alleles in this variant have been converted to minimal representation before consequence calculation
-- **PICK** - indicates if this block of consequence data was picked by [--flag_pick](/help/articles/vep-options-filtering#opt_flag_pick) or [--flag_pick_allele](/help/articles/vep-options-filtering#opt_flag_pick_allele)
+- **PICK** - indicates if this block of consequence data was picked by [--flag_pick](/help/articles/vep-filtering-and-qc-options#opt_flag_pick) or [--flag_pick_allele](/help/articles/vep-filtering-and-qc-options#opt_flag_pick_allele)
 - **BAM_EDIT** - Indicates success or failure of edit using BAM file
 - **GIVEN_REF** - Reference allele from input
 - **USED_REF** - Reference allele as used to get consequences
@@ -611,7 +611,7 @@ The Ensembl VEP command line tool will also add a header to the output file. Thi
 
 ## Tab-delimited output
 
-The [--tab](/help/articles/vep-options-output-format#opt_tab) specifies a tab-delimited output file. **This differs from the default output format in that each individual field from the "Extra" field is written to a separate tab-delimited column**. This makes the output more suitable for import into spreadsheet programs such as Excel. Furthermore the header is the same as the one for the Ensembl VEP default output format and this is also the format used when selecting the "TXT" option on the Ensembl VEP web interface.
+The [--tab](/help/articles/vep-output-format-options#opt_tab) specifies a tab-delimited output file. **This differs from the default output format in that each individual field from the "Extra" field is written to a separate tab-delimited column**. This makes the output more suitable for import into spreadsheet programs such as Excel. Furthermore the header is the same as the one for the Ensembl VEP default output format and this is also the format used when selecting the "TXT" option on the Ensembl VEP web interface.
 
 Example of tab-delimited output format:
 
@@ -624,9 +624,9 @@ Example of tab-delimited output format:
 
 ### Note
 
-The Existing_variation column is only populated if we use option [--check_existing](/help/articles/vep-options-existing-variants#opt_check_existing) or any other option that switches it on (--af_1kg silently switches on --check_existing).
+The Existing_variation column is only populated if we use option [--check_existing](/help/articles/vep-co-located-variants#opt_check_existing) or any other option that switches it on (--af_1kg silently switches on --check_existing).
 
-The choice and order of columns in the output may be configured using [--fields](/help/articles/vep-options-output-format#opt_fields). For instance:
+The choice and order of columns in the output may be configured using [--fields](/help/articles/vep-output-format-options#opt_fields). For instance:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i examples/homo_sapiens_GRCh38.vcf --cache --force_overwrite --tab --fields &quot;Uploaded variation,Location,Allele,Gene&quot;
 </code></pre>
@@ -635,13 +635,13 @@ The choice and order of columns in the output may be configured using [--fields]
 
 ## VCF output
 
-The Ensembl VEP commandline tool can also generate VCF output using the [--vcf](/help/articles/vep-options-output-format#opt_vcf) flag.
+The Ensembl VEP commandline tool can also generate VCF output using the [--vcf](/help/articles/vep-output-format-options#opt_vcf) flag.
 
 Main information about the VCF output format:
 
-- Consequences are added in the INFO field of the VCF file, using the key "**CSQ**" (you can change it using [--vcf_info_field](/help/articles/vep-options-output#opt_vcf_info_field)).
+- Consequences are added in the INFO field of the VCF file, using the key "**CSQ**" (you can change it using [--vcf_info_field](/help/articles/vep-output-options#opt_vcf_info_field)).
 - Data fields are encoded separated by the character "**|**" (pipe). The order of fields is written in the VCF header. Unpopulated fields are represented by an empty string.
-- Output fields in the "CSQ" INFO field can be configured by using [--fields](/help/articles/vep-options-output-format#opt_fields).
+- Output fields in the "CSQ" INFO field can be configured by using [--fields](/help/articles/vep-output-format-options#opt_fields).
 - Each prediction, for a given variant, is separated by the character "**,**" in the CSQ INFO field (e.g. when a variant overlaps more than 1 transcript)
 
 Here is a list of the (default) fields you can find within the CSQ field:
@@ -653,16 +653,16 @@ Here is a list of the (default) fields you can find within the CSQ field:
 
 Some fields are not reported by default and need configuring including HGVS, Symbol and Existing_variation.
 
-Example command using the [--vcf](/help/articles/vep-options-output-format#opt_vcf) and [--fields](/help/articles/vep-options-output-format#opt_fields) options:
+Example command using the [--vcf](/help/articles/vep-output-format-options#opt_vcf) and [--fields](/help/articles/vep-output-format-options#opt_fields) options:
 
 <pre style="width: var(--text-column-width, 450px); max-width: 100%; box-sizing: border-box; white-space: pre-wrap; overflow-wrap: anywhere;"><code class="language-text">./vep -i examples/homo_sapiens_GRCh38.vcf --cache --force_overwrite --vcf --fields &quot;Allele,Consequence,Feature_type,Feature&quot;
 </code></pre>
 
-VCFs produced by Ensembl VEP can be filtered using [filter_vep.pl](/help/articles/vep-filtering-results) in the same way as standard format output files.
+VCFs produced by Ensembl VEP can be filtered using [filter_vep.pl](/help/articles/filtering-vep-results) in the same way as standard format output files.
 
-If the input format was VCF, the file will remain unchanged save for the addition of the CSQ field and the header (unless using any filtering). If an existing CSQ field is found, it will be replaced by the new annotation (use [--keep_csq](/help/articles/vep-options-output#opt_keep_csq) to preserve it).
+If the input format was VCF, the file will remain unchanged save for the addition of the CSQ field and the header (unless using any filtering). If an existing CSQ field is found, it will be replaced by the new annotation (use [--keep_csq](/help/articles/vep-output-options#opt_keep_csq) to preserve it).
 
-Custom data added with [--custom](/help/articles/vep-options-annotation#opt_custom) are added as separate fields, using the key specified for each data file.
+Custom data added with [--custom](/help/articles/vep-other-annotation-sources#opt_custom) are added as separate fields, using the key specified for each data file.
 
 Commas in fields are replaced with ampersands (&) to preserve VCF format.
 
@@ -675,9 +675,9 @@ Commas in fields are replaced with ampersands (&) to preserve VCF format.
 
 ## JSON output
 
-Ensembl VEP can output serialised [JSON](http://json.org/) objects using the [--json](/help/articles/vep-options-output-format#opt_json) flag. JSON is a serialisation format that can be parsed and processed easily by many packages and programming languages; it is used as the default output format for [Ensembl's REST server](http://rest.ensembl.org).
+Ensembl VEP can output serialised [JSON](http://json.org/) objects using the [--json](/help/articles/vep-output-format-options#opt_json) flag. JSON is a serialisation format that can be parsed and processed easily by many packages and programming languages; it is used as the default output format for [Ensembl's REST server](http://rest.ensembl.org).
 
-Each input variant is reported as a single JSON object which constitutes one line of the output file. The JSON object is structured somewhat differently to the other output formats, in that per-variant fields (e.g. co-located existing variant details) are reported only once. Consequences are grouped under the feature type that they affect (Transcript, Regulatory Feature, etc). The original input line (e.g. from VCF input) is reported under the "input" key in order to aid aligning input with output. When using a cache file, frequencies for co-located variants are reported by default (see [--af_1kg](/help/articles/vep-options-existing-variants#opt_af_1kg), [--af_gnomade](/help/articles/vep-options-existing-variants#opt_af_gnomade)).
+Each input variant is reported as a single JSON object which constitutes one line of the output file. The JSON object is structured somewhat differently to the other output formats, in that per-variant fields (e.g. co-located existing variant details) are reported only once. Consequences are grouped under the feature type that they affect (Transcript, Regulatory Feature, etc). The original input line (e.g. from VCF input) is reported under the "input" key in order to aid aligning input with output. When using a cache file, frequencies for co-located variants are reported by default (see [--af_1kg](/help/articles/vep-co-located-variants#opt_af_1kg), [--af_gnomade](/help/articles/vep-co-located-variants#opt_af_gnomade)).
 
 Here follows an example of JSON output (prettified and redacted for display here):
 
@@ -846,9 +846,9 @@ In accordance with JSON conventions, all keys (except alleles) are lower-case. S
 
 Ensembl VEP writes an HTML file containing statistics pertaining to the results of your job; it is named **\[output_file\]\_summary.html** (with the default options the file will be named **variant_effect_output.txt_summary.html**). To view it, please open the file in your web browser.
 
-- To prevent Ensembl VEP writing a stats file, use [--no_stats](/help/articles/vep-options-basic#opt_no_stats).
-- To get a machine-readable text file in place of the HTML file, use [--stats_text](/help/articles/vep-options-basic#opt_stats_text). You can get both a HTML file and plain text file by using both [--stats_text](/help/articles/vep-options-basic#opt_stats_text) and [--stats_html](/help/articles/vep-options-basic#opt_stats_html).
-- To change the name of the stats file from the default, use [--stats_file \[file\]](/help/articles/vep-options-basic#opt_stats_file).
+- To prevent Ensembl VEP writing a stats file, use [--no_stats](/help/articles/vep-basic-options#opt_no_stats).
+- To get a machine-readable text file in place of the HTML file, use [--stats_text](/help/articles/vep-basic-options#opt_stats_text). You can get both a HTML file and plain text file by using both [--stats_text](/help/articles/vep-basic-options#opt_stats_text) and [--stats_html](/help/articles/vep-basic-options#opt_stats_html).
+- To change the name of the stats file from the default, use [--stats_file \[file\]](/help/articles/vep-basic-options#opt_stats_file).
 
 The page contains several sections:
 

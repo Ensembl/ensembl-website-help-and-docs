@@ -34,17 +34,17 @@ related_articles:
 
 ## Option reference
 
-- [Basic options](/help/articles/vep-options-basic)
-- [Cache options](/help/articles/vep-options-cache)
-- [Other annotation sources](/help/articles/vep-options-annotation)
-- [Output format options](/help/articles/vep-options-output-format)
+- [Basic options](/help/articles/vep-basic-options)
+- [Cache options](/help/articles/vep-cache-options)
+- [Other annotation sources](/help/articles/vep-other-annotation-sources)
+- [Output format options](/help/articles/vep-output-format-options)
 - **Output options (this section)**
-- [Identifiers](/help/articles/vep-options-identifiers)
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
-- [Database options](/help/articles/vep-options-database)
+- [Identifiers](/help/articles/vep-identifiers)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
+- [Database options](/help/articles/vep-database-options)
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="output"></span>
 
@@ -68,19 +68,19 @@ Species limited [SIFT](http://sift.bii.a-star.edu.sg/) predicts whether an amino
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_polyphen"></span>
 
 ### `--polyphen [p|s|b]`
 
-Human only [PolyPhen](http://genetics.bwh.harvard.edu/pph2/) is a tool which predicts possible impact of an amino acid substitution on the structure and function of a human protein using straightforward physical and comparative considerations. Ensembl VEP can output the **p**rediction term, **s**core or **b**oth. Ensembl VEP uses the humVar score by default - use [--humdiv](/help/articles/vep-options-output#opt_humdiv) to retrieve the humDiv score. *Not used by default*
+Human only [PolyPhen](http://genetics.bwh.harvard.edu/pph2/) is a tool which predicts possible impact of an amino acid substitution on the structure and function of a human protein using straightforward physical and comparative considerations. Ensembl VEP can output the **p**rediction term, **s**core or **b**oth. Ensembl VEP uses the humVar score by default - use [--humdiv](/help/articles/vep-output-options#opt_humdiv) to retrieve the humDiv score. *Not used by default*
 
 **Output fields:** PolyPhen
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_humdiv"></span>
 
@@ -96,7 +96,7 @@ Human only Retrieve the [humDiv PolyPhen prediction](http://genetics.bwh.harvard
 
 Retrieve the transcript or gene with the nearest protein-coding transcription start site (TSS) to each input variant. Use "transcript" to retrieve the transcript stable ID, "gene" to retrieve the gene stable ID, or "symbol" to retrieve the gene symbol. Note that the nearest TSS may not belong to a transcript that overlaps the input variant, and more than one may be reported in the case where two are equidistant from the input coordinates.
 
-Currently only available when using a [cache](/help/articles/vep-annotation-sources#cache) annotation source, and [requires the Set::IntervalTree perl module](/help/articles/vep-download-and-install#additional).
+Currently only available when using a [cache](/help/articles/vep-annotation-sources#cache) annotation source, and [requires the Set::IntervalTree perl module](/help/articles/download-and-install-vep#additional).
 
 *Not used by default*
 
@@ -134,7 +134,7 @@ Look for overlaps with regulatory regions. Ensembl VEP can also report if a vari
 
 ### `--cell_type`
 
-Report only regulatory regions that are found in the given cell type(s). Can be a single cell type or a comma-separated list. The functional type in each cell type is reported under CELL_TYPE in the output. To retrieve a list of cell types, use [--cell_type list](/help/articles/vep-options-output#opt_cell_type). *Not used by default*
+Report only regulatory regions that are found in the given cell type(s). Can be a single cell type or a comma-separated list. The functional type in each cell type is reported under CELL_TYPE in the output. To retrieve a list of cell types, use [--cell_type list](/help/articles/vep-output-options#opt_cell_type). *Not used by default*
 
 **Output fields:** CELL_TYPE
 
@@ -142,7 +142,7 @@ Report only regulatory regions that are found in the given cell type(s). Can be 
 
 ### `--regulatory_gff [file=filename,...]`
 
-Use regulatory annotation from Ensembl regulatory GFF3 files, instead of data from a cache or database. Will override [--regulatory](/help/articles/vep-options-output#opt_regulatory) if used together. Files available from [Ensembl FTP](https://ftp.ensembl.org/pub/current/regulation/) under species/annotation. The argument is comma-separated list of key=value pairs, in the same style as [--custom](/help/articles/vep-options-annotation#opt_custom) providing one or more of: **file** (the regulatory-feature GFF3), **motifs** (a transcription factor binding motif GFF3) and **emars** (an epigenetically modified accessible region GFF3). Features from **file** and **emars** have a Feature type of RegulatoryFeature and the consequence regulatory_region_variant (with short variants, for example), with the feature's type — for example promoter, enhancer, CTCF_binding_site or open_chromatin_region — reported under BIOTYPE. Features from **motifs** have a Feature type of MotifFeature and the consequence TF_binding_site_variant. HIGH_INF_POS and MOTIF_SCORE_CHANGE require the position weight matrix, which the GFF does not carry, and are omitted. [--cell_type](/help/articles/vep-options-output#opt_cell_type) is ignored, with a warning, as a GFF carries no epigenome activity data. See [regulatory annotation from GFF files](/help/articles/vep-annotation-sources#reg_gff). *Not used by default*
+Use regulatory annotation from Ensembl regulatory GFF3 files, instead of data from a cache or database. Will override [--regulatory](/help/articles/vep-output-options#opt_regulatory) if used together. Files available from [Ensembl FTP](https://ftp.ensembl.org/pub/current/regulation/) under species/annotation. The argument is comma-separated list of key=value pairs, in the same style as [--custom](/help/articles/vep-other-annotation-sources#opt_custom) providing one or more of: **file** (the regulatory-feature GFF3), **motifs** (a transcription factor binding motif GFF3) and **emars** (an epigenetically modified accessible region GFF3). Features from **file** and **emars** have a Feature type of RegulatoryFeature and the consequence regulatory_region_variant (with short variants, for example), with the feature's type — for example promoter, enhancer, CTCF_binding_site or open_chromatin_region — reported under BIOTYPE. Features from **motifs** have a Feature type of MotifFeature and the consequence TF_binding_site_variant. HIGH_INF_POS and MOTIF_SCORE_CHANGE require the position weight matrix, which the GFF does not carry, and are omitted. [--cell_type](/help/articles/vep-output-options#opt_cell_type) is ignored, with a warning, as a GFF carries no epigenome activity data. See [regulatory annotation from GFF files](/help/articles/vep-annotation-sources#reg_gff). *Not used by default*
 
 **Output fields:** BIOTYPE, MOTIF_NAME, MOTIF_POS, TRANSCRIPTION_FACTORS
 
@@ -150,7 +150,7 @@ Use regulatory annotation from Ensembl regulatory GFF3 files, instead of data fr
 
 ### `--extended_promoters`
 
-Use the extended boundaries of promoter features when annotating with [--regulatory_gff](/help/articles/vep-options-output#opt_regulatory_gff). Ensembl regulatory GFF files record both a core promoter region and a wider region, given in the extended_start and extended_end attributes; by default the core coordinates are used, matching the VEP cache. The extended region is never smaller than the core region, so this option only ever adds annotation. Affects promoter features only. *Not used by default*
+Use the extended boundaries of promoter features when annotating with [--regulatory_gff](/help/articles/vep-output-options#opt_regulatory_gff). Ensembl regulatory GFF files record both a core promoter region and a wider region, given in the extended_start and extended_end attributes; by default the core coordinates are used, matching the VEP cache. The extended region is never smaller than the core region, so this option only ever adds annotation. Affects promoter features only. *Not used by default*
 
 <span id="opt_individual"></span>
 
@@ -162,7 +162,7 @@ Consider only alternate alleles present in the genotypes of the specified indivi
 
 **Incompatible with:**
 
-[--minimal](/help/articles/vep-options-output-format#opt_minimal) [--individual_zyg](/help/articles/vep-options-output#opt_individual_zyg)
+[--minimal](/help/articles/vep-output-format-options#opt_minimal) [--individual_zyg](/help/articles/vep-output-options#opt_individual_zyg)
 
 <span id="opt_individual_zyg"></span>
 
@@ -172,7 +172,7 @@ Consider alternate and reference alleles present in the genotypes of the specifi
 
 **Output fields:** ZYG
 
-**Incompatible with:** [--individual](/help/articles/vep-options-output#opt_individual)
+**Incompatible with:** [--individual](/help/articles/vep-output-options#opt_individual)
 
 <span id="opt_phased"></span>
 
@@ -184,7 +184,7 @@ Force VCF genotypes to be interpreted as phased. For use with plugins that depen
 
 ### `--allele_number`
 
-Identify allele number from VCF input, where 1 = first ALT allele, 2 = second ALT allele etc. Useful when using [--minimal](/help/articles/vep-options-output-format#opt_minimal) *Not used by default*
+Identify allele number from VCF input, where 1 = first ALT allele, 2 = second ALT allele etc. Useful when using [--minimal](/help/articles/vep-output-format-options#opt_minimal) *Not used by default*
 
 **Output fields:** ALLELE_NUM
 
@@ -220,7 +220,7 @@ Adds affected exon and intron numbering to to output. Format is Number/Total. *N
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_mirna"></span>
 
@@ -266,7 +266,7 @@ Don't write header lines in output files. *Default = add headers*
 
 Right aligns all variants relative to their associated transcripts prior to consequence calculation. An example using this option can be found [here](/help/articles/vep-other-information#shifting). *Default = 0*
 
-**Incompatible with:** [--shift_hgvs](/help/articles/vep-options-identifiers#opt_shift_hgvs)
+**Incompatible with:** [--shift_hgvs](/help/articles/vep-identifiers#opt_shift_hgvs)
 
 <span id="opt_shift_genomic"></span>
 
@@ -274,11 +274,11 @@ Right aligns all variants relative to their associated transcripts prior to cons
 
 Right aligns all variants, including intergenic variants, before consequence calculation and updates the *Location* field. An example using this option can be found [here](/help/articles/vep-other-information#shifting). *Default = 0*
 
-**Incompatible with:** [--shift_hgvs](/help/articles/vep-options-identifiers#opt_shift_hgvs)
+**Incompatible with:** [--shift_hgvs](/help/articles/vep-identifiers#opt_shift_hgvs)
 
 <span id="opt_shift_length"></span>
 
 ### `--shift_length`
 
-Reports the distance each variant has been shifted when used in conjuction with [--shift_3prime](/help/articles/vep-options-output#opt_shift_3prime)
+Reports the distance each variant has been shifted when used in conjuction with [--shift_3prime](/help/articles/vep-output-options#opt_shift_3prime)
 

@@ -38,7 +38,7 @@ These pages describe **VEP release 116 (June 2026)**. Keep the VEP software, cac
 
 ## Quick start
 
-You will need Git, Perl and the dependencies described in [Download and install](/help/articles/vep-download-and-install). Container instructions are available for [Docker](/help/articles/vep-download-and-install#docker) and [Singularity](/help/articles/vep-download-and-install#singularity), with a separate [Windows guide](/help/articles/vep-download-and-install#windows).
+You will need Git, Perl and the dependencies described in [Download and install](/help/articles/download-and-install-vep). Container instructions are available for [Docker](/help/articles/download-and-install-vep#docker) and [Singularity](/help/articles/download-and-install-vep#singularity), with a separate [Windows guide](/help/articles/download-and-install-vep#windows).
 
 ### 1. Download VEP
 
@@ -62,7 +62,7 @@ By default, VEP writes annotations to `variant_effect_output.txt` and generates 
 
 ## Work through an analysis
 
-The [tutorial](/help/articles/vep-tutorial) walks through installation, annotation and filtering. For your own analysis, use [Running VEP](/help/articles/vep-running-vep) to choose options and configuration settings, then [filter the results](/help/articles/vep-filtering-results) to select annotations of interest.
+The [tutorial](/help/articles/vep-command-line-tutorial) walks through installation, annotation and filtering. For your own analysis, use [Running VEP](/help/articles/running-vep) to choose options and configuration settings, then [filter the results](/help/articles/filtering-vep-results) to select annotations of interest.
 
 You can add your own datasets with [custom annotations](/help/articles/vep-custom-annotations) and extend VEP with [plugins](/help/articles/vep-plugins). The [examples and use cases](/help/articles/vep-examples-and-use-cases) cover frequencies, conservation, structural variants and pangenome assemblies.
 
@@ -70,9 +70,9 @@ You can add your own datasets with [custom annotations](/help/articles/vep-custo
 
 ## Find reference information
 
-Use the menu to browse the full CLI documentation, including the option reference and plugin catalogue. Read [other information](/help/articles/vep-other-information) for performance, transcript selection, HGVS, RefSeq and variant normalisation, or consult the [frequently asked questions](/help/articles/vep-faq).
+Use the menu to browse the full CLI documentation, including the option reference and plugin catalogue. Read [other information](/help/articles/vep-other-information) for performance, transcript selection, HGVS, RefSeq and variant normalisation, or consult the [frequently asked questions](/help/articles/vep-frequently-asked-questions).
 
-For browser-based analyses, see [How to use the Ensembl VEP web app](/help/articles/how-to-use-the-ensembl-variant-effect-predictor-vep).
+For browser-based analyses, see [How to use the Ensembl VEP web app](/help/articles/how-to-use-the-ensembl-variant-effect-predictor-ensembl-vep).
 
 ## Cite VEP and get help
 

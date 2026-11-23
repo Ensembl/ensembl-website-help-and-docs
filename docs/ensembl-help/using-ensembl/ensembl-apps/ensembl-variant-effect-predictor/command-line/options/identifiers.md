@@ -34,17 +34,17 @@ related_articles:
 
 ## Option reference
 
-- [Basic options](/help/articles/vep-options-basic)
-- [Cache options](/help/articles/vep-options-cache)
-- [Other annotation sources](/help/articles/vep-options-annotation)
-- [Output format options](/help/articles/vep-options-output-format)
-- [Output options](/help/articles/vep-options-output)
+- [Basic options](/help/articles/vep-basic-options)
+- [Cache options](/help/articles/vep-cache-options)
+- [Other annotation sources](/help/articles/vep-other-annotation-sources)
+- [Output format options](/help/articles/vep-output-format-options)
+- [Output options](/help/articles/vep-output-options)
 - **Identifiers (this section)**
-- [Co-located variants](/help/articles/vep-options-existing-variants)
-- [Filtering and QC options](/help/articles/vep-options-filtering)
-- [Database options](/help/articles/vep-options-database)
+- [Co-located variants](/help/articles/vep-co-located-variants)
+- [Filtering and QC options](/help/articles/vep-filtering-and-qc-options)
+- [Database options](/help/articles/vep-database-options)
 
-[Running VEP and choosing options](/help/articles/vep-running-vep)
+[Running VEP and choosing options](/help/articles/running-vep)
 
 <span id="ident"></span>
 
@@ -54,7 +54,7 @@ related_articles:
 
 ### `--hgvs`
 
-Add [HGVS](https://varnomen.hgvs.org) nomenclature based on Ensembl stable identifiers to the output. Both coding and protein sequence names are added where appropriate. To generate HGVS identifiers when using [--cache](/help/articles/vep-options-cache#opt_cache) or [--offline](/help/articles/vep-options-cache#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-options-cache#opt_fasta). HGVS notations given on Ensembl identifiers are [versioned](https://jun2026.archive.ensembl.org/info/genome/stable_ids/index.html). *Not used by default*
+Add [HGVS](https://varnomen.hgvs.org) nomenclature based on Ensembl stable identifiers to the output. Both coding and protein sequence names are added where appropriate. To generate HGVS identifiers when using [--cache](/help/articles/vep-cache-options#opt_cache) or [--offline](/help/articles/vep-cache-options#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-cache-options#opt_fasta). HGVS notations given on Ensembl identifiers are [versioned](https://jun2026.archive.ensembl.org/info/genome/stable_ids/index.html). *Not used by default*
 
 **Output fields:** HGVSc, HGVSp, HGVS_OFFSET
 
@@ -62,7 +62,7 @@ Add [HGVS](https://varnomen.hgvs.org) nomenclature based on Ensembl stable ident
 
 ### `--hgvsg`
 
-Add genomic [HGVS](https://varnomen.hgvs.org) nomenclature based on the input chromosome name. To generate HGVS identifiers when using [--cache](/help/articles/vep-options-cache#opt_cache) or [--offline](/help/articles/vep-options-cache#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-options-cache#opt_fasta). *Not used by default*
+Add genomic [HGVS](https://varnomen.hgvs.org) nomenclature based on the input chromosome name. To generate HGVS identifiers when using [--cache](/help/articles/vep-cache-options#opt_cache) or [--offline](/help/articles/vep-cache-options#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-cache-options#opt_fasta). *Not used by default*
 
 **Output fields:** HGVSg
 
@@ -70,7 +70,7 @@ Add genomic [HGVS](https://varnomen.hgvs.org) nomenclature based on the input ch
 
 ### `--hgvsg_use_accession`
 
-Force [--hgvsg](/help/articles/vep-options-identifiers#opt_hgvsg) to return RefSeq reference sequence. For example, reports NC_000002.11 for human chromosome 2 (build GRCh38).
+Force [--hgvsg](/help/articles/vep-identifiers#opt_hgvsg) to return RefSeq reference sequence. For example, reports NC_000002.11 for human chromosome 2 (build GRCh38).
 
 **Output fields:** HGVSg
 
@@ -78,7 +78,7 @@ Force [--hgvsg](/help/articles/vep-options-identifiers#opt_hgvsg) to return RefS
 
 ### `--hgvsp_use_prediction`
 
-Force [--hgvs](/help/articles/vep-options-identifiers#opt_hgvs) to return the HGVSp notation in predicted format. For example, ENSP00000233741.4:p.Thr367AsnfsTer13 will be returned as ENSP00000233741.4:p.(Thr367AsnfsTer13).
+Force [--hgvs](/help/articles/vep-identifiers#opt_hgvs) to return the HGVSp notation in predicted format. For example, ENSP00000233741.4:p.Thr367AsnfsTer13 will be returned as ENSP00000233741.4:p.(Thr367AsnfsTer13).
 
 **Output fields:** HGVSp
 
@@ -92,7 +92,7 @@ Allow input HGVSp to resolve to all genomic locations. Otherwise, most likely tr
 
 ### `--spdi`
 
-Add genomic [SPDI](https://www.ncbi.nlm.nih.gov/variation/notation/) notation. To generate SPDI when using [--cache](/help/articles/vep-options-cache#opt_cache) or [--offline](/help/articles/vep-options-cache#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-options-cache#opt_fasta). *Not used by default*
+Add genomic [SPDI](https://www.ncbi.nlm.nih.gov/variation/notation/) notation. To generate SPDI when using [--cache](/help/articles/vep-cache-options#opt_cache) or [--offline](/help/articles/vep-cache-options#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-cache-options#opt_fasta). *Not used by default*
 
 **Output fields:** SPDI
 
@@ -100,11 +100,11 @@ Add genomic [SPDI](https://www.ncbi.nlm.nih.gov/variation/notation/) notation. T
 
 ### `--ga4gh_vrs`
 
-Add [GA4GH Variation Representation Specification (VRS)](https://vrs.ga4gh.org/) notation. To generate GA4GH VRS when using [--cache](/help/articles/vep-options-cache#opt_cache) or [--offline](/help/articles/vep-options-cache#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-options-cache#opt_fasta). *Not used by default*
+Add [GA4GH Variation Representation Specification (VRS)](https://vrs.ga4gh.org/) notation. To generate GA4GH VRS when using [--cache](/help/articles/vep-cache-options#opt_cache) or [--offline](/help/articles/vep-cache-options#opt_offline) you must use a FASTA file and [--fasta](/help/articles/vep-cache-options#opt_fasta). *Not used by default*
 
 **Output fields:** GA4GH_VRS
 
-**Incompatible with:** [--vcf](/help/articles/vep-options-output-format#opt_vcf)
+**Incompatible with:** [--vcf](/help/articles/vep-output-format-options#opt_vcf)
 
 <span id="opt_shift_hgvs"></span>
 
@@ -114,7 +114,7 @@ Enable or disable 3' shifting of HGVS notations. HGVS nomenclature requires an a
 
 **Incompatible with:**
 
-[--shift_3prime](/help/articles/vep-options-output#opt_shift_3prime) [--shift_genomic](/help/articles/vep-options-output#opt_shift_genomic)
+[--shift_3prime](/help/articles/vep-output-options#opt_shift_3prime) [--shift_genomic](/help/articles/vep-output-options#opt_shift_genomic)
 
 <span id="opt_transcript_version"></span>
 
@@ -138,19 +138,19 @@ Add the Ensembl protein identifier to the output where appropriate. *Not used by
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_symbol"></span>
 
 ### `--symbol`
 
-Adds the gene symbol (e.g. HGNC) (where available) to the output. Some gene symbol, e.g. HGNC, are only available in merged and Ensembl caches and therefore should **not** be used with the [--refseq](/help/articles/vep-options-cache#opt_refseq) cache option. *Not used by default*
+Adds the gene symbol (e.g. HGNC) (where available) to the output. Some gene symbol, e.g. HGNC, are only available in merged and Ensembl caches and therefore should **not** be used with the [--refseq](/help/articles/vep-cache-options#opt_refseq) cache option. *Not used by default*
 
 **Output fields:** SYMBOL, SYMBOL_SOURCE, HGNC_ID
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_ccds"></span>
 
@@ -162,7 +162,7 @@ Adds the CCDS transcript identifer (where available) to the output. *Not used by
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_uniprot"></span>
 
@@ -174,7 +174,7 @@ Adds best match accessions for translated protein products from three [UniProt](
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_tsl"></span>
 
@@ -190,7 +190,7 @@ Only available for human on the GRCh38 assembly
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_appris"></span>
 
@@ -206,7 +206,7 @@ Only available for human on the GRCh38 assembly
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_canonical"></span>
 
@@ -218,13 +218,13 @@ Adds a flag indicating if the transcript is the canonical transcript for the gen
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_mane"></span>
 
 ### `--mane`
 
-Adds a flag indicating if the transcript is the [MANE Select](https://jun2026.archive.ensembl.org/info/genome/genebuild/mane.html) or [MANE Plus Clinical](https://jun2026.archive.ensembl.org/info/genome/genebuild/mane.html) transcript for the gene. If [--cache](/help/articles/vep-options-cache#opt_cache) or [--database](/help/articles/vep-options-database#opt_database) annotation source is used, the alternative transcript stable ID is also added. *Not used by default*
+Adds a flag indicating if the transcript is the [MANE Select](https://jun2026.archive.ensembl.org/info/genome/genebuild/mane.html) or [MANE Plus Clinical](https://jun2026.archive.ensembl.org/info/genome/genebuild/mane.html) transcript for the gene. If [--cache](/help/articles/vep-cache-options#opt_cache) or [--database](/help/articles/vep-database-options#opt_database) annotation source is used, the alternative transcript stable ID is also added. *Not used by default*
 
 ### Note
 
@@ -234,13 +234,13 @@ Only available for human on the GRCh38 assembly
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_mane_select"></span>
 
 ### `--mane_select`
 
-Adds a flag indicating if the transcript is the [MANE Select](https://jun2026.archive.ensembl.org/info/genome/genebuild/mane.html) transcript for the gene. If [--cache](/help/articles/vep-options-cache#opt_cache) or [--database](/help/articles/vep-options-database#opt_database) annotation source is used, the alternative transcript stable ID is also added. *Not used by default*
+Adds a flag indicating if the transcript is the [MANE Select](https://jun2026.archive.ensembl.org/info/genome/genebuild/mane.html) transcript for the gene. If [--cache](/help/articles/vep-cache-options#opt_cache) or [--database](/help/articles/vep-database-options#opt_database) annotation source is used, the alternative transcript stable ID is also added. *Not used by default*
 
 ### Note
 
@@ -250,7 +250,7 @@ Only available for human on the GRCh38 assembly
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_biotype"></span>
 
@@ -262,7 +262,7 @@ Adds the biotype of the transcript or regulatory feature. *Not used by default*
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_domains"></span>
 
@@ -274,7 +274,7 @@ Adds names of overlapping protein domains to output. *Not used by default*
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_xref_refseq"></span>
 
@@ -290,7 +290,7 @@ The RefSeq and Ensembl transcripts aligned in this way MAY NOT, AND FREQUENTLY W
 
 **Incompatible with:**
 
-[--most_severe](/help/articles/vep-options-filtering#opt_most_severe) [--summary](/help/articles/vep-options-filtering#opt_summary)
+[--most_severe](/help/articles/vep-filtering-and-qc-options#opt_most_severe) [--summary](/help/articles/vep-filtering-and-qc-options#opt_summary)
 
 <span id="opt_synonyms"></span>
 

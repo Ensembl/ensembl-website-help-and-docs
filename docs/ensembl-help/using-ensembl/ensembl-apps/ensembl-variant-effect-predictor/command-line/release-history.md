@@ -32,7 +32,7 @@ related_articles:
 
 # VEP release history
 
-These are historical release notes, ending with release 116 (June 2026). Options, datasets and services mentioned in older entries may have changed or been retired; use the current [option reference](/help/articles/vep-running-vep) for the release documented here.
+These are historical release notes, ending with release 116 (June 2026). Options, datasets and services mentioned in older entries may have changed or been retired; use the current [option reference](/help/articles/running-vep) for the release documented here.
 
 <span id="new"></span>
 
@@ -82,8 +82,8 @@ These are historical release notes, ending with release 116 (June 2026). Options
 ### New in version 113 *(October 2024)*
 
 - gnomAD frequency data updated to v4.1 for both genomes and exomes.
-- Support for GENCODE primary transcript set added. See, [--gencode_primary](/help/articles/vep-options-filtering#opt_gencode_primary) and [--flag_gencode_primary](/help/articles/vep-options-filtering#opt_flag_gencode_primary).
-- Support added for [--mane](/help/articles/vep-options-identifiers#opt_mane), [--mane_select](/help/articles/vep-options-identifiers#opt_mane_select), and [--canonical](/help/articles/vep-options-identifiers#opt_canonical) when GFF/GTF file used as annotation source.
+- Support for GENCODE primary transcript set added. See, [--gencode_primary](/help/articles/vep-filtering-and-qc-options#opt_gencode_primary) and [--flag_gencode_primary](/help/articles/vep-filtering-and-qc-options#opt_flag_gencode_primary).
+- Support added for [--mane](/help/articles/vep-identifiers#opt_mane), [--mane_select](/help/articles/vep-identifiers#opt_mane_select), and [--canonical](/help/articles/vep-identifiers#opt_canonical) when GFF/GTF file used as annotation source.
 - Nextflow Ensembl VEP now supports other input data formats besides VCF. For supported formats see - [Data formats](/help/articles/vep-data-formats#input).
 - Plugin support added to REST and Web for:
   - [RiboseqORFs](https://github.com/Ensembl/VEP_plugins/blob/release/116/RiboseqORFs.pm)
@@ -118,7 +118,7 @@ These are historical release notes, ending with release 116 (June 2026). Options
 
 ### New in version 111 *(January 2024)*
 
-- New option [--individual_zyg](/help/articles/vep-options-output#opt_individual_zyg) returns a single list of individuals and their zygosity (instead of a separate line of output for each individual and variant combination like in [--individual](/help/articles/vep-options-output#opt_individual))
+- New option [--individual_zyg](/help/articles/vep-output-options#opt_individual_zyg) returns a single list of individuals and their zygosity (instead of a separate line of output for each individual and variant combination like in [--individual](/help/articles/vep-output-options#opt_individual))
 - [Custom annotation](/help/articles/vep-custom-annotations) has been improved with the following options:
   - [num_records](/help/articles/vep-custom-annotations#opt_num_records) to limit the number of matching records (50 by default)
   - [summary_stats](/help/articles/vep-custom-annotations#opt_summary_stats) to calculate summary statistics (min, mean, max, count, sum) using annotation scores (not used by default)
@@ -199,7 +199,7 @@ These are historical release notes, ending with release 116 (June 2026). Options
 ### New in version 104 *(May 2021)*
 
 - Human GRCh37 cache files now include dbSNP 154!
-- [--var_synonyms](/help/articles/vep-options-existing-variants#opt_var_synonyms) output structure has been altered when used with [--json](/help/articles/vep-options-output-format#opt_json)
+- [--var_synonyms](/help/articles/vep-co-located-variants#opt_var_synonyms) output structure has been altered when used with [--json](/help/articles/vep-output-format-options#opt_json)
 
 <!-- -->
 
@@ -221,24 +221,24 @@ These are historical release notes, ending with release 116 (June 2026). Options
 <!-- -->
 
 - Ensembl VEP Options:
-  - [--mane](/help/articles/vep-options-identifiers#opt_mane) : Now provides additional MANE Plus Clinical annotations alongside MANE Select
-  - [--mane_select](/help/articles/vep-options-identifiers#opt_mane_select) : Returns MANE Select annotations
+  - [--mane](/help/articles/vep-identifiers#opt_mane) : Now provides additional MANE Plus Clinical annotations alongside MANE Select
+  - [--mane_select](/help/articles/vep-identifiers#opt_mane_select) : Returns MANE Select annotations
 
 ### New in version 102 *(November 2020)*
 
 - Ensembl VEP options:
-  - [--uniprot](/help/articles/vep-options-identifiers#opt_uniprot): Now we report precise Ensembl translation to UniProt isoform mappings.
-  - [--spdi](/help/articles/vep-options-identifiers#opt_spdi) - **new**: Add genomic [SPDI](https://www.ncbi.nlm.nih.gov/variation/notation/) notation.
+  - [--uniprot](/help/articles/vep-identifiers#opt_uniprot): Now we report precise Ensembl translation to UniProt isoform mappings.
+  - [--spdi](/help/articles/vep-identifiers#opt_spdi) - **new**: Add genomic [SPDI](https://www.ncbi.nlm.nih.gov/variation/notation/) notation.
 - Web Ensembl VEP options:
-  - Shifting variants in the 3' direction with [--shift_3prime](/help/articles/vep-options-output#opt_shift_3prime) and [--shift_genomic](/help/articles/vep-options-output#opt_shift_genomic) is now supported through the web interface.
+  - Shifting variants in the 3' direction with [--shift_3prime](/help/articles/vep-output-options#opt_shift_3prime) and [--shift_genomic](/help/articles/vep-output-options#opt_shift_genomic) is now supported through the web interface.
   - [SpliceAI](https://github.com/Ensembl/VEP_plugins/blob/release/116/SpliceAI.pm) - **new**: SpliceAI pre-calculated scores are available through the web interface.
 - Ensembl VEP filter options:
-  - [--soft_filter](/help/articles/vep-filtering-results#opt_softfilter) - **new**: Option to only flag the failing variation in the FILTER column and keep the entries in the output VCF file.
+  - [--soft_filter](/help/articles/filtering-vep-results#opt_softfilter) - **new**: Option to only flag the failing variation in the FILTER column and keep the entries in the output VCF file.
 
 ### New in version version 101 *(August 2020)*
 
 - New options:
-  - [--var_synonyms](/help/articles/vep-options-existing-variants#opt_var_synonyms): Report known synonyms for colocated variants. Must be used with [--cache](/help/articles/vep-options-cache#opt_cache).
+  - [--var_synonyms](/help/articles/vep-co-located-variants#opt_var_synonyms): Report known synonyms for colocated variants. Must be used with [--cache](/help/articles/vep-cache-options#opt_cache).
 - Ensembl VEP plugins:
   - [neXtProt](https://github.com/Ensembl/VEP_plugins/blob/release/116/neXtProt.pm) - **new**: neXtProt retrieves comprehensive human-centric protein-related data for missense variants
 
@@ -247,8 +247,8 @@ These are historical release notes, ending with release 116 (June 2026). Options
 - Human GRCh37 variant and phenotype data has been updated with multiple data sets including dbSNP153, ClinVar's 201912 release and COSMIC release 90
 - The GRCh37 RefSeq transcript set has been updated to NCBI's 1st November 2019 release (initially annotated on GCF_000001405.25)!
 - New options:
-  - [--shift_3prime](/help/articles/vep-options-output#opt_shift_3prime): Right aligns all variants relative to their associated transcripts prior to consequence calculation
-  - [--shift_genomic](/help/articles/vep-options-output#opt_shift_genomic): Right aligns all variants, including intergenic variants, before consequence calculation and updates the *Location* field
+  - [--shift_3prime](/help/articles/vep-output-options#opt_shift_3prime): Right aligns all variants relative to their associated transcripts prior to consequence calculation
+  - [--shift_genomic](/help/articles/vep-output-options#opt_shift_genomic): Right aligns all variants, including intergenic variants, before consequence calculation and updates the *Location* field
 - Ensembl VEP plugins:
   - [SpliceAI](https://github.com/Ensembl/VEP_plugins/blob/release/116/SpliceAI.pm) - **new**: SpliceAI is a deep neural network, developed by Illumina, Inc that predicts splice junctions from an arbitrary pre-mRNA transcript sequence.
 
@@ -265,9 +265,9 @@ These are historical release notes, ending with release 116 (June 2026). Options
 
 - Human GRCh38 cache files now contain variants from dbSNP152
 - This employs a new clustering strategy which may result in different rsIDs being reported as known variants for some insertions and deletions - for more information see [here](http://www.ensembl.info/2019/08/29/coming-soon-to-an-ensembl-near-you-dbsnp-2-0/)
-- [--clin_sig_allele](/help/articles/vep-options-existing-variants#opt_clin_sig_allele) has been updated to be used by default
+- [--clin_sig_allele](/help/articles/vep-co-located-variants#opt_clin_sig_allele) has been updated to be used by default
 - New options:
-  - [--custom_multi_allelic](/help/articles/vep-options-annotation#opt_custom_multi_allelic): prevents Ensembl VEP from assuming that comma separated lists in custom annotations are allele specific
+  - [--custom_multi_allelic](/help/articles/vep-other-annotation-sources#opt_custom_multi_allelic): prevents Ensembl VEP from assuming that comma separated lists in custom annotations are allele specific
 - MANE attributes are now included within Ensembl VEP cache files, web Ensembl VEP and REST
 - Ensembl VEP plugins:
   - [satMutMPRA](https://github.com/Ensembl/VEP_plugins/blob/release/116/satMutMPRA.pm) - **new**: measures variant effects on gene RNA expression for 21 regulatory elements
@@ -280,13 +280,13 @@ These are historical release notes, ending with release 116 (June 2026). Options
 
 - Allele-specific clinical significance reported (it was previously variant-specific).
 - New options:
-  - [--clin_sig_allele](/help/articles/vep-options-existing-variants#opt_clin_sig_allele): report allele specific clinical significance.
-  - [--mane](/help/articles/vep-options-identifiers#opt_mane): report if a transcript is the MANE Select.
-  - [--max_sv_size](/help/articles/vep-options-basic#opt_max_sv_size): extend the maximum Structural Variant size Ensembl VEP can process.
-  - [--no_check_variants_order](/help/articles/vep-options-basic#opt_no_check_variants_order): permit the use of unsorted input files (WARNING - this is slow and requires more memory).
-  - [--overlaps](/help/articles/vep-options-output#opt_overlaps): report the proportion and length of a transcript overlapped by a structural variant in VCF format.
-- Include the [--mane](/help/articles/vep-options-identifiers#opt_mane) option into the [--everything](/help/articles/vep-options-basic#opt_everything) group option.
-- Update [--pick](/help/articles/vep-options-filtering#opt_pick) and [--pick_order](/help/articles/vep-options-filtering#opt_pick_order) to support MANE Select transcripts.
+  - [--clin_sig_allele](/help/articles/vep-co-located-variants#opt_clin_sig_allele): report allele specific clinical significance.
+  - [--mane](/help/articles/vep-identifiers#opt_mane): report if a transcript is the MANE Select.
+  - [--max_sv_size](/help/articles/vep-basic-options#opt_max_sv_size): extend the maximum Structural Variant size Ensembl VEP can process.
+  - [--no_check_variants_order](/help/articles/vep-basic-options#opt_no_check_variants_order): permit the use of unsorted input files (WARNING - this is slow and requires more memory).
+  - [--overlaps](/help/articles/vep-output-options#opt_overlaps): report the proportion and length of a transcript overlapped by a structural variant in VCF format.
+- Include the [--mane](/help/articles/vep-identifiers#opt_mane) option into the [--everything](/help/articles/vep-basic-options#opt_everything) group option.
+- Update [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick) and [--pick_order](/help/articles/vep-filtering-and-qc-options#opt_pick_order) to support MANE Select transcripts.
 - Check if the input variants are ordered: non ordered variants slow down Ensembl VEP and require more memory.
 - Skip annotation of complex and long structural variants and display a warning message.
 - Variant recoder: add an option [--vcf_string](https://jun2026.archive.ensembl.org/info/docs/tools/vep/recoder/index.html#opt_vcf_string) to return results in VCF format.
@@ -318,7 +318,7 @@ These are historical release notes, ending with release 116 (June 2026). Options
 ### New in version 95 *(January 2019)*
 
 - The Ensembl VEP parser is now more permissive for the GFF files (ID attribute only required for genes and transcripts)
-- Add new option [--show_ref_allele](/help/articles/vep-options-output#opt_show_ref_allele) to include the allele reference in the VEP default output and the tab output formats
+- Add new option [--show_ref_allele](/help/articles/vep-output-options#opt_show_ref_allele) to include the allele reference in the VEP default output and the tab output formats
 - Add a warning message when the Ensembl VEP annotations INFO field hasn't been found/recognised in the VCF input file
 - Ensembl VEP Docker image:
   - Reduce the size of the Ensembl VEP Docker image by about 45%.
@@ -332,7 +332,7 @@ These are historical release notes, ending with release 116 (June 2026). Options
 
 - RefSeq transcript version updated.
 - Minor updates on the [Ensembl VEP web tool](https://jun2026.archive.ensembl.org/Tools/VEP) interface.
-- When the input data format is not specified on the command line, Ensembl VEP attempts to detect it. The assumed format is now reported in verbose mode ([--verbose](/help/articles/vep-options-basic#opt_verbose)).
+- When the input data format is not specified on the command line, Ensembl VEP attempts to detect it. The assumed format is now reported in verbose mode ([--verbose](/help/articles/vep-basic-options#opt_verbose)).
 - Ensembl VEP assigns assigned the consequence types *TF_binding_site_variant*, *TFBS_ablation*, *TFBS_fusion*, *TFBS_amplification* and *TFBS_translocation* to human and mouse variants which overlapped motif features. These annotations will not be available in VEP caches for human in release 94 so must be added as a [custom annotation](/help/articles/vep-custom-annotations).
 
 ### New in version 93 *(July 2018)*
@@ -353,24 +353,24 @@ These are historical release notes, ending with release 116 (June 2026). Options
 ### New in version 91 *(December 2017)*
 
 - New input format "[region](/help/articles/vep-data-formats#region)" allows REST-style input to Ensembl VEP.
-- Replace your input variant reference allele with the correct one from the genome with [--lookup_ref](/help/articles/vep-options-filtering#opt_lookup_ref).
-- Add version numbers to Ensembl transcripts with [--transcript_version](/help/articles/vep-options-identifiers#opt_transcript_version).
+- Replace your input variant reference allele with the correct one from the genome with [--lookup_ref](/help/articles/vep-filtering-and-qc-options#opt_lookup_ref).
+- Add version numbers to Ensembl transcripts with [--transcript_version](/help/articles/vep-identifiers#opt_transcript_version).
 
 ### New in version 90 *(August 2017)*
 
-- [gnomAD](http://gnomad.broadinstitute.org/) exomes allele frequencies now available with [--af_gnomad](/help/articles/vep-options-existing-variants#opt_af_gnomade), replacing ExAC. gnomAD genomes and ExAC are [available via custom annotation](/help/articles/vep-examples-and-use-cases#gnomad).
-- Ensembl VEP is now available as a [Docker image](/help/articles/vep-download-and-install#docker).
+- [gnomAD](http://gnomad.broadinstitute.org/) exomes allele frequencies now available with [--af_gnomad](/help/articles/vep-co-located-variants#opt_af_gnomade), replacing ExAC. gnomAD genomes and ExAC are [available via custom annotation](/help/articles/vep-examples-and-use-cases#gnomad).
+- Ensembl VEP is now available as a [Docker image](/help/articles/download-and-install-vep#docker).
 - RefSeq transcripts in Ensembl VEP cache files are now ["corrected" from the reference genome sequence](/help/articles/vep-other-information#refseq).
 - Ensembl VEP's algorithm for matching colocated known variants has been overhauled - [details](/help/articles/vep-other-information#colocated).
-- Change Ensembl VEP's default (5kb) up/downstream distance with [--distance](/help/articles/vep-options-output#opt_distance). This supercedes the functionality of the UpDownDistance Ensembl VEP plugin.
-- Feed input directly to Ensembl VEP with [--input_data](/help/articles/vep-options-basic#opt_input_data).
-- Suppress header output with [--no_headers](/help/articles/vep-options-output#opt_no_headers).
-- Detailed [installation instructions for Bio::DB::BigFile](/help/articles/vep-download-and-install#bigfile) to access bigWig custom annotation files.
+- Change Ensembl VEP's default (5kb) up/downstream distance with [--distance](/help/articles/vep-output-options#opt_distance). This supercedes the functionality of the UpDownDistance Ensembl VEP plugin.
+- Feed input directly to Ensembl VEP with [--input_data](/help/articles/vep-basic-options#opt_input_data).
+- Suppress header output with [--no_headers](/help/articles/vep-output-options#opt_no_headers).
+- Detailed [installation instructions for Bio::DB::BigFile](/help/articles/download-and-install-vep#bigfile) to access bigWig custom annotation files.
 
 ### New in version 89 *(May 2017)*
 
-- exclude known variants with unknown (null) alleles with [--exclude_null_alleles](/help/articles/vep-options-existing-variants#opt_exclude_null_alleles).
-- write compressed output with [--compress_output](/help/articles/vep-options-output-format#opt_compress_output).
+- exclude known variants with unknown (null) alleles with [--exclude_null_alleles](/help/articles/vep-co-located-variants#opt_exclude_null_alleles).
+- write compressed output with [--compress_output](/help/articles/vep-output-format-options#opt_compress_output).
 - improved matching of alleles in [custom VCF files](/help/articles/vep-custom-annotations).
 - API perldoc documentation added.
 
@@ -380,14 +380,14 @@ These are historical release notes, ending with release 116 (June 2026). Options
 - Documentation updated to reflect switch to ensembl-vep. See the [Ensembl 87 VEP script PDF](https://github.com/Ensembl/public-plugins/blob/release/87/docs/htdocs/info/docs/tools/vep/script/VEP_script_documentation.pdf) for documentation of the obsolete ensembl-tools Ensembl VEP.
 - The Ensembl VEP script is now named simply `vep` (formerly `variant_effect_predictor.pl` or `vep.pl`)
 - Directly use tabix-indexed [GFF/GTF files as annotation sources](/help/articles/vep-annotation-sources#gff)
-- Allele-specific reporting of frequencies ([--af](/help/articles/vep-options-existing-variants#opt_af) and more) and [custom VCF annotations](/help/articles/vep-custom-annotations)
-- [--check_existing](/help/articles/vep-options-existing-variants#opt_check_existing) now compares alleles by default, disable with [--no_check_alleles](/help/articles/vep-running-vep)
-- Report the highest allele frequency observed in any population from 1000 genomes, ESP or ExAC using [--max_af](/help/articles/vep-options-existing-variants#opt_max_af)
-- Get genomic HGVS nomenclature with [--hgvsg](/help/articles/vep-options-identifiers#opt_hgvsg)
-- Find the gene or transcript with the nearest transcription start site (TSS) to each input variant with [--nearest](/help/articles/vep-options-output#opt_nearest)
-- [filter_vep](/help/articles/vep-filtering-results) supports field/field comparisons e.g. AFR_AF \> \#EUR_AF
-- Exclude predicted (XM and XR) transcripts when using RefSeq or merged cache with [--exclude_predicted](/help/articles/vep-options-filtering#opt_exclude_predicted)
-- Filter transcripts used for annotation with [--transcript_filter](/help/articles/vep-options-filtering#opt_transcript_filter)
+- Allele-specific reporting of frequencies ([--af](/help/articles/vep-co-located-variants#opt_af) and more) and [custom VCF annotations](/help/articles/vep-custom-annotations)
+- [--check_existing](/help/articles/vep-co-located-variants#opt_check_existing) now compares alleles by default, disable with [--no_check_alleles](/help/articles/running-vep)
+- Report the highest allele frequency observed in any population from 1000 genomes, ESP or ExAC using [--max_af](/help/articles/vep-co-located-variants#opt_max_af)
+- Get genomic HGVS nomenclature with [--hgvsg](/help/articles/vep-identifiers#opt_hgvsg)
+- Find the gene or transcript with the nearest transcription start site (TSS) to each input variant with [--nearest](/help/articles/vep-output-options#opt_nearest)
+- [filter_vep](/help/articles/filtering-vep-results) supports field/field comparisons e.g. AFR_AF \> \#EUR_AF
+- Exclude predicted (XM and XR) transcripts when using RefSeq or merged cache with [--exclude_predicted](/help/articles/vep-filtering-and-qc-options#opt_exclude_predicted)
+- Filter transcripts used for annotation with [--transcript_filter](/help/articles/vep-filtering-and-qc-options#opt_transcript_filter)
 - pileup input format no longer supported
 
 <span id="old_vep_tool"></span>
@@ -396,7 +396,7 @@ These are historical release notes, ending with release 116 (June 2026). Options
 
 <span id="div_old_vep_tool"></span>
 
-Versions of Ensembl VEP up to and including 87 were released as part of the ensembl-tools package. See [download links](/help/articles/vep-download-and-install#toolsversions) above.
+Versions of Ensembl VEP up to and including 87 were released as part of the ensembl-tools package. See [download links](/help/articles/download-and-install-vep#toolsversions) above.
 
 ### New in version 87 *(December 2016)*
 
@@ -407,11 +407,11 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
 
 ### New in version 86 *(October 2016)*
 
-- Chromosome synonyms supported when using Ensembl VEP caches; may be loaded manually with [--synonyms](/help/articles/vep-options-identifiers#opt_synonyms)
+- Chromosome synonyms supported when using Ensembl VEP caches; may be loaded manually with [--synonyms](/help/articles/vep-identifiers#opt_synonyms)
 
 ### New in version 85 *(July 2016)*
 
-- [--pick](/help/articles/vep-options-filtering#opt_pick) now uses translated length instead of genomic transcript length
+- [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick) now uses translated length instead of genomic transcript length
 - Support for epigenomes in regulatory features
 
 ### New in version 84 *(March 2016)*
@@ -426,28 +426,28 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
   - Basic consequence calculations up to 2x faster than version 82
   - HGVS calculations up to 10x faster
   - FASTA sequence retrieval implements caching
-- Add [ExAC project](http://exac.broadinstitute.org/) frequencies with [--af_exac](/help/articles/vep-options-existing-variants#opt_af_exac)
-- [APPRIS](https://jun2026.archive.ensembl.org/glossary/ENSGLOSSARY_0000012) isoform annotations now available with [--appris](/help/articles/vep-options-identifiers#opt_appris) and used by [--pick](/help/articles/vep-options-filtering#opt_pick) and others to prioritise VEP annotations
+- Add [ExAC project](http://exac.broadinstitute.org/) frequencies with [--af_exac](/help/articles/vep-co-located-variants#opt_af_exac)
+- [APPRIS](https://jun2026.archive.ensembl.org/glossary/ENSGLOSSARY_0000012) isoform annotations now available with [--appris](/help/articles/vep-identifiers#opt_appris) and used by [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick) and others to prioritise VEP annotations
 
 ### New in version 82 *(September 2015)*
 
-- [Faster FASTA file access](/help/articles/vep-download-and-install#installer) using Bio::DB::HTS/htslib and bgzipped FASTA files
-- [Flag genes](/help/articles/vep-options-output#opt_gene_phenotype) with phenotype associations
+- [Faster FASTA file access](/help/articles/download-and-install-vep#installer) using Bio::DB::HTS/htslib and bgzipped FASTA files
+- [Flag genes](/help/articles/vep-output-options#opt_gene_phenotype) with phenotype associations
 - Some plugins now available for use via the [web](https://jun2026.archive.ensembl.org/Tools/VEP) and [REST](http://rest.ensembl.org/#VEP) interfaces
 
 ### New in version 81 *(July 2015)*
 
-- Plugin registry means plugins can be installed from the [Ensembl VEP installer](/help/articles/vep-download-and-install#installer)
+- Plugin registry means plugins can be installed from the [Ensembl VEP installer](/help/articles/download-and-install-vep#installer)
 - GFF format now supported by Ensembl VEP's [cache converter](/help/articles/vep-annotation-sources#gff)
 - Fixes and improvements for sequence retrieval from FASTA files
 
 ### New in version 80 *(May 2015)*
 
 - [Flag added](/help/articles/vep-data-formats#output) indicating if an overlapping known variant is associated with a phenotype, disease or trait
-- HGVS notations are now 3'-shifted by default (use [--shift_hgvs](/help/articles/vep-options-identifiers#opt_shift_hgvs) to force enable/disable)
-- Source version information added to caches; see output file headers or use [--show_cache_info](/help/articles/vep-options-cache#opt_show_cache_info)
-- Get the variant class using [--variant_class](/help/articles/vep-options-output#opt_variant_class)
-- CCDS status added to categories used by [--pick](/help/articles/vep-options-filtering#opt_pick) flag (and [others](/help/articles/vep-other-information#pick))
+- HGVS notations are now 3'-shifted by default (use [--shift_hgvs](/help/articles/vep-identifiers#opt_shift_hgvs) to force enable/disable)
+- Source version information added to caches; see output file headers or use [--show_cache_info](/help/articles/vep-cache-options#opt_show_cache_info)
+- Get the variant class using [--variant_class](/help/articles/vep-output-options#opt_variant_class)
+- CCDS status added to categories used by [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick) flag (and [others](/help/articles/vep-other-information#pick))
 
 ### New in version 79 *(March 2015)*
 
@@ -459,52 +459,52 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
 
 ### New in version 78 *(December 2014)*
 
-- Customise [--pick](/help/articles/vep-options-filtering#opt_pick) using [--pick_order](/help/articles/vep-options-filtering#opt_pick_order)
-- Get [transcript support level](https://jun2026.archive.ensembl.org/glossary/ENSGLOSSARY_0000005) using [--tsl](/help/articles/vep-options-identifiers#opt_tsl)
+- Customise [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick) using [--pick_order](/help/articles/vep-filtering-and-qc-options#opt_pick_order)
+- Get [transcript support level](https://jun2026.archive.ensembl.org/glossary/ENSGLOSSARY_0000005) using [--tsl](/help/articles/vep-identifiers#opt_tsl)
 
 ### New in version 77 *(October 2014)*
 
-- Get the [SO](http://www.sequenceontology.org/) feature type of regulatory features using [--regulatory](/help/articles/vep-options-output#opt_regulatory) and [--biotype](/help/articles/vep-options-identifiers#opt_biotype)
+- Get the [SO](http://www.sequenceontology.org/) feature type of regulatory features using [--regulatory](/help/articles/vep-output-options#opt_regulatory) and [--biotype](/help/articles/vep-identifiers#opt_biotype)
 
 ### New in version 76 *(August 2014)*
 
-- Ensembl VEP now supports caches from multiple assemblies ([--assembly](/help/articles/vep-options-basic#opt_assembly)) on the same software version - e.g. [human builds GRCh37 and GRCh38](/help/articles/vep-other-information#assembly)
-- Protein identifiers from UniProt (SWISSPROT, TrEMBL and UniParc) now available using [--uniprot](/help/articles/vep-options-identifiers#opt_uniprot)
-- Ensembl VEP can generate [JSON output](/help/articles/vep-data-formats#json) using [--json](/help/articles/vep-options-output-format#opt_json)
-- Two new analysis set options - [--gencode_basic](/help/articles/vep-options-filtering#opt_gencode_basic) and the merged Ensembl/RefSeq cache ([--merged](/help/articles/vep-options-cache#opt_merged))
+- Ensembl VEP now supports caches from multiple assemblies ([--assembly](/help/articles/vep-basic-options#opt_assembly)) on the same software version - e.g. [human builds GRCh37 and GRCh38](/help/articles/vep-other-information#assembly)
+- Protein identifiers from UniProt (SWISSPROT, TrEMBL and UniParc) now available using [--uniprot](/help/articles/vep-identifiers#opt_uniprot)
+- Ensembl VEP can generate [JSON output](/help/articles/vep-data-formats#json) using [--json](/help/articles/vep-output-format-options#opt_json)
+- Two new analysis set options - [--gencode_basic](/help/articles/vep-filtering-and-qc-options#opt_gencode_basic) and the merged Ensembl/RefSeq cache ([--merged](/help/articles/vep-cache-options#opt_merged))
 - Non-RefSeq transcripts now excluded by default when using the RefSeq or merged cache; use `--all_refseq` to include them
-- Let Ensembl VEP pick one consequence per variant allele using [--pick_allele](/help/articles/vep-options-filtering#opt_pick_allele)
-- Allele now included alongside frequency for 1000 Genomes ([--af_1kg](/help/articles/vep-options-existing-variants#opt_af_1kg)) and ESP ([--af_esp](/help/articles/vep-options-existing-variants#opt_af_esp)) data
+- Let Ensembl VEP pick one consequence per variant allele using [--pick_allele](/help/articles/vep-filtering-and-qc-options#opt_pick_allele)
+- Allele now included alongside frequency for 1000 Genomes ([--af_1kg](/help/articles/vep-co-located-variants#opt_af_1kg)) and ESP ([--af_esp](/help/articles/vep-co-located-variants#opt_af_esp)) data
 - Not strictly script-related, but the [Ensembl VEP REST API](http://rest.ensembl.org/#Variation) has come out of beta!
 
 ### New in version 75 *(February 2014)*
 
-- let Ensembl VEP pick one consequence per variant for you using [--pick](/help/articles/vep-options-filtering#opt_pick); includes all transcript-specific data
-- [gene symbol](/help/articles/vep-options-identifiers#opt_symbol) available in RefSeq cache and when using [--refseq](/help/articles/vep-options-cache#opt_refseq)
-- Installation and use of RefSeq cache improved - remember to use [--refseq](/help/articles/vep-options-cache#opt_refseq) with your RefSeq cache!
-- Added [--cache_version](/help/articles/vep-options-cache#opt_cache_version) option, primarily to aid Ensembl Genomes users.
+- let Ensembl VEP pick one consequence per variant for you using [--pick](/help/articles/vep-filtering-and-qc-options#opt_pick); includes all transcript-specific data
+- [gene symbol](/help/articles/vep-identifiers#opt_symbol) available in RefSeq cache and when using [--refseq](/help/articles/vep-cache-options#opt_refseq)
+- Installation and use of RefSeq cache improved - remember to use [--refseq](/help/articles/vep-cache-options#opt_refseq) with your RefSeq cache!
+- Added [--cache_version](/help/articles/vep-cache-options#opt_cache_version) option, primarily to aid Ensembl Genomes users.
 
 ### New in version 74 *(December 2013)*
 
-- retrieve the [humDiv PolyPhen prediction](http://genetics.bwh.harvard.edu/wiki/!pph2/overview#prediction) instead of humVar using [--humdiv](/help/articles/vep-options-output#opt_humdiv)
-- source for gene symbol available with [--symbol](/help/articles/vep-options-identifiers#opt_symbol)
+- retrieve the [humDiv PolyPhen prediction](http://genetics.bwh.harvard.edu/wiki/!pph2/overview#prediction) instead of humVar using [--humdiv](/help/articles/vep-output-options#opt_humdiv)
+- source for gene symbol available with [--symbol](/help/articles/vep-identifiers#opt_symbol)
 
 ### New in version 73 *(August 2013)*
 
-- NHLBI-ESP frequencies available in cache ([--af_esp](/help/articles/vep-options-existing-variants#opt_af_esp))
-- Pubmed IDs for cited existing variants available in cache ([--pubmed](/help/articles/vep-options-existing-variants#opt_pubmed))
+- NHLBI-ESP frequencies available in cache ([--af_esp](/help/articles/vep-co-located-variants#opt_af_esp))
+- Pubmed IDs for cited existing variants available in cache ([--pubmed](/help/articles/vep-co-located-variants#opt_pubmed))
 - [Convert your cache to use tabix](/help/articles/vep-annotation-sources#manual_cache) - much faster when retrieving co-located existing variants!
-- The [installer](/help/articles/vep-download-and-install#installer) can now update the Ensembl VEP to the latest version and install [FASTA files](/help/articles/vep-annotation-sources#fasta)
-- **--hgnc** replaced by [--symbol](/help/articles/vep-options-identifiers#opt_symbol) for non-human compatibility
+- The [installer](/help/articles/download-and-install-vep#installer) can now update the Ensembl VEP to the latest version and install [FASTA files](/help/articles/vep-annotation-sources#fasta)
+- **--hgnc** replaced by [--symbol](/help/articles/vep-identifiers#opt_symbol) for non-human compatibility
 - HGVS strings are now part [URI-escaped](http://en.wikipedia.org/wiki/Percent-encoding) to avoid "=" sign clashes
-- use [--allele_number](/help/articles/vep-options-output#opt_allele_number) to identify input alleles by their order in the VCF ALT field
-- use [--total_length](/help/articles/vep-options-output#opt_total_length) to give the total length of cDNA, CDS and protein sequences
+- use [--allele_number](/help/articles/vep-output-options#opt_allele_number) to identify input alleles by their order in the VCF ALT field
+- use [--total_length](/help/articles/vep-output-options#opt_total_length) to give the total length of cDNA, CDS and protein sequences
 - add data from VCF INFO fields when using [custom annotations](/help/articles/vep-custom-annotations)
 
 ### New in version 72 *(June 2013)*
 
 - Speed and stability improvements when using forking
-- Filter Ensembl VEP results using [filter_vep.pl](/help/articles/vep-filtering-results)
+- Filter Ensembl VEP results using [filter_vep.pl](/help/articles/filtering-vep-results)
 
 ### New in version 71 *(April 2013)*
 
@@ -522,7 +522,7 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
 
 ### New in version 2.8 *(December 2012)*
 
-- Easily filter out common human variants with [--filter_common](/help/articles/vep-options-filtering#opt_filter_common)
+- Easily filter out common human variants with [--filter_common](/help/articles/vep-filtering-and-qc-options#opt_filter_common)
 - 1000 Genomes continental population frequencies now stored in cache files
 
 ### New in version 2.7 *(October 2012)*
@@ -534,7 +534,7 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
 
 - support for [structural variant](/help/articles/vep-data-formats#sv) consequences
 - Sequence Ontology (SO) consequence terms now default
-- script runtime 3-4x faster when using [forking](/help/articles/vep-options-basic#opt_fork)
+- script runtime 3-4x faster when using [forking](/help/articles/vep-basic-options#opt_fork)
 - 1000 Genomes global MAF available in cache files
 - improved memory usage
 
@@ -549,10 +549,10 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
 ### New in version 2.4 *(February 2012)*
 
 - offline mode and new installer script make it easy to use the Ensembl VEP without the usual dependencies
-- output columns configurable using the [--fields](/help/articles/vep-options-output-format#opt_fields) flag
+- output columns configurable using the [--fields](/help/articles/vep-output-format-options#opt_fields) flag
 - VCF output support expanded, can now carry all fields
-- output affected exon and intron numbers with [--numbers](/help/articles/vep-options-output#opt_numbers)
-- output overlapping protein domains using [--domains](/help/articles/vep-options-identifiers#opt_domains)
+- output affected exon and intron numbers with [--numbers](/help/articles/vep-output-options#opt_numbers)
+- output overlapping protein domains using [--domains](/help/articles/vep-identifiers#opt_domains)
 - enhanced support for LRGs
 - plugins now work on variants called as intergenic
 
@@ -567,12 +567,12 @@ Versions of Ensembl VEP up to and including 87 were released as part of the ense
 - SIFT, PolyPhen and Condel predictions and regulatory features now accessible from the [cache](/help/articles/vep-annotation-sources)
 - support for calling consequences against [RefSeq](/help/articles/vep-other-information#refseq) transcripts
 - variant identifiers (e.g. dbSNP rsIDs) and [HGVS notations](/help/articles/vep-other-information#hgvs) supported as input format
-- variants can now be [filtered](/help/articles/vep-options-filtering#filt) by frequency in HapMap and 1000 genomes populations
+- variants can now be [filtered](/help/articles/vep-filtering-and-qc-options#filt) by frequency in HapMap and 1000 genomes populations
 - script can be used to convert files between formats (Ensembl/VCF/Pileup/HGVS to Ensembl/VCF/Pileup)
 - large amount of code moved to API modules to ensure consistency between web and script Ensembl VEP
 - memory usage optimisations
 - Ensembl VEP script moved to [ensembl-tools repo](https://github.com/Ensembl/ensembl-tools/tree/release/116/scripts/variant_effect_predictor)
-- Added [--canonical](/help/articles/vep-options-identifiers#opt_canonical), [--per_gene](/help/articles/vep-options-filtering#opt_per_gene) and [--no_intergenic](/help/articles/vep-options-filtering#opt_no_intergenic) options
+- Added [--canonical](/help/articles/vep-identifiers#opt_canonical), [--per_gene](/help/articles/vep-filtering-and-qc-options#opt_per_gene) and [--no_intergenic](/help/articles/vep-filtering-and-qc-options#opt_no_intergenic) options
 
 ### New in version 2.1 *(June 2011)*
 
