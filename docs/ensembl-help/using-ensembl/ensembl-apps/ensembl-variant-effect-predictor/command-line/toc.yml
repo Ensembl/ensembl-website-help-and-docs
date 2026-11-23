@@ -1,0 +1,44 @@
+- name: Getting started
+  href: getting-started.md
+  url: /help/articles/vep-getting-started
+- name: Tutorial
+  href: tutorial.md
+  url: /help/articles/vep-tutorial
+- name: Download and install
+  href: download-and-install.md
+  url: /help/articles/vep-download-and-install
+- name: Running VEP
+  href: running-vep.md
+  url: /help/articles/vep-running-vep
+- name: Option reference
+  href: options/toc.yml
+- name: Data formats
+  href: data-formats.md
+  url: /help/articles/vep-data-formats
+- name: Annotation sources
+  href: annotation-sources.md
+  url: /help/articles/vep-annotation-sources
+- name: Filtering results
+  href: filtering-results.md
+  url: /help/articles/vep-filtering-results
+- name: Custom annotations
+  href: custom-annotations.md
+  url: /help/articles/vep-custom-annotations
+- name: Plugins
+  href: plugins.md
+  url: /help/articles/vep-plugins
+- name: Plugin catalogue
+  href: plugin-catalogue.md
+  url: /help/articles/vep-plugin-catalogue
+- name: Examples and use cases
+  href: examples-and-use-cases.md
+  url: /help/articles/vep-examples-and-use-cases
+- name: Other information
+  href: other-information.md
+  url: /help/articles/vep-other-information
+- name: Frequently asked questions
+  href: faq.md
+  url: /help/articles/vep-faq
+- name: Release history
+  href: release-history.md
+  url: /help/articles/vep-release-history

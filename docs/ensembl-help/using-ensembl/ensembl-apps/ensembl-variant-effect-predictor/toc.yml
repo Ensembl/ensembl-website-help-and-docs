@@ -2,3 +2,5 @@
   href: how-to-use-ensembl-vep.md
 - name: What is the Ensembl Variant Effect Predictor(VEP)
   href: what-is-ensembl-vep.md
+- name: VEP on the command line
+  href: command-line/toc.yml

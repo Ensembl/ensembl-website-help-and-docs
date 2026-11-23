@@ -1,0 +1,27 @@
+- name: Basic options
+  href: basic.md
+  url: /help/articles/vep-options-basic
+- name: Cache options
+  href: cache.md
+  url: /help/articles/vep-options-cache
+- name: Other annotation sources
+  href: annotation.md
+  url: /help/articles/vep-options-annotation
+- name: Output format options
+  href: output-format.md
+  url: /help/articles/vep-options-output-format
+- name: Output options
+  href: output.md
+  url: /help/articles/vep-options-output
+- name: Identifiers
+  href: identifiers.md
+  url: /help/articles/vep-options-identifiers
+- name: Co-located variants
+  href: existing-variants.md
+  url: /help/articles/vep-options-existing-variants
+- name: Filtering and QC options
+  href: filtering.md
+  url: /help/articles/vep-options-filtering
+- name: Database options
+  href: database.md
+  url: /help/articles/vep-options-database
