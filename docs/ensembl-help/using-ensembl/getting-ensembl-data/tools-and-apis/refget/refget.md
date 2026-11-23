@@ -7,7 +7,7 @@ related_articles:
 ---
 # Accessing Ensembl's refget service
 
-The Ensembl refget service can be accessed at [beta.ensembl.org/data/refget/](https://beta.ensembl.org/data/refget/).
+The Ensembl refget service can be accessed at [www.ensembl.org/data/refget/](https://www.ensembl.org/data/refget/).
 
 ## About the standard
 
@@ -119,7 +119,7 @@ returns:
 Then use the information from the previous step to query refget (Curl for clarity). Note you must convert from Ensembl coordinates (1-based) to 0-based coordinates.
 
 ```bash
-curl -H'Accept: text/plain' "https://beta.ensembl.org/data/refget/sequence/b18e6c531b0bd70e949a7fc20859cb01?start=10637683&end=10673999"
+curl -H'Accept: text/plain' "https://www.ensembl.org/data/refget/sequence/b18e6c531b0bd70e949a7fc20859cb01?start=10637683&end=10673999"
 
 ```
 
@@ -221,19 +221,19 @@ Each sequence product (cDNA, CDS and protein) refer to a checksum. The value of 
 
 Each sequence can now be retrieved with the following URLs.
 
-- cDNA: [beta.ensembl.org/data/refget/sequence/d8d95cac5218b333fba43ed6ebe4b017](https://beta.ensembl.org/data/refget/sequence/2f8c687a656debd4c8b1b4d47747ba35)
-- CDS: [beta.ensembl.org/data/refget/sequence/27ec2b034fb386c69f48653d2f18daf2](https://beta.ensembl.org/data/refget/sequence/c6b5e532b5aef696e987ca55a538ae9e)
-- Protein: [beta.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d](https://beta.ensembl.org/data/refget/sequence/92addb948c6c652abc1dcecca05f26c0)
+- cDNA: [www.ensembl.org/data/refget/sequence/d8d95cac5218b333fba43ed6ebe4b017](https://www.ensembl.org/data/refget/sequence/2f8c687a656debd4c8b1b4d47747ba35)
+- CDS: [www.ensembl.org/data/refget/sequence/27ec2b034fb386c69f48653d2f18daf2](https://www.ensembl.org/data/refget/sequence/c6b5e532b5aef696e987ca55a538ae9e)
+- Protein: [www.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d](https://www.ensembl.org/data/refget/sequence/92addb948c6c652abc1dcecca05f26c0)
 
 Metadata concerning each of the records can be retreived by adding a `/metadata` to each URL.
 
-- cDNA: [beta.ensembl.org/data/refget/sequence/d8d95cac5218b333fba43ed6ebe4b017/metadata](https://beta.ensembl.org/data/refget/sequence/2f8c687a656debd4c8b1b4d47747ba35/metadata)
-- CDS: [beta.ensembl.org/data/refget/sequence/27ec2b034fb386c69f48653d2f18daf2/metadata](https://beta.ensembl.org/data/refget/sequence/c6b5e532b5aef696e987ca55a538ae9e/metadata)
-- Protein: [beta.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d/metadata](https://beta.ensembl.org/data/refget/sequence/92addb948c6c652abc1dcecca05f26c0/metadata)
+- cDNA: [www.ensembl.org/data/refget/sequence/d8d95cac5218b333fba43ed6ebe4b017/metadata](https://www.ensembl.org/data/refget/sequence/2f8c687a656debd4c8b1b4d47747ba35/metadata)
+- CDS: [www.ensembl.org/data/refget/sequence/27ec2b034fb386c69f48653d2f18daf2/metadata](https://www.ensembl.org/data/refget/sequence/c6b5e532b5aef696e987ca55a538ae9e/metadata)
+- Protein: [www.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d/metadata](https://www.ensembl.org/data/refget/sequence/92addb948c6c652abc1dcecca05f26c0/metadata)
 
 ```bash
 # Get the sequence metadata
-curl -H'Accept: application/json' 'https://beta.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d/metadata'
+curl -H'Accept: application/json' 'https://www.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d/metadata'
 {"metadata": {"aliases": [
   {"alias": "ga4gh:SQ.0pyg0Uu3J8LDWTEm_14sUQ7DCX8rK8nl", "naming_authority": "ga4gh"},
   {"alias": "ENSP00000254958.4", "naming_authority": "Ensembl"},
@@ -241,10 +241,10 @@ curl -H'Accept: application/json' 'https://beta.ensembl.org/data/refget/sequence
 "length": 1218, "md5": "84706f0ee2a4d23ae4050036e62dac5d", "trunc512": "d29ca0d14bb727c2c3593126ff5e2c510ec3097f2b2bc9e5"}}
 
 # Pipe into wc and count characters to confirm length
-curl -s -H'Accept: text/plain' 'https://beta.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d' | wc -c
+curl -s -H'Accept: text/plain' 'https://www.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d' | wc -c
     1218
 
 # Retreiving the first 10 residues of the sequence
-curl -s -H'Accept: text/plain' 'https://beta.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d?start=0&end=10'
+curl -s -H'Accept: text/plain' 'https://www.ensembl.org/data/refget/sequence/84706f0ee2a4d23ae4050036e62dac5d?start=0&end=10'
 MRSPRTRGRS
 ```
